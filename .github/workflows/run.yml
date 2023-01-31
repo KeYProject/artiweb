@@ -5,7 +5,7 @@ on:
     branches: ["main"]
 
 permissions:
-  contents: read
+  contents: write
   pages: write
   id-token: write
 
@@ -26,9 +26,10 @@ jobs:
         with:
           repository: ${{ github.event.pull_request.head.repo.full_name }}
           ref: ${{ github.event.pull_request.head.ref }}
-      - uses: actions/setup-node@v1
+      - uses: actions/setup-node@v3
         with:
-          version: 16
+          node-version: 18
+          cache: 'npm'
       - run: npm install .
       - run: node index.js
         env:
