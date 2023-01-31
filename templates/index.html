@@ -1,8 +1,15 @@
-{% extends "base.html" %}
+{% extends "main.html" %}
 {% block title %}Index{% endblock %}
 {% block content %}
 <h1>Index</h1>
 <p class="important">
     Welcome to my awesome homepage.
 </p>
+
+<ul>
+    {% for pr in pullrequests %}
+    <li><a href="/{{pr['number']}}/">{{pr['title']}}</a> </li>
+    {% endfor %}
+</ul>
+
 {% endblock %}
