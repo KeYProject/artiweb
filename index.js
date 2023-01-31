@@ -120,7 +120,7 @@ async function main() {
 
     for (const pr of pullRequests) {
         console.log("Update pull request:", pr.number)
-        updatePullRequest(pr);
+        await updatePullRequest(pr);
     }
 }
 
