@@ -9,7 +9,7 @@ targetFolder=$3
 mkdir -p $(dirname $targetFile) $targetFolder
 
 if [ ! -f $targetFile ]; then 
-    wget --header="Authorization: token $GITHUB_ACTION" -o $targetFile $zipUrl
+    wget --header="Authorization: token $GITHUB_ACTION" -O $targetFile $zipUrl
 fi 
 
 unzip $targetFile -d $targetFolder || true
