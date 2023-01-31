@@ -104,7 +104,7 @@ async function main() {
         owner: OWNER,
         repo: REPO
     })
-
+    
     pullRequests = prReq.data
     console.log("Remote PRs", pullRequests.length)
 
@@ -115,6 +115,26 @@ async function main() {
     })
     artifacts = aReq.data.artifacts
     console.log("Number of artifacts:", artifacts.length)
+
+    mkdirSafe("meta")
+
+    fs.writeFile("meta/pull-requests.json", pullRequests, 'utf8', function (err) {
+        if (err) {
+            console.log("An error occured while writing JSON Object to File.");
+            return console.log(err);
+        }
+        console.log("JSON file has been saved.");
+    });
+
+
+    fs.writeFile("meta/artifacts.json", artifacts, 'utf8', function (err) {
+        if (err) {
+            console.log("An error occured while writing JSON Object to File.");
+            return console.log(err);
+        }
+        console.log("JSON file has been saved.");
+    });
+
 
     mkdirSafe(temp)
 
