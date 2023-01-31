@@ -118,7 +118,7 @@ async function main() {
 
     mkdirSafe(temp)
 
-    for (const pr of pullRequests) {
+    for (const pr of pullRequests) { 
         console.log("Update pull request:", pr.number)
         await updatePullRequest(pr);
     }
