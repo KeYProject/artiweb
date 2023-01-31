@@ -43,7 +43,7 @@ async function updatePullRequest(pr) {
         // console.log(branch, artifact.workflow_run.head_branch)
         if (artifact.workflow_run.head_branch == branch) { // may be to relaxed, may add repository information
             console.log("Found artifact", artifact.id, " for PR", pr.number)
-            const target = TARGET + "/" + pr.id + '/' + artifact.id
+            const target = TARGET + "/" + pr.number + '/' + artifact.id
             const filename = temp + "/" + artifact.id + ".zip"
             //await downloadArtifact(target, tmpFile, artifact.archive_download_url)
             const zipUrl = artifact.archive_download_url
