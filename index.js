@@ -104,7 +104,7 @@ async function main() {
         owner: OWNER,
         repo: REPO
     })
-    
+
     pullRequests = prReq.data
     console.log("Remote PRs", pullRequests.length)
 
@@ -118,7 +118,7 @@ async function main() {
 
     mkdirSafe("meta")
 
-    fs.writeFile("meta/pull-requests.json", pullRequests, 'utf8', function (err) {
+    fs.writeFile("meta/pull-requests.json", JSON.stringify(pullRequests), 'utf8', function (err) {
         if (err) {
             console.log("An error occured while writing JSON Object to File.");
             return console.log(err);
@@ -127,7 +127,7 @@ async function main() {
     });
 
 
-    fs.writeFile("meta/artifacts.json", artifacts, 'utf8', function (err) {
+    fs.writeFile("meta/artifacts.json", JSON.stringify(artifacts), 'utf8', function (err) {
         if (err) {
             console.log("An error occured while writing JSON Object to File.");
             return console.log(err);
@@ -138,7 +138,7 @@ async function main() {
 
     mkdirSafe(temp)
 
-    for (const pr of pullRequests) { 
+    for (const pr of pullRequests) {
         console.log("Update pull request:", pr.number)
         await updatePullRequest(pr);
     }
