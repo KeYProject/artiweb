@@ -8,8 +8,10 @@ targetFolder=$3
 
 mkdir -p $(dirname $targetFile) $targetFolder
 
-if [ ! -f $targetFile ]; then 
-    wget --header="Authorization: token $PRIVATE_TOKEN" -O $targetFile $zipUrl
-fi 
+if [ ! -f $targetFolder ]; then 
+    if [ ! -f $targetFile ]; then 
+        wget --header="Authorization: token $PRIVATE_TOKEN" -O $targetFile $zipUrl
+    fi 
 
-unzip $targetFile -d $targetFolder || true
+    unzip $targetFile -d $targetFolder || true
+fi
