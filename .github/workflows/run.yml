@@ -16,4 +16,5 @@ jobs:
       - run: node index.js
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - run: file tmp/*
       - run: git add pull-requests; git commit -am 'new artifacts'; git push 
