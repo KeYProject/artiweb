@@ -13,5 +13,5 @@ if [ ! -f $targetFolder ]; then
         wget --header="Authorization: token $PRIVATE_TOKEN" -O $targetFile $zipUrl
     fi 
 
-    unzip $targetFile -d $targetFolder || true
+    unzip $targetFile -o -d $targetFolder || true
 fi
