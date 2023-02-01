@@ -49,7 +49,8 @@ def render_artifact(pull_request, artifact):
     # find all index.html
     prefix = len(str(target.parent))
     indexes = [x[prefix+1:] for x in find_files(target.parent, "index.html")]
-    indexes.remove("index.html")
+    if "index.html" in indexes:
+        indexes.remove("index.html")
 
     target.parent.mkdir(exist_ok=True)
 
