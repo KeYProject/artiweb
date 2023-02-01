@@ -32,14 +32,24 @@ def render_pull_request(pull_request):
         render_artifact(pull_request, artifact)
 
 
+def find_files(directory, pattern):
+    import fnmatch
+    for root, dirs, files in os.walk(directory):
+        for basename in files:
+            if fnmatch.fnmatch(basename, pattern):
+                filename = os.path.join(root, basename)
+                yield filename
+
+
 def render_artifact(pull_request, artifact):
     template = env.get_template("artifact.html")
     target = PUBLIC / str(pull_request['number']) / str(
         artifact['id']) / "index.html"
 
     # find all index.html
-    from glob import glob
-    indexes = glob(str(target.parent) + "/**/index.html")
+    prefix = len(str(target.parent))
+    indexes = [x[prefix+1:] for x in find_files(target.parent, "index.html")]
+    indexes.remove("index.html")
 
     target.parent.mkdir(exist_ok=True)
 
@@ -60,7 +70,7 @@ import shutil
 
 if __name__ == '__main__':
     try:
-        shutil.copytree("pull-requests", "public")
+        shutil.copytree("pull-requests", "public", dirs_exist_ok=True)
     except:
         pass
 
