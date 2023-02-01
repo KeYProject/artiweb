@@ -36,12 +36,12 @@ repo: REPO
 async function updatePullRequest(pr) {
     //console.log(pr.head)
     let repo = pr.head.repo.id
-    let base = pr.base.repo.id
     let branch = pr.head.ref
+
     for (const artifact of artifacts) {
-        // console.log(repo, base, artifact.workflow_run)
-        // console.log(branch, artifact.workflow_run.head_branch)
-        if (artifact.workflow_run.head_branch == branch) { // may be to relaxed, may add repository information
+        const arti_head = artifact.workflow_run.head_repository_id
+        //console.log(branch, artifact.workflow_run.head_branch)
+        if (arti_head == repo && artifact.workflow_run.head_branch == branch) { // may be to relaxed, may add repository information
             console.log("Found artifact", artifact.id, " for PR", pr.number)
             const target = TARGET + "/" + pr.number + '/' + artifact.id
             const filename = temp + "/" + artifact.id + ".zip"
