@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 
-from benedict import benedict
+import addict
 import json
 import os
 
@@ -27,7 +27,8 @@ def index():
 
 
 def read_meta(folder: Path):
-    return benedict(folder/"meta.json", format='json')
+    with (folder/"meta.json").open() as fp:
+        return addict.Dict(json.load(fp))
 
 
 def render_pull_request(pull_request: Path):
@@ -65,7 +66,7 @@ def generate_artifact(pull_request: benedict, artifact: Path):
 
     # find all index.html
     prefix = len(str(target.parent))
-    #indexes = [x[prefix+1:] for x in find_files(target.parent, "index.html")]
+    # indexes = [x[prefix+1:] for x in find_files(target.parent, "index.html")]
     indexes = list(artifact.rglob("index.html"))
     if "index.html" in indexes:
         indexes.remove("index.html")
@@ -75,6 +76,7 @@ def generate_artifact(pull_request: benedict, artifact: Path):
     with target.open('w') as fp:
         fp.write(
             template.render(pr=pull_request, artifact=data, indexes=indexes))
+
 
 if __name__ == '__main__':
     for pr in TARGET:

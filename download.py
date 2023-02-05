@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 
+from addict import Dict
 import requests
 import json
 from pathlib import Path
@@ -69,7 +70,7 @@ artifacts = []
 def get_json(path, **args):
     url = f"https://api.github.com/repos/{OWNER}/{REPO}/{path}".format(**args)
     import helper 
-    return helper.ObjDict(requests.get(url).json())
+    return helper.AttrDict(requests.get(url).json())
 
 
 def main():
