@@ -114,7 +114,7 @@ def main():
     mkdirSafe(temp)
 
     for pr in pullRequests:
-        print("Update pull request:", pr.number)
+        print("Update pull request:", pr)
         updatePullRequest(pr)
 
 
