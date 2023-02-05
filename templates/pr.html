@@ -5,9 +5,18 @@
 
 
 <h1>{{ pr['number'] }} - {{ pr['title']  }}</h1>
-{{pr.body|markdown|safe}}
 
-<div> <canvas id="myChart"></canvas> </div>     
+<summary>
+    <span>Description</span>
+<details>
+{{pr.body|markdown|safe}}
+</details>
+</summary>
+
+<a href="{{pr.html_url}}">To Github</a>
+
+<div style="height:10em;"> <canvas id="runtime"></canvas> </div>     
+<div style="height:10em;"> <canvas id="testcases"></canvas> </div>     
 
 
 <ul>
@@ -21,8 +30,11 @@
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 <script type="text/javascript" src="/script.js"></script>
 <script type="text/javascript">
-      const ctx = document.getElementById('myChart');
+      const ctx = document.getElementById('runtime');
       new Chart(ctx, {{rtchart|tojson}});
+
+      const ctx2 = document.getElementById('testcases');
+      new Chart(ctx2, {{tcchart|tojson}});
 </script>
 
 
