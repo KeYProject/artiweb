@@ -1,15 +1,29 @@
 {% extends "main.html" %}
 {% block title %}{{ pr['number'] }} - {{ pr['title']  }}{% endblock %}
+
 {% block content %}
+
+
 <h1>{{ pr['number'] }} - {{ pr['title']  }}</h1>
-<p class="important">
-    Welcome to my awesome homepage.
-</p>
+{{pr.body|markdown|safe}}
+
+<div> <canvas id="myChart"></canvas> </div>     
+
 
 <ul>
-{% for artifact in pr['artifacts'] %}
-    <li> <a href="/{{pr['number']}}/{{ artifact['id'] }}/index.html">{{artifact['created_at']}}</a> </li>
+    {% for artifact in artifacts %}
+    <li> <a href="/artiweb/{{pr['number']}}/{{ artifact['id'] }}/index.html">{{artifact.created_at}} ({{"%.2f"|format(artifact.size_in_bytes/1024|float)}} kB)</a> </li>
 {% endfor %}
 </ul>
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script type="text/javascript" src="/script.js"></script>
+<script type="text/javascript">
+      const ctx = document.getElementById('myChart');
+      new Chart(ctx, {{rtchart|tojson}});
+</script>
+
 
 {% endblock %}
