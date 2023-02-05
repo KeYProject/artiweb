@@ -15,16 +15,17 @@ REPO = Path("key")
 ARTIFACT = Path("test-results")
 temp = Path("tmp")
 
-GITHUB_TOKEN = os.environ['GITHUB_TOKEN']
+GITHUB_TOKEN = os.environ.get('GITHUB_TOKEN', '')
 
-PRIVATE_TOKEN = os.environ['PRIVATE_TOKEN']
+PRIVATE_TOKEN = os.environ.get('PRIVATE_TOKEN', '')
 
 
 def updatePullRequest(pr):
     repo = pr.head.repo.id
     branch = pr.head.ref
 
-    folder = TARGET / pr.number
+    folder = TARGET / str(pr.number)
+    folder.mkdir(exist_ok=True, parents=True)
     with (folder / "meta.json").open('w') as fp:
         json.dump(pr, fp)
 
@@ -78,18 +79,17 @@ def get_json(path, **args):
 
 
 def main():
-    prReq = get_json('pulls')
-    pullRequests = prReq.data
-    print("Remote PRs", pullRequests.length)
-    aReq = get_json("actions/artifacts?name={artiname}", artiname=ARTIFACT)
-    artifacts = aReq.data.artifacts
-    print("Number of artifacts:", artifacts.length)
+    pullRequests = get_json('pulls')
+    print(f"Remote PullRequests {len(pullRequests)}")
+    artifacts = get_json(
+        "actions/artifacts?name={artiname}", artiname=ARTIFACT)
+    print(f"Number of artifacts: {len(artifacts)}")
 
     mkdirSafe("meta")
 
     with open("meta/pull-requests.json", "w") as fp:
         json.dump(pullRequests, fp)
-    with open("meta/artifacts.json") as fp:
+    with open("meta/artifacts.json", 'w') as fp:
         json.dump(artifacts, fp)
 
     mkdirSafe(temp)
