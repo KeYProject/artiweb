@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 
+import zipfile
 from addict import Dict
 import requests
 import json
@@ -31,10 +32,11 @@ def updatePullRequest(pr):
 
     for artifact in artifacts:
         arti_head = artifact.workflow_run.head_repository_id
+        print(arti_head, repo,  artifact.workflow_run.head_branch, branch)
         if arti_head == repo and artifact.workflow_run.head_branch == branch:
             print("Found artifact", artifact.id, " for PR", pr.number)
-            target = folder / artifact.id
-            filename = temp / (artifact.id + ".zip")
+            target = folder / str(artifact.id)
+            filename = temp / (str(artifact.id) + ".zip")
             zipUrl = artifact.archive_download_url
             downloadArtifact(target, filename, zipUrl)
 
@@ -50,12 +52,13 @@ def downloadArtifact(targetFolder: Path, targetFile: Path, zipUrl):
                 r = requests.get(zipUrl, headers={
                                  "Authorization": f"token {PRIVATE_TOKEN}"})
                 f.write(r.content)
-
-        mkdirSafe(targetFolder)
-        import zipfile
-        with zipfile.ZipFile(targetFile, 'r') as zip_ref:
-            zip_ref.extractall(targetFolder)
-        targetFile.unlink()
+        try:
+            mkdirSafe(targetFolder)
+            with zipfile.ZipFile(targetFile, 'r') as zip_ref:
+                zip_ref.extractall(targetFolder)
+            targetFile.unlink()
+        except zipfile.BadZipFile as e: 
+            print(e, targetFile)
 
 
 def mkdirSafe(f):
@@ -71,6 +74,7 @@ artifacts = []
 
 def get_json(path, **args):
     url = f"https://api.github.com/repos/{OWNER}/{REPO}/{path}".format(**args)
+    print(url)
     j = requests.get(url).json()
     if isinstance(j, list):
         return list(map(Dict, j))
@@ -78,10 +82,25 @@ def get_json(path, **args):
         return Dict(j)
 
 
+def get_json_all(url, per_page=100, results_key='artifacts', **kwargs):
+    sfx = "&per_page={per_page}&page={page}"
+    kwargs['page'] = 0
+    kwargs['per_page'] = per_page
+    results = []
+    while True:
+        kwargs['page'] += 1
+        page = get_json(url + sfx, **kwargs)
+        if page[results_key]:
+            results += page[results_key]
+        else:
+            return results
+
+
 def main():
+    global pullRequests, artifacts
     pullRequests = get_json('pulls')
     print(f"Remote PullRequests {len(pullRequests)}")
-    artifacts = get_json(
+    artifacts = get_json_all(
         "actions/artifacts?name={artiname}", artiname=ARTIFACT)
     print(f"Number of artifacts: {len(artifacts)}")
 
