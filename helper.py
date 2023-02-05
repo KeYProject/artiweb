@@ -1,3 +1,6 @@
+from typing import Any
+
+
 class ObjDict(object):
     def __init__(self, d) -> None:
         self._dict = d

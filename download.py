@@ -3,7 +3,6 @@
 import requests
 import json
 from pathlib import Path
-from benedict import benedict
 import subprocess
 import os
 import sys
