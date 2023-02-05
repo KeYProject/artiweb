@@ -40,6 +40,7 @@ def updatePullRequest(pr):
             with (target / 'meta.json').open('w') as fp:
                 json.dump(artifact, fp)
 
+
 def downloadArtifact(targetFolder: Path, targetFile: Path, zipUrl):
     if not targetFolder.exists():
         if not targetFile.exists():
@@ -69,7 +70,11 @@ artifacts = []
 
 def get_json(path, **args):
     url = f"https://api.github.com/repos/{OWNER}/{REPO}/{path}".format(**args)
-    return Dict(requests.get(url).json())
+    j = requests.get(url).json()
+    if isinstance(j, list):
+        return list(map(Dict, j))
+    else:
+        return Dict(j)
 
 
 def main():
@@ -92,5 +97,6 @@ def main():
     for pr in pullRequests:
         print("Update pull request:", pr.number)
         updatePullRequest(pr)
+
 
 main()
