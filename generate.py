@@ -17,9 +17,8 @@ ARTIFACTS = []
 
 
 def index():
-    global PUBLIC
     template = env.get_template("index.html")
-    target = PUBLIC / "index.html"
+    target = TARGET / "index.html"
     target.parent.mkdir(exist_ok=True)
 
     with target.open('w') as fp:
@@ -40,7 +39,8 @@ def generate_pull_request(pull_request: Path):
     target.parent.mkdir(exist_ok=True)
 
     artifacts = [generate_artifact(pull_request, arti_folder)
-                 for arti_folder in pull_request.glob("*/")]
+                 for arti_folder in pull_request.glob("*/") 
+                 if arti_folder.is_dir() ]
 
     with target.open('w') as fp:
         fp.write(template.render(pr=data, artifacts=artifacts))
@@ -79,6 +79,11 @@ def generate_artifact(pull_request, artifact: Path):
 
 
 if __name__ == '__main__':
+    pr:Path
     for pr in TARGET.glob("*/"):
-        generate_pull_request(pr)
+        if pr.is_dir():
+            try:
+                generate_pull_request(pr)
+            except Exception as e:
+                print(e)
     index()
