@@ -1,7 +1,7 @@
 {% extends "main.html" %}
-{% block title %}{{ pr['number'] }} - {{ pr['title'] }}{% endblock %}
+{% block title %}{{ pr.number }} - {{ pr.title }}{% endblock %}
 {% block content %}
-<h1>{{ pr['number'] }} - {{ pr['title'] }}</h1>
+<h1>{{ pr.number }} - {{ pr.title }}</h1>
 
 <pre>
 {{artifact}}
