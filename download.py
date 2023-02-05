@@ -69,8 +69,7 @@ artifacts = []
 
 def get_json(path, **args):
     url = f"https://api.github.com/repos/{OWNER}/{REPO}/{path}".format(**args)
-    import helper 
-    return helper.AttrDict(requests.get(url).json())
+    return Dict(requests.get(url).json())
 
 
 def main():
