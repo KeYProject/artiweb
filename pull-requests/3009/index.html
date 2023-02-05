@@ -15,9 +15,18 @@
 
 
 <h1>3009 - Generic undo button for user actions</h1>
-<p>Continuation of https://git.key-project.org/key/key/-/merge_requests/627</p>
 
-<div> <canvas id="myChart"></canvas> </div>     
+<summary>
+    <span>Description</span>
+<details>
+<p>Continuation of https://git.key-project.org/key/key/-/merge_requests/627</p>
+</details>
+</summary>
+
+<a href="https://github.com/KeYProject/key/pull/3009">To Github</a>
+
+<div style="height:10em;"> <canvas id="runtime"></canvas> </div>     
+<div style="height:10em;"> <canvas id="testcases"></canvas> </div>     
 
 
 <ul>
@@ -29,8 +38,11 @@
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 <script type="text/javascript" src="/script.js"></script>
 <script type="text/javascript">
-      const ctx = document.getElementById('myChart');
-      new Chart(ctx, {"data": {"datasets": [{"borderWidth": 1, "data": [], "label": "runtime"}, {"borderWidth": 1, "data": [], "label": "test cases"}], "labels": []}, "options": {"scales": {"y": {"beginAtZero": true}}}, "type": "bar"});
+      const ctx = document.getElementById('runtime');
+      new Chart(ctx, {"data": {"datasets": [{"borderWidth": 1, "data": [], "label": "Runtime in Hours"}], "labels": []}, "options": {"maintainAspectRatio": false, "responsive": true, "scales": {"y": {"beginAtZero": true}}}, "type": "bar"});
+
+      const ctx2 = document.getElementById('testcases');
+      new Chart(ctx2, {"data": {"datasets": [{"backgroundColor": "rgb(250, 220, 220)", "borderColor": "rgb(250, 192, 192)", "data": [], "fill": true, "label": "Failures", "tension": 0.1}, {"backgroundColor": "rgb(200, 212, 212)", "borderColor": "rgb(180, 192, 192)", "data": [], "fill": true, "label": "Errors", "tension": 0.1}, {"backgroundColor": "rgb(150, 150, 150)", "borderColor": "rgb(100, 100, 100)", "data": [], "fill": true, "label": "Skipped", "tension": 0.1}, {"backgroundColor": "rgb(95, 212, 120)", "borderColor": "rgb(75, 192, 100)", "data": [], "fill": true, "label": "Success", "tension": 0.1}], "labels": []}, "options": {"maintainAspectRatio": false, "responsive": true, "scales": {"y": {"stacked": true}}}, "type": "line"});
 </script>
 
 
