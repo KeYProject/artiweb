@@ -31,7 +31,7 @@ def read_meta(folder: Path):
         return addict.Dict(json.load(fp))
 
 
-def render_pull_request(pull_request: Path):
+def generate_pull_request(pull_request: Path):
     template = env.get_template("pr.html")
     data = read_meta(pull_request)
     PULL_REQUESTS.append(data)
@@ -40,7 +40,7 @@ def render_pull_request(pull_request: Path):
     target.parent.mkdir(exist_ok=True)
 
     artifacts = [generate_artifact(pull_request, arti_folder)
-                 for arti_folder in pull_request]
+                 for arti_folder in pull_request.glob("*/")]
 
     with target.open('w') as fp:
         fp.write(template.render(pr=data, artifacts=artifacts))
@@ -58,7 +58,7 @@ def find_files(directory, pattern):
                 yield filename
 
 
-def generate_artifact(pull_request: benedict, artifact: Path):
+def generate_artifact(pull_request, artifact: Path):
     template = env.get_template("artifact.html")
     target = artifact / "index.md"
     data = read_meta(artifact)
@@ -79,6 +79,6 @@ def generate_artifact(pull_request: benedict, artifact: Path):
 
 
 if __name__ == '__main__':
-    for pr in TARGET:
+    for pr in TARGET.glob("*/"):
         generate_pull_request(pr)
     index()
