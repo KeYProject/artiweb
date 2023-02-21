@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=1024px, initial-scale=1.0">
-    <title>3034 - Draft: Formatter</title>
+    <title>3034 - Formatter</title>
     <link rel="stylesheet" href="https://unpkg.com/@picocss/pico@1.*/css/pico.min.css">
     
     
@@ -14,14 +14,17 @@
     
 
 
-<h1>3034 - Draft: Formatter</h1>
+<h1>3034 - Formatter</h1>
 
 <summary>
     <span>Description</span>
 <details>
 <p>The current Java formatter used in the sequent view is a mess. This PR tries to improve on that.</p>
 <p>Current changes:
-* Remove <code>IOException</code> out of the interface of all pretty printing functions since it is never thrown.</p>
+* Remove <code>IOException</code> out of the interface of all pretty printing functions since it is never thrown.
+* Rewrite PrettyPrinter on top of Layouter
+* Many changes to the interface of pretty printers
+* Bring internal taclet printer to same format as key file formatter</p>
 </details>
 </summary>
 
