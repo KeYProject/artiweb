@@ -15,7 +15,11 @@ TARGET = Path("./pull-requests")
 env = Environment(loader=FileSystemLoader("templates"),
                   autoescape=select_autoescape())
 
-env.filters['markdown'] = markdown.markdown
+def mymarkdown(txt): 
+    if txt: return markdown.markdown(txt)
+    else: return "" 
+
+env.filters['markdown'] = mymarkdown
 
 PULL_REQUESTS = []
 ARTIFACTS = []
