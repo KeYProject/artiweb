@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=1024px, initial-scale=1.0">
+    <title>3030 - Removal of the Proof Collection Parser</title>
+    <link rel="stylesheet" href="https://unpkg.com/@picocss/pico@1.*/css/pico.min.css">
+    
+    
+</head>
+<body>
+    <main class="container">
+    
+
+
+<h1>3030 - Removal of the Proof Collection Parser</h1>
+
+<summary>
+    <span>Description</span>
+<details>
+<p>The Proof Collection Parser is an antlr3 parser, which reads text files -- the proof collections -- and translates them into a data structure used for executing <em>run all proofs</em> tests. In order of switching from antlr3 to antlr4, it seems that rewriting of this parser is not beneficial, as its grammar can easily mapped to a Java-DSL without loss of readability and gaining all nice IDE features (syntax highlighting, code assist etc) for writing these files. </p>
+<p>:exclamation: So this PR removes the collection and also all dependencies of ANTLR2 and ANTLR3 in the source code of KeY. </p>
+<p>Sides effects are that unused exception classes are removed. </p>
+<p>This PR also repairs wrong paths of Information flow statistics and adds the run-all-proofs to the uploaded build artifacts.</p>
+<p>The impact is limited to run all proofs. This MR also changes the path, where the statistics are written to---in particular the folder <code>key.core.test</code> does not exists anymore; leading to changes in the Jenkins config.</p>
+</details>
+</summary>
+
+<a href="https://github.com/KeYProject/key/pull/3030">To Github</a>
+
+<div style="height:10em;"> <canvas id="runtime"></canvas> </div>     
+<div style="height:10em;"> <canvas id="testcases"></canvas> </div>     
+
+
+<ul>
+    
+    <li> <a href="/artiweb/3030/549031664/index.html">2023-02-09T13:34:21Z (33.40 kB)</a> </li>
+
+    <li> <a href="/artiweb/3030/552888299/index.html">2023-02-12T19:57:59Z (1234.79 kB)</a> </li>
+
+    <li> <a href="/artiweb/3030/552879809/index.html">2023-02-12T19:36:48Z (1234.50 kB)</a> </li>
+
+    <li> <a href="/artiweb/3030/549078243/index.html">2023-02-09T14:03:39Z (1115.72 kB)</a> </li>
+
+    <li> <a href="/artiweb/3030/549023442/index.html">2023-02-09T13:28:55Z (33.34 kB)</a> </li>
+
+</ul>
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script type="text/javascript" src="/script.js"></script>
+<script type="text/javascript">
+      const ctx = document.getElementById('runtime');
+      new Chart(ctx, {"data": {"datasets": [{"borderWidth": 1, "data": [0.0005327777777777779, 0.0006083333333333334, 0.4301177777777777, 2.857929166666669, 3.1055188888888905], "label": "Runtime in Hours"}], "labels": ["2023-02-09T13:34:21Z", "2023-02-12T19:57:59Z", "2023-02-12T19:36:48Z", "2023-02-09T14:03:39Z", "2023-02-09T13:28:55Z"]}, "options": {"maintainAspectRatio": false, "responsive": true, "scales": {"y": {"beginAtZero": true}}}, "type": "bar"});
+
+      const ctx2 = document.getElementById('testcases');
+      new Chart(ctx2, {"data": {"datasets": [{"backgroundColor": "rgb(250, 220, 220)", "borderColor": "rgb(250, 192, 192)", "data": [0, 0, 2, 5, 5], "fill": true, "label": "Failures", "tension": 0.1}, {"backgroundColor": "rgb(200, 212, 212)", "borderColor": "rgb(180, 192, 192)", "data": [0, 0, 0, 0, 0], "fill": true, "label": "Errors", "tension": 0.1}, {"backgroundColor": "rgb(150, 150, 150)", "borderColor": "rgb(100, 100, 100)", "data": [15, 15, 119, 119, 119], "fill": true, "label": "Skipped", "tension": 0.1}, {"backgroundColor": "rgb(95, 212, 120)", "borderColor": "rgb(75, 192, 100)", "data": [172, 172, 3353, 3411, 3411], "fill": true, "label": "Success", "tension": 0.1}], "labels": ["2023-02-09T13:34:21Z", "2023-02-12T19:57:59Z", "2023-02-12T19:36:48Z", "2023-02-09T14:03:39Z", "2023-02-09T13:28:55Z"]}, "options": {"maintainAspectRatio": false, "responsive": true, "scales": {"y": {"stacked": true}}}, "type": "line"});
+</script>
+
+
+
+    </main>
+</body>
+</html>

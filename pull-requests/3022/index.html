@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=1024px, initial-scale=1.0">
+    <title>3022 - Exploiting JML Names in the Proof Tree</title>
+    <link rel="stylesheet" href="https://unpkg.com/@picocss/pico@1.*/css/pico.min.css">
+    
+    
+</head>
+<body>
+    <main class="container">
+    
+
+
+<h1>3022 - Exploiting JML Names in the Proof Tree</h1>
+
+<summary>
+    <span>Description</span>
+<details>
+<p>This MR tries to exploit the newly introduced JML names for entities inside the KeY's proof tree as branching labels.</p>
+<p>Missing: 
+* [ ] Labels are behind an update are not recognize or and get lost if the update is applied</p>
+<p>This MR brings following changes:</p>
+<ul>
+<li>JML entities have names:
+  <code>java
+  //@ invariant NAME: true;
+  //@ ensures&lt;h1&gt; NAME: true;
+  //@ behavior NAME: requires NAME1: true;</code></li>
+<li>
+<p>A new TermLabel <code>name(XXX)</code> is added.</p>
+</li>
+<li>
+<p>Change to the KeY parser: Goal templates can have computed labels. 
+  Currently, the label of a goal can be a schema variable or static string. With this MR you are allowed to define labels which are computed by a Java interface <code>BranchingNamingFunction</code>. 
+  A taclet exploits this in the following way:</p>
+</li>
+</ul>
+<p><code>andRight {
+      \find (==&gt; b &amp; c)
+      "\nameLabelOf(b)":\replacewith(==&gt; b);
+      "\nameLabelOf(c)":\replacewith(==&gt; c)
+      \heuristics(beta)
+  };</code></p>
+<p>New branching naming functions can be added by an interface.</p>
+<hr />
+<h3>KeY example (working)</h3>
+<p><code>\sorts { s; }
+\predicates {   p;  q; }
+\problem {
+  (p&lt;&lt;name("A")&gt;&gt; -&gt; q&lt;&lt;name("B")&gt;&gt;) -&gt; !q&lt;&lt;name("C")&gt;&gt; -&gt; !p&lt;&lt;name("D")&gt;&gt;
+}</code></p>
+<p><img alt="image" src="https://user-images.githubusercontent.com/104259/216825901-cbe6bc91-fe49-49fa-869a-400626cec0c0.png" /></p>
+<h3>JML</h3>
+<p>```java
+class Test {
+    //@ public invariant MY_SUPER_INVARIANT: CONST == 42;</p>
+<pre><code>public final int CONST = 42;
+/*@
+requires Z: this != null;
+ensures A: \result == 42;
+ensures B: \result &gt;= 0;
+ensures C: \result != 0;
+*/
+public int foo() {return CONST;}
+</code></pre>
+<p>}
+```</p>
+<p>Sum And Max
+```
+class SumAndMax {</p>
+<pre><code>int sum;
+int max;
+
+/*@ normal_behaviour
+  @   requires R1: (\forall int i; 0 &lt;= i &amp;&amp; i &lt; a.length; 0 &lt;= a[i]);
+  @   assignable sum, max;
+  @   ensures E1: (\forall int i; 0 &lt;= i &amp;&amp; i &lt; a.length; a[i] &lt;= max);
+  @   ensures E2: (a.length &gt; 0
+  @           ==&gt; (\exists int i; 0 &lt;= i &amp;&amp; i &lt; a.length; max == a[i]));
+  @   ensures E3: sum == (\sum int i; 0 &lt;= i &amp;&amp; i &lt; a.length; a[i]);
+  @   ensures E4: sum &lt;= a.length * max;
+  @*/
+void sumAndMax(int[] a) {
+    sum = 0;
+    max = 0;
+    int k = 0;
+
+    /*@ loop_invariant I1: 0 &lt;= k &amp;&amp; k &lt;= a.length;
+      @ loop_invariant I2: (\forall int i; 0 &lt;= i &amp;&amp; i &lt; k; a[i] &lt;= max);
+      @ loop_invariant I3: (k == 0 ==&gt; max == 0);
+      @ loop_invariant I4: (k &gt; 0 ==&gt; (\exists int i; 0 &lt;= i &amp;&amp; i &lt; k; max == a[i]));
+      @ loop_invariant I5: sum == (\sum int i; 0 &lt;= i &amp;&amp; i&lt; k; a[i]);
+      @ loop_invariant I6: sum &lt;= k * max;
+      @
+      @  assignable sum, max;
+      @  decreases a.length - k;
+      @*/
+    while(k &lt; a.length) {
+        if(max &lt; a[k]) {
+            max = a[k];
+        }
+        sum += a[k];
+        k++;
+    }
+}
+</code></pre>
+<p>}
+```</p>
+<h3>Introduction of Abbreviations for Named Terms</h3>
+<p><code>Menu: Proof-&gt; Introduce abbreviation for named formulas</code></p>
+<p>Before:</p>
+<p><img alt="image" src="https://user-images.githubusercontent.com/104259/216825923-3b9c60f8-0a12-4d4e-9980-424ef2143191.png" /></p>
+<p>After actions is applied:</p>
+<p><img alt="image" src="https://user-images.githubusercontent.com/104259/216825936-306b20c6-688a-40d9-954c-d274846228bb.png" /></p>
+</details>
+</summary>
+
+<a href="https://github.com/KeYProject/key/pull/3022">To Github</a>
+
+<div style="height:10em;"> <canvas id="runtime"></canvas> </div>     
+<div style="height:10em;"> <canvas id="testcases"></canvas> </div>     
+
+
+<ul>
+    
+    <li> <a href="/artiweb/3022/543711894/index.html">2023-02-06T16:39:20Z (72197.66 kB)</a> </li>
+
+</ul>
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script type="text/javascript" src="/script.js"></script>
+<script type="text/javascript">
+      const ctx = document.getElementById('runtime');
+      new Chart(ctx, {"data": {"datasets": [{"borderWidth": 1, "data": [0.12431555555555557], "label": "Runtime in Hours"}], "labels": ["2023-02-06T16:39:20Z"]}, "options": {"maintainAspectRatio": false, "responsive": true, "scales": {"y": {"beginAtZero": true}}}, "type": "bar"});
+
+      const ctx2 = document.getElementById('testcases');
+      new Chart(ctx2, {"data": {"datasets": [{"backgroundColor": "rgb(250, 220, 220)", "borderColor": "rgb(250, 192, 192)", "data": [166], "fill": true, "label": "Failures", "tension": 0.1}, {"backgroundColor": "rgb(200, 212, 212)", "borderColor": "rgb(180, 192, 192)", "data": [0], "fill": true, "label": "Errors", "tension": 0.1}, {"backgroundColor": "rgb(150, 150, 150)", "borderColor": "rgb(100, 100, 100)", "data": [95], "fill": true, "label": "Skipped", "tension": 0.1}, {"backgroundColor": "rgb(95, 212, 120)", "borderColor": "rgb(75, 192, 100)", "data": [1030], "fill": true, "label": "Success", "tension": 0.1}], "labels": ["2023-02-06T16:39:20Z"]}, "options": {"maintainAspectRatio": false, "responsive": true, "scales": {"y": {"stacked": true}}}, "type": "line"});
+</script>
+
+
+
+    </main>
+</body>
+</html>

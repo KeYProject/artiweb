@@ -20,6 +20,23 @@
     <span>Description</span>
 <details>
 <p>Continuation of https://git.key-project.org/key/key/-/merge_requests/627</p>
+<p>This branch adds a new dropdown list and button to the toolbar, used to undo the last action performed by the user.
+<img alt="image" src="/uploads/142a55d01d1decdbb5029eaf904ec8b6/image.png" /></p>
+<h1>Why?</h1>
+<p>After e.g. unsuccessfully applying a strategy, a lot of proof steps may have been added. Removing these was an annoying manual operation previously. Now, the user can just undo the last action.</p>
+<h1>Features and Impact</h1>
+<p>See screenshot above. Currently supported user actions:</p>
+<ul>
+<li>loading a proof</li>
+<li>manually applying a rule</li>
+<li>executing a strategy</li>
+<li>closing (several) goals by SMT</li>
+<li>running auto mode (either via toolbar button, or proof tree popup "Apply strategy", or sequent popup "Apply rules automatically here")</li>
+</ul>
+<h1>Open Questions</h1>
+<p>It is not clear how to limit the size of the popup menu.</p>
+<h1>Review</h1>
+<p>Should be fairly straightforward.</p>
 </details>
 </summary>
 
@@ -31,6 +48,10 @@
 
 <ul>
     
+    <li> <a href="/artiweb/3009/557805085/index.html">2023-02-15T15:53:44Z (1287.40 kB)</a> </li>
+
+    <li> <a href="/artiweb/3009/557749132/index.html">2023-02-15T15:24:58Z (1286.99 kB)</a> </li>
+
 </ul>
 
 
@@ -39,10 +60,10 @@
 <script type="text/javascript" src="/script.js"></script>
 <script type="text/javascript">
       const ctx = document.getElementById('runtime');
-      new Chart(ctx, {"data": {"datasets": [{"borderWidth": 1, "data": [], "label": "Runtime in Hours"}], "labels": []}, "options": {"maintainAspectRatio": false, "responsive": true, "scales": {"y": {"beginAtZero": true}}}, "type": "bar"});
+      new Chart(ctx, {"data": {"datasets": [{"borderWidth": 1, "data": [2.680581666666669, 3.294942777777778], "label": "Runtime in Hours"}], "labels": ["2023-02-15T15:53:44Z", "2023-02-15T15:24:58Z"]}, "options": {"maintainAspectRatio": false, "responsive": true, "scales": {"y": {"beginAtZero": true}}}, "type": "bar"});
 
       const ctx2 = document.getElementById('testcases');
-      new Chart(ctx2, {"data": {"datasets": [{"backgroundColor": "rgb(250, 220, 220)", "borderColor": "rgb(250, 192, 192)", "data": [], "fill": true, "label": "Failures", "tension": 0.1}, {"backgroundColor": "rgb(200, 212, 212)", "borderColor": "rgb(180, 192, 192)", "data": [], "fill": true, "label": "Errors", "tension": 0.1}, {"backgroundColor": "rgb(150, 150, 150)", "borderColor": "rgb(100, 100, 100)", "data": [], "fill": true, "label": "Skipped", "tension": 0.1}, {"backgroundColor": "rgb(95, 212, 120)", "borderColor": "rgb(75, 192, 100)", "data": [], "fill": true, "label": "Success", "tension": 0.1}], "labels": []}, "options": {"maintainAspectRatio": false, "responsive": true, "scales": {"y": {"stacked": true}}}, "type": "line"});
+      new Chart(ctx2, {"data": {"datasets": [{"backgroundColor": "rgb(250, 220, 220)", "borderColor": "rgb(250, 192, 192)", "data": [0, 0], "fill": true, "label": "Failures", "tension": 0.1}, {"backgroundColor": "rgb(200, 212, 212)", "borderColor": "rgb(180, 192, 192)", "data": [0, 0], "fill": true, "label": "Errors", "tension": 0.1}, {"backgroundColor": "rgb(150, 150, 150)", "borderColor": "rgb(100, 100, 100)", "data": [119, 119], "fill": true, "label": "Skipped", "tension": 0.1}, {"backgroundColor": "rgb(95, 212, 120)", "borderColor": "rgb(75, 192, 100)", "data": [3430, 3430], "fill": true, "label": "Success", "tension": 0.1}], "labels": ["2023-02-15T15:53:44Z", "2023-02-15T15:24:58Z"]}, "options": {"maintainAspectRatio": false, "responsive": true, "scales": {"y": {"stacked": true}}}, "type": "line"});
 </script>
 
 

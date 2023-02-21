@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=1024px, initial-scale=1.0">
+    <title>3031 - Overhaul of the Configuration</title>
+    <link rel="stylesheet" href="https://unpkg.com/@picocss/pico@1.*/css/pico.min.css">
+    
+    
+</head>
+<body>
+    <main class="container">
+    
+
+
+<h1>3031 - Overhaul of the Configuration</h1>
+
+<summary>
+    <span>Description</span>
+<details>
+<p>The KeY settings are in a <em>hysterical</em> and <em>historic</em> shape. </p>
+<p>This PR tries to homogenize the settings to Java POJOs using the JavaBeans standard and mechanism. The measurement include:</p>
+<ul>
+<li>Introduction of Getter/Setter</li>
+<li>Removal of <code>SettingsListener</code> in favour of <code>PropertyChangeListener</code>
+  (You can listen on individual configuration changes.)</li>
+</ul>
+<p><strong>Most of the changes</strong> results from dependencies to the <code>SettingsListener</code>, or the change of field-access to getter and setter.</p>
+<p>A next PR step will change the settings language in KeY files to a custom type-safe backward 
+compatible language. </p>
+</details>
+</summary>
+
+<a href="https://github.com/KeYProject/key/pull/3031">To Github</a>
+
+<div style="height:10em;"> <canvas id="runtime"></canvas> </div>     
+<div style="height:10em;"> <canvas id="testcases"></canvas> </div>     
+
+
+<ul>
+    
+    <li> <a href="/artiweb/3031/547068863/index.html">2023-02-08T12:39:28Z (1287.19 kB)</a> </li>
+
+    <li> <a href="/artiweb/3031/546919380/index.html">2023-02-08T10:54:23Z (33.34 kB)</a> </li>
+
+    <li> <a href="/artiweb/3031/546921172/index.html">2023-02-08T10:55:34Z (33.38 kB)</a> </li>
+
+    <li> <a href="/artiweb/3031/546926265/index.html">2023-02-08T10:59:02Z (33.36 kB)</a> </li>
+
+</ul>
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script type="text/javascript" src="/script.js"></script>
+<script type="text/javascript">
+      const ctx = document.getElementById('runtime');
+      new Chart(ctx, {"data": {"datasets": [{"borderWidth": 1, "data": [0.0004794444444444445, 0.0006936111111111111, 0.0006194444444444446, 2.7056438888888925], "label": "Runtime in Hours"}], "labels": ["2023-02-08T12:39:28Z", "2023-02-08T10:54:23Z", "2023-02-08T10:55:34Z", "2023-02-08T10:59:02Z"]}, "options": {"maintainAspectRatio": false, "responsive": true, "scales": {"y": {"beginAtZero": true}}}, "type": "bar"});
+
+      const ctx2 = document.getElementById('testcases');
+      new Chart(ctx2, {"data": {"datasets": [{"backgroundColor": "rgb(250, 220, 220)", "borderColor": "rgb(250, 192, 192)", "data": [0, 0, 0, 0], "fill": true, "label": "Failures", "tension": 0.1}, {"backgroundColor": "rgb(200, 212, 212)", "borderColor": "rgb(180, 192, 192)", "data": [0, 0, 0, 0], "fill": true, "label": "Errors", "tension": 0.1}, {"backgroundColor": "rgb(150, 150, 150)", "borderColor": "rgb(100, 100, 100)", "data": [15, 15, 15, 119], "fill": true, "label": "Skipped", "tension": 0.1}, {"backgroundColor": "rgb(95, 212, 120)", "borderColor": "rgb(75, 192, 100)", "data": [172, 172, 172, 3430], "fill": true, "label": "Success", "tension": 0.1}], "labels": ["2023-02-08T12:39:28Z", "2023-02-08T10:54:23Z", "2023-02-08T10:55:34Z", "2023-02-08T10:59:02Z"]}, "options": {"maintainAspectRatio": false, "responsive": true, "scales": {"y": {"stacked": true}}}, "type": "line"});
+</script>
+
+
+
+    </main>
+</body>
+</html>

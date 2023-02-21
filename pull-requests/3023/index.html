@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=1024px, initial-scale=1.0">
+    <title>3023 - Solving the FP completeness issues in #1723</title>
+    <link rel="stylesheet" href="https://unpkg.com/@picocss/pico@1.*/css/pico.min.css">
+    
+    
+</head>
+<body>
+    <main class="container">
+    
+
+
+<h1>3023 - Solving the FP completeness issues in #1723</h1>
+
+<summary>
+    <span>Description</span>
+<details>
+<!-- Thanks for submitting this pull request for KeY -->
+<!-- Since the project has a strict review policy, please make the -->
+<!-- reviewer's job easier by providing the necessary information -->
+<!-- in the text below. The comments may remain since they will be -->
+<!-- invisible when showing the PR. -->
+
+<h2>Related Issue</h2>
+<!-- Please remove if this PR is not related to an issue. -->
+<!-- Please add number if it is in answer to an issue. -->
+<p>This pull request answers to issue #1723.</p>
+<h2>Intended Change</h2>
+<p>Floats and doubles are currently incorrectly insufficiently handled when they appear in
+one expression.</p>
+<p>Casts need to be added and casts need to be dealt with. ...</p>
+<ul>
+<li>[x] introducing casts where needed</li>
+<li>[ ] adding rules / SMT support for such casts.</li>
+</ul>
+<h2>Type of pull request</h2>
+<!--- What types of changes does your code introduce? Put an `x` in the box(es) that apply: -->
+
+<ul>
+<li>[x] Bug fix (non-breaking change which fixes an issue)</li>
+<li>[x] Refactoring (behaviour should not change or only minimally change)</li>
+<li>[ ] New feature (non-breaking change which adds functionality)</li>
+<li>[ ] Breaking change (fix or feature that would cause existing functionality to change)</li>
+<li>[x] There are changes to the (Java) code</li>
+<li>[x] There are changes to the taclet rule base</li>
+<li>[ ] There are changes to the deployment/CI infrastructure (gradle, github, ...)</li>
+<li>[ ] Other: </li>
+</ul>
+<h2>Ensuring quality</h2>
+<ul>
+<li>[x] I made sure that introduced/changed code has been well documented (javadoc).</li>
+<li>[x] I added new test case(s) for new functionality.</li>
+<li>[x] I have tested the feature as follows: small 2-liners</li>
+<li>[ ] I have checked that runtime performance has not deteriorated  </li>
+</ul>
+<h2>Additional information and contact(s)</h2>
+<p>It's still  W I P.</p>
+<p>@samysweb </p>
+<!-- Add further information to help the reviewer understand the request.
+     Leave empty if you are sure the reviewer does not need more
+
+     Who apart from yourself is involved in this pull request?
+     Use @mentions to refer to them here -->
+
+<!-- DRAFT MODE: Please note that on the button to submit this pull
+     request you can select between submitting a merge-ready request
+     or one in draft mode (still evolving). 
+     Please use the draft mode unless you think that your proposal
+     should be brought onto master in the current form. -->
+
+<p>The contributions within this pull request will be licensed under GPL2-or-later wihtin KeY.</p>
+</details>
+</summary>
+
+<a href="https://github.com/KeYProject/key/pull/3023">To Github</a>
+
+<div style="height:10em;"> <canvas id="runtime"></canvas> </div>     
+<div style="height:10em;"> <canvas id="testcases"></canvas> </div>     
+
+
+<ul>
+    
+    <li> <a href="/artiweb/3023/542402825/index.html">2023-02-05T17:09:36Z (1286.33 kB)</a> </li>
+
+</ul>
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script type="text/javascript" src="/script.js"></script>
+<script type="text/javascript">
+      const ctx = document.getElementById('runtime');
+      new Chart(ctx, {"data": {"datasets": [{"borderWidth": 1, "data": [2.7128622222222254], "label": "Runtime in Hours"}], "labels": ["2023-02-05T17:09:36Z"]}, "options": {"maintainAspectRatio": false, "responsive": true, "scales": {"y": {"beginAtZero": true}}}, "type": "bar"});
+
+      const ctx2 = document.getElementById('testcases');
+      new Chart(ctx2, {"data": {"datasets": [{"backgroundColor": "rgb(250, 220, 220)", "borderColor": "rgb(250, 192, 192)", "data": [0], "fill": true, "label": "Failures", "tension": 0.1}, {"backgroundColor": "rgb(200, 212, 212)", "borderColor": "rgb(180, 192, 192)", "data": [0], "fill": true, "label": "Errors", "tension": 0.1}, {"backgroundColor": "rgb(150, 150, 150)", "borderColor": "rgb(100, 100, 100)", "data": [119], "fill": true, "label": "Skipped", "tension": 0.1}, {"backgroundColor": "rgb(95, 212, 120)", "borderColor": "rgb(75, 192, 100)", "data": [3422], "fill": true, "label": "Success", "tension": 0.1}], "labels": ["2023-02-05T17:09:36Z"]}, "options": {"maintainAspectRatio": false, "responsive": true, "scales": {"y": {"stacked": true}}}, "type": "line"});
+</script>
+
+
+
+    </main>
+</body>
+</html>

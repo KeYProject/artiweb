@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=1024px, initial-scale=1.0">
+    <title>3034 - Draft: Formatter</title>
+    <link rel="stylesheet" href="https://unpkg.com/@picocss/pico@1.*/css/pico.min.css">
+    
+    
+</head>
+<body>
+    <main class="container">
+    
+
+
+<h1>3034 - Draft: Formatter</h1>
+
+<summary>
+    <span>Description</span>
+<details>
+<p>The current Java formatter used in the sequent view is a mess. This PR tries to improve on that.</p>
+<p>Current changes:
+* Remove <code>IOException</code> out of the interface of all pretty printing functions since it is never thrown.</p>
+</details>
+</summary>
+
+<a href="https://github.com/KeYProject/key/pull/3034">To Github</a>
+
+<div style="height:10em;"> <canvas id="runtime"></canvas> </div>     
+<div style="height:10em;"> <canvas id="testcases"></canvas> </div>     
+
+
+<ul>
+    
+    <li> <a href="/artiweb/3034/551416434/index.html">2023-02-10T20:42:10Z (1287.39 kB)</a> </li>
+
+    <li> <a href="/artiweb/3034/551484246/index.html">2023-02-10T21:36:58Z (1287.60 kB)</a> </li>
+
+    <li> <a href="/artiweb/3034/551424896/index.html">2023-02-10T20:49:28Z (1288.12 kB)</a> </li>
+
+    <li> <a href="/artiweb/3034/551441409/index.html">2023-02-10T21:02:20Z (1287.33 kB)</a> </li>
+
+    <li> <a href="/artiweb/3034/551484870/index.html">2023-02-10T21:37:36Z (1287.95 kB)</a> </li>
+
+    <li> <a href="/artiweb/3034/551422708/index.html">2023-02-10T20:47:37Z (1287.12 kB)</a> </li>
+
+</ul>
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script type="text/javascript" src="/script.js"></script>
+<script type="text/javascript">
+      const ctx = document.getElementById('runtime');
+      new Chart(ctx, {"data": {"datasets": [{"borderWidth": 1, "data": [2.7099494444444474, 2.729626666666669, 2.7388447222222267, 2.700639722222226, 3.0318252777777785, 3.247994166666671], "label": "Runtime in Hours"}], "labels": ["2023-02-10T20:42:10Z", "2023-02-10T21:36:58Z", "2023-02-10T20:49:28Z", "2023-02-10T21:02:20Z", "2023-02-10T21:37:36Z", "2023-02-10T20:47:37Z"]}, "options": {"maintainAspectRatio": false, "responsive": true, "scales": {"y": {"beginAtZero": true}}}, "type": "bar"});
+
+      const ctx2 = document.getElementById('testcases');
+      new Chart(ctx2, {"data": {"datasets": [{"backgroundColor": "rgb(250, 220, 220)", "borderColor": "rgb(250, 192, 192)", "data": [0, 0, 0, 0, 0, 0], "fill": true, "label": "Failures", "tension": 0.1}, {"backgroundColor": "rgb(200, 212, 212)", "borderColor": "rgb(180, 192, 192)", "data": [0, 0, 0, 0, 0, 0], "fill": true, "label": "Errors", "tension": 0.1}, {"backgroundColor": "rgb(150, 150, 150)", "borderColor": "rgb(100, 100, 100)", "data": [119, 119, 119, 119, 119, 119], "fill": true, "label": "Skipped", "tension": 0.1}, {"backgroundColor": "rgb(95, 212, 120)", "borderColor": "rgb(75, 192, 100)", "data": [3430, 3430, 3430, 3430, 3430, 3430], "fill": true, "label": "Success", "tension": 0.1}], "labels": ["2023-02-10T20:42:10Z", "2023-02-10T21:36:58Z", "2023-02-10T20:49:28Z", "2023-02-10T21:02:20Z", "2023-02-10T21:37:36Z", "2023-02-10T20:47:37Z"]}, "options": {"maintainAspectRatio": false, "responsive": true, "scales": {"y": {"stacked": true}}}, "type": "line"});
+</script>
+
+
+
+    </main>
+</body>
+</html>
