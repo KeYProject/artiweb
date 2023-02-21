@@ -214,5 +214,5 @@ if __name__ == '__main__':
                 generate_pull_request(pr)
             except Exception as e:
                 print(e)
-                raise e
+                #raise e
     index()
