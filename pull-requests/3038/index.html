@@ -4,41 +4,31 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=1024px, initial-scale=1.0">
-    <title>3038 - Allow user to select any installed LaF</title>
+    <title>#3038 - Allow user to select any installed LaF</title>
     <link rel="stylesheet" href="https://unpkg.com/@picocss/pico@1.*/css/pico.min.css">
     
     
 </head>
 <body>
     <main class="container">
-    
+    <section>
+<h1>#3038 - Allow user to select any installed LaF</h1>
+    <summary>
+        <p><a href="https://github.com/KeYProject/key/pull/3038">Github</a></p>
+        <span>Description</span>
+        <details><p>This is another style available by default.</p>
+<p>EDIT: Code has been adapted as suggested by @wadoon.</p></details>
+    </summary>
+</section>
+
+<section>
+    <h3>Artifacts</h3>
+    <ul><li><a href="562565949/index.html">18. Feb 2023 12:50</a> <small>(3406.71 kB large)</small></li><li><a href="561030105/index.html">17. Feb 2023 10:18</a> <small>(1286.95 kB large)</small></li></ul>
+</section>
 
 
-<h1>3038 - Allow user to select any installed LaF</h1>
-
-<summary>
-    <span>Description</span>
-<details>
-<p>This is another style available by default.</p>
-<p>EDIT: Code has been adapted as suggested by @wadoon.</p>
-</details>
-</summary>
-
-<a href="https://github.com/KeYProject/key/pull/3038">To Github</a>
-
-<div style="height:10em;"> <canvas id="runtime"></canvas> </div>     
-<div style="height:10em;"> <canvas id="testcases"></canvas> </div>     
-
-
-<ul>
-    
-    <li> <a href="/artiweb/3038/562565949/index.html">2023-02-18T12:50:34Z (3406.71 kB)</a> </li>
-
-    <li> <a href="/artiweb/3038/561030105/index.html">2023-02-17T10:18:03Z (1286.95 kB)</a> </li>
-
-</ul>
-
-
+<div style="height:10em;"><canvas id="runtime"></canvas></div>     
+<div style="height:10em;"><canvas id="testcases"></canvas></div>     
 
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 <script type="text/javascript" src="/script.js"></script>
@@ -49,9 +39,6 @@
       const ctx2 = document.getElementById('testcases');
       new Chart(ctx2, {"data": {"datasets": [{"backgroundColor": "rgb(250, 220, 220)", "borderColor": "rgb(250, 192, 192)", "data": [0, 1], "fill": true, "label": "Failures", "tension": 0.1}, {"backgroundColor": "rgb(200, 212, 212)", "borderColor": "rgb(180, 192, 192)", "data": [0, 0], "fill": true, "label": "Errors", "tension": 0.1}, {"backgroundColor": "rgb(150, 150, 150)", "borderColor": "rgb(100, 100, 100)", "data": [119, 119], "fill": true, "label": "Skipped", "tension": 0.1}, {"backgroundColor": "rgb(95, 212, 120)", "borderColor": "rgb(75, 192, 100)", "data": [3430, 3429], "fill": true, "label": "Success", "tension": 0.1}], "labels": ["2023-02-18T12:50:34Z", "2023-02-17T10:18:03Z"]}, "options": {"maintainAspectRatio": false, "responsive": true, "scales": {"y": {"stacked": true}}}, "type": "line"});
 </script>
-
-
-
     </main>
 </body>
 </html>

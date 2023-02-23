@@ -4,22 +4,19 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=1024px, initial-scale=1.0">
-    <title>3021 - Use KeYParser.g4 for parsing proof scripts</title>
+    <title>#3021 - Use KeYParser.g4 for parsing proof scripts</title>
     <link rel="stylesheet" href="https://unpkg.com/@picocss/pico@1.*/css/pico.min.css">
     
     
 </head>
 <body>
     <main class="container">
-    
-
-
-<h1>3021 - Use KeYParser.g4 for parsing proof scripts</h1>
-
-<summary>
-    <span>Description</span>
-<details>
-<p>This MR get rid of the hand-written parser for proof scripts and uses a few rules in KeYParser.g4 instead.</p>
+    <section>
+<h1>#3021 - Use KeYParser.g4 for parsing proof scripts</h1>
+    <summary>
+        <p><a href="https://github.com/KeYProject/key/pull/3021">Github</a></p>
+        <span>Description</span>
+        <details><p>This MR get rid of the hand-written parser for proof scripts and uses a few rules in KeYParser.g4 instead.</p>
 <p>Since the start of proof scripts, the KeYParser has changed and became an ANTLR4 grammar. This allows us to easily write grammar for our proof scripts. (Or just copy the few rules from Sarah and mine proof script parser). This eliminates the handwritten proof script parser with the following benefits:</p>
 <ol>
 <li>Proof Scripts are a first-class citizen in KeY files. You do not need to put your proof script into a string literal:
@@ -45,23 +42,18 @@
 </li>
 </ol>
 <p>Tried to achieve backwards-compatibility. If the proof script is given as a string, the parsing is delayed until the execution. The same is valid for arguments. </p>
-<p>Note there is a difference between <code>f(x)</code> and "f(x)". The first one is parsed directly as a term and cannot be passed to non-term arguments. The second one is parsed as a string. By meta-information on commands, the string is lazily converted to a term if necessary.</p>
-</details>
-</summary>
+<p>Note there is a difference between <code>f(x)</code> and "f(x)". The first one is parsed directly as a term and cannot be passed to non-term arguments. The second one is parsed as a string. By meta-information on commands, the string is lazily converted to a term if necessary.</p></details>
+    </summary>
+</section>
 
-<a href="https://github.com/KeYProject/key/pull/3021">To Github</a>
-
-<div style="height:10em;"> <canvas id="runtime"></canvas> </div>     
-<div style="height:10em;"> <canvas id="testcases"></canvas> </div>     
-
-
-<ul>
-    
-    <li> <a href="/artiweb/3021/542331158/index.html">2023-02-05T14:36:06Z (32.76 kB)</a> </li>
-
-</ul>
+<section>
+    <h3>Artifacts</h3>
+    <ul><li><a href="542331158/index.html">05. Feb 2023 14:36</a> <small>(32.76 kB large)</small></li></ul>
+</section>
 
 
+<div style="height:10em;"><canvas id="runtime"></canvas></div>     
+<div style="height:10em;"><canvas id="testcases"></canvas></div>     
 
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 <script type="text/javascript" src="/script.js"></script>
@@ -72,9 +64,6 @@
       const ctx2 = document.getElementById('testcases');
       new Chart(ctx2, {"data": {"datasets": [{"backgroundColor": "rgb(250, 220, 220)", "borderColor": "rgb(250, 192, 192)", "data": [0], "fill": true, "label": "Failures", "tension": 0.1}, {"backgroundColor": "rgb(200, 212, 212)", "borderColor": "rgb(180, 192, 192)", "data": [0], "fill": true, "label": "Errors", "tension": 0.1}, {"backgroundColor": "rgb(150, 150, 150)", "borderColor": "rgb(100, 100, 100)", "data": [15], "fill": true, "label": "Skipped", "tension": 0.1}, {"backgroundColor": "rgb(95, 212, 120)", "borderColor": "rgb(75, 192, 100)", "data": [167], "fill": true, "label": "Success", "tension": 0.1}], "labels": ["2023-02-05T14:36:06Z"]}, "options": {"maintainAspectRatio": false, "responsive": true, "scales": {"y": {"stacked": true}}}, "type": "line"});
 </script>
-
-
-
     </main>
 </body>
 </html>

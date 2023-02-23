@@ -4,38 +4,30 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=1024px, initial-scale=1.0">
-    <title>3041 - Report better error for missing model method</title>
+    <title>#3041 - Report better error for missing model method</title>
     <link rel="stylesheet" href="https://unpkg.com/@picocss/pico@1.*/css/pico.min.css">
     
     
 </head>
 <body>
     <main class="container">
-    
+    <section>
+<h1>#3041 - Report better error for missing model method</h1>
+    <summary>
+        <p><a href="https://github.com/KeYProject/key/pull/3041">Github</a></p>
+        <span>Description</span>
+        <details><p>Fixes #1692. The null value is checked later on, leading to the construction of an exception with location information.</p></details>
+    </summary>
+</section>
+
+<section>
+    <h3>Artifacts</h3>
+    <ul><li><a href="568120239/index.html">22. Feb 2023 16:30</a> <small>(3410.41 kB large)</small></li></ul>
+</section>
 
 
-<h1>3041 - Report better error for missing model method</h1>
-
-<summary>
-    <span>Description</span>
-<details>
-<p>Fixes #1692. The null value is checked later on, leading to the construction of an exception with location information.</p>
-</details>
-</summary>
-
-<a href="https://github.com/KeYProject/key/pull/3041">To Github</a>
-
-<div style="height:10em;"> <canvas id="runtime"></canvas> </div>     
-<div style="height:10em;"> <canvas id="testcases"></canvas> </div>     
-
-
-<ul>
-    
-    <li> <a href="/artiweb/3041/568120239/index.html">2023-02-22T16:30:24Z (3410.41 kB)</a> </li>
-
-</ul>
-
-
+<div style="height:10em;"><canvas id="runtime"></canvas></div>     
+<div style="height:10em;"><canvas id="testcases"></canvas></div>     
 
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 <script type="text/javascript" src="/script.js"></script>
@@ -46,9 +38,6 @@
       const ctx2 = document.getElementById('testcases');
       new Chart(ctx2, {"data": {"datasets": [{"backgroundColor": "rgb(250, 220, 220)", "borderColor": "rgb(250, 192, 192)", "data": [1], "fill": true, "label": "Failures", "tension": 0.1}, {"backgroundColor": "rgb(200, 212, 212)", "borderColor": "rgb(180, 192, 192)", "data": [0], "fill": true, "label": "Errors", "tension": 0.1}, {"backgroundColor": "rgb(150, 150, 150)", "borderColor": "rgb(100, 100, 100)", "data": [119], "fill": true, "label": "Skipped", "tension": 0.1}, {"backgroundColor": "rgb(95, 212, 120)", "borderColor": "rgb(75, 192, 100)", "data": [3429], "fill": true, "label": "Success", "tension": 0.1}], "labels": ["2023-02-22T16:30:24Z"]}, "options": {"maintainAspectRatio": false, "responsive": true, "scales": {"y": {"stacked": true}}}, "type": "line"});
 </script>
-
-
-
     </main>
 </body>
 </html>

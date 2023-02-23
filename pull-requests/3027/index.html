@@ -4,45 +4,33 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=1024px, initial-scale=1.0">
-    <title>3027 - Draft: Overflow checking</title>
+    <title>#3027 - Draft: Overflow checking</title>
     <link rel="stylesheet" href="https://unpkg.com/@picocss/pico@1.*/css/pico.min.css">
     
     
 </head>
 <body>
     <main class="container">
-    
-
-
-<h1>3027 - Draft: Overflow checking</h1>
-
-<summary>
-    <span>Description</span>
-<details>
-<p>This is a follow up to #3014.</p>
+    <section>
+<h1>#3027 - Draft: Overflow checking</h1>
+    <summary>
+        <p><a href="https://github.com/KeYProject/key/pull/3027">Github</a></p>
+        <span>Description</span>
+        <details><p>This is a follow up to #3014.</p>
 <p>This MR implements overflow checking of all arithmetic operations in code by opening a new goal where the absence of overflows has to be proven.</p>
 <p>Furthermore, it deduplicates and rearranges a lot of rules.</p>
-<p>There are some todos where I was unsure, if you know an answer to any of them please add a comment.</p>
-</details>
-</summary>
+<p>There are some todos where I was unsure, if you know an answer to any of them please add a comment.</p></details>
+    </summary>
+</section>
 
-<a href="https://github.com/KeYProject/key/pull/3027">To Github</a>
-
-<div style="height:10em;"> <canvas id="runtime"></canvas> </div>     
-<div style="height:10em;"> <canvas id="testcases"></canvas> </div>     
-
-
-<ul>
-    
-    <li> <a href="/artiweb/3027/543802216/index.html">2023-02-06T17:34:25Z (7268.34 kB)</a> </li>
-
-    <li> <a href="/artiweb/3027/543826278/index.html">2023-02-06T17:50:04Z (7268.65 kB)</a> </li>
-
-    <li> <a href="/artiweb/3027/543815079/index.html">2023-02-06T17:42:52Z (7268.59 kB)</a> </li>
-
-</ul>
+<section>
+    <h3>Artifacts</h3>
+    <ul><li><a href="543826278/index.html">06. Feb 2023 17:50</a> <small>(7268.65 kB large)</small></li><li><a href="543815079/index.html">06. Feb 2023 17:42</a> <small>(7268.59 kB large)</small></li><li><a href="543802216/index.html">06. Feb 2023 17:34</a> <small>(7268.34 kB large)</small></li></ul>
+</section>
 
 
+<div style="height:10em;"><canvas id="runtime"></canvas></div>     
+<div style="height:10em;"><canvas id="testcases"></canvas></div>     
 
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 <script type="text/javascript" src="/script.js"></script>
@@ -53,9 +41,6 @@
       const ctx2 = document.getElementById('testcases');
       new Chart(ctx2, {"data": {"datasets": [{"backgroundColor": "rgb(250, 220, 220)", "borderColor": "rgb(250, 192, 192)", "data": [166, 166, 166], "fill": true, "label": "Failures", "tension": 0.1}, {"backgroundColor": "rgb(200, 212, 212)", "borderColor": "rgb(180, 192, 192)", "data": [0, 0, 0], "fill": true, "label": "Errors", "tension": 0.1}, {"backgroundColor": "rgb(150, 150, 150)", "borderColor": "rgb(100, 100, 100)", "data": [95, 95, 95], "fill": true, "label": "Skipped", "tension": 0.1}, {"backgroundColor": "rgb(95, 212, 120)", "borderColor": "rgb(75, 192, 100)", "data": [1025, 1025, 1025], "fill": true, "label": "Success", "tension": 0.1}], "labels": ["2023-02-06T17:34:25Z", "2023-02-06T17:50:04Z", "2023-02-06T17:42:52Z"]}, "options": {"maintainAspectRatio": false, "responsive": true, "scales": {"y": {"stacked": true}}}, "type": "line"});
 </script>
-
-
-
     </main>
 </body>
 </html>
