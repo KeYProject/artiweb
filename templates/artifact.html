@@ -1,16 +1,17 @@
 {% extends "main.html" %}
-{% block title %}{{ pr.number }} - {{ pr.title }}{% endblock %}
+{% block title %}#{{ pr.number }} - {{ pr.title }}{% endblock %}
 {% block content %}
-<h1>{{ pr.number }} - {{ pr.title }}</h1>
+<section>
+    <h1>#{{ pr.number }} - {{ pr.title }}</h1>
+    <span>Build time: {{artifact.created_at_pretty}}</span>
+</section>
 
-<pre>
-{{artifact.created_at}}
-</pre>
-
-{{indexes}}
-<ul>
-    {% for ind in indexes %}
-    <li><a href="{{ind}}">{{ind}}</a></li>
-    {% endfor %}
-</ul>
-{% endblock %}
+<section>
+    <h3>Tests</h3>
+    <ul>
+        {%- for test in tests -%}
+            <li><a href="{{test.path}}">{{test.project}}:{{test.name}}</a> [{{test.statistics.success}} succeeded, {{test.statistics.failures}} failed, {{test.statistics.skipped}} skipped]</li>
+        {%- endfor -%}
+    </ul>
+</section>
+{%- endblock %}
