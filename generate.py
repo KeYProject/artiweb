@@ -4,6 +4,8 @@ from collections import namedtuple
 import addict
 import json
 import os
+import re
+from datetime import datetime
 
 from jinja2 import Environment, FileSystemLoader, select_autoescape
 from pathlib import Path
@@ -22,16 +24,16 @@ def mymarkdown(txt):
 env.filters['markdown'] = mymarkdown
 
 PULL_REQUESTS = []
-ARTIFACTS = []
 
 
 def index():
     template = env.get_template("index.html")
     target = TARGET / "index.html"
     target.parent.mkdir(exist_ok=True)
+    requests = sorted(PULL_REQUESTS, key=lambda x: x.number)
 
     with target.open('w') as fp:
-        fp.write(template.render(pullrequests=PULL_REQUESTS))
+        fp.write(template.render(pullrequests=requests))
 
 
 def read_meta(folder: Path):
@@ -47,9 +49,11 @@ def generate_pull_request(pull_request: Path):
     target = pull_request / "index.html"
     target.parent.mkdir(exist_ok=True)
 
-    artifacts = [generate_artifact(pull_request, arti_folder)
+    artifacts = [generate_artifact(data, arti_folder)
                  for arti_folder in pull_request.glob("*/")
                  if arti_folder.is_dir()]
+                 
+    artifacts = sorted(artifacts, key=lambda x: x.created_at)
 
     total_runtimes = {arti_folder.name:  junit_statistics(arti_folder)
                       for arti_folder in pull_request.glob("*/")
@@ -185,25 +189,36 @@ def junit_statistics(folder: Path):
     return JUnitStat(total_time, number_test_cases, skipped, error, failures, success)
 
 
-def generate_artifact(pull_request, artifact: Path):
-    template = env.get_template("artifact.html")
-    target = artifact / "index.html"
-    data = read_meta(artifact)
-    ARTIFACTS.append(data)
-
+def generate_artifact(pull_request, path: Path):
+    target = path / "index.html"
+    path.mkdir(exist_ok=True)
+    artifact = read_meta(path)
+    t = datetime.strptime(artifact.created_at, "%Y-%m-%dT%H:%M:%SZ")
+    artifact.created_at_pretty = t.strftime("%d. %b %Y %H:%M")
+    
     # find all index.html
-    prefix = len(str(target.parent))
-    # indexes = [x[prefix+1:] for x in find_files(target.parent, "index.html")]
-    indexes = list(artifact.rglob("index.html"))
-    if "index.html" in indexes:
-        indexes.remove("index.html")
+    indexes = [p for p in path.rglob("index.html")]
+    indexes.remove(target)
+    tests = [{"path": p.relative_to(path), "full_path": p} for p in indexes]
 
-    target.parent.mkdir(exist_ok=True)
+    for test in tests:
+        p = str(test["path"]).replace("\\", "/")
+        match = re.match("^([^/]+)/build/reports/tests/([^/]+)/index\.html$", p)
+        if match:
+            project = match.group(1)
+            name = match.group(2)
+            stat_path = path / project / "build" / "test-results" / name
+            statistics = junit_statistics(stat_path)
 
+            test["name"] = name
+            test["statistics"] = statistics
+            test["project"] = project
+
+    template = env.get_template("artifact.html")
     with target.open('w') as fp:
         fp.write(
-            template.render(pr=pull_request, artifact=data, indexes=indexes))
-    return data
+            template.render(pr=pull_request, artifact=artifact, tests=tests))
+    return artifact
 
 
 if __name__ == '__main__':

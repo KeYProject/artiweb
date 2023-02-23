@@ -3,13 +3,13 @@
 {% block content %}
 <h1>Index</h1>
 <p class="important">
-    Welcome to my awesome homepage.
+    Welcome to artiweb.
 </p>
 
 <ul>
-    {% for pr in pullrequests %}
-    <li><a href="/artiweb/{{pr['number']}}/">{{pr['title']}}</a> </li>
-    {% endfor %}
+    {%- for pr in pullrequests | reverse -%}
+        <li><a href="{{pr.number}}/index.html">[#{{pr.number}}] {{pr.title}}</a></li>
+    {%- endfor -%}
 </ul>
 
 {% endblock %}
