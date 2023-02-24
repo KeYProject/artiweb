@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=1024px, initial-scale=1.0">
+    <title>#3029 - JUnit XML files for RunAllProofs</title>
+    <link rel="stylesheet" href="https://unpkg.com/@picocss/pico@1.*/css/pico.min.css">
+    
+    
+</head>
+<body>
+    <main class="container">
+    <section>
+<h1>#3029 - JUnit XML files for RunAllProofs</h1>
+    <summary>
+        <p><a href="https://github.com/KeYProject/key/pull/3029">Github</a></p>
+        <span>Description</span>
+        <details><p>This PR extends the RunAllProofs facility for the generation of JUnit files. Each test entry in <code>automaticJavaDL.txt</code> or <code>automaticInfflow.txt</code> results into an entry in a JUnit file. This allows later a processing of these tests in Jenkins/Gitlab and Co. </p>
+<p>Further changes are:
+* Achieve a better catching of the stdout and stderr during the prove for inserting it into the JUnit files
+* Upload the statistics as build artifacts </p></details>
+    </summary>
+</section>
+
+<section>
+    <h3>Artifacts</h3>
+    <ul><li><a href="552851759/index.html">12. Feb 2023 18:35</a> <small>(1890.05 kB large)</small></li><li><a href="550740148/index.html">10. Feb 2023 12:45</a> <small>(1891.15 kB large)</small></li><li><a href="550040134/index.html">10. Feb 2023 01:34</a> <small>(2249.67 kB large)</small></li><li><a href="549451667/index.html">09. Feb 2023 17:31</a> <small>(51.21 kB large)</small></li><li><a href="548193771/index.html">09. Feb 2023 01:27</a> <small>(1699.31 kB large)</small></li><li><a href="548118929/index.html">09. Feb 2023 00:09</a> <small>(1698.73 kB large)</small></li><li><a href="548079633/index.html">08. Feb 2023 23:30</a> <small>(51.17 kB large)</small></li><li><a href="548069404/index.html">08. Feb 2023 23:20</a> <small>(51.19 kB large)</small></li><li><a href="548066136/index.html">08. Feb 2023 23:18</a> <small>(51.16 kB large)</small></li><li><a href="548059530/index.html">08. Feb 2023 23:13</a> <small>(51.15 kB large)</small></li><li><a href="548057347/index.html">08. Feb 2023 23:11</a> <small>(51.13 kB large)</small></li><li><a href="548049918/index.html">08. Feb 2023 23:03</a> <small>(32.80 kB large)</small></li><li><a href="548048723/index.html">08. Feb 2023 23:02</a> <small>(32.83 kB large)</small></li><li><a href="548044093/index.html">08. Feb 2023 22:58</a> <small>(32.82 kB large)</small></li><li><a href="548042688/index.html">08. Feb 2023 22:56</a> <small>(32.82 kB large)</small></li><li><a href="548027394/index.html">08. Feb 2023 22:43</a> <small>(32.78 kB large)</small></li><li><a href="548025716/index.html">08. Feb 2023 22:42</a> <small>(32.79 kB large)</small></li></ul>
+</section>
+
+
+<div style="height:10em;"><canvas id="runtime"></canvas></div>     
+<div style="height:10em;"><canvas id="testcases"></canvas></div>     
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script type="text/javascript" src="/script.js"></script>
+<script type="text/javascript">
+      const ctx = document.getElementById('runtime');
+      new Chart(ctx, {"data": {"datasets": [{"borderWidth": 1, "data": [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0], "label": "Runtime in Hours"}], "labels": ["08. Feb 2023 22:42", "08. Feb 2023 22:43", "08. Feb 2023 22:56", "08. Feb 2023 22:58", "08. Feb 2023 23:02", "08. Feb 2023 23:03", "08. Feb 2023 23:11", "08. Feb 2023 23:13", "08. Feb 2023 23:18", "08. Feb 2023 23:20", "08. Feb 2023 23:30", "09. Feb 2023 00:09", "09. Feb 2023 01:27", "09. Feb 2023 17:31", "10. Feb 2023 01:34", "10. Feb 2023 12:45", "12. Feb 2023 18:35"]}, "options": {"maintainAspectRatio": false, "responsive": true, "scales": {"y": {"beginAtZero": true}}}, "type": "bar"});
+
+      const ctx2 = document.getElementById('testcases');
+      new Chart(ctx2, {"data": {"datasets": [{"backgroundColor": "rgb(250, 220, 220)", "borderColor": "rgb(250, 192, 192)", "data": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], "fill": true, "label": "Failures", "tension": 0.1}, {"backgroundColor": "rgb(200, 212, 212)", "borderColor": "rgb(180, 192, 192)", "data": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], "fill": true, "label": "Errors", "tension": 0.1}, {"backgroundColor": "rgb(150, 150, 150)", "borderColor": "rgb(100, 100, 100)", "data": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], "fill": true, "label": "Skipped", "tension": 0.1}, {"backgroundColor": "rgb(95, 212, 120)", "borderColor": "rgb(75, 192, 100)", "data": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], "fill": true, "label": "Success", "tension": 0.1}], "labels": ["08. Feb 2023 22:42", "08. Feb 2023 22:43", "08. Feb 2023 22:56", "08. Feb 2023 22:58", "08. Feb 2023 23:02", "08. Feb 2023 23:03", "08. Feb 2023 23:11", "08. Feb 2023 23:13", "08. Feb 2023 23:18", "08. Feb 2023 23:20", "08. Feb 2023 23:30", "09. Feb 2023 00:09", "09. Feb 2023 01:27", "09. Feb 2023 17:31", "10. Feb 2023 01:34", "10. Feb 2023 12:45", "12. Feb 2023 18:35"]}, "options": {"maintainAspectRatio": false, "responsive": true, "scales": {"y": {"stacked": true}}}, "type": "line"});
+</script>
+    </main>
+</body>
+</html>
