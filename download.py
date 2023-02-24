@@ -21,7 +21,7 @@ GITHUB_TOKEN = os.environ.get('GITHUB_TOKEN', '')
 PRIVATE_TOKEN = os.environ.get('PRIVATE_TOKEN', '')
 
 
-def updatePullRequest(pr):
+def updatePullRequest(pr, artifacts):
     repo = pr.head.repo.id
     branch = pr.head.ref
 
@@ -30,11 +30,12 @@ def updatePullRequest(pr):
     with (folder / "meta.json").open('w') as fp:
         json.dump(pr, fp)
 
+    pr_artifacts = []
+
     for artifact in artifacts:
         arti_head = artifact.workflow_run.head_repository_id
-        print(arti_head, repo,  artifact.workflow_run.head_branch, branch)
         if arti_head == repo and artifact.workflow_run.head_branch == branch:
-            print("Found artifact", artifact.id, " for PR", pr.number)
+            pr_artifacts.append(artifact.id)
             target = folder / str(artifact.id)
             filename = temp / (str(artifact.id) + ".zip")
             zipUrl = artifact.archive_download_url
@@ -42,23 +43,24 @@ def updatePullRequest(pr):
 
             with (target / 'meta.json').open('w') as fp:
                 json.dump(artifact, fp)
+    print("Artifacts for", pr.number, "found:", pr_artifacts)
 
 
-def downloadArtifact(targetFolder: Path, targetFile: Path, zipUrl):
+def downloadArtifact(targetFolder: Path, tmpFile: Path, zipUrl):
     if not targetFolder.exists():
-        if not targetFile.exists():
-            mkdirSafe(targetFile.parent)
-            with targetFile.open('wb') as f:
-                r = requests.get(zipUrl, headers={
-                                 "Authorization": f"token {PRIVATE_TOKEN}"})
+        if not tmpFile.exists():
+            mkdirSafe(tmpFile.parent)
+            with tmpFile.open('wb') as f:
+                r = requests.get(zipUrl, headers={"Authorization": f"token {PRIVATE_TOKEN}"})
+                r.raise_for_status()
                 f.write(r.content)
         try:
             mkdirSafe(targetFolder)
-            with zipfile.ZipFile(targetFile, 'r') as zip_ref:
+            with zipfile.ZipFile(tmpFile, 'r') as zip_ref:
                 zip_ref.extractall(targetFolder)
-            targetFile.unlink()
+            tmpFile.unlink()
         except zipfile.BadZipFile as e: 
-            print(e, targetFile)
+            print("Failed to open zip file:", e, tmpFile)
 
 
 def mkdirSafe(f):
@@ -68,40 +70,37 @@ def mkdirSafe(f):
         pass
 
 
-pullRequests = []
-artifacts = []
-
-
-def get_json(path, **args):
-    url = f"https://api.github.com/repos/{OWNER}/{REPO}/{path}".format(**args)
-    print(url)
-    j = requests.get(url).json()
+def get_json(path, args):
+    url = f"https://api.github.com/repos/{OWNER}/{REPO}/{path}"
+    print("Fetching", url, "with args", args)
+    r = requests.get(url, args)
+    r.raise_for_status()
+    j = r.json()
     if isinstance(j, list):
         return list(map(Dict, j))
     else:
         return Dict(j)
 
 
-def get_json_all(url, per_page=100, results_key='artifacts', **kwargs):
-    sfx = "&per_page={per_page}&page={page}"
-    kwargs['page'] = 0
-    kwargs['per_page'] = per_page
+def get_json_all(path, args, extract=lambda x: x):
+    args['page'] = 1
+    args['per_page'] = 100
     results = []
     while True:
-        kwargs['page'] += 1
-        page = get_json(url + sfx, **kwargs)
-        if page[results_key]:
-            results += page[results_key]
+        page = get_json(path, args)
+        e = extract(page)
+        if e:
+            results += e
         else:
             return results
+        args['page'] += 1
 
 
 def main():
-    global pullRequests, artifacts
-    pullRequests = get_json('pulls')
-    print(f"Remote PullRequests {len(pullRequests)}")
-    artifacts = get_json_all(
-        "actions/artifacts?name={artiname}", artiname=ARTIFACT)
+    pullRequests = get_json_all('pulls', {"state": "all"})
+    print("Found", len(pullRequests), "pull requests")
+
+    artifacts = get_json_all("actions/artifacts", {"name": str(ARTIFACT)}, lambda p: p["artifacts"])
     print(f"Number of artifacts: {len(artifacts)}")
 
     mkdirSafe("meta")
@@ -112,10 +111,9 @@ def main():
         json.dump(artifacts, fp)
 
     mkdirSafe(temp)
-
+        
     for pr in pullRequests:
-        print("Update pull request:", pr)
-        updatePullRequest(pr)
-
+        print("Updating pull request:", pr.number)
+        updatePullRequest(pr, artifacts)
 
 main()

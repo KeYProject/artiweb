@@ -198,7 +198,8 @@ def generate_artifact(pull_request, path: Path):
     
     # find all index.html
     indexes = [p for p in path.rglob("index.html")]
-    indexes.remove(target)
+    if target  in indexes:
+        indexes.remove(target)
     tests = [{"path": p.relative_to(path), "full_path": p} for p in indexes]
 
     for test in tests:
