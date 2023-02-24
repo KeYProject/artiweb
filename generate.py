@@ -201,7 +201,7 @@ def find_tests(path: Path):
 
             html_file_path = html_files_path / name / "index.html"
             if html_file_path.is_file():
-                test.report_path = html_file_path
+                test.report_path = html_file_path.parent.relative_to(path)
             
             tests.append(test)
     return tests
@@ -209,6 +209,7 @@ def find_tests(path: Path):
 def generate_artifact(path: Path):
     artifact = read_meta(path)
     artifact.path = path
+    artifact.id = path.name
     t = datetime.strptime(artifact.created_at, "%Y-%m-%dT%H:%M:%SZ")
     artifact.created_at_pretty = t.strftime("%d. %b %Y %H:%M")
     
@@ -223,9 +224,7 @@ def render_artifact(artifact, pr):
     artifact.path.mkdir(exist_ok=True)
     target = artifact.path / "index.html"
     with target.open('w', encoding="utf-8") as fp:
-        tests = artifact.tests
-        fp.write(
-            template.render(pr=pr, artifact=artifact, tests=tests))
+        fp.write(template.render(pr=pr, artifact=artifact))
 
 if __name__ == '__main__':
     pr: Path

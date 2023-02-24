@@ -3,19 +3,18 @@
 {% block content %}
 <section>
     <h1>#{{ pr.number }} - {{ pr.title }}</h1>
-    <span>Build time: {{artifact.created_at_pretty}}</span>
+    <a href="{{pr.html_url}}">Pull request</a><br>
+    <a href="https://github.com/KeYProject/key/actions/runs/{{artifact.workflow_run.id}}">Github Action</a><br>
+    <span>Artifact: {{artifact.id}}</span><br>
+    <span>Build time: {{artifact.created_at_pretty}}</span><br>
 </section>
 
 <section>
     <h3>Tests</h3>
     <ul>
-        {%- for test in tests -%}
+        {%- for test in artifact.tests -%}
             <li>
-                {%- if test.statistics.failures > 0 -%}
-                    ❌
-                {%- elif test.statistics.failures == 0 -%}
-                    ✅
-                {% endif %}
+                {%- if test.statistics.failures > 0 or test.statistics.errors > 0 -%}❌ {% else -%}✅ {% endif -%}
                 {%- if test.report_path -%}
                     <a href="{{test.report_path}}">{{test.project}}:{{test.name}}</a>
                 {%- else -%}

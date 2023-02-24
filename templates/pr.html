@@ -6,7 +6,7 @@
 <section>
 <h1>#{{ pr.number }} - {{ pr.title  }}</h1>
     <summary>
-        <p><a href="{{pr.html_url}}">Github</a></p>
+        <p><a href="{{pr.html_url}}">Pull request</a></p>
         <span>Description</span>
         <details>
             {{- pr.body|markdown|safe -}}
@@ -18,7 +18,7 @@
     <h3>Artifacts</h3>
     <ul>
         {%- for artifact in artifacts|reverse -%}
-            <li><a href="{{ artifact.id }}/index.html">{{artifact.created_at_pretty}}</a> <small>({{"%.2f"|format(artifact.size_in_bytes/1024|float)}} kB large)</small></li>
+            <li><a href="{{ artifact.id }}">{{artifact.created_at_pretty}}</a> <small>({{"%.2f"|format(artifact.size_in_bytes/1024|float)}} kB large)</small></li>
         {%- endfor -%}
     </ul>
 </section>
