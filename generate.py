@@ -16,7 +16,7 @@ import markdown
 
 TARGET = Path("./pull-requests")
 
-env = Environment(loader=FileSystemLoader("templates"),
+env = Environment(loader=FileSystemLoader("templates", encoding="utf-8"),
                   autoescape=select_autoescape())
 
 def mymarkdown(txt): 
@@ -34,12 +34,12 @@ def index():
     target.parent.mkdir(exist_ok=True)
     requests = sorted(PULL_REQUESTS, key=lambda x: x.number)
 
-    with target.open('w') as fp:
+    with target.open('w', encoding="utf-8") as fp:
         fp.write(template.render(pullrequests=requests))
 
 
 def read_meta(folder: Path):
-    with (folder/"meta.json").open() as fp:
+    with (folder/"meta.json").open("r", encoding="utf-8") as fp:
         return addict.Dict(json.load(fp))
 
 
@@ -141,7 +141,7 @@ def generate_pull_request(path: Path):
 
     print("Rendering index.html")
     target = path / "index.html"
-    with target.open('w') as fp:
+    with target.open('w', encoding="utf-8") as fp:
         fp.write(template.render(
             pr=pr, artifacts=artifacts, rtchart=runtime_chart, tcchart=test_cases))
 
@@ -228,7 +228,7 @@ def render_artifact(artifact, pr):
     template = env.get_template("artifact.html")
     artifact.path.mkdir(exist_ok=True)
     target = artifact.path / "index.html"
-    with target.open('w') as fp:
+    with target.open('w', encoding="utf-8") as fp:
         fp.write(
             template.render(pr=pr, artifact=artifact, tests=artifact.tests))
 

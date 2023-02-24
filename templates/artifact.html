@@ -10,7 +10,16 @@
     <h3>Tests</h3>
     <ul>
         {%- for test in tests -%}
-            <li><a href="{{test.path}}">{{test.project}}:{{test.name}}</a> [{{test.statistics.success}} succeeded, {{test.statistics.failures}} failed, {{test.statistics.skipped}} skipped]</li>
+            <li>
+                {%- if test.statistics.failures > 0 -%}
+                    ❌
+                {%- elif test.statistics.failures == 0 -%}
+                    ✅
+                {% endif %}
+                <a href="{{test.path}}">{{test.project}}:{{test.name}}</a> ({{test.statistics.success}} succeeded
+                {%- if test.statistics.failures > 0 %}, {{ test.statistics.failures }} failed{% endif -%}
+                {%- if test.statistics.skipped > 0 %}, {{ test.statistics.skipped }} skipped{% endif -%}
+                {%- if test.statistics.errors > 0 %}, {{ test.statistics.errors }} errors{% endif -%})</li>
         {%- endfor -%}
     </ul>
 </section>
