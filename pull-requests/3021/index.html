@@ -14,7 +14,7 @@
     <section>
 <h1>#3021 - Use KeYParser.g4 for parsing proof scripts</h1>
     <summary>
-        <p><a href="https://github.com/KeYProject/key/pull/3021">Github</a></p>
+        <p><a href="https://github.com/KeYProject/key/pull/3021">Pull request</a></p>
         <span>Description</span>
         <details><p>This MR get rid of the hand-written parser for proof scripts and uses a few rules in KeYParser.g4 instead.</p>
 <p>Since the start of proof scripts, the KeYParser has changed and became an ANTLR4 grammar. This allows us to easily write grammar for our proof scripts. (Or just copy the few rules from Sarah and mine proof script parser). This eliminates the handwritten proof script parser with the following benefits:</p>
@@ -48,7 +48,7 @@
 
 <section>
     <h3>Artifacts</h3>
-    <ul><li><a href="542331158/index.html">05. Feb 2023 14:36</a> <small>(32.76 kB large)</small></li></ul>
+    <ul><li><a href="542331158">05. Feb 2023 14:36</a> <small>(32.76 kB large)</small></li></ul>
 </section>
 
 
@@ -59,10 +59,10 @@
 <script type="text/javascript" src="/script.js"></script>
 <script type="text/javascript">
       const ctx = document.getElementById('runtime');
-      new Chart(ctx, {"data": {"datasets": [{"borderWidth": 1, "data": [0.0], "label": "Runtime in Hours"}], "labels": ["05. Feb 2023 14:36"]}, "options": {"maintainAspectRatio": false, "responsive": true, "scales": {"y": {"beginAtZero": true}}}, "type": "bar"});
+      new Chart(ctx, {"data": {"datasets": [{"borderWidth": 1, "data": [0.0002977777777777778], "label": "Runtime in Hours"}], "labels": ["05. Feb 2023 14:36"]}, "options": {"maintainAspectRatio": false, "responsive": true, "scales": {"y": {"beginAtZero": true}}}, "type": "bar"});
 
       const ctx2 = document.getElementById('testcases');
-      new Chart(ctx2, {"data": {"datasets": [{"backgroundColor": "rgb(250, 220, 220)", "borderColor": "rgb(250, 192, 192)", "data": [0], "fill": true, "label": "Failures", "tension": 0.1}, {"backgroundColor": "rgb(200, 212, 212)", "borderColor": "rgb(180, 192, 192)", "data": [0], "fill": true, "label": "Errors", "tension": 0.1}, {"backgroundColor": "rgb(150, 150, 150)", "borderColor": "rgb(100, 100, 100)", "data": [0], "fill": true, "label": "Skipped", "tension": 0.1}, {"backgroundColor": "rgb(95, 212, 120)", "borderColor": "rgb(75, 192, 100)", "data": [0], "fill": true, "label": "Success", "tension": 0.1}], "labels": ["05. Feb 2023 14:36"]}, "options": {"maintainAspectRatio": false, "responsive": true, "scales": {"y": {"stacked": true}}}, "type": "line"});
+      new Chart(ctx2, {"data": {"datasets": [{"backgroundColor": "rgb(250, 220, 220)", "borderColor": "rgb(250, 192, 192)", "data": [0], "fill": true, "label": "Failures", "tension": 0.1}, {"backgroundColor": "rgb(200, 212, 212)", "borderColor": "rgb(180, 192, 192)", "data": [0], "fill": true, "label": "Errors", "tension": 0.1}, {"backgroundColor": "rgb(150, 150, 150)", "borderColor": "rgb(100, 100, 100)", "data": [15], "fill": true, "label": "Skipped", "tension": 0.1}, {"backgroundColor": "rgb(95, 212, 120)", "borderColor": "rgb(75, 192, 100)", "data": [167], "fill": true, "label": "Success", "tension": 0.1}], "labels": ["05. Feb 2023 14:36"]}, "options": {"maintainAspectRatio": false, "responsive": true, "scales": {"y": {"stacked": true}}}, "type": "line"});
 </script>
     </main>
 </body>

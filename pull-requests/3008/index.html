@@ -14,7 +14,7 @@
     <section>
 <h1>#3008 - Fix construction of Javac issue dialog</h1>
     <summary>
-        <p><a href="https://github.com/KeYProject/key/pull/3008">Github</a></p>
+        <p><a href="https://github.com/KeYProject/key/pull/3008">Pull request</a></p>
         <span>Description</span>
         <details><p>Continuation of https://git.key-project.org/key/key/-/merge_requests/637</p></details>
     </summary>
@@ -22,7 +22,7 @@
 
 <section>
     <h3>Artifacts</h3>
-    <ul><li><a href="541939837/index.html">05. Feb 2023 00:48</a> <small>(1286.85 kB large)</small></li><li><a href="541630126/index.html">04. Feb 2023 12:30</a> <small>(1374.89 kB large)</small></li><li><a href="539507058/index.html">02. Feb 2023 23:24</a> <small>(1374.79 kB large)</small></li><li><a href="538952019/index.html">02. Feb 2023 16:37</a> <small>(1375.95 kB large)</small></li><li><a href="538617374/index.html">02. Feb 2023 13:29</a> <small>(1389.77 kB large)</small></li><li><a href="538550950/index.html">02. Feb 2023 12:47</a> <small>(1390.05 kB large)</small></li><li><a href="535057428/index.html">31. Jan 2023 15:39</a> <small>(1390.27 kB large)</small></li></ul>
+    <ul><li><a href="541939837">05. Feb 2023 00:48</a> <small>(1286.85 kB large)</small></li><li><a href="541630126">04. Feb 2023 12:30</a> <small>(1374.89 kB large)</small></li><li><a href="539507058">02. Feb 2023 23:24</a> <small>(1374.79 kB large)</small></li><li><a href="538952019">02. Feb 2023 16:37</a> <small>(1375.95 kB large)</small></li><li><a href="538617374">02. Feb 2023 13:29</a> <small>(1389.77 kB large)</small></li><li><a href="538550950">02. Feb 2023 12:47</a> <small>(1390.05 kB large)</small></li><li><a href="535057428">31. Jan 2023 15:39</a> <small>(1390.27 kB large)</small></li></ul>
 </section>
 
 
@@ -33,10 +33,10 @@
 <script type="text/javascript" src="/script.js"></script>
 <script type="text/javascript">
       const ctx = document.getElementById('runtime');
-      new Chart(ctx, {"data": {"datasets": [{"borderWidth": 1, "data": [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0], "label": "Runtime in Hours"}], "labels": ["31. Jan 2023 15:39", "02. Feb 2023 12:47", "02. Feb 2023 13:29", "02. Feb 2023 16:37", "02. Feb 2023 23:24", "04. Feb 2023 12:30", "05. Feb 2023 00:48"]}, "options": {"maintainAspectRatio": false, "responsive": true, "scales": {"y": {"beginAtZero": true}}}, "type": "bar"});
+      new Chart(ctx, {"data": {"datasets": [{"borderWidth": 1, "data": [3.244133888888889, 3.1887019444444444, 3.4248597222222226, 3.3796644444444444, 3.905984166666667, 3.176506666666667, 2.6971705555555556], "label": "Runtime in Hours"}], "labels": ["31. Jan 2023 15:39", "02. Feb 2023 12:47", "02. Feb 2023 13:29", "02. Feb 2023 16:37", "02. Feb 2023 23:24", "04. Feb 2023 12:30", "05. Feb 2023 00:48"]}, "options": {"maintainAspectRatio": false, "responsive": true, "scales": {"y": {"beginAtZero": true}}}, "type": "bar"});
 
       const ctx2 = document.getElementById('testcases');
-      new Chart(ctx2, {"data": {"datasets": [{"backgroundColor": "rgb(250, 220, 220)", "borderColor": "rgb(250, 192, 192)", "data": [0, 0, 0, 0, 0, 0, 0], "fill": true, "label": "Failures", "tension": 0.1}, {"backgroundColor": "rgb(200, 212, 212)", "borderColor": "rgb(180, 192, 192)", "data": [0, 0, 0, 0, 0, 0, 0], "fill": true, "label": "Errors", "tension": 0.1}, {"backgroundColor": "rgb(150, 150, 150)", "borderColor": "rgb(100, 100, 100)", "data": [0, 0, 0, 0, 0, 0, 0], "fill": true, "label": "Skipped", "tension": 0.1}, {"backgroundColor": "rgb(95, 212, 120)", "borderColor": "rgb(75, 192, 100)", "data": [0, 0, 0, 0, 0, 0, 0], "fill": true, "label": "Success", "tension": 0.1}], "labels": ["31. Jan 2023 15:39", "02. Feb 2023 12:47", "02. Feb 2023 13:29", "02. Feb 2023 16:37", "02. Feb 2023 23:24", "04. Feb 2023 12:30", "05. Feb 2023 00:48"]}, "options": {"maintainAspectRatio": false, "responsive": true, "scales": {"y": {"stacked": true}}}, "type": "line"});
+      new Chart(ctx2, {"data": {"datasets": [{"backgroundColor": "rgb(250, 220, 220)", "borderColor": "rgb(250, 192, 192)", "data": [1, 1, 1, 0, 0, 0, 0], "fill": true, "label": "Failures", "tension": 0.1}, {"backgroundColor": "rgb(200, 212, 212)", "borderColor": "rgb(180, 192, 192)", "data": [0, 0, 0, 0, 0, 0, 0], "fill": true, "label": "Errors", "tension": 0.1}, {"backgroundColor": "rgb(150, 150, 150)", "borderColor": "rgb(100, 100, 100)", "data": [158, 158, 158, 158, 158, 158, 119], "fill": true, "label": "Skipped", "tension": 0.1}, {"backgroundColor": "rgb(95, 212, 120)", "borderColor": "rgb(75, 192, 100)", "data": [3828, 3828, 3828, 3829, 3829, 3829, 3422], "fill": true, "label": "Success", "tension": 0.1}], "labels": ["31. Jan 2023 15:39", "02. Feb 2023 12:47", "02. Feb 2023 13:29", "02. Feb 2023 16:37", "02. Feb 2023 23:24", "04. Feb 2023 12:30", "05. Feb 2023 00:48"]}, "options": {"maintainAspectRatio": false, "responsive": true, "scales": {"y": {"stacked": true}}}, "type": "line"});
 </script>
     </main>
 </body>

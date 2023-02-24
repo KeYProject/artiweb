@@ -14,7 +14,7 @@
     <section>
 <h1>#3014 - Spec math mode</h1>
     <summary>
-        <p><a href="https://github.com/KeYProject/key/pull/3014">Github</a></p>
+        <p><a href="https://github.com/KeYProject/key/pull/3014">Pull request</a></p>
         <span>Description</span>
         <details><p>This MR implements the spec math modes discussed in a recent KaKeY meeting. See <a href="https://github.com/KeYProject/key/wiki/Spec-math-modes">here</a> for a reference. Furthermore, safe math is implemented using the wd checker, this mode generates additional in bounds checks when doing a wd proof and is otherwise treated like the bigint mode.</p>
 <p>The <em>code</em> overflow behaviour remains unchanged and is to be overhauled in a later MR. This MR only includes the changes to specification translation.</p>
@@ -26,7 +26,7 @@ All other tests are green and only minor changes to the specification of the exi
 
 <section>
     <h3>Artifacts</h3>
-    <ul><li><a href="541746392/index.html">04. Feb 2023 17:02</a> <small>(1283.42 kB large)</small></li><li><a href="540157741/index.html">03. Feb 2023 10:32</a> <small>(1324.89 kB large)</small></li><li><a href="538926762/index.html">02. Feb 2023 16:22</a> <small>(1338.89 kB large)</small></li></ul>
+    <ul><li><a href="541746392">04. Feb 2023 17:02</a> <small>(1283.42 kB large)</small></li><li><a href="540157741">03. Feb 2023 10:32</a> <small>(1324.89 kB large)</small></li><li><a href="538926762">02. Feb 2023 16:22</a> <small>(1338.89 kB large)</small></li></ul>
 </section>
 
 
@@ -37,10 +37,10 @@ All other tests are green and only minor changes to the specification of the exi
 <script type="text/javascript" src="/script.js"></script>
 <script type="text/javascript">
       const ctx = document.getElementById('runtime');
-      new Chart(ctx, {"data": {"datasets": [{"borderWidth": 1, "data": [0.0, 0.0, 0.0], "label": "Runtime in Hours"}], "labels": ["02. Feb 2023 16:22", "03. Feb 2023 10:32", "04. Feb 2023 17:02"]}, "options": {"maintainAspectRatio": false, "responsive": true, "scales": {"y": {"beginAtZero": true}}}, "type": "bar"});
+      new Chart(ctx, {"data": {"datasets": [{"borderWidth": 1, "data": [3.3731530555555556, 3.3153405555555557, 3.000749999999999], "label": "Runtime in Hours"}], "labels": ["02. Feb 2023 16:22", "03. Feb 2023 10:32", "04. Feb 2023 17:02"]}, "options": {"maintainAspectRatio": false, "responsive": true, "scales": {"y": {"beginAtZero": true}}}, "type": "bar"});
 
       const ctx2 = document.getElementById('testcases');
-      new Chart(ctx2, {"data": {"datasets": [{"backgroundColor": "rgb(250, 220, 220)", "borderColor": "rgb(250, 192, 192)", "data": [0, 0, 0], "fill": true, "label": "Failures", "tension": 0.1}, {"backgroundColor": "rgb(200, 212, 212)", "borderColor": "rgb(180, 192, 192)", "data": [0, 0, 0], "fill": true, "label": "Errors", "tension": 0.1}, {"backgroundColor": "rgb(150, 150, 150)", "borderColor": "rgb(100, 100, 100)", "data": [0, 0, 0], "fill": true, "label": "Skipped", "tension": 0.1}, {"backgroundColor": "rgb(95, 212, 120)", "borderColor": "rgb(75, 192, 100)", "data": [0, 0, 0], "fill": true, "label": "Success", "tension": 0.1}], "labels": ["02. Feb 2023 16:22", "03. Feb 2023 10:32", "04. Feb 2023 17:02"]}, "options": {"maintainAspectRatio": false, "responsive": true, "scales": {"y": {"stacked": true}}}, "type": "line"});
+      new Chart(ctx2, {"data": {"datasets": [{"backgroundColor": "rgb(250, 220, 220)", "borderColor": "rgb(250, 192, 192)", "data": [3, 2, 0], "fill": true, "label": "Failures", "tension": 0.1}, {"backgroundColor": "rgb(200, 212, 212)", "borderColor": "rgb(180, 192, 192)", "data": [0, 0, 0], "fill": true, "label": "Errors", "tension": 0.1}, {"backgroundColor": "rgb(150, 150, 150)", "borderColor": "rgb(100, 100, 100)", "data": [119, 119, 119], "fill": true, "label": "Skipped", "tension": 0.1}, {"backgroundColor": "rgb(95, 212, 120)", "borderColor": "rgb(75, 192, 100)", "data": [3507, 3508, 3421], "fill": true, "label": "Success", "tension": 0.1}], "labels": ["02. Feb 2023 16:22", "03. Feb 2023 10:32", "04. Feb 2023 17:02"]}, "options": {"maintainAspectRatio": false, "responsive": true, "scales": {"y": {"stacked": true}}}, "type": "line"});
 </script>
     </main>
 </body>

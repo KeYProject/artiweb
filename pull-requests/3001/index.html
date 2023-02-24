@@ -14,7 +14,7 @@
     <section>
 <h1>#3001 - Install SMT solvers for CI testing</h1>
     <summary>
-        <p><a href="https://github.com/KeYProject/key/pull/3001">Github</a></p>
+        <p><a href="https://github.com/KeYProject/key/pull/3001">Pull request</a></p>
         <span>Description</span>
         <details><p>Currently, no SMT-solver is available during the CI build and test. </p>
 <p>This MR brings a small bash scripts, which download and "install" z3 and CVC5. Both SMT-solvers should be available via <code>$PATH</code>. Caching is activated. </p>
@@ -24,7 +24,7 @@
 
 <section>
     <h3>Artifacts</h3>
-    <ul><li><a href="538880078/index.html">02. Feb 2023 15:58</a> <small>(1371.77 kB large)</small></li><li><a href="537546626/index.html">01. Feb 2023 21:41</a> <small>(1372.34 kB large)</small></li><li><a href="535281157/index.html">31. Jan 2023 17:51</a> <small>(1372.10 kB large)</small></li><li><a href="535074496/index.html">31. Jan 2023 15:49</a> <small>(324.47 kB large)</small></li><li><a href="533240954/index.html">30. Jan 2023 16:05</a> <small>(100.98 kB large)</small></li><li><a href="533234637/index.html">30. Jan 2023 16:02</a> <small>(100.99 kB large)</small></li><li><a href="533227658/index.html">30. Jan 2023 15:57</a> <small>(100.98 kB large)</small></li></ul>
+    <ul><li><a href="538880078">02. Feb 2023 15:58</a> <small>(1371.77 kB large)</small></li><li><a href="537546626">01. Feb 2023 21:41</a> <small>(1372.34 kB large)</small></li><li><a href="535281157">31. Jan 2023 17:51</a> <small>(1372.10 kB large)</small></li><li><a href="535074496">31. Jan 2023 15:49</a> <small>(324.47 kB large)</small></li><li><a href="533240954">30. Jan 2023 16:05</a> <small>(100.98 kB large)</small></li><li><a href="533234637">30. Jan 2023 16:02</a> <small>(100.99 kB large)</small></li><li><a href="533227658">30. Jan 2023 15:57</a> <small>(100.98 kB large)</small></li></ul>
 </section>
 
 
@@ -35,10 +35,10 @@
 <script type="text/javascript" src="/script.js"></script>
 <script type="text/javascript">
       const ctx = document.getElementById('runtime');
-      new Chart(ctx, {"data": {"datasets": [{"borderWidth": 1, "data": [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0], "label": "Runtime in Hours"}], "labels": ["30. Jan 2023 15:57", "30. Jan 2023 16:02", "30. Jan 2023 16:05", "31. Jan 2023 15:49", "31. Jan 2023 17:51", "01. Feb 2023 21:41", "02. Feb 2023 15:58"]}, "options": {"maintainAspectRatio": false, "responsive": true, "scales": {"y": {"beginAtZero": true}}}, "type": "bar"});
+      new Chart(ctx, {"data": {"datasets": [{"borderWidth": 1, "data": [0.4376280555555557, 0.4628416666666667, 0.45420166666666656, 3.715714722222222, 3.133167222222222, 3.198152777777778, 3.6453238888888886], "label": "Runtime in Hours"}], "labels": ["30. Jan 2023 15:57", "30. Jan 2023 16:02", "30. Jan 2023 16:05", "31. Jan 2023 15:49", "31. Jan 2023 17:51", "01. Feb 2023 21:41", "02. Feb 2023 15:58"]}, "options": {"maintainAspectRatio": false, "responsive": true, "scales": {"y": {"beginAtZero": true}}}, "type": "bar"});
 
       const ctx2 = document.getElementById('testcases');
-      new Chart(ctx2, {"data": {"datasets": [{"backgroundColor": "rgb(250, 220, 220)", "borderColor": "rgb(250, 192, 192)", "data": [0, 0, 0, 0, 0, 0, 0], "fill": true, "label": "Failures", "tension": 0.1}, {"backgroundColor": "rgb(200, 212, 212)", "borderColor": "rgb(180, 192, 192)", "data": [0, 0, 0, 0, 0, 0, 0], "fill": true, "label": "Errors", "tension": 0.1}, {"backgroundColor": "rgb(150, 150, 150)", "borderColor": "rgb(100, 100, 100)", "data": [0, 0, 0, 0, 0, 0, 0], "fill": true, "label": "Skipped", "tension": 0.1}, {"backgroundColor": "rgb(95, 212, 120)", "borderColor": "rgb(75, 192, 100)", "data": [0, 0, 0, 0, 0, 0, 0], "fill": true, "label": "Success", "tension": 0.1}], "labels": ["30. Jan 2023 15:57", "30. Jan 2023 16:02", "30. Jan 2023 16:05", "31. Jan 2023 15:49", "31. Jan 2023 17:51", "01. Feb 2023 21:41", "02. Feb 2023 15:58"]}, "options": {"maintainAspectRatio": false, "responsive": true, "scales": {"y": {"stacked": true}}}, "type": "line"});
+      new Chart(ctx2, {"data": {"datasets": [{"backgroundColor": "rgb(250, 220, 220)", "borderColor": "rgb(250, 192, 192)", "data": [0, 0, 0, 0, 0, 0, 0], "fill": true, "label": "Failures", "tension": 0.1}, {"backgroundColor": "rgb(200, 212, 212)", "borderColor": "rgb(180, 192, 192)", "data": [0, 0, 0, 0, 0, 0, 0], "fill": true, "label": "Errors", "tension": 0.1}, {"backgroundColor": "rgb(150, 150, 150)", "borderColor": "rgb(100, 100, 100)", "data": [39, 39, 39, 39, 158, 158, 158], "fill": true, "label": "Skipped", "tension": 0.1}, {"backgroundColor": "rgb(95, 212, 120)", "borderColor": "rgb(75, 192, 100)", "data": [450, 450, 450, 723, 3828, 3828, 3828], "fill": true, "label": "Success", "tension": 0.1}], "labels": ["30. Jan 2023 15:57", "30. Jan 2023 16:02", "30. Jan 2023 16:05", "31. Jan 2023 15:49", "31. Jan 2023 17:51", "01. Feb 2023 21:41", "02. Feb 2023 15:58"]}, "options": {"maintainAspectRatio": false, "responsive": true, "scales": {"y": {"stacked": true}}}, "type": "line"});
 </script>
     </main>
 </body>

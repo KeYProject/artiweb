@@ -14,7 +14,7 @@
     <section>
 <h1>#3013 - Fix non duplicate feature perf</h1>
     <summary>
-        <p><a href="https://github.com/KeYProject/key/pull/3013">Github</a></p>
+        <p><a href="https://github.com/KeYProject/key/pull/3013">Pull request</a></p>
         <span>Description</span>
         <details><p>I optimized the non duplicate app feature calculation by caching a map <code>rule name =&gt; [RuleApp]</code>.
 This lead to an overall performance gain of about 20% for most cost computations done by the strategies.</p>
@@ -29,7 +29,7 @@ See the doc of <code>getRuleAppsWithName</code>.</p>
 
 <section>
     <h3>Artifacts</h3>
-    <ul><li><a href="540537910/index.html">03. Feb 2023 15:05</a> <small>(1371.97 kB large)</small></li><li><a href="540248779/index.html">03. Feb 2023 11:43</a> <small>(1387.23 kB large)</small></li><li><a href="537206185/index.html">01. Feb 2023 17:49</a> <small>(1386.66 kB large)</small></li></ul>
+    <ul><li><a href="540537910">03. Feb 2023 15:05</a> <small>(1371.97 kB large)</small></li><li><a href="540248779">03. Feb 2023 11:43</a> <small>(1387.23 kB large)</small></li><li><a href="537206185">01. Feb 2023 17:49</a> <small>(1386.66 kB large)</small></li></ul>
 </section>
 
 
@@ -40,10 +40,10 @@ See the doc of <code>getRuleAppsWithName</code>.</p>
 <script type="text/javascript" src="/script.js"></script>
 <script type="text/javascript">
       const ctx = document.getElementById('runtime');
-      new Chart(ctx, {"data": {"datasets": [{"borderWidth": 1, "data": [0.0, 0.0, 0.0], "label": "Runtime in Hours"}], "labels": ["01. Feb 2023 17:49", "03. Feb 2023 11:43", "03. Feb 2023 15:05"]}, "options": {"maintainAspectRatio": false, "responsive": true, "scales": {"y": {"beginAtZero": true}}}, "type": "bar"});
+      new Chart(ctx, {"data": {"datasets": [{"borderWidth": 1, "data": [3.4813980555555557, 3.4150524999999994, 3.2221483333333336], "label": "Runtime in Hours"}], "labels": ["01. Feb 2023 17:49", "03. Feb 2023 11:43", "03. Feb 2023 15:05"]}, "options": {"maintainAspectRatio": false, "responsive": true, "scales": {"y": {"beginAtZero": true}}}, "type": "bar"});
 
       const ctx2 = document.getElementById('testcases');
-      new Chart(ctx2, {"data": {"datasets": [{"backgroundColor": "rgb(250, 220, 220)", "borderColor": "rgb(250, 192, 192)", "data": [0, 0, 0], "fill": true, "label": "Failures", "tension": 0.1}, {"backgroundColor": "rgb(200, 212, 212)", "borderColor": "rgb(180, 192, 192)", "data": [0, 0, 0], "fill": true, "label": "Errors", "tension": 0.1}, {"backgroundColor": "rgb(150, 150, 150)", "borderColor": "rgb(100, 100, 100)", "data": [0, 0, 0], "fill": true, "label": "Skipped", "tension": 0.1}, {"backgroundColor": "rgb(95, 212, 120)", "borderColor": "rgb(75, 192, 100)", "data": [0, 0, 0], "fill": true, "label": "Success", "tension": 0.1}], "labels": ["01. Feb 2023 17:49", "03. Feb 2023 11:43", "03. Feb 2023 15:05"]}, "options": {"maintainAspectRatio": false, "responsive": true, "scales": {"y": {"stacked": true}}}, "type": "line"});
+      new Chart(ctx2, {"data": {"datasets": [{"backgroundColor": "rgb(250, 220, 220)", "borderColor": "rgb(250, 192, 192)", "data": [1, 1, 0], "fill": true, "label": "Failures", "tension": 0.1}, {"backgroundColor": "rgb(200, 212, 212)", "borderColor": "rgb(180, 192, 192)", "data": [0, 0, 0], "fill": true, "label": "Errors", "tension": 0.1}, {"backgroundColor": "rgb(150, 150, 150)", "borderColor": "rgb(100, 100, 100)", "data": [158, 158, 158], "fill": true, "label": "Skipped", "tension": 0.1}, {"backgroundColor": "rgb(95, 212, 120)", "borderColor": "rgb(75, 192, 100)", "data": [3827, 3827, 3828], "fill": true, "label": "Success", "tension": 0.1}], "labels": ["01. Feb 2023 17:49", "03. Feb 2023 11:43", "03. Feb 2023 15:05"]}, "options": {"maintainAspectRatio": false, "responsive": true, "scales": {"y": {"stacked": true}}}, "type": "line"});
 </script>
     </main>
 </body>
