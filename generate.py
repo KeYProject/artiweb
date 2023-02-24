@@ -43,16 +43,18 @@ def read_meta(folder: Path):
 
 def generate_pull_request(pull_request: Path):
     template = env.get_template("pr.html")
+    print("Reading meta")
     data = read_meta(pull_request)
     PULL_REQUESTS.append(data)
 
-    target = pull_request / "index.html"
-    target.parent.mkdir(exist_ok=True)
+    pull_request.mkdir(exist_ok=True)
 
+    print("Generating artifacts")
     artifacts = [generate_artifact(data, arti_folder)
                  for arti_folder in pull_request.glob("*/")
                  if arti_folder.is_dir()]
-                 
+
+    print("Rendered", len(artifacts), "artifacts") 
     artifacts = sorted(artifacts, key=lambda x: x.created_at)
 
     total_runtimes = {arti_folder.name:  junit_statistics(arti_folder)
@@ -61,12 +63,13 @@ def generate_pull_request(pull_request: Path):
 
     keys = sorted(list(total_runtimes.keys()))
     values = [total_runtimes[x] for x in keys]
-    labels = [a.created_at
+    labels = [a.created_at_pretty
               for x in total_runtimes.keys()
               for a in artifacts
               if str(a.id) == x
               ]
 
+    print("Generating charts")
     runtime_chart = {
         'type': 'bar',
         'data': {
@@ -139,10 +142,8 @@ def generate_pull_request(pull_request: Path):
         }
     }
 
-    # import pprint
-    # pprint.pprint(test_cases)
-
-    print(target)
+    print("Rendering index.html")
+    target = pull_request / "index.html"
     with target.open('w') as fp:
         fp.write(template.render(
             pr=data, artifacts=artifacts, runtimes=total_runtimes, rtchart=runtime_chart, tcchart=test_cases))
@@ -173,19 +174,22 @@ def junit_statistics(folder: Path):
     success = 0
     failures = 0
     for f in folder.rglob("*.xml"):
-        xml = JUnitXml.fromfile(f)
-        total_time += xml.time
+        try:
+            xml = JUnitXml.fromfile(f)
+            total_time += xml.time
 
-        s = xml.skipped
-        t = xml.tests
-        f = xml.failures
-        e = xml.errors
+            s = xml.skipped
+            t = xml.tests
+            f = xml.failures
+            e = xml.errors
 
-        number_test_cases += t
-        skipped += s
-        error += e
-        failures += f
-        success += (t - f - e - s)
+            number_test_cases += t
+            skipped += s
+            error += e
+            failures += f
+            success += (t - f - e - s)
+        except Exception as e:
+            print("Skipping malformed file", f, e)
     return JUnitStat(total_time, number_test_cases, skipped, error, failures, success)
 
 
@@ -226,9 +230,10 @@ if __name__ == '__main__':
     pr: Path
     for pr in TARGET.glob("*/"):
         if pr.is_dir():
+            print("Generating pull request", pr.relative_to(TARGET))
             try:
                 generate_pull_request(pr)
             except Exception as e:
-                print(e)
+                print("Error generating", pr, e)
                 #raise e
     index()

@@ -6,10 +6,30 @@
     Welcome to artiweb.
 </p>
 
-<ul>
-    {%- for pr in pullrequests | reverse -%}
-        <li><a href="{{pr.number}}/index.html">[#{{pr.number}}] {{pr.title}}</a></li>
-    {%- endfor -%}
-</ul>
+{% macro pullRequestLink(pr) -%}
+    <a href="{{pr.number}}/index.html">[#{{pr.number}}] {{pr.title}}</a>
+{%- endmacro %}
+
+<section>
+    <h3>Open pull requests</h3>
+    <ul>
+        {%- for pr in pullrequests | reverse -%}
+            {%- if pr.state == "open" -%}
+                <li>{{ pullRequestLink(pr) }}</li>
+            {%- endif -%}
+        {%- endfor -%}
+    </ul>
+</section>
+
+<section>
+    <h3>Closed pull requests</h3>
+    <ul>
+        {%- for pr in pullrequests | reverse -%}
+            {%- if pr.state != "open" -%}
+                <li>{{ pullRequestLink(pr) }}</li>
+            {%- endif -%}
+        {%- endfor -%}
+    </ul>
+</section>
 
 {% endblock %}
