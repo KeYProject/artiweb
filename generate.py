@@ -148,16 +148,6 @@ def generate_pull_request(path: Path):
     pr.artifacts = artifacts
     return pr
 
-
-def find_files(directory, pattern):
-    import fnmatch
-    for root, dirs, files in os.walk(directory):
-        for basename in files:
-            if fnmatch.fnmatch(basename, pattern):
-                filename = os.path.join(root, basename)
-                yield filename
-
-
 JUnitStat = namedtuple(
     "JUnitStat", "total_time, total_tests, skipped, errors, failures, success")
 
@@ -171,7 +161,7 @@ def combine_stats(a, b):
     return JUnitStat(total_time, total_tests, skipped, errors, failures, success)
 
 def junit_statistics(folder: Path):
-    from junitparser import JUnitXml, TestCase, TestSuite
+    from junitparser import JUnitXml
     acc = JUnitStat(0, 0, 0, 0, 0, 0)
     for f in folder.rglob("*.xml"):
         try:
@@ -193,35 +183,39 @@ def junit_statistics(folder: Path):
             print("Skipping malformed file", f, e)
     return acc
 
+def find_tests(path: Path):
+    projects = [p for p in path.glob("*/") if p.is_dir()]
+    tests = []
+    for project_path in projects:
+        build_path = project_path / "build"
+        project_tests = [p for p in (build_path / "test-results") .glob("*/") if p.is_dir()]
+        project = project_path.name
+        html_files_path = build_path / "reports" / "tests"
+        for test_path in project_tests:
+            name = test_path.name
+
+            test = addict.Dict()
+            test.statistics = junit_statistics(test_path)
+            test.project = project
+            test.name = name
+
+            html_file_path = html_files_path / name / "index.html"
+            if html_file_path.is_file():
+                test.report_path = html_file_path
+            
+            tests.append(test)
+    return tests
 
 def generate_artifact(path: Path):
-    target = path / "index.html"
     artifact = read_meta(path)
     artifact.path = path
     t = datetime.strptime(artifact.created_at, "%Y-%m-%dT%H:%M:%SZ")
     artifact.created_at_pretty = t.strftime("%d. %b %Y %H:%M")
     
-    # find all index.html
-    indexes = [p for p in path.rglob("index.html")]
-    if target  in indexes:
-        indexes.remove(target)
-    tests = [{"path": p.relative_to(path), "full_path": p} for p in indexes]
-
-    for test in tests:
-        p = str(test["path"]).replace("\\", "/")
-        match = re.match("^([^/]+)/build/reports/tests/([^/]+)/index\.html$", p)
-        if match:
-            project = match.group(1)
-            name = match.group(2)
-            stat_path = path / project / "build" / "test-results" / name
-            statistics = junit_statistics(stat_path)
-
-            test["name"] = name
-            test["statistics"] = statistics
-            test["project"] = project
+    tests = find_tests(path)
     
     artifact.tests = tests
-    artifact.statistics = reduce(lambda acc, value: combine_stats(acc, value["statistics"]), tests, JUnitStat(0, 0, 0, 0, 0, 0))
+    artifact.statistics = reduce(lambda acc, value: combine_stats(acc, value.statistics), tests, JUnitStat(0, 0, 0, 0, 0, 0))
     return artifact
 
 def render_artifact(artifact, pr):
@@ -229,8 +223,9 @@ def render_artifact(artifact, pr):
     artifact.path.mkdir(exist_ok=True)
     target = artifact.path / "index.html"
     with target.open('w', encoding="utf-8") as fp:
+        tests = artifact.tests
         fp.write(
-            template.render(pr=pr, artifact=artifact, tests=artifact.tests))
+            template.render(pr=pr, artifact=artifact, tests=tests))
 
 if __name__ == '__main__':
     pr: Path
