@@ -7,6 +7,8 @@ import os
 import re
 from datetime import datetime
 
+from functools import reduce
+
 from jinja2 import Environment, FileSystemLoader, select_autoescape
 from pathlib import Path
 import markdown
@@ -41,33 +43,28 @@ def read_meta(folder: Path):
         return addict.Dict(json.load(fp))
 
 
-def generate_pull_request(pull_request: Path):
+def generate_pull_request(path: Path):
     template = env.get_template("pr.html")
     print("Reading meta")
-    data = read_meta(pull_request)
-    PULL_REQUESTS.append(data)
+    pr = read_meta(path)
+    PULL_REQUESTS.append(pr)
 
-    pull_request.mkdir(exist_ok=True)
+    path.mkdir(exist_ok=True)
 
     print("Generating artifacts")
-    artifacts = [generate_artifact(data, arti_folder)
-                 for arti_folder in pull_request.glob("*/")
+    artifacts = [generate_artifact(arti_folder)
+                 for arti_folder in path.glob("*/")
                  if arti_folder.is_dir()]
+    
+    print("Rendering artifacts")
+    for artifact in artifacts:
+        render_artifact(artifact, pr)
 
     print("Rendered", len(artifacts), "artifacts") 
     artifacts = sorted(artifacts, key=lambda x: x.created_at)
 
-    total_runtimes = {arti_folder.name:  junit_statistics(arti_folder)
-                      for arti_folder in pull_request.glob("*/")
-                      if arti_folder.is_dir()}
-
-    keys = sorted(list(total_runtimes.keys()))
-    values = [total_runtimes[x] for x in keys]
-    labels = [a.created_at_pretty
-              for x in total_runtimes.keys()
-              for a in artifacts
-              if str(a.id) == x
-              ]
+    values = [a.statistics for a in artifacts]
+    labels = [a.created_at_pretty for a in artifacts]
 
     print("Generating charts")
     runtime_chart = {
@@ -143,13 +140,13 @@ def generate_pull_request(pull_request: Path):
     }
 
     print("Rendering index.html")
-    target = pull_request / "index.html"
+    target = path / "index.html"
     with target.open('w') as fp:
         fp.write(template.render(
-            pr=data, artifacts=artifacts, runtimes=total_runtimes, rtchart=runtime_chart, tcchart=test_cases))
+            pr=pr, artifacts=artifacts, rtchart=runtime_chart, tcchart=test_cases))
 
-    data.artifacts = artifacts
-    return data
+    pr.artifacts = artifacts
+    return pr
 
 
 def find_files(directory, pattern):
@@ -164,39 +161,43 @@ def find_files(directory, pattern):
 JUnitStat = namedtuple(
     "JUnitStat", "total_time, total_tests, skipped, errors, failures, success")
 
+def combine_stats(a, b):
+    total_time = a.total_time + b.total_time
+    total_tests = a.total_tests + b.total_tests
+    skipped = a.skipped + b.skipped
+    errors = a.errors + b.errors
+    failures = a.failures + b.failures
+    success = a.success + b.success
+    return JUnitStat(total_time, total_tests, skipped, errors, failures, success)
 
 def junit_statistics(folder: Path):
     from junitparser import JUnitXml, TestCase, TestSuite
-    total_time = 0.0
-    number_test_cases = 0
-    skipped = 0
-    error = 0
-    success = 0
-    failures = 0
+    acc = JUnitStat(0, 0, 0, 0, 0, 0)
     for f in folder.rglob("*.xml"):
         try:
             xml = JUnitXml.fromfile(f)
-            total_time += xml.time
-
             s = xml.skipped
             t = xml.tests
             f = xml.failures
             e = xml.errors
-
-            number_test_cases += t
-            skipped += s
-            error += e
-            failures += f
-            success += (t - f - e - s)
+            stat = JUnitStat(
+                xml.time,
+                t,
+                s,
+                e,
+                f,
+                (t - f - e - s)
+            )
+            acc = combine_stats(acc, stat)
         except Exception as e:
             print("Skipping malformed file", f, e)
-    return JUnitStat(total_time, number_test_cases, skipped, error, failures, success)
+    return acc
 
 
-def generate_artifact(pull_request, path: Path):
+def generate_artifact(path: Path):
     target = path / "index.html"
-    path.mkdir(exist_ok=True)
     artifact = read_meta(path)
+    artifact.path = path
     t = datetime.strptime(artifact.created_at, "%Y-%m-%dT%H:%M:%SZ")
     artifact.created_at_pretty = t.strftime("%d. %b %Y %H:%M")
     
@@ -218,13 +219,18 @@ def generate_artifact(pull_request, path: Path):
             test["name"] = name
             test["statistics"] = statistics
             test["project"] = project
-
-    template = env.get_template("artifact.html")
-    with target.open('w') as fp:
-        fp.write(
-            template.render(pr=pull_request, artifact=artifact, tests=tests))
+    
+    artifact.tests = tests
+    artifact.statistics = reduce(lambda acc, value: combine_stats(acc, value["statistics"]), tests, JUnitStat(0, 0, 0, 0, 0, 0))
     return artifact
 
+def render_artifact(artifact, pr):
+    template = env.get_template("artifact.html")
+    artifact.path.mkdir(exist_ok=True)
+    target = artifact.path / "index.html"
+    with target.open('w') as fp:
+        fp.write(
+            template.render(pr=pr, artifact=artifact, tests=artifact.tests))
 
 if __name__ == '__main__':
     pr: Path
