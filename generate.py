@@ -25,17 +25,36 @@ def mymarkdown(txt):
 
 env.filters['markdown'] = mymarkdown
 
-PULL_REQUESTS = []
-
-
-def index():
+def index(pull_requests):
     template = env.get_template("index.html")
     target = TARGET / "index.html"
     target.parent.mkdir(exist_ok=True)
-    requests = sorted(PULL_REQUESTS, key=lambda x: x.number)
+    pull_requests.sort(key=lambda x: x.number)
 
+    tests = {}
+    for pr in pull_requests:
+        for a in pr.artifacts:
+            for t in a.tests:
+                t.created_at_pretty = a.created_at_pretty
+                t.created_at = a.created_at
+                if t.full_name in tests:
+                    tests[t.full_name].append(t)
+                else:
+                    tests[t.full_name] = [t]
+    
+    graphs = []
+    for name, ts in tests.items():
+        ts.sort(key=lambda t: t.created_at)
+        labels = [t.created_at_pretty for t in ts]
+        values = [t.statistics.total_time/60.0/60.0 for t in ts]
+
+        graph = generate_runtime_chart(labels, values)
+        graphs.append({ "graph": graph, "name": name })
+
+    graphs.sort(key=lambda x: x["name"])
+    
     with target.open('w', encoding="utf-8") as fp:
-        fp.write(template.render(pullrequests=requests))
+        fp.write(template.render(pullrequests=pull_requests, graphs=graphs))
 
 
 def read_meta(folder: Path):
@@ -43,37 +62,14 @@ def read_meta(folder: Path):
         return addict.Dict(json.load(fp))
 
 
-def generate_pull_request(path: Path):
-    template = env.get_template("pr.html")
-    print("Reading meta")
-    pr = read_meta(path)
-    PULL_REQUESTS.append(pr)
-
-    path.mkdir(exist_ok=True)
-
-    print("Generating artifacts")
-    artifacts = [generate_artifact(arti_folder)
-                 for arti_folder in path.glob("*/")
-                 if arti_folder.is_dir()]
-    
-    print("Rendering artifacts")
-    for artifact in artifacts:
-        render_artifact(artifact, pr)
-
-    print("Rendered", len(artifacts), "artifacts") 
-    artifacts = sorted(artifacts, key=lambda x: x.created_at)
-
-    values = [a.statistics for a in artifacts]
-    labels = [a.created_at_pretty for a in artifacts]
-
-    print("Generating charts")
-    runtime_chart = {
+def generate_runtime_chart(labels, data):
+    return {
         'type': 'bar',
         'data': {
             'labels': labels,
             'datasets': [{
                 'label': 'Runtime in Hours',
-                'data': [v.total_time/60.0/60.0 for v in values],
+                'data': data,
                 'borderWidth': 1
             },
             ]
@@ -88,6 +84,32 @@ def generate_pull_request(path: Path):
             }
         }
     }
+
+def generate_pull_request(path: Path):
+    template = env.get_template("pr.html")
+    print("Reading meta")
+    pr = read_meta(path)
+
+    path.mkdir(exist_ok=True)
+
+    print("Generating artifacts")
+    artifacts = [generate_artifact(arti_folder)
+                 for arti_folder in path.glob("*/")
+                 if arti_folder.is_dir()]
+    
+    print("Rendering artifacts")
+    for artifact in artifacts:
+        render_artifact(artifact, pr)
+
+    print("Rendered", len(artifacts), "artifacts") 
+
+    artifacts.sort(key=lambda x: x.created_at)
+
+    values = [a.statistics for a in artifacts]
+    labels = [a.created_at_pretty for a in artifacts]
+
+    print("Generating charts")
+    runtime_chart = generate_runtime_chart(labels, [v.total_time/60.0/60.0 for v in values])
 
     test_cases = {
         'type': 'line',
@@ -198,6 +220,7 @@ def find_tests(path: Path):
             test.statistics = junit_statistics(test_path)
             test.project = project
             test.name = name
+            test.full_name = project + ":" + name
 
             html_file_path = html_files_path / name / "index.html"
             if html_file_path.is_file():
@@ -227,13 +250,14 @@ def render_artifact(artifact, pr):
         fp.write(template.render(pr=pr, artifact=artifact))
 
 if __name__ == '__main__':
-    pr: Path
-    for pr in TARGET.glob("*/"):
-        if pr.is_dir():
-            print("Generating pull request", pr.relative_to(TARGET))
+    path: Path
+    pull_requests = []
+    for path in TARGET.glob("*/"):
+        if path.is_dir():
+            print("Generating pull request", path.relative_to(TARGET))
             try:
-                generate_pull_request(pr)
+                pr = generate_pull_request(path)
+                pull_requests.append(pr)
             except Exception as e:
-                print("Error generating", pr, e)
-                #raise e
-    index()
+                print("Error generating", path, e)
+    index(pull_requests)

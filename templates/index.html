@@ -1,7 +1,7 @@
 {% extends "main.html" %}
-{% block title %}Index{% endblock %}
+{% block title %}Artiweb{% endblock %}
 {% block content %}
-<h1>Index</h1>
+<h1>Artiweb</h1>
 <p class="important">
     Welcome to artiweb.
 </p>
@@ -31,5 +31,24 @@
         {%- endfor -%}
     </ul>
 </section>
+
+<section>
+    <h3>Graphs</h3>
+    {%- for g in graphs -%}
+        <h4>{{ g.name }}</h4>
+        <div style="height:10em;"><canvas id="{{ g.name }}"></canvas></div>   
+    {%- endfor -%}
+    
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script type="text/javascript">
+        {%- for g in graphs -%}
+        {
+            const ctx = document.getElementById("{{ g.name }}");
+            new Chart(ctx, {{g.graph|tojson}});
+        }
+        {% endfor -%}
+    </script>
+</section>
+
 
 {% endblock %}
