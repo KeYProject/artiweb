@@ -31,11 +31,76 @@
 
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 <script type="text/javascript">
-      const ctx = document.getElementById('runtime');
-      new Chart(ctx, {"data": {"datasets": [{"borderWidth": 1, "data": [3.7219194444444446, 3.680585833333333, 3.9936227777777784, 3.0075986111111113, 3.018737777777778, 3.022313333333334], "label": "Runtime in Hours"}], "labels": ["31. Jan 2023 15:51", "31. Jan 2023 19:36", "02. Feb 2023 16:39", "06. Feb 2023 12:55", "15. Feb 2023 15:26", "24. Feb 2023 00:12"]}, "options": {"maintainAspectRatio": false, "responsive": true, "scales": {"y": {"beginAtZero": true}}}, "type": "bar"});
+    function formatLabel(context) {
+        let label = context.dataset.label || '';
+        if (label) {
+            label += ': ';
+        }
+        const value = context.raw;
+        let format;
+        if (value == 0) {
+            format = "0s";
+        } else if (value < 3) {
+            format = Math.round(value * 1000) + "ms";
+        } else if (value < 120) {
+            format = Math.round(value) + "s";
+        } else {
+            format = "";
+            let remainder = value;
+            if (remainder > 3600) {
+                const hours = Math.floor(remainder / 3600);
+                remainder = remainder % 3600;
+                format += hours + "h ";
+            }
+            
+            if (remainder > 60) {
+                const minutes = Math.floor(remainder / 60);
+                remainder = remainder % 60;
+                format += minutes + "m ";
+            }
+            
+            const seconds = Math.round(remainder);
+            format += seconds + "s";
+        }
+        return label + format;
+    }
 
-      const ctx2 = document.getElementById('testcases');
-      new Chart(ctx2, {"data": {"datasets": [{"backgroundColor": "rgb(250, 220, 220)", "borderColor": "rgb(250, 192, 192)", "data": [3, 2, 1, 1, 1, 2], "fill": true, "label": "Failures", "tension": 0.1}, {"backgroundColor": "rgb(200, 212, 212)", "borderColor": "rgb(180, 192, 192)", "data": [0, 0, 0, 0, 0, 0], "fill": true, "label": "Errors", "tension": 0.1}, {"backgroundColor": "rgb(150, 150, 150)", "borderColor": "rgb(100, 100, 100)", "data": [158, 158, 158, 119, 119, 119], "fill": true, "label": "Skipped", "tension": 0.1}, {"backgroundColor": "rgb(95, 212, 120)", "borderColor": "rgb(75, 192, 100)", "data": [3825, 3826, 3827, 3421, 3429, 3428], "fill": true, "label": "Success", "tension": 0.1}], "labels": ["31. Jan 2023 15:51", "31. Jan 2023 19:36", "02. Feb 2023 16:39", "06. Feb 2023 12:55", "15. Feb 2023 15:26", "24. Feb 2023 00:12"]}, "options": {"maintainAspectRatio": false, "responsive": true, "scales": {"y": {"stacked": true}}}, "type": "line"});
+    function createChart(name, labels, data) {
+        const ctx = document.getElementById(name);
+        const graph = {
+            type: 'bar',
+            data: {
+                labels: labels,
+                datasets: [{
+                    label: "Runtime",
+                    data: data,
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        };
+        graph.options.plugins = {
+            tooltip: {
+                callbacks: {
+                    label: formatLabel
+                }
+            }
+        };
+        new Chart(ctx, graph);
+    }
+
+    createChart("runtime", ["31. Jan 2023 15:51", "31. Jan 2023 19:36", "02. Feb 2023 16:39", "06. Feb 2023 12:55", "15. Feb 2023 15:26", "24. Feb 2023 00:12"], [13398.91, 13250.108999999999, 14377.042000000001, 10827.355, 10867.456, 10880.328000000001]);
+
+    const ctx2 = document.getElementById('testcases');
+    new Chart(ctx2, {"data": {"datasets": [{"backgroundColor": "rgb(250, 220, 220)", "borderColor": "rgb(250, 192, 192)", "data": [3, 2, 1, 1, 1, 2], "fill": true, "label": "Failures", "tension": 0.1}, {"backgroundColor": "rgb(200, 212, 212)", "borderColor": "rgb(180, 192, 192)", "data": [0, 0, 0, 0, 0, 0], "fill": true, "label": "Errors", "tension": 0.1}, {"backgroundColor": "rgb(150, 150, 150)", "borderColor": "rgb(100, 100, 100)", "data": [158, 158, 158, 119, 119, 119], "fill": true, "label": "Skipped", "tension": 0.1}, {"backgroundColor": "rgb(95, 212, 120)", "borderColor": "rgb(75, 192, 100)", "data": [3825, 3826, 3827, 3421, 3429, 3428], "fill": true, "label": "Success", "tension": 0.1}], "labels": ["31. Jan 2023 15:51", "31. Jan 2023 19:36", "02. Feb 2023 16:39", "06. Feb 2023 12:55", "15. Feb 2023 15:26", "24. Feb 2023 00:12"]}, "options": {"maintainAspectRatio": false, "responsive": true, "scales": {"y": {"stacked": true}}}, "type": "line"});
 </script>
     </main>
 </body>

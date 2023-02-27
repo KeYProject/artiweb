@@ -38,11 +38,76 @@
 
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 <script type="text/javascript">
-      const ctx = document.getElementById('runtime');
-      new Chart(ctx, {"data": {"datasets": [{"borderWidth": 1, "data": [2.7099494444444447, 2.7296266666666664, 2.7388447222222223, 2.7006397222222223, 3.031825277777777, 3.247994166666667, 2.7954308333333335, 2.7205486111111115, 2.7820947222222228, 3.145663888888889, 2.6678936111111105, 2.7050330555555555, 2.6314902777777784, 3.2608375000000005, 2.7335272222222224, 3.113466111111111, 2.769660555555555, 3.2147274999999995, 3.03914], "label": "Runtime in Hours"}], "labels": ["10. Feb 2023 20:42", "10. Feb 2023 20:47", "10. Feb 2023 20:49", "10. Feb 2023 21:02", "10. Feb 2023 21:36", "10. Feb 2023 21:37", "21. Feb 2023 17:59", "21. Feb 2023 18:24", "21. Feb 2023 18:26", "21. Feb 2023 18:52", "21. Feb 2023 19:06", "21. Feb 2023 19:12", "22. Feb 2023 12:37", "23. Feb 2023 03:25", "23. Feb 2023 03:49", "23. Feb 2023 14:22", "23. Feb 2023 18:54", "23. Feb 2023 19:32", "23. Feb 2023 21:41"]}, "options": {"maintainAspectRatio": false, "responsive": true, "scales": {"y": {"beginAtZero": true}}}, "type": "bar"});
+    function formatLabel(context) {
+        let label = context.dataset.label || '';
+        if (label) {
+            label += ': ';
+        }
+        const value = context.raw;
+        let format;
+        if (value == 0) {
+            format = "0s";
+        } else if (value < 3) {
+            format = Math.round(value * 1000) + "ms";
+        } else if (value < 120) {
+            format = Math.round(value) + "s";
+        } else {
+            format = "";
+            let remainder = value;
+            if (remainder > 3600) {
+                const hours = Math.floor(remainder / 3600);
+                remainder = remainder % 3600;
+                format += hours + "h ";
+            }
+            
+            if (remainder > 60) {
+                const minutes = Math.floor(remainder / 60);
+                remainder = remainder % 60;
+                format += minutes + "m ";
+            }
+            
+            const seconds = Math.round(remainder);
+            format += seconds + "s";
+        }
+        return label + format;
+    }
 
-      const ctx2 = document.getElementById('testcases');
-      new Chart(ctx2, {"data": {"datasets": [{"backgroundColor": "rgb(250, 220, 220)", "borderColor": "rgb(250, 192, 192)", "data": [0, 0, 0, 0, 0, 0, 10, 10, 10, 10, 620, 620, 619, 619, 11, 32, 7, 7, 1], "fill": true, "label": "Failures", "tension": 0.1}, {"backgroundColor": "rgb(200, 212, 212)", "borderColor": "rgb(180, 192, 192)", "data": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], "fill": true, "label": "Errors", "tension": 0.1}, {"backgroundColor": "rgb(150, 150, 150)", "borderColor": "rgb(100, 100, 100)", "data": [119, 119, 119, 119, 119, 119, 119, 119, 119, 119, 119, 119, 119, 119, 119, 119, 119, 119, 119], "fill": true, "label": "Skipped", "tension": 0.1}, {"backgroundColor": "rgb(95, 212, 120)", "borderColor": "rgb(75, 192, 100)", "data": [3430, 3430, 3430, 3430, 3430, 3430, 3412, 3412, 3412, 3412, 2810, 2810, 2811, 2811, 3419, 3398, 3420, 3420, 3424], "fill": true, "label": "Success", "tension": 0.1}], "labels": ["10. Feb 2023 20:42", "10. Feb 2023 20:47", "10. Feb 2023 20:49", "10. Feb 2023 21:02", "10. Feb 2023 21:36", "10. Feb 2023 21:37", "21. Feb 2023 17:59", "21. Feb 2023 18:24", "21. Feb 2023 18:26", "21. Feb 2023 18:52", "21. Feb 2023 19:06", "21. Feb 2023 19:12", "22. Feb 2023 12:37", "23. Feb 2023 03:25", "23. Feb 2023 03:49", "23. Feb 2023 14:22", "23. Feb 2023 18:54", "23. Feb 2023 19:32", "23. Feb 2023 21:41"]}, "options": {"maintainAspectRatio": false, "responsive": true, "scales": {"y": {"stacked": true}}}, "type": "line"});
+    function createChart(name, labels, data) {
+        const ctx = document.getElementById(name);
+        const graph = {
+            type: 'bar',
+            data: {
+                labels: labels,
+                datasets: [{
+                    label: "Runtime",
+                    data: data,
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        };
+        graph.options.plugins = {
+            tooltip: {
+                callbacks: {
+                    label: formatLabel
+                }
+            }
+        };
+        new Chart(ctx, graph);
+    }
+
+    createChart("runtime", ["10. Feb 2023 20:42", "10. Feb 2023 20:47", "10. Feb 2023 20:49", "10. Feb 2023 21:02", "10. Feb 2023 21:36", "10. Feb 2023 21:37", "21. Feb 2023 17:59", "21. Feb 2023 18:24", "21. Feb 2023 18:26", "21. Feb 2023 18:52", "21. Feb 2023 19:06", "21. Feb 2023 19:12", "22. Feb 2023 12:37", "23. Feb 2023 03:25", "23. Feb 2023 03:49", "23. Feb 2023 14:22", "23. Feb 2023 18:54", "23. Feb 2023 19:32", "23. Feb 2023 21:41"], [9755.818000000001, 9826.655999999999, 9859.841, 9722.303, 10914.570999999998, 11692.779000000002, 10063.551000000001, 9793.975, 10015.541000000001, 11324.39, 9604.416999999998, 9738.119, 9473.365000000002, 11739.015000000001, 9840.698, 11208.478, 9970.777999999998, 11573.018999999998, 10940.904]);
+
+    const ctx2 = document.getElementById('testcases');
+    new Chart(ctx2, {"data": {"datasets": [{"backgroundColor": "rgb(250, 220, 220)", "borderColor": "rgb(250, 192, 192)", "data": [0, 0, 0, 0, 0, 0, 10, 10, 10, 10, 620, 620, 619, 619, 11, 32, 7, 7, 1], "fill": true, "label": "Failures", "tension": 0.1}, {"backgroundColor": "rgb(200, 212, 212)", "borderColor": "rgb(180, 192, 192)", "data": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], "fill": true, "label": "Errors", "tension": 0.1}, {"backgroundColor": "rgb(150, 150, 150)", "borderColor": "rgb(100, 100, 100)", "data": [119, 119, 119, 119, 119, 119, 119, 119, 119, 119, 119, 119, 119, 119, 119, 119, 119, 119, 119], "fill": true, "label": "Skipped", "tension": 0.1}, {"backgroundColor": "rgb(95, 212, 120)", "borderColor": "rgb(75, 192, 100)", "data": [3430, 3430, 3430, 3430, 3430, 3430, 3412, 3412, 3412, 3412, 2810, 2810, 2811, 2811, 3419, 3398, 3420, 3420, 3424], "fill": true, "label": "Success", "tension": 0.1}], "labels": ["10. Feb 2023 20:42", "10. Feb 2023 20:47", "10. Feb 2023 20:49", "10. Feb 2023 21:02", "10. Feb 2023 21:36", "10. Feb 2023 21:37", "21. Feb 2023 17:59", "21. Feb 2023 18:24", "21. Feb 2023 18:26", "21. Feb 2023 18:52", "21. Feb 2023 19:06", "21. Feb 2023 19:12", "22. Feb 2023 12:37", "23. Feb 2023 03:25", "23. Feb 2023 03:49", "23. Feb 2023 14:22", "23. Feb 2023 18:54", "23. Feb 2023 19:32", "23. Feb 2023 21:41"]}, "options": {"maintainAspectRatio": false, "responsive": true, "scales": {"y": {"stacked": true}}}, "type": "line"});
 </script>
     </main>
 </body>
