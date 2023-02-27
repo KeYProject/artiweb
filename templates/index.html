@@ -5,12 +5,16 @@
 <p class="important">
     Welcome to artiweb.
 </p>
-
+<ul>
+    <li><a href="#pr-open">Open pull requests</a></li>
+    <li><a href="#pr-closed">Closed pull requests</a></li>
+    <li><a href="#graphs">Runtime graphs</a></li>
+</ul>
 {% macro pullRequestLink(pr) -%}
     <a href="{{pr.number}}">[#{{pr.number}}] {{pr.title}}</a>
 {%- endmacro %}
 
-<section>
+<section id="pr-open">
     <h3>Open pull requests</h3>
     <ul>
         {%- for pr in pullrequests | reverse -%}
@@ -21,7 +25,7 @@
     </ul>
 </section>
 
-<section>
+<section id="pr-closed">
     <h3>Closed pull requests</h3>
     <ul>
         {%- for pr in pullrequests | reverse -%}
@@ -32,7 +36,7 @@
     </ul>
 </section>
 
-<section>
+<section id="graphs">
     <h3>Graphs</h3>
     {%- for g in graphs -%}
         <h4>{{ g.name }}</h4>
