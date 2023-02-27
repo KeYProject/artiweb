@@ -14,7 +14,7 @@
     <ul>
         {%- for test in artifact.tests -%}
             <li>
-                {%- if test.statistics.failures > 0 or test.statistics.errors > 0 -%}❌ {% else -%}✅ {% endif -%}
+                {%- if test.green -%}✅ {% else -%}❌ {% endif -%}
                 {%- if test.report_path -%}
                     <a href="{{test.report_path}}">{{test.full_name}}</a>
                 {%- else -%}

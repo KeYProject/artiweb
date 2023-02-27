@@ -46,10 +46,16 @@ def index(pull_requests):
     for name, ts in tests.items():
         ts.sort(key=lambda t: t.created_at)
         labels = [t.created_at_pretty for t in ts]
-        values = [t.statistics.total_time/60.0/60.0 for t in ts]
+        succeded = [t.statistics.total_time if t.green else None for t in ts]
+        failed = [t.statistics.total_time if not(t.green) else None for t in ts]
 
-        graph = generate_runtime_chart(labels, values)
-        graphs.append({ "graph": graph, "name": name })
+        graph = {
+            "name": name,
+            "labels": labels,
+            "succeded": succeded,
+            "failed": failed
+        }
+        graphs.append(graph)
 
     graphs.sort(key=lambda x: x["name"])
     
@@ -62,27 +68,11 @@ def read_meta(folder: Path):
         return addict.Dict(json.load(fp))
 
 
-def generate_runtime_chart(labels, data):
+def generate_runtime_chart(name, labels, data):
     return {
-        'type': 'bar',
-        'data': {
-            'labels': labels,
-            'datasets': [{
-                'label': 'Runtime in Hours',
-                'data': data,
-                'borderWidth': 1
-            },
-            ]
-        },
-        'options': {
-            'responsive': True,
-            'maintainAspectRatio': False,
-            'scales': {
-                'y': {
-                    'beginAtZero': True
-                }
-            }
-        }
+        'name': name,
+        'labels': labels,
+        'data': data
     }
 
 def generate_pull_request(path: Path):
@@ -109,7 +99,7 @@ def generate_pull_request(path: Path):
     labels = [a.created_at_pretty for a in artifacts]
 
     print("Generating charts")
-    runtime_chart = generate_runtime_chart(labels, [v.total_time/60.0/60.0 for v in values])
+    runtime_chart = generate_runtime_chart("Runtime", labels, [v.total_time for v in values])
 
     test_cases = {
         'type': 'line',
@@ -218,6 +208,7 @@ def find_tests(path: Path):
 
             test = addict.Dict()
             test.statistics = junit_statistics(test_path)
+            test.green = not(test.statistics.failures > 0 or test.statistics.errors > 0)
             test.project = project
             test.name = name
             test.full_name = project + ":" + name
