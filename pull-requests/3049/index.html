@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=1024px, initial-scale=1.0">
+    <title>#3049 - Position information overhaul</title>
+    <link rel="stylesheet" href="https://unpkg.com/@picocss/pico@1.*/css/pico.min.css">
+    
+    
+</head>
+<body>
+    <main class="container">
+    <section>
+<h1>#3049 - Position information overhaul</h1>
+    <summary>
+        <p><a href="https://github.com/KeYProject/key/pull/3049">Pull request</a></p>
+        <span>Description</span>
+        <details><ul>
+<li>Removes most manual passing of line, column and replaces it with <code>Location</code></li>
+<li><a href="https://github.com/KeYProject/key/commit/9894f7a5a8ca9b8b0b962d9565cced69dc60c89f">Fix issue dialog pointing to the wrong line (at least on Windows)</a></li>
+<li>Fix many positioning issues coming from 0-based/1-based columns/lines</li>
+<li>Fix position information of block contracts and the like</li>
+</ul>
+<p>Blocking on #3034. There are some usages in the <code>PrettyPrinter</code> I won't fix since it's deleted there.</p></details>
+    </summary>
+</section>
+
+<section>
+    <h3>Artifacts</h3>
+    <ul><li><a href="576938332">28. Feb 2023 17:21</a> <small>(173.46 kB large)</small></li></ul>
+</section>
+
+
+<div style="height:10em;"><canvas id="runtime"></canvas></div>     
+<div style="height:10em;"><canvas id="testcases"></canvas></div>     
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script type="text/javascript">
+    function formatLabel(context) {
+        let label = context.dataset.label || '';
+        if (label) {
+            label += ': ';
+        }
+        const value = context.raw;
+        let format;
+        if (value == 0) {
+            format = "0s";
+        } else if (value < 3) {
+            format = Math.round(value * 1000) + "ms";
+        } else if (value < 120) {
+            format = Math.round(value) + "s";
+        } else {
+            format = "";
+            let remainder = value;
+            if (remainder > 3600) {
+                const hours = Math.floor(remainder / 3600);
+                remainder = remainder % 3600;
+                format += hours + "h ";
+            }
+            
+            if (remainder > 60) {
+                const minutes = Math.floor(remainder / 60);
+                remainder = remainder % 60;
+                format += minutes + "m ";
+            }
+            
+            const seconds = Math.round(remainder);
+            format += seconds + "s";
+        }
+        return label + format;
+    }
+
+    function createChart(name, labels, data) {
+        const ctx = document.getElementById(name);
+        const graph = {
+            type: 'bar',
+            data: {
+                labels: labels,
+                datasets: [{
+                    label: "Runtime",
+                    data: data,
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        };
+        graph.options.plugins = {
+            tooltip: {
+                callbacks: {
+                    label: formatLabel
+                }
+            }
+        };
+        new Chart(ctx, graph);
+    }
+
+    createChart("runtime", ["28. Feb 2023 17:21"], [1.593]);
+
+    const ctx2 = document.getElementById('testcases');
+    new Chart(ctx2, {"data": {"datasets": [{"backgroundColor": "rgb(250, 220, 220)", "borderColor": "rgb(250, 192, 192)", "data": [0], "fill": true, "label": "Failures", "tension": 0.1}, {"backgroundColor": "rgb(200, 212, 212)", "borderColor": "rgb(180, 192, 192)", "data": [0], "fill": true, "label": "Errors", "tension": 0.1}, {"backgroundColor": "rgb(150, 150, 150)", "borderColor": "rgb(100, 100, 100)", "data": [15], "fill": true, "label": "Skipped", "tension": 0.1}, {"backgroundColor": "rgb(95, 212, 120)", "borderColor": "rgb(75, 192, 100)", "data": [172], "fill": true, "label": "Success", "tension": 0.1}], "labels": ["28. Feb 2023 17:21"]}, "options": {"maintainAspectRatio": false, "responsive": true, "scales": {"y": {"stacked": true}}}, "type": "line"});
+</script>
+    </main>
+</body>
+</html>
