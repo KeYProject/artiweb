@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=1024px, initial-scale=1.0">
+    <title>#3052 - Bump org.slf4j:slf4j-api from 1.7.32 to 2.0.6</title>
+    <link rel="stylesheet" href="https://unpkg.com/@picocss/pico@1.*/css/pico.min.css">
+    
+    
+</head>
+<body>
+    <main class="container">
+    <section>
+<h1>#3052 - Bump org.slf4j:slf4j-api from 1.7.32 to 2.0.6</h1>
+    <summary>
+        <p><a href="https://github.com/KeYProject/key/pull/3052">Pull request</a></p>
+        <span>Description</span>
+        <details><p>Bumps <a href="https://github.com/qos-ch/slf4j">org.slf4j:slf4j-api</a> from 1.7.32 to 2.0.6.</p>
+<details>
+<summary>Commits</summary>
+<ul>
+<li><a href="https://github.com/qos-ch/slf4j/commit/5ff6f2c385c36ea4f8b85cacd69f7ca891c37818"><code>5ff6f2c</code></a> prepare for release 2.0.6</li>
+<li><a href="https://github.com/qos-ch/slf4j/commit/2f4aa754451167e2fef98a07f2e1260cdb08b332"><code>2f4aa75</code></a> fix SLF4J-575</li>
+<li><a href="https://github.com/qos-ch/slf4j/commit/363f0a534ea736bb02ced129f3ae27720f95c13f"><code>363f0a5</code></a> remove unused parts</li>
+<li><a href="https://github.com/qos-ch/slf4j/commit/171679baa87e13cfb8ca471242da6fd0d3acbe53"><code>171679b</code></a> SLF4J-574: Add full OSGi headers, especially &quot;uses&quot; clauses</li>
+<li><a href="https://github.com/qos-ch/slf4j/commit/921b5b31e179d625d349debf15210ed067a5a153"><code>921b5b3</code></a> fix FUNDING file</li>
+<li><a href="https://github.com/qos-ch/slf4j/commit/e02244c39f11cdcdb07d6b291f157e3687d5b920"><code>e02244c</code></a> fix FUNDING file</li>
+<li><a href="https://github.com/qos-ch/slf4j/commit/441d4584bed16ec8fe54a9c4acb8d289e51005b8"><code>441d458</code></a> fix FUNDING file</li>
+<li><a href="https://github.com/qos-ch/slf4j/commit/f5e741ba1af6565269499d34c725c32ef8ca467f"><code>f5e741b</code></a> add FUNDING file</li>
+<li><a href="https://github.com/qos-ch/slf4j/commit/2e71327c8ee745927d731e8d9f4e51d331dad138"><code>2e71327</code></a> remove unused log4j dependency in the version definition section of pom.xml</li>
+<li><a href="https://github.com/qos-ch/slf4j/commit/3ff2a30e05e5825d96ddb54da243df48f1a9d897"><code>3ff2a30</code></a> start work on 2.0.6-SNAPSHOT</li>
+<li>Additional commits viewable in <a href="https://github.com/qos-ch/slf4j/compare/v_1.7.32...v_2.0.6">compare view</a></li>
+</ul>
+</details>
+<p><br /></p>
+<p><a href="https://docs.github.com/en/github/managing-security-vulnerabilities/about-dependabot-security-updates#about-compatibility-scores"><img alt="Dependabot compatibility score" src="https://dependabot-badges.githubapp.com/badges/compatibility_score?dependency-name=org.slf4j:slf4j-api&amp;package-manager=gradle&amp;previous-version=1.7.32&amp;new-version=2.0.6" /></a></p>
+<p>Dependabot will resolve any conflicts with this PR as long as you don't alter it yourself. You can also trigger a rebase manually by commenting <code>@dependabot rebase</code>.</p>
+<hr />
+<details>
+<summary>Dependabot commands and options</summary>
+<br />
+
+You can trigger Dependabot actions by commenting on this PR:
+- `@dependabot rebase` will rebase this PR
+- `@dependabot recreate` will recreate this PR, overwriting any edits that have been made to it
+- `@dependabot merge` will merge this PR after your CI passes on it
+- `@dependabot squash and merge` will squash and merge this PR after your CI passes on it
+- `@dependabot cancel merge` will cancel a previously requested merge and block automerging
+- `@dependabot reopen` will reopen this PR if it is closed
+- `@dependabot close` will close this PR and stop Dependabot recreating it. You can achieve the same result by closing it manually
+- `@dependabot ignore this major version` will close this PR and stop Dependabot creating any more for this major version (unless you reopen the PR or upgrade to it yourself)
+- `@dependabot ignore this minor version` will close this PR and stop Dependabot creating any more for this minor version (unless you reopen the PR or upgrade to it yourself)
+- `@dependabot ignore this dependency` will close this PR and stop Dependabot creating any more for this dependency (unless you reopen the PR or upgrade to it yourself)
+
+
+</details></details>
+    </summary>
+</section>
+
+<section>
+    <h3>Artifacts</h3>
+    <ul></ul>
+</section>
+
+
+<div style="height:10em;"><canvas id="runtime"></canvas></div>     
+<div style="height:10em;"><canvas id="testcases"></canvas></div>     
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script type="text/javascript">
+    function formatLabel(context) {
+        let label = context.dataset.label || '';
+        if (label) {
+            label += ': ';
+        }
+        const value = context.raw;
+        let format;
+        if (value == 0) {
+            format = "0s";
+        } else if (value < 3) {
+            format = Math.round(value * 1000) + "ms";
+        } else if (value < 120) {
+            format = Math.round(value) + "s";
+        } else {
+            format = "";
+            let remainder = value;
+            if (remainder > 3600) {
+                const hours = Math.floor(remainder / 3600);
+                remainder = remainder % 3600;
+                format += hours + "h ";
+            }
+            
+            if (remainder > 60) {
+                const minutes = Math.floor(remainder / 60);
+                remainder = remainder % 60;
+                format += minutes + "m ";
+            }
+            
+            const seconds = Math.round(remainder);
+            format += seconds + "s";
+        }
+        return label + format;
+    }
+
+    function createChart(name, labels, data) {
+        const ctx = document.getElementById(name);
+        const graph = {
+            type: 'bar',
+            data: {
+                labels: labels,
+                datasets: [{
+                    label: "Runtime",
+                    data: data,
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        };
+        graph.options.plugins = {
+            tooltip: {
+                callbacks: {
+                    label: formatLabel
+                }
+            }
+        };
+        new Chart(ctx, graph);
+    }
+
+    createChart("runtime", [], []);
+
+    const ctx2 = document.getElementById('testcases');
+    new Chart(ctx2, {"data": {"datasets": [{"backgroundColor": "rgb(250, 220, 220)", "borderColor": "rgb(250, 192, 192)", "data": [], "fill": true, "label": "Failures", "tension": 0.1}, {"backgroundColor": "rgb(200, 212, 212)", "borderColor": "rgb(180, 192, 192)", "data": [], "fill": true, "label": "Errors", "tension": 0.1}, {"backgroundColor": "rgb(150, 150, 150)", "borderColor": "rgb(100, 100, 100)", "data": [], "fill": true, "label": "Skipped", "tension": 0.1}, {"backgroundColor": "rgb(95, 212, 120)", "borderColor": "rgb(75, 192, 100)", "data": [], "fill": true, "label": "Success", "tension": 0.1}], "labels": []}, "options": {"maintainAspectRatio": false, "responsive": true, "scales": {"y": {"stacked": true}}}, "type": "line"});
+</script>
+    </main>
+</body>
+</html>
