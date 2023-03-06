@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=1024px, initial-scale=1.0">
+    <title>#3055 - Bump ch.qos.logback:logback-classic from 1.2.10 to 1.4.5</title>
+    <link rel="stylesheet" href="https://unpkg.com/@picocss/pico@1.*/css/pico.min.css">
+    
+    
+</head>
+<body>
+    <main class="container">
+    <section>
+<h1>#3055 - Bump ch.qos.logback:logback-classic from 1.2.10 to 1.4.5</h1>
+    <summary>
+        <p><a href="https://github.com/KeYProject/key/pull/3055">Pull request</a></p>
+        <span>Description</span>
+        <details><p>Bumps <a href="https://github.com/qos-ch/logback">ch.qos.logback:logback-classic</a> from 1.2.10 to 1.4.5.</p>
+<details>
+<summary>Commits</summary>
+<ul>
+<li><a href="https://github.com/qos-ch/logback/commit/34a6efc53416709b0f47701e9e7099531cb8b256"><code>34a6efc</code></a> preparfe release 1.4.5</li>
+<li><a href="https://github.com/qos-ch/logback/commit/0d3ac63114cf1ed2416aca285e96daa71a22ccb7"><code>0d3ac63</code></a> fix LOGBACK-1698, [Nested appenders are not allowed] warning using SiftingApp...</li>
+<li><a href="https://github.com/qos-ch/logback/commit/a64b8d43b497a39171253a7c7a67d7638b9f29cf"><code>a64b8d4</code></a> make jakarta.servlet-api as both provided and optional</li>
+<li><a href="https://github.com/qos-ch/logback/commit/114b3ded2dcbfec9dcf2d69d871297f5ac0ed673"><code>114b3de</code></a> bump slf4j version</li>
+<li><a href="https://github.com/qos-ch/logback/commit/1df66621e441e668816414fa21ea5942e5d92c43"><code>1df6662</code></a> fix LOGBACK-1706</li>
+<li><a href="https://github.com/qos-ch/logback/commit/ea165fb023f55aec48d3051b817105a69e881eb9"><code>ea165fb</code></a> fix LOGBACK-1703</li>
+<li><a href="https://github.com/qos-ch/logback/commit/9e07bd075abb3261ccb50f73f46c714a63506473"><code>9e07bd0</code></a> fix LOGBACK-1703</li>
+<li><a href="https://github.com/qos-ch/logback/commit/a871e9f1b52e49ebe2ca002a476062b85207fc9c"><code>a871e9f</code></a> minor edits in README.md</li>
+<li><a href="https://github.com/qos-ch/logback/commit/7dc0ce51185f4c887ae50f87f7530a1f89d339aa"><code>7dc0ce5</code></a> Merge pull request <a href="https://github-redirect.dependabot.com/qos-ch/logback/issues/605">#605</a> from Zardoz89/patch-1</li>
+<li><a href="https://github.com/qos-ch/logback/commit/7130dfe3a45816b073fbe6a4d05b7ee47f2d6cd1"><code>7130dfe</code></a> README.md MUST inform about Java &amp; Jackarta EE support</li>
+<li>Additional commits viewable in <a href="https://github.com/qos-ch/logback/compare/v_1.2.10...v_1.4.5">compare view</a></li>
+</ul>
+</details>
+<p><br /></p>
+<p><a href="https://docs.github.com/en/github/managing-security-vulnerabilities/about-dependabot-security-updates#about-compatibility-scores"><img alt="Dependabot compatibility score" src="https://dependabot-badges.githubapp.com/badges/compatibility_score?dependency-name=ch.qos.logback:logback-classic&amp;package-manager=gradle&amp;previous-version=1.2.10&amp;new-version=1.4.5" /></a></p>
+<p>Dependabot will resolve any conflicts with this PR as long as you don't alter it yourself. You can also trigger a rebase manually by commenting <code>@dependabot rebase</code>.</p>
+<hr />
+<details>
+<summary>Dependabot commands and options</summary>
+<br />
+
+You can trigger Dependabot actions by commenting on this PR:
+- `@dependabot rebase` will rebase this PR
+- `@dependabot recreate` will recreate this PR, overwriting any edits that have been made to it
+- `@dependabot merge` will merge this PR after your CI passes on it
+- `@dependabot squash and merge` will squash and merge this PR after your CI passes on it
+- `@dependabot cancel merge` will cancel a previously requested merge and block automerging
+- `@dependabot reopen` will reopen this PR if it is closed
+- `@dependabot close` will close this PR and stop Dependabot recreating it. You can achieve the same result by closing it manually
+- `@dependabot ignore this major version` will close this PR and stop Dependabot creating any more for this major version (unless you reopen the PR or upgrade to it yourself)
+- `@dependabot ignore this minor version` will close this PR and stop Dependabot creating any more for this minor version (unless you reopen the PR or upgrade to it yourself)
+- `@dependabot ignore this dependency` will close this PR and stop Dependabot creating any more for this dependency (unless you reopen the PR or upgrade to it yourself)
+
+
+</details></details>
+    </summary>
+</section>
+
+<section>
+    <h3>Artifacts</h3>
+    <ul></ul>
+</section>
+
+
+<div style="height:10em;"><canvas id="runtime"></canvas></div>     
+<div style="height:10em;"><canvas id="testcases"></canvas></div>     
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script type="text/javascript">
+    function formatLabel(context) {
+        let label = context.dataset.label || '';
+        if (label) {
+            label += ': ';
+        }
+        const value = context.raw;
+        let format;
+        if (value == 0) {
+            format = "0s";
+        } else if (value < 3) {
+            format = Math.round(value * 1000) + "ms";
+        } else if (value < 120) {
+            format = Math.round(value) + "s";
+        } else {
+            format = "";
+            let remainder = value;
+            if (remainder > 3600) {
+                const hours = Math.floor(remainder / 3600);
+                remainder = remainder % 3600;
+                format += hours + "h ";
+            }
+            
+            if (remainder > 60) {
+                const minutes = Math.floor(remainder / 60);
+                remainder = remainder % 60;
+                format += minutes + "m ";
+            }
+            
+            const seconds = Math.round(remainder);
+            format += seconds + "s";
+        }
+        return label + format;
+    }
+
+    function createChart(name, labels, data) {
+        const ctx = document.getElementById(name);
+        const graph = {
+            type: 'bar',
+            data: {
+                labels: labels,
+                datasets: [{
+                    label: "Runtime",
+                    data: data,
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        };
+        graph.options.plugins = {
+            tooltip: {
+                callbacks: {
+                    label: formatLabel
+                }
+            }
+        };
+        new Chart(ctx, graph);
+    }
+
+    createChart("runtime", [], []);
+
+    const ctx2 = document.getElementById('testcases');
+    new Chart(ctx2, {"data": {"datasets": [{"backgroundColor": "rgb(250, 220, 220)", "borderColor": "rgb(250, 192, 192)", "data": [], "fill": true, "label": "Failures", "tension": 0.1}, {"backgroundColor": "rgb(200, 212, 212)", "borderColor": "rgb(180, 192, 192)", "data": [], "fill": true, "label": "Errors", "tension": 0.1}, {"backgroundColor": "rgb(150, 150, 150)", "borderColor": "rgb(100, 100, 100)", "data": [], "fill": true, "label": "Skipped", "tension": 0.1}, {"backgroundColor": "rgb(95, 212, 120)", "borderColor": "rgb(75, 192, 100)", "data": [], "fill": true, "label": "Success", "tension": 0.1}], "labels": []}, "options": {"maintainAspectRatio": false, "responsive": true, "scales": {"y": {"stacked": true}}}, "type": "line"});
+</script>
+    </main>
+</body>
+</html>
