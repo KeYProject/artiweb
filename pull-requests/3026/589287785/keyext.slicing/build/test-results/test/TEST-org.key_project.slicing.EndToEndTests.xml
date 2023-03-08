@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="org.key_project.slicing.EndToEndTests" tests="11" skipped="0" failures="0" errors="0" timestamp="2023-03-08T14:44:03" hostname="fv-az411-813" time="246.697">
+  <properties/>
+  <testcase name="sliceSitaRearrange()" classname="org.key_project.slicing.EndToEndTests" time="22.393"/>
+  <testcase name="sliceIfThenElseSplit()" classname="org.key_project.slicing.EndToEndTests" time="47.303"/>
+  <testcase name="deduplicateChecksMergabilityCorrectly()" classname="org.key_project.slicing.EndToEndTests" time="9.158"/>
+  <testcase name="sliceDuplicatesAway()" classname="org.key_project.slicing.EndToEndTests" time="36.059"/>
+  <testcase name="sliceDuplicatesAwayOpenGoals()" classname="org.key_project.slicing.EndToEndTests" time="35.965"/>
+  <testcase name="sliceCutExample()" classname="org.key_project.slicing.EndToEndTests" time="8.761"/>
+  <testcase name="sliceAgathaWithOpenGoal()" classname="org.key_project.slicing.EndToEndTests" time="8.631"/>
+  <testcase name="sliceSimpleSMT()" classname="org.key_project.slicing.EndToEndTests" time="0.001"/>
+  <testcase name="sliceWithOpenGoal()" classname="org.key_project.slicing.EndToEndTests" time="16.816"/>
+  <testcase name="sliceAgatha()" classname="org.key_project.slicing.EndToEndTests" time="8.59"/>
+  <testcase name="sliceRemoveDuplicates()" classname="org.key_project.slicing.EndToEndTests" time="53.008"/>
+  <system-out><![CDATA[loading /home/runner/work/key/key/keyext.slicing/src/test/resources/testcase/sitaRearrange.zproof
+[14:44:04.037] ?[31mWARN ?[0;39m ?[36mProofIndependentSettings?[0;39m - The settings in /home/runner/.key/proofIndependentSettings.props are *not* read due to flag 'key.disregardSettings'
+[14:44:04.213] ?[31mWARN ?[0;39m ?[36mProofSettings?[0;39m - The settings in /home/runner/.key/proof-settings.props are *not* read.
+[14:44:16.761] ?[34mINFO ?[0;39m ?[36mKeyStrokeSettings?[0;39m - Save keyboard shortcuts to: /home/runner/.key/keystrokes.properties
+loading /home/runner/work/key/key/keyext.slicing/src/test/resources/testcase/ifThenElseSplit.proof
+loading /home/runner/work/key/key/keyext.slicing/src/test/resources/testcase/ifThenElseSplit.proof
+[14:44:39.444] ?[34mINFO ?[0;39m ?[36mDependencyAnalyzer?[0;39m - merging 2 and 3
+loading /tmp/KeYslice7673176963554736162/ifThenElseSplit_slice1.proof
+[14:44:49.050] ?[34mINFO ?[0;39m ?[36mDependencyAnalyzer?[0;39m - merging 3 and 4
+loading /tmp/KeYslice12747104037877306986/ifThenElseSplit_slice2.proof
+[14:44:58.078] ?[34mINFO ?[0;39m ?[36mDependencyAnalyzer?[0;39m - merging 4 and 5
+loading /tmp/KeYslice16638883032597536725/ifThenElseSplit_slice3.proof
+[14:45:07.444] ?[34mINFO ?[0;39m ?[36mDependencyAnalyzer?[0;39m - merging 5 and 6
+loading /home/runner/work/key/key/keyext.slicing/src/test/resources/testcase/deduplicateCheck4.proof
+loading /home/runner/work/key/key/keyext.slicing/src/test/resources/testcase/exampleDuplicate.proof
+[14:45:25.834] ?[34mINFO ?[0;39m ?[36mDependencyAnalyzer?[0;39m - merging 2 and 3
+loading /tmp/KeYslice15614499335034531578/exampleDuplicate_slice1.proof
+[14:45:34.960] ?[34mINFO ?[0;39m ?[36mDependencyAnalyzer?[0;39m - merging 3 and 4
+loading /tmp/KeYslice17916563306228334972/exampleDuplicate_slice2.proof
+[14:45:43.751] ?[34mINFO ?[0;39m ?[36mDependencyAnalyzer?[0;39m - merging 4 and 5
+loading /tmp/KeYslice2816696381643337638/exampleDuplicate_slice3.proof
+loading /home/runner/work/key/key/keyext.slicing/src/test/resources/testcase/exampleDuplicateOpen.proof
+[14:46:01.680] ?[34mINFO ?[0;39m ?[36mDependencyAnalyzer?[0;39m - merging 2 and 3
+loading /tmp/KeYslice18252084685939936586/exampleDuplicateOpen_slice1.proof
+[14:46:10.782] ?[34mINFO ?[0;39m ?[36mDependencyAnalyzer?[0;39m - merging 3 and 4
+loading /tmp/KeYslice15136906267512878102/exampleDuplicateOpen_slice2.proof
+[14:46:19.736] ?[34mINFO ?[0;39m ?[36mDependencyAnalyzer?[0;39m - merging 4 and 5
+loading /tmp/KeYslice10450250042139489346/exampleDuplicateOpen_slice3.proof
+loading /home/runner/work/key/key/keyext.slicing/src/test/resources/testcase/cutExample.proof
+loading /home/runner/work/key/key/keyext.slicing/src/test/resources/testcase/agathaOpenGoal.proof
+loading /home/runner/work/key/key/keyext.slicing/src/test/resources/testcase/openGoal1.proof
+loading /home/runner/work/key/key/keyext.slicing/src/test/resources/testcase/openGoal2.proof
+loading /home/runner/work/key/key/keyext.slicing/src/test/resources/testcase/agatha.proof
+loading /home/runner/work/key/key/keyext.slicing/src/test/resources/testcase/removeDuplicates.zproof
+loading /tmp/KeYslice8419554240321151078/RemoveDup(RemoveDup__removeDup((I)).JML normal_behavior operation contract.0_slice1.proof
+loading /tmp/KeYslice7310616003463941752/RemoveDup(RemoveDup__removeDup((I)).JML normal_behavior operation contract.0_slice2.proof
+loading /tmp/KeYslice5895983410847861554/RemoveDup(RemoveDup__removeDup((I)).JML normal_behavior operation contract.0_slice3.proof
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
