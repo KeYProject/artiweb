@@ -101,7 +101,7 @@ All other tests are green and only minor changes to the specification of the exi
         new Chart(ctx, graph);
     }
 
-    createChart("runtime", ["02. Feb 2023 16:22", "03. Feb 2023 10:32", "04. Feb 2023 17:02"], [12143.351, 11935.226, 10802.699999999997]);
+    createChart("runtime", ["02. Feb 2023 16:22", "03. Feb 2023 10:32", "04. Feb 2023 17:02"], [12143.350999999997, 11935.226, 10802.699999999999]);
 
     const ctx2 = document.getElementById('testcases');
     new Chart(ctx2, {"data": {"datasets": [{"backgroundColor": "rgb(250, 220, 220)", "borderColor": "rgb(250, 192, 192)", "data": [3, 2, 0], "fill": true, "label": "Failures", "tension": 0.1}, {"backgroundColor": "rgb(200, 212, 212)", "borderColor": "rgb(180, 192, 192)", "data": [0, 0, 0], "fill": true, "label": "Errors", "tension": 0.1}, {"backgroundColor": "rgb(150, 150, 150)", "borderColor": "rgb(100, 100, 100)", "data": [119, 119, 119], "fill": true, "label": "Skipped", "tension": 0.1}, {"backgroundColor": "rgb(95, 212, 120)", "borderColor": "rgb(75, 192, 100)", "data": [3507, 3508, 3421], "fill": true, "label": "Success", "tension": 0.1}], "labels": ["02. Feb 2023 16:22", "03. Feb 2023 10:32", "04. Feb 2023 17:02"]}, "options": {"maintainAspectRatio": false, "responsive": true, "scales": {"y": {"stacked": true}}}, "type": "line"});
