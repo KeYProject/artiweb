@@ -16,7 +16,36 @@
     <summary>
         <p><a href="https://github.com/KeYProject/key/pull/3026">Pull request</a></p>
         <span>Description</span>
-        <details><p>Continuation of https://git.key-project.org/key/key/-/merge_requests/596. All review comments have been adressed.</p></details>
+        <details><p>Continuation of https://git.key-project.org/key/key/-/merge_requests/596. All review comments have been adressed.</p>
+<hr />
+<p>This branch introduces the proof analysis and slicing algorithms implemented for my bachelor's thesis for inclusion in the next KeY version.</p>
+<h1>Why?</h1>
+<p>Neat data structure (dependency graph) and algorithm that help many usecases: "optimizing" the loading time of finished proofs, investigating the efficiency of KeY's heuristics, reducing the size of incomplete proofs, ...</p>
+<p>Also see https://git.key-project.org/key/key-docs/-/merge_requests/7</p>
+<h1>Features and Impact</h1>
+<p>Many new features available in the GUI: inspecting the dependency graph of a proof, proof analysis, proof slicing, ...</p>
+<p>The build script has been changed to save the full git commit hash as KeY version.</p>
+<h2>Changes in key.core</h2>
+<ul>
+<li>new <code>EqualsModProofIrrelevancy</code> interface to ignore certain details when comparing objects across proofs (currently only origin labels)</li>
+<li><code>Node</code>: <code>stepIndex</code> and <code>branchLocation</code></li>
+<li><code>BranchLocation</code> class to represent a location in the proof tree</li>
+<li><code>KeYMediator</code>: <code>fireProofLoaded</code> event (called just before a loaded proof is replayed)</li>
+<li><code>ProofSaver</code>: option to only save the proof obligation</li>
+<li><code>OneStepSimplifier</code>: when reloading a proof, restrict the formulas available to the Simplifier to the previously used formulas</li>
+<li><code>Taclet</code>: <code>addedBy</code> field to indicate which proof step defined a taclet</li>
+<li><code>ModularSMTLib2Translator</code>, <code>SMTFocusResults</code>: new facilities to ask the SMT solver for an unsat core and hide formulas not present in the unsat core from the sequent</li>
+</ul>
+<h2>Changes in key.util</h2>
+<ul>
+<li><code>Graph</code>, <code>DirectedGraph</code>, <code>GraphEdge</code>, <code>DefaultEdge</code>: simple implementation of a directed graph</li>
+</ul>
+<h1>Review</h1>
+<p>The most "interesting" class to review is probably SlicingProofReplayer, since some parts of it are very similar to the IntermediateProofReplayer.</p>
+<h1>Persons involved</h1>
+<p>Commit c9f59aeba25cde9f9db4fc608e99f235575377bc by Mattias Ulbrich (experiments with SMT unsat cores) is included in this branch. It was only intended as a "temporary hack", but it proved to be quite useful and has been adapted slightly to handle SMT solvers that do not produce unsat cores.</p>
+<hr />
+<p>Comment edited by @WolframPfeifer: Attached the original description.</p></details>
     </summary>
 </section>
 
