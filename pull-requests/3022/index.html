@@ -50,7 +50,10 @@
   (p&lt;&lt;name("A")&gt;&gt; -&gt; q&lt;&lt;name("B")&gt;&gt;) -&gt; !q&lt;&lt;name("C")&gt;&gt; -&gt; !p&lt;&lt;name("D")&gt;&gt;
 }</code></p>
 <p><img alt="image" src="https://user-images.githubusercontent.com/104259/216825901-cbe6bc91-fe49-49fa-869a-400626cec0c0.png" /></p>
+<p>New rules <code>andRightX</code> (for $x \in 3..6$) allows a more comprehensible proof split. </p>
+<p><img alt="image" src="https://user-images.githubusercontent.com/104259/226412328-e893721c-ac18-4477-87a1-c0f81cf51a2d.png" /></p>
 <h3>JML</h3>
+<p>Consider following examples: </p>
 <p>```java
 class Test {
     //@ public invariant MY_SUPER_INVARIANT: CONST == 42;</p>
@@ -65,6 +68,7 @@ public int foo() {return CONST;}
 </code></pre>
 <p>}
 ```</p>
+<p>This results into the following proof tree. At places where no name label is available we ask the origin label for a string representation. The origin label needs further improvement e.g., line numbers :exclamation: </p>
 <p><img alt="image" src="https://user-images.githubusercontent.com/104259/226410449-4bbee03c-75f5-4f0d-895d-a8aeb6009a49.png" /></p>
 <h3>Sum And Max</h3>
 <p>```
