@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=1024px, initial-scale=1.0">
+    <title>#3084 - Fix some positions being offset</title>
+    <link rel="stylesheet" href="https://unpkg.com/@picocss/pico@1.*/css/pico.min.css">
+    
+    
+</head>
+<body>
+    <main class="container">
+    <section>
+<h1>#3084 - Fix some positions being offset</h1>
+    <summary>
+        <p><a href="https://github.com/KeYProject/key/pull/3084">Pull request</a></p>
+        <span>Description</span>
+        <details><p>This tries to fix some offset positions caused by me thinking that the column given by recoder is 0-based when it is actually 1-based by sometimes is the uninitialized value of 0.</p></details>
+    </summary>
+</section>
+
+<section>
+    <h3>Artifacts</h3>
+    <ul><li><a href="594355701">11. Mar 2023 23:27</a> <small>(3402.56 kB large)</small></li><li><a href="594338756">11. Mar 2023 22:40</a> <small>(3531.39 kB large)</small></li><li><a href="594243498">11. Mar 2023 18:57</a> <small>(3532.78 kB large)</small></li><li><a href="594242245">11. Mar 2023 18:54</a> <small>(3531.86 kB large)</small></li><li><a href="593091735">10. Mar 2023 16:29</a> <small>(3889.48 kB large)</small></li><li><a href="593043964">10. Mar 2023 16:00</a> <small>(4092.57 kB large)</small></li><li><a href="592966457">10. Mar 2023 15:12</a> <small>(4094.72 kB large)</small></li><li><a href="592947796">10. Mar 2023 15:02</a> <small>(4095.13 kB large)</small></li><li><a href="592794568">10. Mar 2023 13:25</a> <small>(3181.72 kB large)</small></li><li><a href="576938332">28. Feb 2023 17:21</a> <small>(173.46 kB large)</small></li></ul>
+</section>
+
+
+<div style="height:10em;"><canvas id="runtime"></canvas></div>     
+<div style="height:10em;"><canvas id="testcases"></canvas></div>     
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script type="text/javascript">
+    function formatLabel(context) {
+        let label = context.dataset.label || '';
+        if (label) {
+            label += ': ';
+        }
+        const value = context.raw;
+        let format;
+        if (value == 0) {
+            format = "0s";
+        } else if (value < 3) {
+            format = Math.round(value * 1000) + "ms";
+        } else if (value < 120) {
+            format = Math.round(value) + "s";
+        } else {
+            format = "";
+            let remainder = value;
+            if (remainder > 3600) {
+                const hours = Math.floor(remainder / 3600);
+                remainder = remainder % 3600;
+                format += hours + "h ";
+            }
+            
+            if (remainder > 60) {
+                const minutes = Math.floor(remainder / 60);
+                remainder = remainder % 60;
+                format += minutes + "m ";
+            }
+            
+            const seconds = Math.round(remainder);
+            format += seconds + "s";
+        }
+        return label + format;
+    }
+
+    function createChart(name, labels, data) {
+        const ctx = document.getElementById(name);
+        const graph = {
+            type: 'bar',
+            data: {
+                labels: labels,
+                datasets: [{
+                    label: "Runtime",
+                    data: data,
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        };
+        graph.options.plugins = {
+            tooltip: {
+                callbacks: {
+                    label: formatLabel
+                }
+            }
+        };
+        new Chart(ctx, graph);
+    }
+
+    createChart("runtime", ["28. Feb 2023 17:21", "10. Mar 2023 13:25", "10. Mar 2023 15:02", "10. Mar 2023 15:12", "10. Mar 2023 16:00", "10. Mar 2023 16:29", "11. Mar 2023 18:54", "11. Mar 2023 18:57", "11. Mar 2023 22:40", "11. Mar 2023 23:27"], [1.593, 1411.6259999999997, 11085.857999999998, 10395.360999999999, 10725.769999999999, 11082.654, 9827.26, 10028.461, 9596.146, 10137.166]);
+
+    const ctx2 = document.getElementById('testcases');
+    new Chart(ctx2, {"data": {"datasets": [{"backgroundColor": "rgb(250, 220, 220)", "borderColor": "rgb(250, 192, 192)", "data": [0, 17, 20, 20, 20, 10, 2, 2, 2, 0], "fill": true, "label": "Failures", "tension": 0.1}, {"backgroundColor": "rgb(200, 212, 212)", "borderColor": "rgb(180, 192, 192)", "data": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], "fill": true, "label": "Errors", "tension": 0.1}, {"backgroundColor": "rgb(150, 150, 150)", "borderColor": "rgb(100, 100, 100)", "data": [15, 117, 117, 117, 117, 117, 117, 117, 117, 117], "fill": true, "label": "Skipped", "tension": 0.1}, {"backgroundColor": "rgb(95, 212, 120)", "borderColor": "rgb(75, 192, 100)", "data": [172, 3184, 3390, 3390, 3390, 3400, 3408, 3408, 3408, 3410], "fill": true, "label": "Success", "tension": 0.1}], "labels": ["28. Feb 2023 17:21", "10. Mar 2023 13:25", "10. Mar 2023 15:02", "10. Mar 2023 15:12", "10. Mar 2023 16:00", "10. Mar 2023 16:29", "11. Mar 2023 18:54", "11. Mar 2023 18:57", "11. Mar 2023 22:40", "11. Mar 2023 23:27"]}, "options": {"maintainAspectRatio": false, "responsive": true, "scales": {"y": {"stacked": true}}}, "type": "line"});
+</script>
+    </main>
+</body>
+</html>
