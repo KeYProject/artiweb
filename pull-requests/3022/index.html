@@ -16,32 +16,38 @@
     <summary>
         <p><a href="https://github.com/KeYProject/key/pull/3022">Pull request</a></p>
         <span>Description</span>
-        <details><p>This MR tries to exploit the newly introduced JML names for entities inside the KeY's proof tree as branching labels.</p>
-<p>Missing: 
-* [ ] Labels are behind an update are not recognize or and get lost if the update is applied</p>
+        <details><p>This PR adds the newly introduced JML names for entities to KeY. Such labels are exploited inside the KeY's proof tree as branching labels. And may later become accessible in proof scripts.</p>
 <p>This MR brings following changes:</p>
 <ul>
-<li>JML entities have names:
+<li>
+<p>JML entities have names:
   <code>java
   //@ invariant NAME: true;
   //@ ensures&lt;h1&gt; NAME: true;
-  //@ behavior NAME: requires NAME1: true;</code></li>
-<li>
-<p>A new TermLabel <code>name(XXX)</code> is added.</p>
+  //@ behavior NAME: requires NAME1: true;</code></p>
 </li>
 <li>
-<p>Change to the KeY parser: Goal templates can have computed labels. 
-  Currently, the label of a goal can be a schema variable or static string. With this MR you are allowed to define labels which are computed by a Java interface <code>BranchNamingFunction</code>. 
-  A taclet exploits this in the following way:</p>
+<p><code>lbl</code> function is supported, e.g., <code>\lbl(NAME, x != y)</code></p>
+</li>
+<li>
+<p>A new term label <code>name(XXX)</code> is added, where "XXX" holds the name given in the JML specification. </p>
+</li>
+<li>
+<p>Terms that are created by the JMLParser/Translator receive a this term label if the entity has a name or a <code>\lbl</code> was given. </p>
+</li>
+<li>
+<p>Change to the KeY parser: Goal templates can have computed labels. </p>
 </li>
 </ul>
+<p>Currently, the label of a goal can be a schema variable or static string. With this MR you are allowed to define labels which are computed by a Java interface <code>BranchNamingFunction</code>. 
+  A taclet exploits this in the following way:</p>
 <p><code>andRight {
       \find (==&gt; b &amp; c)
       "\nameLabelOf(b)":\replacewith(==&gt; b);
       "\nameLabelOf(c)":\replacewith(==&gt; c)
       \heuristics(beta)
   };</code></p>
-<p>New branching naming functions can be added by an interface.</p>
+<p>New branching naming functions can be added by an interface. The <code>\nameLabelOf</code> tries to find a <code>f«name(X)»</code> term label, and returns <code>X</code>. It fallbacks to the origin term label and then to the toString representation.</p>
 <hr />
 <h3>KeY example (working)</h3>
 <p><code>\sorts { s; }
