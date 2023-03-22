@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="org.key_project.slicing.EndToEndTests" tests="11" skipped="0" failures="0" errors="0" timestamp="2023-03-22T10:50:57" hostname="fv-az487-0" time="240.072">
+  <properties/>
+  <testcase name="sliceIfThenElseSplit()" classname="org.key_project.slicing.EndToEndTests" time="51.502"/>
+  <testcase name="deduplicateChecksMergabilityCorrectly()" classname="org.key_project.slicing.EndToEndTests" time="8.34"/>
+  <testcase name="sliceDuplicatesAway()" classname="org.key_project.slicing.EndToEndTests" time="33.377"/>
+  <testcase name="sliceMultipleIterations()" classname="org.key_project.slicing.EndToEndTests" time="61.815"/>
+  <testcase name="sliceDuplicatesAwayOpenGoals()" classname="org.key_project.slicing.EndToEndTests" time="34.005"/>
+  <testcase name="sliceCutExample()" classname="org.key_project.slicing.EndToEndTests" time="8.303"/>
+  <testcase name="sliceAgathaWithOpenGoal()" classname="org.key_project.slicing.EndToEndTests" time="8.447"/>
+  <testcase name="sliceSimpleSMT()" classname="org.key_project.slicing.EndToEndTests" time="0.001"/>
+  <testcase name="sliceWithOpenGoal()" classname="org.key_project.slicing.EndToEndTests" time="16.003"/>
+  <testcase name="sliceAgatha()" classname="org.key_project.slicing.EndToEndTests" time="7.846"/>
+  <testcase name="sliceJavaProof()" classname="org.key_project.slicing.EndToEndTests" time="10.43"/>
+  <system-out><![CDATA[loading /home/runner/work/key/key/keyext.slicing/src/test/resources/testcase/ifThenElseSplit.proof
+[10:50:57.913] ?[31mWARN ?[0;39m ?[36mProofIndependentSettings?[0;39m - The settings in /home/runner/.key/proofIndependentSettings.props are *not* read due to flag 'key.disregardSettings'
+[10:50:58.042] ?[31mWARN ?[0;39m ?[36mProofSettings?[0;39m - The settings in /home/runner/.key/proof-settings.props are *not* read.
+[10:51:08.797] ?[34mINFO ?[0;39m ?[36mKeyStrokeSettings?[0;39m - Save keyboard shortcuts to: /home/runner/.key/keystrokes.properties
+loading /home/runner/work/key/key/keyext.slicing/src/test/resources/testcase/ifThenElseSplit.proof
+[10:51:18.311] ?[34mINFO ?[0;39m ?[36mDependencyAnalyzer?[0;39m - merging 2 and 3
+loading /tmp/KeYslice14821652345740925984/ifThenElseSplit_slice1.proof
+[10:51:27.008] ?[34mINFO ?[0;39m ?[36mDependencyAnalyzer?[0;39m - merging 3 and 4
+loading /tmp/KeYslice17645367857761279199/ifThenElseSplit_slice2.proof
+[10:51:35.375] ?[34mINFO ?[0;39m ?[36mDependencyAnalyzer?[0;39m - merging 4 and 5
+loading /tmp/KeYslice15922070571964736206/ifThenElseSplit_slice3.proof
+[10:51:43.789] ?[34mINFO ?[0;39m ?[36mDependencyAnalyzer?[0;39m - merging 5 and 6
+loading /home/runner/work/key/key/keyext.slicing/src/test/resources/testcase/deduplicateCheck4.proof
+loading /home/runner/work/key/key/keyext.slicing/src/test/resources/testcase/exampleDuplicate.proof
+[10:52:00.359] ?[34mINFO ?[0;39m ?[36mDependencyAnalyzer?[0;39m - merging 2 and 3
+loading /tmp/KeYslice12993425361262064915/exampleDuplicate_slice1.proof
+[10:52:08.659] ?[34mINFO ?[0;39m ?[36mDependencyAnalyzer?[0;39m - merging 3 and 4
+loading /tmp/KeYslice14361249473624326766/exampleDuplicate_slice2.proof
+[10:52:17.024] ?[34mINFO ?[0;39m ?[36mDependencyAnalyzer?[0;39m - merging 4 and 5
+loading /tmp/KeYslice10579065134443667301/exampleDuplicate_slice3.proof
+loading /home/runner/work/key/key/keyext.slicing/src/test/resources/testcase/../../../../../key.ui/examples/firstTouch/05-ReverseArray/reverseArray.proof
+[10:52:36.722] ?[34mINFO ?[0;39m ?[36mDependencyAnalyzer?[0;39m - merging 1010 and 4663
+[10:52:36.762] ?[34mINFO ?[0;39m ?[36mDependencyAnalyzer?[0;39m - merging 3958 and 4306
+[10:52:36.769] ?[34mINFO ?[0;39m ?[36mDependencyAnalyzer?[0;39m - merging 2591 and 3795
+[10:52:36.781] ?[34mINFO ?[0;39m ?[36mDependencyAnalyzer?[0;39m - merging 1354 and 4678
+loading /tmp/KeYslice11253474415008080040/reverseArray_slice1.proof
+[10:52:49.577] ?[34mINFO ?[0;39m ?[36mDependencyAnalyzer?[0;39m - merging 2219 and 2914
+[10:52:49.582] ?[34mINFO ?[0;39m ?[36mDependencyAnalyzer?[0;39m - merging 943 and 3370
+[10:52:49.592] ?[34mINFO ?[0;39m ?[36mDependencyAnalyzer?[0;39m - merging 2973 and 3148
+[10:52:49.599] ?[34mINFO ?[0;39m ?[36mDependencyAnalyzer?[0;39m - merging 880 and 3479
+[10:52:49.601] ?[34mINFO ?[0;39m ?[36mDependencyAnalyzer?[0;39m - merging 947 and 3782
+[10:52:49.605] ?[34mINFO ?[0;39m ?[36mDependencyAnalyzer?[0;39m - merging 879 and 3473
+[10:52:49.609] ?[34mINFO ?[0;39m ?[36mDependencyAnalyzer?[0;39m - merging 1281 and 3384
+loading /tmp/KeYslice9859288324651380904/reverseArray_slice2.proof
+[10:53:01.901] ?[34mINFO ?[0;39m ?[36mDependencyAnalyzer?[0;39m - merging 946 and 3368
+[10:53:01.906] ?[34mINFO ?[0;39m ?[36mDependencyAnalyzer?[0;39m - merging 1301 and 3381
+[10:53:01.911] ?[34mINFO ?[0;39m ?[36mDependencyAnalyzer?[0;39m - merging 781 and 3569
+[10:53:01.914] ?[34mINFO ?[0;39m ?[36mDependencyAnalyzer?[0;39m - merging 2973 and 3147
+[10:53:01.915] ?[34mINFO ?[0;39m ?[36mDependencyAnalyzer?[0;39m - merging 882 and 3469
+[10:53:01.917] ?[34mINFO ?[0;39m ?[36mDependencyAnalyzer?[0;39m - merging 883 and 3474
+[10:53:01.922] ?[34mINFO ?[0;39m ?[36mDependencyAnalyzer?[0;39m - merging 2220 and 2914
+[10:53:01.930] ?[34mINFO ?[0;39m ?[36mDependencyAnalyzer?[0;39m - merging 782 and 3554
+[10:53:01.932] ?[34mINFO ?[0;39m ?[36mDependencyAnalyzer?[0;39m - merging 949 and 3776
+loading /tmp/KeYslice13948450962456535251/reverseArray_slice3.proof
+[10:53:13.809] ?[34mINFO ?[0;39m ?[36mDependencyAnalyzer?[0;39m - merging 885 and 3465
+[10:53:13.811] ?[34mINFO ?[0;39m ?[36mDependencyAnalyzer?[0;39m - merging 757 and 3651
+[10:53:13.814] ?[34mINFO ?[0;39m ?[36mDependencyAnalyzer?[0;39m - merging 1302 and 3378
+[10:53:13.816] ?[34mINFO ?[0;39m ?[36mDependencyAnalyzer?[0;39m - merging 1296 and 3803
+[10:53:13.818] ?[34mINFO ?[0;39m ?[36mDependencyAnalyzer?[0;39m - merging 2221 and 2914
+[10:53:13.819] ?[34mINFO ?[0;39m ?[36mDependencyAnalyzer?[0;39m - merging 886 and 3469
+[10:53:13.821] ?[34mINFO ?[0;39m ?[36mDependencyAnalyzer?[0;39m - merging 2973 and 3146
+[10:53:13.823] ?[34mINFO ?[0;39m ?[36mDependencyAnalyzer?[0;39m - merging 1285 and 3379
+[10:53:13.826] ?[34mINFO ?[0;39m ?[36mDependencyAnalyzer?[0;39m - merging 785 and 3562
+[10:53:13.829] ?[34mINFO ?[0;39m ?[36mDependencyAnalyzer?[0;39m - merging 756 and 3657
+[10:53:13.830] ?[34mINFO ?[0;39m ?[36mDependencyAnalyzer?[0;39m - merging 784 and 3548
+loading /tmp/KeYslice13193589318456046326/reverseArray_slice4.proof
+[10:53:25.452] ?[34mINFO ?[0;39m ?[36mDependencyAnalyzer?[0;39m - merging 2222 and 2914
+[10:53:25.454] ?[34mINFO ?[0;39m ?[36mDependencyAnalyzer?[0;39m - merging 788 and 3555
+[10:53:25.458] ?[34mINFO ?[0;39m ?[36mDependencyAnalyzer?[0;39m - merging 759 and 3648
+[10:53:25.460] ?[34mINFO ?[0;39m ?[36mDependencyAnalyzer?[0;39m - merging 889 and 3465
+[10:53:25.461] ?[34mINFO ?[0;39m ?[36mDependencyAnalyzer?[0;39m - merging 622 and 3786
+[10:53:25.463] ?[34mINFO ?[0;39m ?[36mDependencyAnalyzer?[0;39m - merging 787 and 3542
+[10:53:25.471] ?[34mINFO ?[0;39m ?[36mDependencyAnalyzer?[0;39m - merging 760 and 3643
+[10:53:25.472] ?[34mINFO ?[0;39m ?[36mDependencyAnalyzer?[0;39m - merging 2973 and 3145
+[10:53:25.474] ?[34mINFO ?[0;39m ?[36mDependencyAnalyzer?[0;39m - merging 1288 and 3376
+[10:53:25.476] ?[34mINFO ?[0;39m ?[36mDependencyAnalyzer?[0;39m - merging 1298 and 3793
+[10:53:25.479] ?[34mINFO ?[0;39m ?[36mDependencyAnalyzer?[0;39m - merging 888 and 3464
+[10:53:25.480] ?[34mINFO ?[0;39m ?[36mDependencyAnalyzer?[0;39m - merging 1396 and 3388
+loading /home/runner/work/key/key/keyext.slicing/src/test/resources/testcase/exampleDuplicateOpen.proof
+[10:53:35.629] ?[34mINFO ?[0;39m ?[36mDependencyAnalyzer?[0;39m - merging 2 and 3
+loading /tmp/KeYslice12327939989019461681/exampleDuplicateOpen_slice1.proof
+[10:53:44.096] ?[34mINFO ?[0;39m ?[36mDependencyAnalyzer?[0;39m - merging 3 and 4
+loading /tmp/KeYslice15825587376066214517/exampleDuplicateOpen_slice2.proof
+[10:53:52.698] ?[34mINFO ?[0;39m ?[36mDependencyAnalyzer?[0;39m - merging 4 and 5
+loading /tmp/KeYslice2219306682147367614/exampleDuplicateOpen_slice3.proof
+loading /home/runner/work/key/key/keyext.slicing/src/test/resources/testcase/cutExample.proof
+loading /home/runner/work/key/key/keyext.slicing/src/test/resources/testcase/agathaOpenGoal.proof
+loading /home/runner/work/key/key/keyext.slicing/src/test/resources/testcase/openGoal1.proof
+loading /home/runner/work/key/key/keyext.slicing/src/test/resources/testcase/openGoal2.proof
+loading /home/runner/work/key/key/keyext.slicing/src/test/resources/testcase/agatha.proof
+loading /home/runner/work/key/key/keyext.slicing/src/test/resources/testcase/../../../../../key.ui/examples/heap/verifyThis15_2_ParallelGcd/parallelGcd.proof
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
