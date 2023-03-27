@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=1024px, initial-scale=1.0">
+    <title>#3088 - Bump org.slf4j:slf4j-api from 2.0.6 to 2.0.7</title>
+    <link rel="stylesheet" href="https://unpkg.com/@picocss/pico@1.*/css/pico.min.css">
+    
+    
+</head>
+<body>
+    <main class="container">
+    <section>
+<h1>#3088 - Bump org.slf4j:slf4j-api from 2.0.6 to 2.0.7</h1>
+    <summary>
+        <p><a href="https://github.com/KeYProject/key/pull/3088">Pull request</a></p>
+        <span>Description</span>
+        <details><p>Bumps <a href="https://github.com/qos-ch/slf4j">org.slf4j:slf4j-api</a> from 2.0.6 to 2.0.7.</p>
+<details>
+<summary>Commits</summary>
+<ul>
+<li><a href="https://github.com/qos-ch/slf4j/commit/d6a21ae68f8a996bc24526f82ec46907e6688bc0"><code>d6a21ae</code></a> update javadoc plugin to version 3.0.5</li>
+<li><a href="https://github.com/qos-ch/slf4j/commit/13950e51a62893eae6a5f6d9f842fe5554b7d4f4"><code>13950e5</code></a> prepare release 2.0.7</li>
+<li><a href="https://github.com/qos-ch/slf4j/commit/122e0c18dd59c1c7ef425e89e6097c07ee2358b9"><code>122e0c1</code></a> add LICENSE.txt files to all modules, rename LICENSE as LICENSE.txt when appr...</li>
+<li><a href="https://github.com/qos-ch/slf4j/commit/2a8ca99cafe8a20c2dc57ed7297ec68c574b0b94"><code>2a8ca99</code></a> add license file to jar</li>
+<li><a href="https://github.com/qos-ch/slf4j/commit/b363bb31ed08d3ad9761ccdca5e51bb2327c3287"><code>b363bb3</code></a> SLF4J-579: Export client packages of slf4j-api in version 1</li>
+<li><a href="https://github.com/qos-ch/slf4j/commit/2235d3c69829caf19e38ea980a86042cc3ffd1f3"><code>2235d3c</code></a> Fully automate OSGi metadata creation and fix brocken OSGi-metadata in slf4j-...</li>
+<li><a href="https://github.com/qos-ch/slf4j/commit/a5540ad51066b4b15132fdf27ead630519541d35"><code>a5540ad</code></a> setup-java v3</li>
+<li><a href="https://github.com/qos-ch/slf4j/commit/1ed084cbc061f0bcbc9250867771550684be25fa"><code>1ed084c</code></a> add missing distribution instruction to github action</li>
+<li><a href="https://github.com/qos-ch/slf4j/commit/b2cb0174225d1163730a209a6a433068fa281903"><code>b2cb017</code></a> update github action versions</li>
+<li><a href="https://github.com/qos-ch/slf4j/commit/fa6721a53eb4b2d13491400908f9ca76c7997300"><code>fa6721a</code></a> add JDK 19 to CI build</li>
+<li>Additional commits viewable in <a href="https://github.com/qos-ch/slf4j/compare/v_2.0.6...v_2.0.7">compare view</a></li>
+</ul>
+</details>
+<p><br /></p>
+<p><a href="https://docs.github.com/en/github/managing-security-vulnerabilities/about-dependabot-security-updates#about-compatibility-scores"><img alt="Dependabot compatibility score" src="https://dependabot-badges.githubapp.com/badges/compatibility_score?dependency-name=org.slf4j:slf4j-api&amp;package-manager=gradle&amp;previous-version=2.0.6&amp;new-version=2.0.7" /></a></p>
+<p>Dependabot will resolve any conflicts with this PR as long as you don't alter it yourself. You can also trigger a rebase manually by commenting <code>@dependabot rebase</code>.</p>
+<hr />
+<details>
+<summary>Dependabot commands and options</summary>
+<br />
+
+You can trigger Dependabot actions by commenting on this PR:
+- `@dependabot rebase` will rebase this PR
+- `@dependabot recreate` will recreate this PR, overwriting any edits that have been made to it
+- `@dependabot merge` will merge this PR after your CI passes on it
+- `@dependabot squash and merge` will squash and merge this PR after your CI passes on it
+- `@dependabot cancel merge` will cancel a previously requested merge and block automerging
+- `@dependabot reopen` will reopen this PR if it is closed
+- `@dependabot close` will close this PR and stop Dependabot recreating it. You can achieve the same result by closing it manually
+- `@dependabot ignore this major version` will close this PR and stop Dependabot creating any more for this major version (unless you reopen the PR or upgrade to it yourself)
+- `@dependabot ignore this minor version` will close this PR and stop Dependabot creating any more for this minor version (unless you reopen the PR or upgrade to it yourself)
+- `@dependabot ignore this dependency` will close this PR and stop Dependabot creating any more for this dependency (unless you reopen the PR or upgrade to it yourself)
+
+
+</details></details>
+    </summary>
+</section>
+
+<section>
+    <h3>Artifacts</h3>
+    <ul></ul>
+</section>
+
+
+<div style="height:10em;"><canvas id="runtime"></canvas></div>     
+<div style="height:10em;"><canvas id="testcases"></canvas></div>     
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script type="text/javascript">
+    function formatLabel(context) {
+        let label = context.dataset.label || '';
+        if (label) {
+            label += ': ';
+        }
+        const value = context.raw;
+        let format;
+        if (value == 0) {
+            format = "0s";
+        } else if (value < 3) {
+            format = Math.round(value * 1000) + "ms";
+        } else if (value < 120) {
+            format = Math.round(value) + "s";
+        } else {
+            format = "";
+            let remainder = value;
+            if (remainder > 3600) {
+                const hours = Math.floor(remainder / 3600);
+                remainder = remainder % 3600;
+                format += hours + "h ";
+            }
+            
+            if (remainder > 60) {
+                const minutes = Math.floor(remainder / 60);
+                remainder = remainder % 60;
+                format += minutes + "m ";
+            }
+            
+            const seconds = Math.round(remainder);
+            format += seconds + "s";
+        }
+        return label + format;
+    }
+
+    function createChart(name, labels, data) {
+        const ctx = document.getElementById(name);
+        const graph = {
+            type: 'bar',
+            data: {
+                labels: labels,
+                datasets: [{
+                    label: "Runtime",
+                    data: data,
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        };
+        graph.options.plugins = {
+            tooltip: {
+                callbacks: {
+                    label: formatLabel
+                }
+            }
+        };
+        new Chart(ctx, graph);
+    }
+
+    createChart("runtime", [], []);
+
+    const ctx2 = document.getElementById('testcases');
+    new Chart(ctx2, {"data": {"datasets": [{"backgroundColor": "rgb(250, 220, 220)", "borderColor": "rgb(250, 192, 192)", "data": [], "fill": true, "label": "Failures", "tension": 0.1}, {"backgroundColor": "rgb(200, 212, 212)", "borderColor": "rgb(180, 192, 192)", "data": [], "fill": true, "label": "Errors", "tension": 0.1}, {"backgroundColor": "rgb(150, 150, 150)", "borderColor": "rgb(100, 100, 100)", "data": [], "fill": true, "label": "Skipped", "tension": 0.1}, {"backgroundColor": "rgb(95, 212, 120)", "borderColor": "rgb(75, 192, 100)", "data": [], "fill": true, "label": "Success", "tension": 0.1}], "labels": []}, "options": {"maintainAspectRatio": false, "responsive": true, "scales": {"y": {"stacked": true}}}, "type": "line"});
+</script>
+    </main>
+</body>
+</html>
