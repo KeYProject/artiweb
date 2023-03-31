@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 
+from time import sleep
 import zipfile
 from addict import Dict
 import requests
@@ -20,6 +21,8 @@ GITHUB_TOKEN = os.environ.get('GITHUB_TOKEN', '')
 
 PRIVATE_TOKEN = os.environ.get('PRIVATE_TOKEN', '')
 
+with open("meta/artifacts.json") as fp:
+    OLD_META =  json.load(fp)
 
 def updatePullRequest(pr, artifacts):
     repo = pr.head.repo.id
@@ -39,19 +42,33 @@ def updatePullRequest(pr, artifacts):
             target = folder / str(artifact.id)
             filename = temp / (str(artifact.id) + ".zip")
             zipUrl = artifact.archive_download_url
-            downloadArtifact(target, filename, zipUrl)
+            
+            old_filesize = get_old_downloaded_file_size(artifact.id)
+            new_filesize = artifact.size_in_bytes
+            downloadArtifact(target, filename, zipUrl, new_filesize != old_filesize)
 
             with (target / 'meta.json').open('w') as fp:
                 json.dump(artifact, fp)
     print("Artifacts for", pr.number, "found:", pr_artifacts)
 
 
-def downloadArtifact(targetFolder: Path, tmpFile: Path, zipUrl):
-    if not targetFolder.exists():
-        if not tmpFile.exists():
+def get_old_downloaded_file_size(id : int) -> int:    
+    for a in OLD_META: 
+        if a.id == id:
+            return a.size_in_bytes
+    return -1
+
+
+
+def downloadArtifact(targetFolder: Path, tmpFile: Path, zipUrl : str, file_size_changed : bool):
+    """Download and unpack the given zipUrl at the targetFolder. tmpFile is used as intermediate storage. 
+    Download and unpack only if it is necessary."""
+
+    if not targetFolder.exists() or file_size_changed:
+        if not tmpFile.exists() or file_size_changed:
             mkdirSafe(tmpFile.parent)
             with tmpFile.open('wb') as f:
-                r = requests.get(zipUrl, headers={"Authorization": f"token {PRIVATE_TOKEN}"})
+                r = requests.get(zipUrl, headers={"Authorization": f"token {PRIVATE_TOKEN}"}, timeout=60)
                 r.raise_for_status()
                 f.write(r.content)
         try:
@@ -88,6 +105,9 @@ def get_json_all(path, args, extract=lambda x: x):
     results = []
     while True:
         page = get_json(path, args)
+
+        sleep(250) # try to avoid hitting rate limits
+
         e = extract(page)
         if e:
             results += e
