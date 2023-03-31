@@ -121,7 +121,7 @@ def get_json_all(path, args, extract=lambda x: x):
         print("Get page", args['page'])
         page = get_json(path, args)
 
-        sleep(250)  # try to avoid hitting rate limits
+        sleep(0.250)  # try to avoid hitting rate limits
 
         e = extract(page)
         if e:
