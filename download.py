@@ -24,10 +24,8 @@ PRIVATE_TOKEN = os.environ.get('PRIVATE_TOKEN', '')
 with open("meta/artifacts.json") as fp:
     OLD_META = json.load(fp)
 
-DOWNLOAD_COUNTER = 10
 
-
-def updatePullRequest(pr, artifacts):
+def update_pull_request(pr, artifacts):
     repo = pr.head.repo.id
     branch = pr.head.ref
 
@@ -48,8 +46,8 @@ def updatePullRequest(pr, artifacts):
 
             old_filesize = get_old_downloaded_file_size(artifact.id)
             new_filesize = artifact.size_in_bytes
-            downloadArtifact(target, filename, zip_url,
-                             new_filesize != old_filesize)
+            download_artifact(target, filename, zip_url,
+                              new_filesize > old_filesize)
 
             with (target / 'meta.json').open('w') as fp:
                 json.dump(artifact, fp)
@@ -64,22 +62,13 @@ def get_old_downloaded_file_size(artinr: int) -> int:
     return -1
 
 
-def downloadArtifact(target_folder: Path, tmp_file: Path, zip_url: str, file_size_changed: bool):
+def download_artifact(target_folder: Path, tmp_file: Path, zip_url: str, file_size_changed: bool):
     """Download and unpack the given zipUrl at the targetFolder. tmpFile is used as intermediate storage. 
     Download and unpack only if it is necessary."""
 
-    print(file_size_changed)
-    file_size_changed = False
-
-    global DOWNLOAD_COUNTER
-    if DOWNLOAD_COUNTER <= 0:
-        print("Downloaded already enough artifacts")
-        return
-    DOWNLOAD_COUNTER -= 1
-
-    if file_size_changed: 
+    if file_size_changed:
         print("Re-download because artifacts were updated")
-    
+
     if not target_folder.exists() or file_size_changed:
         if not tmp_file.exists() or file_size_changed:
             mkdir_safe(tmp_file.parent)
@@ -155,7 +144,7 @@ def main():
 
     for pr in pull_requests:
         print("Updating pull request:", pr.number)
-        updatePullRequest(pr, artifacts)
+        update_pull_request(pr, artifacts)
 
 
 if __name__ == '__main__':
