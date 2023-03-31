@@ -24,6 +24,8 @@ PRIVATE_TOKEN = os.environ.get('PRIVATE_TOKEN', '')
 with open("meta/artifacts.json") as fp:
     OLD_META = json.load(fp)
 
+DOWNLOAD_COUNTER = 10
+
 
 def updatePullRequest(pr, artifacts):
     repo = pr.head.repo.id
@@ -66,10 +68,17 @@ def downloadArtifact(target_folder: Path, tmp_file: Path, zip_url: str, file_siz
     """Download and unpack the given zipUrl at the targetFolder. tmpFile is used as intermediate storage. 
     Download and unpack only if it is necessary."""
 
+    print(file_size_changed)
+    file_size_changed = False
+
+    global DOWNLOAD_COUNTER
+    if DOWNLOAD_COUNTER <= 0:
+        print("Downloaded already enough artifacts")
+        return
+    DOWNLOAD_COUNTER -= 1
+
     if file_size_changed: 
         print("Re-download because artifacts were updated")
-    
-
     
     if not target_folder.exists() or file_size_changed:
         if not tmp_file.exists() or file_size_changed:
