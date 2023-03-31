@@ -22,7 +22,10 @@ GITHUB_TOKEN = os.environ.get('GITHUB_TOKEN', '')
 PRIVATE_TOKEN = os.environ.get('PRIVATE_TOKEN', '')
 
 with open("meta/artifacts.json") as fp:
-    OLD_META =  json.load(fp)
+    OLD_META = json.load(fp)
+
+DOWNLOAD_COUNTER = 10
+
 
 def updatePullRequest(pr, artifacts):
     repo = pr.head.repo.id
@@ -41,46 +44,55 @@ def updatePullRequest(pr, artifacts):
             pr_artifacts.append(artifact.id)
             target = folder / str(artifact.id)
             filename = temp / (str(artifact.id) + ".zip")
-            zipUrl = artifact.archive_download_url
-            
+            zip_url = artifact.archive_download_url
+
             old_filesize = get_old_downloaded_file_size(artifact.id)
             new_filesize = artifact.size_in_bytes
-            downloadArtifact(target, filename, zipUrl, new_filesize != old_filesize)
+            downloadArtifact(target, filename, zip_url,
+                             new_filesize != old_filesize)
 
             with (target / 'meta.json').open('w') as fp:
                 json.dump(artifact, fp)
     print("Artifacts for", pr.number, "found:", pr_artifacts)
 
 
-def get_old_downloaded_file_size(id : int) -> int:    
-    for a in OLD_META: 
-        if a.id == id:
+def get_old_downloaded_file_size(artinr: int) -> int:
+    "Find the download size from the previous run."
+    for a in OLD_META:
+        if a.id == artinr:
             return a.size_in_bytes
     return -1
 
 
-
-def downloadArtifact(targetFolder: Path, tmpFile: Path, zipUrl : str, file_size_changed : bool):
+def downloadArtifact(target_folder: Path, tmp_file: Path, zip_url: str, file_size_changed: bool):
     """Download and unpack the given zipUrl at the targetFolder. tmpFile is used as intermediate storage. 
     Download and unpack only if it is necessary."""
 
-    if not targetFolder.exists() or file_size_changed:
-        if not tmpFile.exists() or file_size_changed:
-            mkdirSafe(tmpFile.parent)
-            with tmpFile.open('wb') as f:
-                r = requests.get(zipUrl, headers={"Authorization": f"token {PRIVATE_TOKEN}"}, timeout=60)
+    global DOWNLOAD_COUNTER
+    if DOWNLOAD_COUNTER <= 0:
+        print("Downloaded already enough artifacts")
+        return
+    DOWNLOAD_COUNTER -= 1
+
+
+    if not target_folder.exists() or file_size_changed:
+        if not tmp_file.exists() or file_size_changed:
+            mkdir_safe(tmp_file.parent)
+            with tmp_file.open('wb') as f:
+                r = requests.get(zip_url, headers={
+                                 "Authorization": f"token {PRIVATE_TOKEN}"}, timeout=60)
                 r.raise_for_status()
                 f.write(r.content)
         try:
-            mkdirSafe(targetFolder)
-            with zipfile.ZipFile(tmpFile, 'r') as zip_ref:
-                zip_ref.extractall(targetFolder)
-            tmpFile.unlink()
-        except zipfile.BadZipFile as e: 
-            print("Failed to open zip file:", e, tmpFile)
+            mkdir_safe(target_folder)
+            with zipfile.ZipFile(tmp_file, 'r') as zip_ref:
+                zip_ref.extractall(target_folder)
+            tmp_file.unlink()
+        except zipfile.BadZipFile as e:
+            print("Failed to open zip file:", e, tmp_file)
 
 
-def mkdirSafe(f):
+def mkdir_safe(f):
     try:
         os.mkdir(f)
     except:
@@ -104,9 +116,10 @@ def get_json_all(path, args, extract=lambda x: x):
     args['per_page'] = 100
     results = []
     while True:
+        print("Get page", args['page'])
         page = get_json(path, args)
 
-        sleep(250) # try to avoid hitting rate limits
+        sleep(250)  # try to avoid hitting rate limits
 
         e = extract(page)
         if e:
@@ -117,23 +130,29 @@ def get_json_all(path, args, extract=lambda x: x):
 
 
 def main():
-    pullRequests = get_json_all('pulls', {"state": "all"})
-    print("Found", len(pullRequests), "pull requests")
+    print("Start downloading process")
 
-    artifacts = get_json_all("actions/artifacts", {"name": str(ARTIFACT)}, lambda p: p["artifacts"])
+    pull_requests = get_json_all('pulls', {"state": "all"})
+    print("Found", len(pull_requests), "pull requests")
+
+    artifacts = get_json_all(
+        "actions/artifacts", {"name": str(ARTIFACT)}, lambda p: p["artifacts"])
     print(f"Number of artifacts: {len(artifacts)}")
 
-    mkdirSafe("meta")
+    mkdir_safe("meta")
 
     with open("meta/pull-requests.json", "w") as fp:
-        json.dump(pullRequests, fp)
+        json.dump(pull_requests, fp)
+
     with open("meta/artifacts.json", 'w') as fp:
         json.dump(artifacts, fp)
 
-    mkdirSafe(temp)
-        
-    for pr in pullRequests:
+    mkdir_safe(temp)
+
+    for pr in pull_requests:
         print("Updating pull request:", pr.number)
         updatePullRequest(pr, artifacts)
 
-main()
+
+if __name__ == '__main__':
+    main()
