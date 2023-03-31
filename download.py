@@ -59,7 +59,7 @@ def updatePullRequest(pr, artifacts):
 def get_old_downloaded_file_size(artinr: int) -> int:
     "Find the download size from the previous run."
     for a in OLD_META:
-        if a.id == artinr:
+        if a['id'] == artinr:
             return a.size_in_bytes
     return -1
 
