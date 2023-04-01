@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta http-equiv="x-ua-compatible" content="IE=edge"/>
+<title>Test results - EndToEndTests</title>
+<link href="../css/base-style.css" rel="stylesheet" type="text/css"/>
+<link href="../css/style.css" rel="stylesheet" type="text/css"/>
+<script src="../js/report.js" type="text/javascript"></script>
+</head>
+<body>
+<div id="content">
+<h1>EndToEndTests</h1>
+<div class="breadcrumbs">
+<a href="../index.html">all</a> &gt; 
+<a href="../packages/org.key_project.slicing.html">org.key_project.slicing</a> &gt; EndToEndTests</div>
+<div id="summary">
+<table>
+<tr>
+<td>
+<div class="summaryGroup">
+<table>
+<tr>
+<td>
+<div class="infoBox" id="tests">
+<div class="counter">11</div>
+<p>tests</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="failures">
+<div class="counter">0</div>
+<p>failures</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="ignored">
+<div class="counter">0</div>
+<p>ignored</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="duration">
+<div class="counter">4m18.57s</div>
+<p>duration</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</td>
+<td>
+<div class="infoBox success" id="successRate">
+<div class="percent">100%</div>
+<p>successful</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div id="tabs">
+<ul class="tabLinks">
+<li>
+<a href="#tab0">Tests</a>
+</li>
+<li>
+<a href="#tab1">Standard output</a>
+</li>
+</ul>
+<div id="tab0" class="tab">
+<h2>Tests</h2>
+<table>
+<thead>
+<tr>
+<th>Test</th>
+<th>Duration</th>
+<th>Result</th>
+</tr>
+</thead>
+<tr>
+<td class="success">deduplicateChecksMergabilityCorrectly()</td>
+<td class="success">8.895s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">sliceAgatha()</td>
+<td class="success">8.672s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">sliceAgathaWithOpenGoal()</td>
+<td class="success">8.946s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">sliceCutExample()</td>
+<td class="success">8.718s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">sliceDuplicatesAway()</td>
+<td class="success">35.476s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">sliceDuplicatesAwayOpenGoals()</td>
+<td class="success">35.232s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">sliceIfThenElseSplit()</td>
+<td class="success">57.633s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">sliceJavaProof()</td>
+<td class="success">11.862s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">sliceMultipleIterations()</td>
+<td class="success">1m5.73s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">sliceSimpleSMT()</td>
+<td class="success">0.001s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">sliceWithOpenGoal()</td>
+<td class="success">17.403s</td>
+<td class="success">passed</td>
+</tr>
+</table>
+</div>
+<div id="tab1" class="tab">
+<h2>Standard output</h2>
+<span class="code">
+<pre>loading /home/runner/work/key/key/keyext.slicing/src/test/resources/testcase/ifThenElseSplit.proof
+[22:43:52.338] ?[31mWARN ?[0;39m ?[36mProofIndependentSettings?[0;39m - The settings in /home/runner/.key/proofIndependentSettings.props are *not* read due to flag 'key.disregardSettings'
+[22:43:52.488] ?[31mWARN ?[0;39m ?[36mProofSettings?[0;39m - The settings in /home/runner/.key/proof-settings.props are *not* read.
+[22:44:05.931] ?[34mINFO ?[0;39m ?[36mKeyStrokeSettings?[0;39m - Save keyboard shortcuts to: /home/runner/.key/keystrokes.properties
+loading /home/runner/work/key/key/keyext.slicing/src/test/resources/testcase/ifThenElseSplit.proof
+[22:44:16.451] ?[34mINFO ?[0;39m ?[36mDependencyAnalyzer?[0;39m - merging 2 and 3
+loading /tmp/KeYslice9031695450306850764/ifThenElseSplit_slice1.proof
+[22:44:25.864] ?[34mINFO ?[0;39m ?[36mDependencyAnalyzer?[0;39m - merging 3 and 4
+loading /tmp/KeYslice9488849863394679276/ifThenElseSplit_slice2.proof
+[22:44:34.979] ?[34mINFO ?[0;39m ?[36mDependencyAnalyzer?[0;39m - merging 4 and 5
+loading /tmp/KeYslice12613539380975009014/ifThenElseSplit_slice3.proof
+[22:44:43.973] ?[34mINFO ?[0;39m ?[36mDependencyAnalyzer?[0;39m - merging 5 and 6
+loading /home/runner/work/key/key/keyext.slicing/src/test/resources/testcase/deduplicateCheck4.proof
+loading /home/runner/work/key/key/keyext.slicing/src/test/resources/testcase/exampleDuplicate.proof
+[22:45:01.702] ?[34mINFO ?[0;39m ?[36mDependencyAnalyzer?[0;39m - merging 2 and 3
+loading /tmp/KeYslice352931440128325137/exampleDuplicate_slice1.proof
+[22:45:10.567] ?[34mINFO ?[0;39m ?[36mDependencyAnalyzer?[0;39m - merging 3 and 4
+loading /tmp/KeYslice4522321526775699582/exampleDuplicate_slice2.proof
+[22:45:19.413] ?[34mINFO ?[0;39m ?[36mDependencyAnalyzer?[0;39m - merging 4 and 5
+loading /tmp/KeYslice16670100563687628744/exampleDuplicate_slice3.proof
+loading /home/runner/work/key/key/keyext.slicing/src/test/resources/testcase/../../../../../key.ui/examples/firstTouch/05-ReverseArray/reverseArray.proof
+[22:45:40.453] ?[34mINFO ?[0;39m ?[36mDependencyAnalyzer?[0;39m - merging 1354 and 4678
+[22:45:40.480] ?[34mINFO ?[0;39m ?[36mDependencyAnalyzer?[0;39m - merging 1010 and 4663
+[22:45:40.527] ?[34mINFO ?[0;39m ?[36mDependencyAnalyzer?[0;39m - merging 3958 and 4306
+[22:45:40.530] ?[34mINFO ?[0;39m ?[36mDependencyAnalyzer?[0;39m - merging 2591 and 3795
+loading /tmp/KeYslice5000643202196494075/reverseArray_slice1.proof
+[22:45:54.358] ?[34mINFO ?[0;39m ?[36mDependencyAnalyzer?[0;39m - merging 2219 and 2914
+[22:45:54.361] ?[34mINFO ?[0;39m ?[36mDependencyAnalyzer?[0;39m - merging 879 and 3479
+[22:45:54.371] ?[34mINFO ?[0;39m ?[36mDependencyAnalyzer?[0;39m - merging 947 and 3782
+[22:45:54.381] ?[34mINFO ?[0;39m ?[36mDependencyAnalyzer?[0;39m - merging 943 and 3370
+[22:45:54.383] ?[34mINFO ?[0;39m ?[36mDependencyAnalyzer?[0;39m - merging 1281 and 3384
+[22:45:54.386] ?[34mINFO ?[0;39m ?[36mDependencyAnalyzer?[0;39m - merging 2973 and 3148
+[22:45:54.399] ?[34mINFO ?[0;39m ?[36mDependencyAnalyzer?[0;39m - merging 880 and 3473
+loading /tmp/KeYslice11848823356807648150/reverseArray_slice2.proof
+[22:46:07.022] ?[34mINFO ?[0;39m ?[36mDependencyAnalyzer?[0;39m - merging 946 and 3368
+[22:46:07.027] ?[34mINFO ?[0;39m ?[36mDependencyAnalyzer?[0;39m - merging 883 and 3474
+[22:46:07.031] ?[34mINFO ?[0;39m ?[36mDependencyAnalyzer?[0;39m - merging 2973 and 3147
+[22:46:07.039] ?[34mINFO ?[0;39m ?[36mDependencyAnalyzer?[0;39m - merging 882 and 3469
+[22:46:07.043] ?[34mINFO ?[0;39m ?[36mDependencyAnalyzer?[0;39m - merging 1301 and 3381
+[22:46:07.046] ?[34mINFO ?[0;39m ?[36mDependencyAnalyzer?[0;39m - merging 2220 and 2914
+[22:46:07.048] ?[34mINFO ?[0;39m ?[36mDependencyAnalyzer?[0;39m - merging 782 and 3554
+[22:46:07.051] ?[34mINFO ?[0;39m ?[36mDependencyAnalyzer?[0;39m - merging 781 and 3569
+[22:46:07.054] ?[34mINFO ?[0;39m ?[36mDependencyAnalyzer?[0;39m - merging 949 and 3776
+loading /tmp/KeYslice10942537393207016572/reverseArray_slice3.proof
+[22:46:19.310] ?[34mINFO ?[0;39m ?[36mDependencyAnalyzer?[0;39m - merging 785 and 3548
+[22:46:19.315] ?[34mINFO ?[0;39m ?[36mDependencyAnalyzer?[0;39m - merging 757 and 3657
+[22:46:19.318] ?[34mINFO ?[0;39m ?[36mDependencyAnalyzer?[0;39m - merging 2973 and 3146
+[22:46:19.319] ?[34mINFO ?[0;39m ?[36mDependencyAnalyzer?[0;39m - merging 1302 and 3378
+[22:46:19.320] ?[34mINFO ?[0;39m ?[36mDependencyAnalyzer?[0;39m - merging 885 and 3465
+[22:46:19.328] ?[34mINFO ?[0;39m ?[36mDependencyAnalyzer?[0;39m - merging 756 and 3651
+[22:46:19.330] ?[34mINFO ?[0;39m ?[36mDependencyAnalyzer?[0;39m - merging 2221 and 2914
+[22:46:19.333] ?[34mINFO ?[0;39m ?[36mDependencyAnalyzer?[0;39m - merging 1296 and 3803
+[22:46:19.335] ?[34mINFO ?[0;39m ?[36mDependencyAnalyzer?[0;39m - merging 784 and 3562
+[22:46:19.342] ?[34mINFO ?[0;39m ?[36mDependencyAnalyzer?[0;39m - merging 1285 and 3379
+[22:46:19.345] ?[34mINFO ?[0;39m ?[36mDependencyAnalyzer?[0;39m - merging 886 and 3469
+loading /tmp/KeYslice13952415353373451149/reverseArray_slice4.proof
+[22:46:31.565] ?[34mINFO ?[0;39m ?[36mDependencyAnalyzer?[0;39m - merging 1288 and 3376
+[22:46:31.570] ?[34mINFO ?[0;39m ?[36mDependencyAnalyzer?[0;39m - merging 788 and 3555
+[22:46:31.573] ?[34mINFO ?[0;39m ?[36mDependencyAnalyzer?[0;39m - merging 889 and 3465
+[22:46:31.585] ?[34mINFO ?[0;39m ?[36mDependencyAnalyzer?[0;39m - merging 2222 and 2914
+[22:46:31.587] ?[34mINFO ?[0;39m ?[36mDependencyAnalyzer?[0;39m - merging 759 and 3643
+[22:46:31.589] ?[34mINFO ?[0;39m ?[36mDependencyAnalyzer?[0;39m - merging 2973 and 3145
+[22:46:31.591] ?[34mINFO ?[0;39m ?[36mDependencyAnalyzer?[0;39m - merging 1298 and 3793
+[22:46:31.594] ?[34mINFO ?[0;39m ?[36mDependencyAnalyzer?[0;39m - merging 787 and 3542
+[22:46:31.598] ?[34mINFO ?[0;39m ?[36mDependencyAnalyzer?[0;39m - merging 888 and 3464
+[22:46:31.602] ?[34mINFO ?[0;39m ?[36mDependencyAnalyzer?[0;39m - merging 621 and 3786
+[22:46:31.603] ?[34mINFO ?[0;39m ?[36mDependencyAnalyzer?[0;39m - merging 1396 and 3388
+[22:46:31.608] ?[34mINFO ?[0;39m ?[36mDependencyAnalyzer?[0;39m - merging 760 and 3648
+loading /home/runner/work/key/key/keyext.slicing/src/test/resources/testcase/exampleDuplicateOpen.proof
+[22:46:42.874] ?[34mINFO ?[0;39m ?[36mDependencyAnalyzer?[0;39m - merging 2 and 3
+loading /tmp/KeYslice2380029559488945037/exampleDuplicateOpen_slice1.proof
+[22:46:51.837] ?[34mINFO ?[0;39m ?[36mDependencyAnalyzer?[0;39m - merging 3 and 4
+loading /tmp/KeYslice7968392712280720224/exampleDuplicateOpen_slice2.proof
+[22:47:00.690] ?[34mINFO ?[0;39m ?[36mDependencyAnalyzer?[0;39m - merging 4 and 5
+loading /tmp/KeYslice1210292991828021793/exampleDuplicateOpen_slice3.proof
+loading /home/runner/work/key/key/keyext.slicing/src/test/resources/testcase/cutExample.proof
+loading /home/runner/work/key/key/keyext.slicing/src/test/resources/testcase/agathaOpenGoal.proof
+loading /home/runner/work/key/key/keyext.slicing/src/test/resources/testcase/openGoal1.proof
+loading /home/runner/work/key/key/keyext.slicing/src/test/resources/testcase/openGoal2.proof
+loading /home/runner/work/key/key/keyext.slicing/src/test/resources/testcase/agatha.proof
+loading /home/runner/work/key/key/keyext.slicing/src/test/resources/testcase/../../../../../key.ui/examples/heap/verifyThis15_2_ParallelGcd/parallelGcd.proof
+</pre>
+</span>
+</div>
+</div>
+<div id="footer">
+<p>
+<div>
+<label class="hidden" id="label-for-line-wrapping-toggle" for="line-wrapping-toggle">Wrap lines
+<input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
+</label>
+</div>Generated by 
+<a href="http://www.gradle.org">Gradle 8.0.2</a> at Mar 31, 2023, 10:48:10 PM</p>
+</div>
+</div>
+</body>
+</html>
