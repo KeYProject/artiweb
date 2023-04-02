@@ -3,8 +3,6 @@
 from collections import namedtuple
 import addict
 import json
-import os
-import re
 from datetime import datetime
 
 from functools import reduce
@@ -13,6 +11,8 @@ from jinja2 import Environment, FileSystemLoader, select_autoescape
 from pathlib import Path
 import markdown
 
+import logging
+from download import initLogging
 
 TARGET = Path("./pull-requests")
 
@@ -77,28 +77,28 @@ def generate_runtime_chart(name, labels, data):
 
 def generate_pull_request(path: Path):
     template = env.get_template("pr.html")
-    print("Reading meta")
+    logging.debug("Reading meta")
     pr = read_meta(path)
 
     path.mkdir(exist_ok=True)
 
-    print("Generating artifacts")
+    logging.debug("Generating artifacts")
     artifacts = [generate_artifact(arti_folder)
                  for arti_folder in path.glob("*/")
                  if arti_folder.is_dir()]
     
-    print("Rendering artifacts")
+    logging.debug("Rendering artifacts")
     for artifact in artifacts:
         render_artifact(artifact, pr)
 
-    print("Rendered", len(artifacts), "artifacts") 
+    logging.debug(f"Rendered {len(artifacts)} artifacts", ) 
 
     artifacts.sort(key=lambda x: x.created_at)
 
     values = [a.statistics for a in artifacts]
     labels = [a.created_at_pretty for a in artifacts]
 
-    print("Generating charts")
+    logging.debug("Generating charts")
     runtime_chart = generate_runtime_chart("Runtime", labels, [v.total_time for v in values])
 
     test_cases = {
@@ -151,7 +151,7 @@ def generate_pull_request(path: Path):
         }
     }
 
-    print("Rendering index.html")
+    logging.debug("Rendering index.html")
     target = path / "index.html"
     with target.open('w', encoding="utf-8") as fp:
         fp.write(template.render(
@@ -192,7 +192,7 @@ def junit_statistics(folder: Path):
             )
             acc = combine_stats(acc, stat)
         except Exception as e:
-            print("Skipping malformed file", f, e)
+            logging.warning(f"Skipping malformed file {f}: {e}")
     return acc
 
 def find_tests(path: Path):
@@ -241,14 +241,16 @@ def render_artifact(artifact, pr):
         fp.write(template.render(pr=pr, artifact=artifact))
 
 if __name__ == '__main__':
+    initLogging()
+
     path: Path
     pull_requests = []
     for path in TARGET.glob("*/"):
         if path.is_dir():
-            print("Generating pull request", path.relative_to(TARGET))
+            logging.info(f"Generating pull request {path.relative_to(TARGET)}")
             try:
                 pr = generate_pull_request(path)
                 pull_requests.append(pr)
             except Exception as e:
-                print("Error generating", path, e)
+                logging.warning(f"Error generating {path}: {e}")
     index(pull_requests)

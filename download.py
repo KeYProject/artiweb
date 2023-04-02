@@ -6,9 +6,8 @@ from addict import Dict
 import requests
 import json
 from pathlib import Path
-import subprocess
 import os
-import sys
+import logging
 
 
 TARGET = Path("pull-requests")
@@ -47,19 +46,20 @@ def update_pull_request(pr, artifacts):
             old_artifact = OLD_ARTIFACTS_BY_ID.get(artifact.id)
             if old_artifact is None: 
                 force_update = True
+                logging.info(f"Downloading artifact {artifact.id}")
             else:
                 old_filesize = old_artifact.size_in_bytes
                 new_filesize = artifact.size_in_bytes
                 force_update = new_filesize != old_filesize
 
                 if force_update:
-                    print("Re-download artifact", artifact.id, "because it was changed:", new_filesize, "!=", old_filesize)
+                    logging.info(f"Re-downloading artifact {artifact.id} because it was changed: {new_filesize} != {old_filesize}")
             
-            download_artifact(target, filename, zip_url, force_update)
+            #download_artifact(target, filename, zip_url, force_update)
 
             with (target / 'meta.json').open('w') as fp:
                 json.dump(artifact, fp)
-    print("Artifacts for", pr.number, "found:", pr_artifacts)
+    logging.info(f"Artifacts for {pr.number} found: {pr_artifacts}")
 
 def download_artifact(target_folder: Path, tmp_file: Path, zip_url: str, force_update: bool):
     """Download and unpack the given zipUrl at the targetFolder. tmpFile is used as intermediate storage. 
@@ -79,7 +79,7 @@ def download_artifact(target_folder: Path, tmp_file: Path, zip_url: str, force_u
                 zip_ref.extractall(target_folder)
             tmp_file.unlink()
         except zipfile.BadZipFile as e:
-            print("Failed to open zip file:", e, tmp_file)
+            logging.error(f"Failed to open zip file {tmp_file}: {e}")
 
 
 def mkdir_safe(f):
@@ -91,7 +91,7 @@ def mkdir_safe(f):
 
 def get_json(path, args):
     url = f"https://api.github.com/repos/{OWNER}/{REPO}/{path}"
-    print("Fetching", url, "with args", args)
+    logging.debug(f"Fetching {url} with args {args}")
     r = requests.get(url, args, timeout=60)
     r.raise_for_status()
     j = r.json()
@@ -118,15 +118,19 @@ def get_json_all(path, args, extract=lambda x: x):
         args['page'] += 1
 
 
+def initLogging():
+    logging.basicConfig(format='[%(asctime)s %(levelname)s] %(message)s', level=logging.DEBUG)
+
 def main():
-    print("Start downloading process")
+    initLogging()
+    logging.info("Start downloading process")
 
     pull_requests = get_json_all('pulls', {"state": "all"})
-    print("Found", len(pull_requests), "pull requests")
+    logging.info(f"Found {len(pull_requests)} pull requests")
 
     artifacts = get_json_all(
         "actions/artifacts", {"name": str(ARTIFACT)}, lambda p: p["artifacts"])
-    print(f"Number of artifacts: {len(artifacts)}")
+    logging.info(f"Number of artifacts: {len(artifacts)}")
 
     mkdir_safe("meta")
 
@@ -139,7 +143,7 @@ def main():
     mkdir_safe(temp)
 
     for pr in pull_requests:
-        print("Updating pull request:", pr.number)
+        logging.info(f"Updating pull request {pr.number}")
         update_pull_request(pr, artifacts)
 
 
