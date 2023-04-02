@@ -22,8 +22,8 @@ GITHUB_TOKEN = os.environ.get('GITHUB_TOKEN', '')
 PRIVATE_TOKEN = os.environ.get('PRIVATE_TOKEN', '')
 
 with open("meta/artifacts.json") as fp:
-    OLD_META = json.load(fp)
-
+    artifacts = json.load(fp)
+    OLD_ARTIFACTS_BY_ID = { a["id"]: Dict(a) for a in artifacts }
 
 def update_pull_request(pr, artifacts):
     repo = pr.head.repo.id
@@ -44,26 +44,22 @@ def update_pull_request(pr, artifacts):
             filename = temp / (str(artifact.id) + ".zip")
             zip_url = artifact.archive_download_url
 
-            old_filesize = get_old_downloaded_file_size(artifact.id)
-            new_filesize = artifact.size_in_bytes
-            force_update = new_filesize > old_filesize
-            if force_update:
-                print("Re-download artifact", artifact.id, "because it was updated:", new_filesize, ">", old_filesize)
+            old_artifact = OLD_ARTIFACTS_BY_ID.get(artifact.id)
+            if old_artifact is None: 
+                force_update = True
+            else:
+                old_filesize = old_artifact.size_in_bytes
+                new_filesize = artifact.size_in_bytes
+                force_update = new_filesize != old_filesize
+
+                if force_update:
+                    print("Re-download artifact", artifact.id, "because it was changed:", new_filesize, "!=", old_filesize)
             
             download_artifact(target, filename, zip_url, force_update)
 
             with (target / 'meta.json').open('w') as fp:
                 json.dump(artifact, fp)
     print("Artifacts for", pr.number, "found:", pr_artifacts)
-
-
-def get_old_downloaded_file_size(artinr: int) -> int:
-    "Find the download size from the previous run."
-    for a in OLD_META:
-        if a['id'] == artinr:
-            return a['size_in_bytes']
-    return -1
-
 
 def download_artifact(target_folder: Path, tmp_file: Path, zip_url: str, force_update: bool):
     """Download and unpack the given zipUrl at the targetFolder. tmpFile is used as intermediate storage. 
@@ -96,7 +92,7 @@ def mkdir_safe(f):
 def get_json(path, args):
     url = f"https://api.github.com/repos/{OWNER}/{REPO}/{path}"
     print("Fetching", url, "with args", args)
-    r = requests.get(url, args)
+    r = requests.get(url, args, timeout=60)
     r.raise_for_status()
     j = r.json()
     if isinstance(j, list):
