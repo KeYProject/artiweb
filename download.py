@@ -46,8 +46,11 @@ def update_pull_request(pr, artifacts):
 
             old_filesize = get_old_downloaded_file_size(artifact.id)
             new_filesize = artifact.size_in_bytes
-            download_artifact(target, filename, zip_url,
-                              new_filesize > old_filesize)
+            force_update = new_filesize > old_filesize
+            if force_update:
+                print("Re-download artifact", artifact.id, "because it was updated:", new_filesize, ">", old_filesize)
+            
+            download_artifact(target, filename, zip_url, force_update)
 
             with (target / 'meta.json').open('w') as fp:
                 json.dump(artifact, fp)
@@ -62,15 +65,12 @@ def get_old_downloaded_file_size(artinr: int) -> int:
     return -1
 
 
-def download_artifact(target_folder: Path, tmp_file: Path, zip_url: str, file_size_changed: bool):
+def download_artifact(target_folder: Path, tmp_file: Path, zip_url: str, force_update: bool):
     """Download and unpack the given zipUrl at the targetFolder. tmpFile is used as intermediate storage. 
     Download and unpack only if it is necessary."""
 
-    if file_size_changed:
-        print("Re-download because artifacts were updated")
-
-    if not target_folder.exists() or file_size_changed:
-        if not tmp_file.exists() or file_size_changed:
+    if not target_folder.exists() or force_update:
+        if not tmp_file.exists() or force_update:
             mkdir_safe(tmp_file.parent)
             with tmp_file.open('wb') as f:
                 r = requests.get(zip_url, headers={
