@@ -23,6 +23,7 @@ PRIVATE_TOKEN = os.environ.get('PRIVATE_TOKEN', '')
 with open("meta/artifacts.json") as fp:
     artifacts = json.load(fp)
     OLD_ARTIFACTS_BY_ID = { a["id"]: Dict(a) for a in artifacts }
+print(OLD_ARTIFACTS_BY_ID)
 
 def update_pull_request(pr, artifacts):
     repo = pr.head.repo.id
@@ -43,6 +44,9 @@ def update_pull_request(pr, artifacts):
             filename = temp / (str(artifact.id) + ".zip")
             zip_url = artifact.archive_download_url
 
+            print(artifact.id)
+            print(OLD_ARTIFACTS_BY_ID.get(artifact.id))
+
             old_artifact = OLD_ARTIFACTS_BY_ID.get(artifact.id)
             if old_artifact is None: 
                 force_update = True
@@ -55,7 +59,7 @@ def update_pull_request(pr, artifacts):
                 if force_update:
                     logging.info(f"Re-downloading artifact {artifact.id} because it was changed: {new_filesize} != {old_filesize}")
             
-            #download_artifact(target, filename, zip_url, force_update)
+            download_artifact(target, filename, zip_url, force_update)
 
             with (target / 'meta.json').open('w') as fp:
                 json.dump(artifact, fp)
@@ -67,6 +71,7 @@ def download_artifact(target_folder: Path, tmp_file: Path, zip_url: str, force_u
 
     if not target_folder.exists() or force_update:
         if not tmp_file.exists() or force_update:
+            logging.debug(f"Downloading {zip_url}")
             mkdir_safe(tmp_file.parent)
             with tmp_file.open('wb') as f:
                 r = requests.get(zip_url, headers={
@@ -74,6 +79,7 @@ def download_artifact(target_folder: Path, tmp_file: Path, zip_url: str, force_u
                 r.raise_for_status()
                 f.write(r.content)
         try:
+            logging.debug(f"Extracting {tmp_file}")
             mkdir_safe(target_folder)
             with zipfile.ZipFile(tmp_file, 'r') as zip_ref:
                 zip_ref.extractall(target_folder)
