@@ -92,7 +92,7 @@ def download_artifact(target_folder: Path, tmp_file: Path, zip_url: str, force_u
                 f.write(r.content)
         try:
             shutil.rmtree(target_folder)
-            logging.debug(f"Extracting {tmp_file}")
+            logging.debug(f"Extracting {tmp_file} to {target_folder}")
             mkdir_safe(target_folder)
             with zipfile.ZipFile(tmp_file, 'r') as zip_ref:
                 zip_ref.extractall(target_folder)
@@ -181,9 +181,8 @@ def main():
     for pr in pull_requests:
         logging.info(f"Updating pull request {pr.number}")
         update_pull_request(pr, data)
-    
-    with downloaded_artifacts_path.open("w") as fp:
-        json.dump(list(data.old_artifacts_by_id.values()), fp)
+        with downloaded_artifacts_path.open("w") as fp:
+            json.dump(list(data.old_artifacts_by_id.values()), fp)
 
 if __name__ == '__main__':
     main()
