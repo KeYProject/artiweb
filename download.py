@@ -91,7 +91,8 @@ def download_artifact(target_folder: Path, tmp_file: Path, zip_url: str, force_u
                 r.raise_for_status()
                 f.write(r.content)
         try:
-            shutil.rmtree(target_folder)
+            if target_folder.exists():
+                shutil.rmtree(target_folder, True)
             logging.debug(f"Extracting {tmp_file} to {target_folder}")
             mkdir_safe(target_folder)
             with zipfile.ZipFile(tmp_file, 'r') as zip_ref:
