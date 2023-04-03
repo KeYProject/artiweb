@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=1024px, initial-scale=1.0">
+    <title>#3099 - A grammar for configuration</title>
+    <link rel="stylesheet" href="https://unpkg.com/@picocss/pico@1.*/css/pico.min.css">
+    
+    
+</head>
+<body>
+    <main class="container">
+    <section>
+<h1>#3099 - A grammar for configuration</h1>
+    <summary>
+        <p><a href="https://github.com/KeYProject/key/pull/3099">Pull request</a></p>
+        <span>Description</span>
+        <details><p>This PR proposes an own grammar for KeY settings and configuration. </p>
+<h2>Status Quo</h2>
+<p>Currently, we store our settings inside of Java Properties files. Either for global settings inside <code>$HOME/.key</code> or inside of proof files. Java Properties are a simple and easy solution, but also have some disadvantages. For example, the lack of type safety (everything is a string), missing positional information (we are not able to give error messages regarding incorrect settings), no support for adding comments, no complex data structures. </p>
+<h2>Proposal</h2>
+<p>I propose an own grammar, written an ANTLR4, for KeY's configuration. </p>
+<h3>Why an own grammar?</h3>
+<p>There are many popular grammars for configuration files, e.g., JSON, TOML and YAML. I decided against them for the following reason:</p>
+<ul>
+<li>No support for storing additional information, like comments. </li>
+<li>Added more dependencies and complexity </li>
+<li>Own grammar is embeddable into the KeY file grammar</li>
+<li>Fallback to properties </li>
+</ul>
+<h3>The grammar</h3>
+<p>The grammar is an extension of the INI files, where the value of entries can be a type-safe and complex data structure. For example the entry for a solver can be look like this:</p>
+<p><code>[SMT_SOLVER]
+Z3 = {
+  name = z3,
+  path = "$HOME/bin/z3",
+  flags = [ "-T", 25, "-smt2" ]
+}</code></p>
+<ul>
+<li><strong>Categories.</strong> The grammar allows to have non-nested category marked with brackets: <code>[category]</code>. The scope of category is valid until the nest category or the end of file.</li>
+<li><strong>Entry.</strong>  An entry is a key-value pair separated by an equal sign <code>=</code>. The key is just a string, whereas the value is one of the following data structures:</li>
+<li><em>Boolean</em>: <code>true</code> or <code>false</code></li>
+<li><em>Integer</em>: any number without a dot</li>
+<li><em>Float</em>: any number with a dot</li>
+<li><em>String</em>: marked with double quotes</li>
+<li><em>List</em>: A list is given with brackets, e.g, [1,2,3]</li>
+<li><em>Map</em>: A structure with named sub-elements. </li>
+<li><em>Fallback</em>: A list of identifiers without any double quotes or something (e.g., <code>a b c</code>), is treated as a string like in Properties files. </li>
+</ul>
+<h3>Grammar in detail</h3>
+<p>```antlr
+grammar Config;</p>
+<p>file: (section? kv)<em>;
+section: LBRACKET SYMBOL RBRACKET;
+kv: (SYMBOL|STRING) EQUAL value;
+value:
+    SYMBOL #symbol
+  | STRING #string
+  | NUMBER #num
+  | FLOATING #fp
+  | BOOLEAN #bool
+  | LBRACE
+     (kv (COMMA kv)</em>)?
+    RBRACE #table
+  | LBRACKET (value (COMMA value)*)? RBRACKET #list;</p>
+<p>COMMENT: '#' ~('\n'|'\r')<em> -&gt; channel(HIDDEN);
+ML_COMMENT: '/</em>' (ML_COMMENT|.)<em>?  '</em>/'-&gt;channel(HIDDEN);
+WS: ('\n'|'\r'|' '|'\f'|'\t')+ -&gt; channel(HIDDEN);
+COMMA:',';
+BOOLEAN: 'true'|'false'|'FALSE'|'TRUE';
+FLOATING: [+-]? [0-9]<em> '.' [0-9]+;
+NUMBER: [+-]? [0-9]+;
+STRING: '"' ~( '"' )</em> '"';
+RBRACE:'}';
+LBRACE:'{';
+LBRACKET: '[';
+RBRACKET: ']';
+EQUAL: '=';
+SYMBOL: [<em>a-zA-Z] [a-zA-Z</em>]*;
+```</p>
+<p>Builds upon #3031 which is currently not merged. </p></details>
+    </summary>
+</section>
+
+<section>
+    <h3>Artifacts</h3>
+    <ul></ul>
+</section>
+
+
+<div style="height:10em;"><canvas id="runtime"></canvas></div>     
+<div style="height:10em;"><canvas id="testcases"></canvas></div>     
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script type="text/javascript">
+    function formatLabel(context) {
+        let label = context.dataset.label || '';
+        if (label) {
+            label += ': ';
+        }
+        const value = context.raw;
+        let format;
+        if (value == 0) {
+            format = "0s";
+        } else if (value < 3) {
+            format = Math.round(value * 1000) + "ms";
+        } else if (value < 120) {
+            format = Math.round(value) + "s";
+        } else {
+            format = "";
+            let remainder = value;
+            if (remainder > 3600) {
+                const hours = Math.floor(remainder / 3600);
+                remainder = remainder % 3600;
+                format += hours + "h ";
+            }
+            
+            if (remainder > 60) {
+                const minutes = Math.floor(remainder / 60);
+                remainder = remainder % 60;
+                format += minutes + "m ";
+            }
+            
+            const seconds = Math.round(remainder);
+            format += seconds + "s";
+        }
+        return label + format;
+    }
+
+    function createChart(name, labels, data) {
+        const ctx = document.getElementById(name);
+        const graph = {
+            type: 'bar',
+            data: {
+                labels: labels,
+                datasets: [{
+                    label: "Runtime",
+                    data: data,
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        };
+        graph.options.plugins = {
+            tooltip: {
+                callbacks: {
+                    label: formatLabel
+                }
+            }
+        };
+        new Chart(ctx, graph);
+    }
+
+    createChart("runtime", [], []);
+
+    const ctx2 = document.getElementById('testcases');
+    new Chart(ctx2, {"data": {"datasets": [{"backgroundColor": "rgb(250, 220, 220)", "borderColor": "rgb(250, 192, 192)", "data": [], "fill": true, "label": "Failures", "tension": 0.1}, {"backgroundColor": "rgb(200, 212, 212)", "borderColor": "rgb(180, 192, 192)", "data": [], "fill": true, "label": "Errors", "tension": 0.1}, {"backgroundColor": "rgb(150, 150, 150)", "borderColor": "rgb(100, 100, 100)", "data": [], "fill": true, "label": "Skipped", "tension": 0.1}, {"backgroundColor": "rgb(95, 212, 120)", "borderColor": "rgb(75, 192, 100)", "data": [], "fill": true, "label": "Success", "tension": 0.1}], "labels": []}, "options": {"maintainAspectRatio": false, "responsive": true, "scales": {"y": {"stacked": true}}}, "type": "line"});
+</script>
+    </main>
+</body>
+</html>
