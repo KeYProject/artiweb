@@ -27,13 +27,13 @@
 </ul>
 <h2>Proposal</h2>
 <p>I propose an own grammar, written an ANTLR4, for KeY's configuration. </p>
-<h3>Why an own grammar?</h3>
+<h3>Why an own grammar? (or why not JSON, TOML or Co.)</h3>
 <p>There are many popular grammars for configuration files, e.g., JSON, TOML and YAML. I decided against them for the following reason:</p>
 <ul>
+<li>The grammar must be embeddable into our KeY files and grammar. </li>
+<li>No external dependencies and complexity. The grammar is small, and parsing is done in a few hundred boring LoC. </li>
 <li>No support for storing additional information, like comments. </li>
-<li>Added more dependencies and complexity </li>
-<li>Own grammar is embeddable into the KeY file grammar</li>
-<li>Can still properties files</li>
+<li>We can still use it to parse old properties files.</li>
 </ul>
 <h3>The grammar</h3>
 <p>The grammar is an extension of the INI files, where the value of entries can be a type-safe and complex data structure. For example the entry for a solver can be look like this:</p>
