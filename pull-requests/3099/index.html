@@ -18,7 +18,13 @@
         <span>Description</span>
         <details><p>This PR proposes an own grammar for KeY settings and configuration. </p>
 <h2>Status Quo</h2>
-<p>Currently, we store our settings inside of Java Properties files. Either for global settings inside <code>$HOME/.key</code> or inside of proof files. Java Properties are a simple and easy solution, but also have some disadvantages. For example, the lack of type safety (everything is a string), missing positional information (we are not able to give error messages regarding incorrect settings), no support for adding comments, no complex data structures. </p>
+<p>Currently, we store our settings inside of Java Properties files. Either for global settings inside <code>$HOME/.key</code> or inside of proof files. Java Properties are a simple and easy solution, but also have some disadvantages. For example, </p>
+<ul>
+<li>the lack of type safety (everything is a string), </li>
+<li>missing positional information (we are not able to give error messages regarding incorrect settings), </li>
+<li>no support for adding comments, and </li>
+<li>no complex data structures. </li>
+</ul>
 <h2>Proposal</h2>
 <p>I propose an own grammar, written an ANTLR4, for KeY's configuration. </p>
 <h3>Why an own grammar?</h3>
@@ -27,7 +33,7 @@
 <li>No support for storing additional information, like comments. </li>
 <li>Added more dependencies and complexity </li>
 <li>Own grammar is embeddable into the KeY file grammar</li>
-<li>Fallback to properties </li>
+<li>Can still properties files</li>
 </ul>
 <h3>The grammar</h3>
 <p>The grammar is an extension of the INI files, where the value of entries can be a type-safe and complex data structure. For example the entry for a solver can be look like this:</p>
@@ -48,6 +54,7 @@ Z3 = {
 <li><em>Map</em>: A structure with named sub-elements. </li>
 <li><em>Fallback</em>: A list of identifiers without any double quotes or something (e.g., <code>a b c</code>), is treated as a string like in Properties files. </li>
 </ul>
+<p>Note, this grammar is very similar to TOML files.</p>
 <h3>Grammar in detail</h3>
 <p>```antlr
 grammar Config;</p>
@@ -79,7 +86,23 @@ RBRACKET: ']';
 EQUAL: '=';
 SYMBOL: [<em>a-zA-Z] [a-zA-Z</em>]*;
 ```</p>
-<p>Builds upon #3031 which is currently not merged. </p></details>
+<h3>Changes</h3>
+<ol>
+<li>Settings inside proof files would no longer be strings instead the section follows the grammar above.</li>
+<li>All configuration files inside <code>$HOME/.key</code> will follow the new grammar. </li>
+<li>The interface for settings (<code>#writeSettings</code> and <code>#readSettings</code>) is extended with two new methods which take an object of <code>Map&lt;String, Object&gt;</code> instead of a <code>Properties</code> object.</li>
+</ol>
+<h3>Migration strategies</h3>
+<p>There are two strategies for supporting old key configurations.</p>
+<ol>
+<li>We make our grammar (as proposed) backward compatible to properties files.</li>
+<li>We keep the support for properties files and support reading them. But newly saved files are stored with the new configuration format. </li>
+</ol>
+<p>Additionally, we can offer a small tool for rewriting existing files. </p>
+<hr />
+<p>Builds upon #3031 which is currently not merged. </p>
+<hr />
+<p>Request for comments: @unp1 @mattulbrich @WolframPfeifer @lks9 </p></details>
     </summary>
 </section>
 
