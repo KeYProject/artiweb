@@ -11,6 +11,8 @@ from jinja2 import Environment, FileSystemLoader, select_autoescape
 from pathlib import Path
 import markdown
 
+import os
+
 import logging
 from download import initLogging
 
@@ -24,6 +26,15 @@ def mymarkdown(txt):
     else: return "" 
 
 env.filters['markdown'] = mymarkdown
+
+BASE_URL = os.environ.get('BASE_URL', '')
+if not BASE_URL.endswith("/") and BASE_URL:
+    BASE_URL += "/"
+
+def absolute_url(url):
+    return BASE_URL + str(url)
+
+env.filters['absolute_url'] = absolute_url
 
 def index(pull_requests):
     template = env.get_template("index.html")

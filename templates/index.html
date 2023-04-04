@@ -1,5 +1,6 @@
 {% extends "main.html" %}
 {% block title %}Artiweb{% endblock %}
+{% block scripts %}<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>{% endblock %}
 {% block content %}
 <h1>Artiweb</h1>
 <p class="important">
@@ -11,7 +12,7 @@
     <li><a href="#graphs">Runtime graphs</a></li>
 </ul>
 {% macro pullRequestLink(pr) -%}
-    <a href="{{pr.number}}">[#{{pr.number}}] {{pr.title}}</a>
+    <a href="{{ pr.number | absolute_url }}">{{pr.title}}</a> <span class="color-muted">#{{pr.number}}</span>
 {%- endmacro %}
 
 <section id="pr-open">
@@ -43,7 +44,6 @@
         <div style="height:10em;"><canvas id="{{ g.name }}"></canvas></div>   
     {%- endfor -%}
     
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script type="text/javascript">
         function createChart(g) {
             const ctx = document.getElementById(g.name);

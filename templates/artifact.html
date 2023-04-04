@@ -2,7 +2,7 @@
 {% block title %}#{{ pr.number }} - {{ pr.title }}{% endblock %}
 {% block content %}
 <section>
-    <a href="/artiweb">Artiweb</a> > <a href="/artiweb/{{pr.number}}">Pull Request #{{ pr.number }}</a> > <span>Artifact {{artifact.id}}</span>
+    <a href="{{ "/" | absolute_url }}">Artiweb</a> > <a href="{{ pr.number | absolute_url }}">Pull Request #{{ pr.number }}</a> > <span>Artifact {{artifact.id}}</span>
     <h1>{{ pr.title  }} <span class="color-muted">#{{ pr.number }}</span></h1>
     <span>Build time: {{artifact.created_at_pretty}}</span><br>
     <a href="https://github.com/KeYProject/key/actions/runs/{{artifact.workflow_run.id}}">Github Action</a><br>

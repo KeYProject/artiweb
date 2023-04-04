@@ -1,10 +1,10 @@
 {% extends "main.html" %}
 {% block title %}#{{ pr.number }} - {{ pr.title  }}{% endblock %}
-
+{% block scripts %}<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>{% endblock %}
 {% block content -%}
 
 <section>
-    <a href="/artiweb">Artiweb</a> > <span>Pull Request #{{ pr.number }}</span>
+    <a href="{{ "/" | absolute_url }}">Artiweb</a> > <span>Pull Request #{{ pr.number }}</span>
     <h1>{{ pr.title  }} <span class="color-muted">#{{ pr.number }}</span></h1>
     <summary>
         <p><a href="{{pr.html_url}}">Github</a></p>
