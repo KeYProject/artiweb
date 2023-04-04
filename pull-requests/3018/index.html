@@ -8,15 +8,15 @@
     <meta name="viewport" content="width=1024px, initial-scale=1.0">
     <title>#3018 - suggesting a pull-request-template.</title>
     <link rel="stylesheet" href="https://unpkg.com/@picocss/pico@1.*/css/pico.min.css">
-    <link rel="stylesheet" href="css/style.css">
-    <script type="application/javascript" src="js/main.js"></script>
+    <link rel="stylesheet" href="artiweb/css/style.css">
+    <script type="application/javascript" src="artiweb/js/main.js"></script>
     
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
     <main class="container">
     <section>
-    <a href="/">Artiweb</a> > <span>Pull Request #3018</span>
+    <a href="artiweb//">Artiweb</a> > <span>Pull Request #3018</span>
     <h1>suggesting a pull-request-template. <span class="color-muted">#3018</span></h1>
     <summary>
         <p><a href="https://github.com/KeYProject/key/pull/3018">Github</a></p>
@@ -81,7 +81,7 @@
         new Chart(ctx, graph);
     }
 
-    createChart("runtime", ["04. Feb 2023 13:22", "05. Feb 2023 14:53", "05. Feb 2023 14:53", "05. Feb 2023 17:05"], [11295.652, 9643.405, 9823.627, 9562.354]);
+    createChart("runtime", ["04. Feb 2023 13:22", "05. Feb 2023 14:53", "05. Feb 2023 14:53", "05. Feb 2023 17:05"], [11295.651999999998, 9643.405, 9823.627, 9562.354]);
 
     const ctx2 = document.getElementById('testcases');
     new Chart(ctx2, {"data": {"datasets": [{"backgroundColor": "rgb(250, 220, 220)", "borderColor": "rgb(250, 192, 192)", "data": [0, 0, 0, 0], "fill": true, "label": "Failures", "tension": 0.1}, {"backgroundColor": "rgb(200, 212, 212)", "borderColor": "rgb(180, 192, 192)", "data": [0, 0, 0, 0], "fill": true, "label": "Errors", "tension": 0.1}, {"backgroundColor": "rgb(150, 150, 150)", "borderColor": "rgb(100, 100, 100)", "data": [158, 119, 119, 119], "fill": true, "label": "Skipped", "tension": 0.1}, {"backgroundColor": "rgb(95, 212, 120)", "borderColor": "rgb(75, 192, 100)", "data": [3828, 3422, 3422, 3422], "fill": true, "label": "Success", "tension": 0.1}], "labels": ["04. Feb 2023 13:22", "05. Feb 2023 14:53", "05. Feb 2023 14:53", "05. Feb 2023 17:05"]}, "options": {"maintainAspectRatio": false, "responsive": true, "scales": {"y": {"stacked": true}}}, "type": "line"});

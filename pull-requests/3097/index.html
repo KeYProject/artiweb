@@ -8,15 +8,15 @@
     <meta name="viewport" content="width=1024px, initial-scale=1.0">
     <title>#3097 - Better artiweb comment workflow</title>
     <link rel="stylesheet" href="https://unpkg.com/@picocss/pico@1.*/css/pico.min.css">
-    <link rel="stylesheet" href="css/style.css">
-    <script type="application/javascript" src="js/main.js"></script>
+    <link rel="stylesheet" href="artiweb/css/style.css">
+    <script type="application/javascript" src="artiweb/js/main.js"></script>
     
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
     <main class="container">
     <section>
-    <a href="/">Artiweb</a> > <span>Pull Request #3097</span>
+    <a href="artiweb//">Artiweb</a> > <span>Pull Request #3097</span>
     <h1>Better artiweb comment workflow <span class="color-muted">#3097</span></h1>
     <summary>
         <p><a href="https://github.com/KeYProject/key/pull/3097">Github</a></p>
@@ -68,7 +68,7 @@
         new Chart(ctx, graph);
     }
 
-    createChart("runtime", ["02. Apr 2023 14:27", "02. Apr 2023 14:51"], [11372.75, 12724.485999999999]);
+    createChart("runtime", ["02. Apr 2023 14:27", "02. Apr 2023 14:51"], [11372.749999999998, 12724.485999999997]);
 
     const ctx2 = document.getElementById('testcases');
     new Chart(ctx2, {"data": {"datasets": [{"backgroundColor": "rgb(250, 220, 220)", "borderColor": "rgb(250, 192, 192)", "data": [29, 29], "fill": true, "label": "Failures", "tension": 0.1}, {"backgroundColor": "rgb(200, 212, 212)", "borderColor": "rgb(180, 192, 192)", "data": [0, 0], "fill": true, "label": "Errors", "tension": 0.1}, {"backgroundColor": "rgb(150, 150, 150)", "borderColor": "rgb(100, 100, 100)", "data": [156, 156], "fill": true, "label": "Skipped", "tension": 0.1}, {"backgroundColor": "rgb(95, 212, 120)", "borderColor": "rgb(75, 192, 100)", "data": [3864, 3864], "fill": true, "label": "Success", "tension": 0.1}], "labels": ["02. Apr 2023 14:27", "02. Apr 2023 14:51"]}, "options": {"maintainAspectRatio": false, "responsive": true, "scales": {"y": {"stacked": true}}}, "type": "line"});

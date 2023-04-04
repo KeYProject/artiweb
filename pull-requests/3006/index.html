@@ -8,15 +8,15 @@
     <meta name="viewport" content="width=1024px, initial-scale=1.0">
     <title>#3006 - Selection history (back + forward button)</title>
     <link rel="stylesheet" href="https://unpkg.com/@picocss/pico@1.*/css/pico.min.css">
-    <link rel="stylesheet" href="css/style.css">
-    <script type="application/javascript" src="js/main.js"></script>
+    <link rel="stylesheet" href="artiweb/css/style.css">
+    <script type="application/javascript" src="artiweb/js/main.js"></script>
     
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
     <main class="container">
     <section>
-    <a href="/">Artiweb</a> > <span>Pull Request #3006</span>
+    <a href="artiweb//">Artiweb</a> > <span>Pull Request #3006</span>
     <h1>Selection history (back + forward button) <span class="color-muted">#3006</span></h1>
     <summary>
         <p><a href="https://github.com/KeYProject/key/pull/3006">Github</a></p>
@@ -68,7 +68,7 @@
         new Chart(ctx, graph);
     }
 
-    createChart("runtime", ["31. Jan 2023 15:22", "02. Feb 2023 16:21", "16. Feb 2023 16:49", "23. Feb 2023 23:47", "24. Feb 2023 11:37", "03. Mar 2023 21:13", "04. Mar 2023 13:35", "04. Mar 2023 16:20"], [11621.016000000001, 11821.752999999999, 10306.72, 9937.738, 9582.788, 11785.517000000002, 10596.577000000001, 12640.17]);
+    createChart("runtime", ["31. Jan 2023 15:22", "02. Feb 2023 16:21", "16. Feb 2023 16:49", "23. Feb 2023 23:47", "24. Feb 2023 11:37", "03. Mar 2023 21:13", "04. Mar 2023 13:35", "04. Mar 2023 16:20"], [11621.016000000001, 11821.753, 10306.72, 9937.738, 9582.788, 11785.517000000003, 10596.577000000001, 12640.17]);
 
     const ctx2 = document.getElementById('testcases');
     new Chart(ctx2, {"data": {"datasets": [{"backgroundColor": "rgb(250, 220, 220)", "borderColor": "rgb(250, 192, 192)", "data": [1, 0, 0, 1, 1, 0, 0, 0], "fill": true, "label": "Failures", "tension": 0.1}, {"backgroundColor": "rgb(200, 212, 212)", "borderColor": "rgb(180, 192, 192)", "data": [0, 0, 0, 0, 0, 0, 0, 0], "fill": true, "label": "Errors", "tension": 0.1}, {"backgroundColor": "rgb(150, 150, 150)", "borderColor": "rgb(100, 100, 100)", "data": [158, 158, 119, 119, 119, 117, 117, 117], "fill": true, "label": "Skipped", "tension": 0.1}, {"backgroundColor": "rgb(95, 212, 120)", "borderColor": "rgb(75, 192, 100)", "data": [3827, 3828, 3430, 3429, 3429, 3433, 3433, 3433], "fill": true, "label": "Success", "tension": 0.1}], "labels": ["31. Jan 2023 15:22", "02. Feb 2023 16:21", "16. Feb 2023 16:49", "23. Feb 2023 23:47", "24. Feb 2023 11:37", "03. Mar 2023 21:13", "04. Mar 2023 13:35", "04. Mar 2023 16:20"]}, "options": {"maintainAspectRatio": false, "responsive": true, "scales": {"y": {"stacked": true}}}, "type": "line"});

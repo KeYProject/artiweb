@@ -8,15 +8,15 @@
     <meta name="viewport" content="width=1024px, initial-scale=1.0">
     <title>#3064 - Code cleanup</title>
     <link rel="stylesheet" href="https://unpkg.com/@picocss/pico@1.*/css/pico.min.css">
-    <link rel="stylesheet" href="css/style.css">
-    <script type="application/javascript" src="js/main.js"></script>
+    <link rel="stylesheet" href="artiweb/css/style.css">
+    <script type="application/javascript" src="artiweb/js/main.js"></script>
     
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
     <main class="container">
     <section>
-    <a href="/">Artiweb</a> > <span>Pull Request #3064</span>
+    <a href="artiweb//">Artiweb</a> > <span>Pull Request #3064</span>
     <h1>Code cleanup <span class="color-muted">#3064</span></h1>
     <summary>
         <p><a href="https://github.com/KeYProject/key/pull/3064">Github</a></p>
@@ -74,7 +74,7 @@ However, I think most of them really help with parsing of and reasoning about th
         new Chart(ctx, graph);
     }
 
-    createChart("runtime", ["12. Mar 2023 21:14", "13. Mar 2023 06:51", "13. Mar 2023 07:30", "13. Mar 2023 13:54", "13. Mar 2023 16:08", "21. Mar 2023 16:58", "24. Mar 2023 13:25", "24. Mar 2023 15:44", "25. Mar 2023 21:05", "26. Mar 2023 00:06", "26. Mar 2023 00:25", "26. Mar 2023 14:13", "31. Mar 2023 14:38", "31. Mar 2023 15:10", "03. Apr 2023 10:36", "03. Apr 2023 12:18"], [10024.453000000001, 10024.453000000001, 9304.615, 10038.41, 10747.17, 10671.653, 1.867, 9907.605999999998, 9781.427, 9403.937, 9843.302, 9568.194, 9927.293999999998, 10644.784, 1.5689999999999993, 12006.493999999999]);
+    createChart("runtime", ["12. Mar 2023 21:14", "13. Mar 2023 06:51", "13. Mar 2023 07:30", "13. Mar 2023 13:54", "13. Mar 2023 16:08", "21. Mar 2023 16:58", "24. Mar 2023 13:25", "24. Mar 2023 15:44", "25. Mar 2023 21:05", "26. Mar 2023 00:06", "26. Mar 2023 00:25", "26. Mar 2023 14:13", "31. Mar 2023 14:38", "31. Mar 2023 15:10", "03. Apr 2023 10:36", "03. Apr 2023 12:18"], [10024.453, 10024.453, 9304.615, 10038.410000000003, 10747.17, 10671.653000000002, 1.867, 9907.606000000002, 9781.427000000001, 9403.937, 9843.302000000001, 9568.194000000001, 9927.294, 10644.784000000001, 1.5689999999999993, 12006.493999999999]);
 
     const ctx2 = document.getElementById('testcases');
     new Chart(ctx2, {"data": {"datasets": [{"backgroundColor": "rgb(250, 220, 220)", "borderColor": "rgb(250, 192, 192)", "data": [3, 3, 0, 5, 0, 0, 0, 25, 25, 0, 0, 0, 0, 0, 0, 76], "fill": true, "label": "Failures", "tension": 0.1}, {"backgroundColor": "rgb(200, 212, 212)", "borderColor": "rgb(180, 192, 192)", "data": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], "fill": true, "label": "Errors", "tension": 0.1}, {"backgroundColor": "rgb(150, 150, 150)", "borderColor": "rgb(100, 100, 100)", "data": [0, 0, 0, 117, 117, 117, 0, 117, 117, 117, 117, 117, 117, 117, 0, 156], "fill": true, "label": "Skipped", "tension": 0.1}, {"backgroundColor": "rgb(95, 212, 120)", "borderColor": "rgb(75, 192, 100)", "data": [270, 270, 273, 3405, 3410, 3424, 132, 3415, 3415, 3440, 3440, 3440, 3440, 3440, 132, 3815], "fill": true, "label": "Success", "tension": 0.1}], "labels": ["12. Mar 2023 21:14", "13. Mar 2023 06:51", "13. Mar 2023 07:30", "13. Mar 2023 13:54", "13. Mar 2023 16:08", "21. Mar 2023 16:58", "24. Mar 2023 13:25", "24. Mar 2023 15:44", "25. Mar 2023 21:05", "26. Mar 2023 00:06", "26. Mar 2023 00:25", "26. Mar 2023 14:13", "31. Mar 2023 14:38", "31. Mar 2023 15:10", "03. Apr 2023 10:36", "03. Apr 2023 12:18"]}, "options": {"maintainAspectRatio": false, "responsive": true, "scales": {"y": {"stacked": true}}}, "type": "line"});
