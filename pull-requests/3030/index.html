@@ -6,16 +6,18 @@
     <meta name="viewport" content="width=1024px, initial-scale=1.0">
     <title>#3030 - Removal of the Proof Collection Parser</title>
     <link rel="stylesheet" href="https://unpkg.com/@picocss/pico@1.*/css/pico.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script type="application/javascript" src="js/main.js"></script>
     
     
 </head>
 <body>
     <main class="container">
     <section>
-    <a href="/artiweb">Artiweb</a> > <span>#3030</span>
-    <h1>#3030 - Removal of the Proof Collection Parser</h1>
+    <a href="/artiweb">Artiweb</a> > <span>Pull Request #3030</span>
+    <h1>Removal of the Proof Collection Parser <span class="color-muted">#3030</span></h1>
     <summary>
-        <p><a href="https://github.com/KeYProject/key/pull/3030">Pull request</a></p>
+        <p><a href="https://github.com/KeYProject/key/pull/3030">Github</a></p>
         <span>Description</span>
         <details><p>The Proof Collection Parser is an antlr3 parser, which reads text files -- the proof collections -- and translates them into a data structure used for executing <em>run all proofs</em> tests. In order of switching from antlr3 to antlr4, it seems that rewriting of this parser is not beneficial, as its grammar can easily mapped to a Java-DSL without loss of readability and gaining all nice IDE features (syntax highlighting, code assist etc) for writing these files. </p>
 <p>:exclamation: So this PR removes the collection and also all dependencies of ANTLR2 and ANTLR3 in the source code of KeY. </p>
@@ -36,40 +38,6 @@
 
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 <script type="text/javascript">
-    function formatLabel(context) {
-        let label = context.dataset.label || '';
-        if (label) {
-            label += ': ';
-        }
-        const value = context.raw;
-        let format;
-        if (value == 0) {
-            format = "0s";
-        } else if (value < 3) {
-            format = Math.round(value * 1000) + "ms";
-        } else if (value < 120) {
-            format = Math.round(value) + "s";
-        } else {
-            format = "";
-            let remainder = value;
-            if (remainder > 3600) {
-                const hours = Math.floor(remainder / 3600);
-                remainder = remainder % 3600;
-                format += hours + "h ";
-            }
-            
-            if (remainder > 60) {
-                const minutes = Math.floor(remainder / 60);
-                remainder = remainder % 60;
-                format += minutes + "m ";
-            }
-            
-            const seconds = Math.round(remainder);
-            format += seconds + "s";
-        }
-        return label + format;
-    }
-
     function createChart(name, labels, data) {
         const ctx = document.getElementById(name);
         const graph = {

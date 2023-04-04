@@ -6,16 +6,18 @@
     <meta name="viewport" content="width=1024px, initial-scale=1.0">
     <title>#3042 - Fix CVC4 solver socket handling of newlines</title>
     <link rel="stylesheet" href="https://unpkg.com/@picocss/pico@1.*/css/pico.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script type="application/javascript" src="js/main.js"></script>
     
     
 </head>
 <body>
     <main class="container">
     <section>
-    <a href="/artiweb">Artiweb</a> > <span>#3042</span>
-    <h1>#3042 - Fix CVC4 solver socket handling of newlines</h1>
+    <a href="/artiweb">Artiweb</a> > <span>Pull Request #3042</span>
+    <h1>Fix CVC4 solver socket handling of newlines <span class="color-muted">#3042</span></h1>
     <summary>
-        <p><a href="https://github.com/KeYProject/key/pull/3042">Pull request</a></p>
+        <p><a href="https://github.com/KeYProject/key/pull/3042">Github</a></p>
         <span>Description</span>
         <details><p>Fixes #1656</p></details>
     </summary>
@@ -32,40 +34,6 @@
 
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 <script type="text/javascript">
-    function formatLabel(context) {
-        let label = context.dataset.label || '';
-        if (label) {
-            label += ': ';
-        }
-        const value = context.raw;
-        let format;
-        if (value == 0) {
-            format = "0s";
-        } else if (value < 3) {
-            format = Math.round(value * 1000) + "ms";
-        } else if (value < 120) {
-            format = Math.round(value) + "s";
-        } else {
-            format = "";
-            let remainder = value;
-            if (remainder > 3600) {
-                const hours = Math.floor(remainder / 3600);
-                remainder = remainder % 3600;
-                format += hours + "h ";
-            }
-            
-            if (remainder > 60) {
-                const minutes = Math.floor(remainder / 60);
-                remainder = remainder % 60;
-                format += minutes + "m ";
-            }
-            
-            const seconds = Math.round(remainder);
-            format += seconds + "s";
-        }
-        return label + format;
-    }
-
     function createChart(name, labels, data) {
         const ctx = document.getElementById(name);
         const graph = {

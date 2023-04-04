@@ -6,16 +6,18 @@
     <meta name="viewport" content="width=1024px, initial-scale=1.0">
     <title>#3014 - Spec math mode</title>
     <link rel="stylesheet" href="https://unpkg.com/@picocss/pico@1.*/css/pico.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script type="application/javascript" src="js/main.js"></script>
     
     
 </head>
 <body>
     <main class="container">
     <section>
-    <a href="/artiweb">Artiweb</a> > <span>#3014</span>
-    <h1>#3014 - Spec math mode</h1>
+    <a href="/artiweb">Artiweb</a> > <span>Pull Request #3014</span>
+    <h1>Spec math mode <span class="color-muted">#3014</span></h1>
     <summary>
-        <p><a href="https://github.com/KeYProject/key/pull/3014">Pull request</a></p>
+        <p><a href="https://github.com/KeYProject/key/pull/3014">Github</a></p>
         <span>Description</span>
         <details><p>This MR implements the spec math modes discussed in a recent KaKeY meeting. See <a href="https://github.com/KeYProject/key/wiki/Spec-math-modes">here</a> for a reference. Furthermore, safe math is implemented using the wd checker, this mode generates additional in bounds checks when doing a wd proof and is otherwise treated like the bigint mode.</p>
 <p>The <em>code</em> overflow behaviour remains unchanged and is to be overhauled in a later MR. This MR only includes the changes to specification translation.</p>
@@ -36,40 +38,6 @@ All other tests are green and only minor changes to the specification of the exi
 
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 <script type="text/javascript">
-    function formatLabel(context) {
-        let label = context.dataset.label || '';
-        if (label) {
-            label += ': ';
-        }
-        const value = context.raw;
-        let format;
-        if (value == 0) {
-            format = "0s";
-        } else if (value < 3) {
-            format = Math.round(value * 1000) + "ms";
-        } else if (value < 120) {
-            format = Math.round(value) + "s";
-        } else {
-            format = "";
-            let remainder = value;
-            if (remainder > 3600) {
-                const hours = Math.floor(remainder / 3600);
-                remainder = remainder % 3600;
-                format += hours + "h ";
-            }
-            
-            if (remainder > 60) {
-                const minutes = Math.floor(remainder / 60);
-                remainder = remainder % 60;
-                format += minutes + "m ";
-            }
-            
-            const seconds = Math.round(remainder);
-            format += seconds + "s";
-        }
-        return label + format;
-    }
-
     function createChart(name, labels, data) {
         const ctx = document.getElementById(name);
         const graph = {
