@@ -229,6 +229,7 @@ def find_tests(path: Path):
                 test.report_path = html_file_path.parent.relative_to(path)
             
             tests.append(test)
+    tests.sort(key = lambda t: t.full_name)
     return tests
 
 def generate_artifact(path: Path):
