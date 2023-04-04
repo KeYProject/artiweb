@@ -2,12 +2,10 @@
 {% block title %}#{{ pr.number }} - {{ pr.title }}{% endblock %}
 {% block content %}
 <section>
-    <a href="/artiweb">Artiweb</a> > <a href="/artiweb/{{pr.number}}">#{{ pr.number }}</a> > <span>{{artifact.id}}</span>
-    <h1>#{{ pr.number }} - {{ pr.title }}</h1>
-    <a href="{{pr.html_url}}">Pull request</a><br>
-    <a href="https://github.com/KeYProject/key/actions/runs/{{artifact.workflow_run.id}}">Github Action</a><br>
-    <span>Artifact: {{artifact.id}}</span><br>
+    <a href="/artiweb">Artiweb</a> > <a href="/artiweb/{{pr.number}}">Pull Request #{{ pr.number }}</a> > <span>Artifact {{artifact.id}}</span>
+    <h1>{{ pr.title  }} <span class="color-muted">#{{ pr.number }}</span></h1>
     <span>Build time: {{artifact.created_at_pretty}}</span><br>
+    <a href="https://github.com/KeYProject/key/actions/runs/{{artifact.workflow_run.id}}">Github Action</a><br>
 </section>
 
 <section>
@@ -19,7 +17,7 @@
                 {%- if test.report_path -%}
                     <a href="{{test.report_path}}">{{test.full_name}}</a>
                 {%- else -%}
-                    {{test.full_name}}
+                    {{test.full_name}} [no report files]
                 {%- endif %} ({{test.statistics.success}} succeeded
                 {%- if test.statistics.failures > 0 %}, {{ test.statistics.failures }} failed{% endif -%}
                 {%- if test.statistics.skipped > 0 %}, {{ test.statistics.skipped }} skipped{% endif -%}
