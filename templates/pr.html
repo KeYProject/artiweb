@@ -4,7 +4,8 @@
 {% block content -%}
 
 <section>
-<h1>#{{ pr.number }} - {{ pr.title  }}</h1>
+    <a href="/artiweb">Artiweb</a> > <span>#{{ pr.number }}</span>
+    <h1>#{{ pr.number }} - {{ pr.title  }}</h1>
     <summary>
         <p><a href="{{pr.html_url}}">Pull request</a></p>
         <span>Description</span>

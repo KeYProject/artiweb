@@ -2,6 +2,7 @@
 {% block title %}#{{ pr.number }} - {{ pr.title }}{% endblock %}
 {% block content %}
 <section>
+    <a href="/artiweb">Artiweb</a> > <a href="/artiweb/{{pr.number}}">#{{ pr.number }}</a> > <span>{{artifact.id}}</span>
     <h1>#{{ pr.number }} - {{ pr.title }}</h1>
     <a href="{{pr.html_url}}">Pull request</a><br>
     <a href="https://github.com/KeYProject/key/actions/runs/{{artifact.workflow_run.id}}">Github Action</a><br>
