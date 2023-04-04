@@ -31,6 +31,9 @@ BASE_URL = os.environ.get('BASE_URL', '')
 if not BASE_URL.endswith("/") and BASE_URL:
     BASE_URL += "/"
 
+if not BASE_URL.startswith("/") and BASE_URL:
+    BASE_URL = "/" + BASE_URL
+
 def absolute_url(url):
     return BASE_URL + str(url)
 
