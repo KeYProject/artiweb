@@ -31,7 +31,7 @@
 <li>no complex data structures. </li>
 </ul>
 <h2>Proposal</h2>
-<p>I propose an own grammar, written an ANTLR4, for KeY's configuration. </p>
+<p>I propose an own grammar, written an ANTLR4, for KeY's configuration that is compatible with JSON and the grammar of KeY.  </p>
 <h3>Why an own grammar? (or why not JSON, TOML or Co.)</h3>
 <p>There are many popular grammars for configuration files, e.g., JSON, TOML and YAML. I decided against them for the following reason:</p>
 <ul>
@@ -41,6 +41,45 @@
 <li>We can still use it to parse old properties files.</li>
 </ul>
 <h3>The grammar</h3>
+<p>The grammar is an extension of JSON, allowing comments, multiline strings, non-quoted keys, etc. An example is given in the comments below. </p>
+<p>The grammar is an recursive definition of values, which can simple express as an ANTLR4 grammar.</p>
+<p><code>antlr4
+// Config
+cfile: cvalue*;
+ckv: doc=DOC_COMMENT? ckey ':' cvalue;
+ckey: IDENT | STRING_LITERAL;
+cvalue:
+    IDENT #csymbol
+  | STRING_LITERAL #cstring
+  | BIN_LITERAL #cintb
+  | HEX_LITERAL #cinth
+  | MINUS? INT_LITERAL #cintd
+  | FLOAT_LITERAL #cfpf
+  | DOUBLE_LITERAL #cfpd
+  | REAL_LITERAL #cfpr
+  | (TRUE|FALSE) #cbool
+  | LBRACE
+     (ckv (COMMA ckv)*)? COMMA?
+    RBRACE #table
+  | LBRACKET (cvalue (COMMA cvalue)*)? RBRACKET #986</code></p>
+<h3>Changes</h3>
+<ol>
+<li>Settings inside proof files would no longer be strings instead the section follows the grammar above.</li>
+<li>All configuration files inside <code>$HOME/.key</code> will follow the new grammar. </li>
+<li>The interface for settings (<code>#writeSettings</code> and <code>#readSettings</code>) is extended with two new methods which take an object of <code>Map&lt;String, Object&gt;</code> instead of a <code>Properties</code> object.</li>
+</ol>
+<h3>Migration strategies</h3>
+<ol>
+<li>We keep the handling of properties in place. And have switches to load "json" over "props" files from the <code>.key</code> directory. </li>
+<li>In KeY files, we decide based on the grammar, (STRING_LITERAL vs. JSON-object) which settings handling to trigger. </li>
+</ol>
+<p>The properties handling will be marked as deprecated and will be removed in the future. </p>
+<hr />
+<p>Builds upon #3031 which is currently not merged. </p>
+<hr />
+<p>Request for comments: @unp1 @mattulbrich @WolframPfeifer @lks9 </p>
+<hr />
+<h3>The grammar OLD &amp; DEPRECATED</h3>
 <p>The grammar is an extension of the INI files, where the value of entries can be a type-safe and complex data structure. For example the entry for a solver can be look like this:</p>
 <p><code>[SMT_SOLVER]
 Z3 = {
@@ -90,30 +129,13 @@ LBRACKET: '[';
 RBRACKET: ']';
 EQUAL: '=';
 SYMBOL: [<em>a-zA-Z] [a-zA-Z</em>]*;
-```</p>
-<h3>Changes</h3>
-<ol>
-<li>Settings inside proof files would no longer be strings instead the section follows the grammar above.</li>
-<li>All configuration files inside <code>$HOME/.key</code> will follow the new grammar. </li>
-<li>The interface for settings (<code>#writeSettings</code> and <code>#readSettings</code>) is extended with two new methods which take an object of <code>Map&lt;String, Object&gt;</code> instead of a <code>Properties</code> object.</li>
-</ol>
-<h3>Migration strategies</h3>
-<p>There are two strategies for supporting old key configurations.</p>
-<ol>
-<li>We make our grammar (as proposed) backward compatible to properties files.</li>
-<li>We keep the support for properties files and support reading them. But newly saved files are stored with the new configuration format. </li>
-</ol>
-<p>Additionally, we can offer a small tool for rewriting existing files. </p>
-<hr />
-<p>Builds upon #3031 which is currently not merged. </p>
-<hr />
-<p>Request for comments: @unp1 @mattulbrich @WolframPfeifer @lks9 </p></details>
+```</p></details>
     </summary>
 </section>
 
 <section>
     <h3>Artifacts</h3>
-    <ul><li><a href="629941150">03. Apr 2023 17:21</a> <small>(167.77 kB large)</small></li><li><a href="629518672">03. Apr 2023 13:40</a> <small>(4454.34 kB large)</small></li></ul>
+    <ul><li><a href="633393275">05. Apr 2023 13:04</a> <small>(6334.10 kB large)</small></li><li><a href="633378642">05. Apr 2023 12:54</a> <small>(6333.46 kB large)</small></li><li><a href="629941150">03. Apr 2023 17:21</a> <small>(167.77 kB large)</small></li><li><a href="629518672">03. Apr 2023 13:40</a> <small>(4454.34 kB large)</small></li></ul>
 </section>
 
 
@@ -154,10 +176,10 @@ SYMBOL: [<em>a-zA-Z] [a-zA-Z</em>]*;
         new Chart(ctx, graph);
     }
 
-    createChart("runtime", ["03. Apr 2023 13:40", "03. Apr 2023 17:21"], [13864.685000000001, 2.307]);
+    createChart("runtime", ["03. Apr 2023 13:40", "03. Apr 2023 17:21", "05. Apr 2023 12:54", "05. Apr 2023 13:04"], [13864.685000000001, 2.3069999999999995, 11249.144999999997, 11716.335]);
 
     const ctx2 = document.getElementById('testcases');
-    new Chart(ctx2, {"data": {"datasets": [{"backgroundColor": "rgb(250, 220, 220)", "borderColor": "rgb(250, 192, 192)", "data": [30, 0], "fill": true, "label": "Failures", "tension": 0.1}, {"backgroundColor": "rgb(200, 212, 212)", "borderColor": "rgb(180, 192, 192)", "data": [0, 0], "fill": true, "label": "Errors", "tension": 0.1}, {"backgroundColor": "rgb(150, 150, 150)", "borderColor": "rgb(100, 100, 100)", "data": [156, 15], "fill": true, "label": "Skipped", "tension": 0.1}, {"backgroundColor": "rgb(95, 212, 120)", "borderColor": "rgb(75, 192, 100)", "data": [3863, 146], "fill": true, "label": "Success", "tension": 0.1}], "labels": ["03. Apr 2023 13:40", "03. Apr 2023 17:21"]}, "options": {"maintainAspectRatio": false, "responsive": true, "scales": {"y": {"stacked": true}}}, "type": "line"});
+    new Chart(ctx2, {"data": {"datasets": [{"backgroundColor": "rgb(250, 220, 220)", "borderColor": "rgb(250, 192, 192)", "data": [30, 0, 77, 77], "fill": true, "label": "Failures", "tension": 0.1}, {"backgroundColor": "rgb(200, 212, 212)", "borderColor": "rgb(180, 192, 192)", "data": [0, 0, 0, 0], "fill": true, "label": "Errors", "tension": 0.1}, {"backgroundColor": "rgb(150, 150, 150)", "borderColor": "rgb(100, 100, 100)", "data": [156, 15, 156, 156], "fill": true, "label": "Skipped", "tension": 0.1}, {"backgroundColor": "rgb(95, 212, 120)", "borderColor": "rgb(75, 192, 100)", "data": [3863, 146, 3814, 3814], "fill": true, "label": "Success", "tension": 0.1}], "labels": ["03. Apr 2023 13:40", "03. Apr 2023 17:21", "05. Apr 2023 12:54", "05. Apr 2023 13:04"]}, "options": {"maintainAspectRatio": false, "responsive": true, "scales": {"y": {"stacked": true}}}, "type": "line"});
 </script>
     </main>
 </body>
