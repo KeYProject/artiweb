@@ -68,7 +68,7 @@
         new Chart(ctx, graph);
     }
 
-    createChart("runtime", ["02. Apr 2023 14:27", "02. Apr 2023 14:51"], [11372.749999999998, 12724.486]);
+    createChart("runtime", ["02. Apr 2023 14:27", "02. Apr 2023 14:51"], [11372.749999999998, 12724.485999999997]);
 
     const ctx2 = document.getElementById('testcases');
     new Chart(ctx2, {"data": {"datasets": [{"backgroundColor": "rgb(250, 220, 220)", "borderColor": "rgb(250, 192, 192)", "data": [29, 29], "fill": true, "label": "Failures", "tension": 0.1}, {"backgroundColor": "rgb(200, 212, 212)", "borderColor": "rgb(180, 192, 192)", "data": [0, 0], "fill": true, "label": "Errors", "tension": 0.1}, {"backgroundColor": "rgb(150, 150, 150)", "borderColor": "rgb(100, 100, 100)", "data": [156, 156], "fill": true, "label": "Skipped", "tension": 0.1}, {"backgroundColor": "rgb(95, 212, 120)", "borderColor": "rgb(75, 192, 100)", "data": [3864, 3864], "fill": true, "label": "Success", "tension": 0.1}], "labels": ["02. Apr 2023 14:27", "02. Apr 2023 14:51"]}, "options": {"maintainAspectRatio": false, "responsive": true, "scales": {"y": {"stacked": true}}}, "type": "line"});
