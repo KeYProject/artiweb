@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=1024px, initial-scale=1.0">
-    <title>#3106 - an action for nightly deploy</title>
+    <title>#3106 - A Github Action for nightly deploy</title>
     <link rel="stylesheet" href="https://unpkg.com/@picocss/pico@1.*/css/pico.min.css">
     <link rel="stylesheet" href="/artiweb/css/style.css">
     <script type="application/javascript" src="/artiweb/js/main.js"></script>
@@ -17,11 +17,30 @@
     <main class="container">
     <section>
     <a href="/artiweb/">Artiweb</a> > <span>Pull Request #3106</span>
-    <h1>an action for nightly deploy <span class="color-muted">#3106</span></h1>
+    <h1>A Github Action for nightly deploy <span class="color-muted">#3106</span></h1>
     <summary>
         <p><a href="https://github.com/KeYProject/key/pull/3106">Github</a></p>
         <span>Description</span>
-        <details></details>
+        <details><p>On Jenkins, we had a "nightly" build of KeY that was also deployed on the www11 sub-domain at the KIT. </p>
+<p>This PR adds a Github Action, which will update (delete and create) a release entry on the Github repo. This entry is marked as pre-release and contains a generated changelog. The current shadow-jar is attached. </p>
+<p>Example see here: https://github.com/KeYProject/key/releases/tag/nightly</p>
+<p>This allows you to simple download the current version of KeY via <code>gh</code>:</p>
+<p><code>sh
+$ gh release download nightly -R keyproject/key -p '*-exe.jar'</code></p>
+<p>or by URL</p>
+<p><code>sh
+wget https://github.com/KeYProject/key/releases/download/nightly/key-2.11.0-exe.jar</code></p>
+<h2>Discussion points:</h2>
+<ul>
+<li>Add further build artifacts? (Javadoc, ...)</li>
+</ul>
+<h2>Todo:</h2>
+<ul>
+<li>[ ] Finalize by restricting the trigger to <code>main</code> branch only</li>
+<li>[ ] <code>git rebase -i</code></li>
+<li>[ ] Re-activate other workflows</li>
+</ul>
+<p>/cc @mattulbrich @jwiesler @unp1 </p></details>
     </summary>
 </section>
 
