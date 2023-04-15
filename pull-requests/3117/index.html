@@ -1,0 +1,88 @@
+
+
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=1024px, initial-scale=1.0">
+    <title>#3117 - Critical changes to the KeY parser/grammer for more performance</title>
+    <link rel="stylesheet" href="https://unpkg.com/@picocss/pico@1.*/css/pico.min.css">
+    <link rel="stylesheet" href="/artiweb/css/style.css">
+    <script type="application/javascript" src="/artiweb/js/main.js"></script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <main class="container">
+    <section>
+    <a href="/artiweb/">Artiweb</a> > <span>Pull Request #3117</span>
+    <h1>Critical changes to the KeY parser/grammer for more performance <span class="color-muted">#3117</span></h1>
+    <summary>
+        <p><a href="https://github.com/KeYProject/key/pull/3117">Github</a></p>
+        <span>Description</span>
+        <details><p>This PR brings restructuring of the KeY's grammar <code>KeYParser.g4</code>  for more performance.</p>
+<p>Some of the changes are critical as they change the grammar, and need to be discuss.</p>
+<p>The <strong>current situation</strong> is as follows. All given benchmarks given on our biggest Key-file <code>javaRules.key</code>. <em>Parse time</em> should be treated carefully, as JIT and caching effects have critical. </p>
+<p><img alt="Screenshot from 2023-04-15 03-36-14" src="https://user-images.githubusercontent.com/104259/232178141-c8ae4d5c-8f58-41c2-93b0-e236aa7ea03b.png" /></p>
+<p>You see a lots of ambiguities and sometimes high maximal lookahead (max. 105).</p>
+<p>The problem lies more in the <em>primitives</em> and some stupid rules. </p>
+<p>The following is possible, depending on the severity on changes. </p>
+<p><img alt="Screenshot from 2023-04-15 04-03-41" src="https://user-images.githubusercontent.com/104259/232178099-7ae84f2f-e666-4026-8ae9-6119570fedf7.png" /></p>
+<p><img alt="Screenshot from 2023-04-15 04-01-50" src="https://user-images.githubusercontent.com/104259/232178108-40bd78e6-3acc-4209-8a00-896dfc697ced.png" /></p>
+<h3>For discussing the changes, please refer to the comments on the source code below.</h3>
+<p>/cc @jwiesler @mattulbrich @unp1 </p></details>
+    </summary>
+</section>
+
+<section>
+    <h3>Artifacts</h3>
+    <ul><li><a href="648492357">15. Apr 2023 02:15</a> <small>(170.12 kB large)</small></li></ul>
+</section>
+
+
+<div style="height:10em;"><canvas id="runtime"></canvas></div>     
+<div style="height:10em;"><canvas id="testcases"></canvas></div>     
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script type="text/javascript">
+    function createChart(name, labels, data) {
+        const ctx = document.getElementById(name);
+        const graph = {
+            type: 'bar',
+            data: {
+                labels: labels,
+                datasets: [{
+                    label: "Runtime",
+                    data: data,
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        };
+        graph.options.plugins = {
+            tooltip: {
+                callbacks: {
+                    label: formatLabel
+                }
+            }
+        };
+        new Chart(ctx, graph);
+    }
+
+    createChart("runtime", ["15. Apr 2023 02:15"], [2.437]);
+
+    const ctx2 = document.getElementById('testcases');
+    new Chart(ctx2, {"data": {"datasets": [{"backgroundColor": "rgb(250, 220, 220)", "borderColor": "rgb(250, 192, 192)", "data": [0], "fill": true, "label": "Failures", "tension": 0.1}, {"backgroundColor": "rgb(200, 212, 212)", "borderColor": "rgb(180, 192, 192)", "data": [0], "fill": true, "label": "Errors", "tension": 0.1}, {"backgroundColor": "rgb(150, 150, 150)", "borderColor": "rgb(100, 100, 100)", "data": [15], "fill": true, "label": "Skipped", "tension": 0.1}, {"backgroundColor": "rgb(95, 212, 120)", "borderColor": "rgb(75, 192, 100)", "data": [146], "fill": true, "label": "Success", "tension": 0.1}], "labels": ["15. Apr 2023 02:15"]}, "options": {"maintainAspectRatio": false, "responsive": true, "scales": {"y": {"stacked": true}}}, "type": "line"});
+</script>
+    </main>
+</body>
+</html>
