@@ -25,6 +25,7 @@
 <ul>
 <li>Removes RuleAppCost making lots of the code easier to reason about (and a bit faster).</li>
 <li>Adds some performance counters (log level trace, close to 0 overhead) to allow some reasoning about why the automatic is slow.</li>
+<li>Make the rule app indices <strong>lazy</strong>, this speeds up all proof loading by at least 25% (the larger the proof the larger this number since the indices get slower). This is a refactoring needed to make enable further optimizations (skipping updates to the indices when not needed).</li>
 </ul></details>
     </summary>
 </section>
