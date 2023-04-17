@@ -21,7 +21,29 @@
     <summary>
         <p><a href="https://github.com/KeYProject/key/pull/3085">Github</a></p>
         <span>Description</span>
-        <details><p>This is an expanded version of https://git.key-project.org/key/key/-/merge_requests/562.</p></details>
+        <details><p>This is an expanded version of https://git.key-project.org/key/key/-/merge_requests/562.</p>
+<p>Original description, modified with additional changes:</p>
+<p>Saves the name of the SMT solver that was able to close a goal in the proof file (and take it into account when loading).
+Also saves the unsat core reported by the SMT solver (currently only enabled for Z3).</p>
+<h1>Why</h1>
+<p>When a goal is closed by applying an SMT solver result, at the moment the solver that was able find an <code>unsat</code> result is not saved in the proof. In the saved file, the corresponding line looks like this:
+<code>(builtin "SMTRule")</code>
+When the proof is reloaded, the SMT solvers are run again. However, when multiple solvers are installed, it is unclear, which of them is used. I think it depends on the current user settings, i.e. the file <code>proofIndependentSettings.proofs</code> in the <code>.key</code> folder, but I am not sure, as changing the key <code>[SMTSettings]ActiveSolver</code> did not produce reliable results on my machine.</p>
+<h2>Further Note</h2>
+<p>With this MR, when I load the proof <code>key.ui/examples/heap/verifyThis17_1_PairInsertionSort/sort.proof.gz</code> (which currently experiences a timeout on Jenkins, see !558), for replay the Z3 solver is selected instead of CVC5, which decreases the loading time from 15 minutes to under 10 minutes on my machine. So while not solving the root cause of the problem, it may also help with timeout.</p>
+<h1>Feature</h1>
+<ul>
+<li>The name of the successful solver and the formulas in the unsat core are stored in the proof file, for example:
+<code>(builtin "SMTRule" (ifInst ""  (formula "7")) (ifInst ""  (formula "3")) (ifInst ""  (formula "2")) (ifInst ""  (formula "1")) (solverType "Z3"))</code></li>
+<li>When reloading, a solver with the given name is searched for in the available solvers. If available, this one is taken. Otherwise the current default solver is used (Z3).</li>
+<li>If no solverType is specified (legacy proofs), the replay is tried with Z3. It probably has the highest chance to work, most likely the proof was originally done with Z3, since for a long time we only supported this solver.</li>
+</ul>
+<h1>Open and possible tasks for the future</h1>
+<ul>
+<li>[ ] When multiple solvers are run, at least one of them has to return <code>unsat</code>, others may return <code>unknown</code> for the result to be applicable and close the goal. Currently, for saving one of the solvers that returned <code>unsat</code> is selected, but I do not know according to which criteria (probably the one that first appears in the solver union). For the future, the fastest one should be selected.</li>
+<li>[ ] There could be a switch to completely disable SMT proof search during proof reloading (maybe show a warning or mark the proof somehow as closed but only partially checked). </li>
+<li>[ ] In addition to saving the solver name, we could also save branch specific settings, for example the timeout or some specific options for the solvers (e.g., translation without type hierarchy).</li>
+</ul></details>
     </summary>
 </section>
 
