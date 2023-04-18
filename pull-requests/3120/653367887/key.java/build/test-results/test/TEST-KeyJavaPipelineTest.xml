@@ -1,0 +1,783 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="KeyJavaPipelineTest" tests="11" skipped="0" failures="6" errors="0" timestamp="2023-04-18T15:57:39" hostname="fv-az89-623" time="0.264">
+  <properties/>
+  <testcase name="D:\a\key\key\key.java\pipelineTests\simple\expected\01_JMLTransformer\Test.java" classname="KeyJavaPipelineTest" time="0.03"/>
+  <testcase name="D:\a\key\key\key.java\pipelineTests\simple\expected\02_ImplicitFieldAdder\Test.java" classname="KeyJavaPipelineTest" time="0.002"/>
+  <testcase name="D:\a\key\key\key.java\pipelineTests\simple\expected\03_InstanceAllocationMethodBuilder\Test.java" classname="KeyJavaPipelineTest" time="0.001"/>
+  <testcase name="D:\a\key\key\key.java\pipelineTests\simple\expected\04_ConstructorNormalformBuilder\Test.java" classname="KeyJavaPipelineTest" time="0.001"/>
+  <testcase name="D:\a\key\key\key.java\pipelineTests\simple\expected\05_ClassPreparationMethodBuilder\Test.java" classname="KeyJavaPipelineTest" time="0.003"/>
+  <testcase name="D:\a\key\key\key.java\pipelineTests\simple\expected\06_ClassInitializeMethodBuilder\Test.java" classname="KeyJavaPipelineTest" time="0.104">
+    <failure message="diff (-expected +actual):&#10;    @@ -32,25 +32,35 @@&#10;             if (!@($classInitialized)) {&#10;                 if (!@($classInitializationInProgress)) {&#10;                     if (!@(this.$classPrepared)) {&#10;    +                    //Created by ClassInitializeMethodBuilder.java:207&#10;                         @($clprepare());&#10;                     }&#10;                     if (@($classErroneous)) {&#10;                         throw new java.lang.NoClassDefFoundError();&#10;                     }&#10;    +                //Created by ClassInitializeMethodBuilder.java:231&#10;                     @($classInitializationInProgress) = true;&#10;                     try {&#10;                         @(java.lang.Object.$clinit());&#10;    -                } catch (java.lang.Error err) {&#10;    -                    @($classInitializationInProgress) = false;&#10;    +                }//Created by ClassInitializeMethodBuilder.java:182&#10;    +                 catch (java.lang.Error err) {&#10;    +                    //Created by ClassInitializeMethodBuilder.java:145&#10;    +                    @($classInitializationInProgress) = true;&#10;    +                    //Created by ClassInitializeMethodBuilder.java:146&#10;                         @($classErroneous) = true;&#10;                         throw err;&#10;                     } catch (java.lang.Throwable twa) {&#10;    -                    @($classInitializationInProgress) = false;&#10;    +                    //Created by ClassInitializeMethodBuilder.java:145&#10;    +                    @($classInitializationInProgress) = true;&#10;    +                    //Created by ClassInitializeMethodBuilder.java:146&#10;                         @($classErroneous) = true;&#10;                         throw new java.lang.ExceptionInInitializerError(twa);&#10;                     }&#10;    +                //Created by ClassInitializeMethodBuilder.java:236&#10;                     @($classInitializationInProgress) = false;&#10;    +                //Created by ClassInitializeMethodBuilder.java:237&#10;                     @($classErroneous) = false;&#10;    +                //Created by ClassInitializeMethodBuilder.java:238&#10;                     @($classInitialized) = true;&#10;                 }&#10;             }&#10;    @@ -84,25 +94,35 @@&#10;             if (!@($classInitialized)) {&#10;                 if (!@($classInitializationInProgress)) {&#10;                     if (!@(this.$classPrepared)) {&#10;    +                    //Created by ClassInitializeMethodBuilder.java:207&#10;                         @($clprepare());&#10;                     }&#10;                     if (@($classErroneous)) {&#10;                         throw new java.lang.NoClassDefFoundError();&#10;                     }&#10;    +                //Created by ClassInitializeMethodBuilder.java:231&#10;                     @($classInitializationInProgress) = true;&#10;                     try {&#10;                         @(Test.$clinit());&#10;    -                } catch (java.lang.Error err) {&#10;    -                    @($classInitializationInProgress) = false;&#10;    +                }//Created by ClassInitializeMethodBuilder.java:182&#10;    +                 catch (java.lang.Error err) {&#10;    +                    //Created by ClassInitializeMethodBuilder.java:145&#10;    +                    @($classInitializationInProgress) = true;&#10;    +                    //Created by ClassInitializeMethodBuilder.java:146&#10;                         @($classErroneous) = true;&#10;                         throw err;&#10;                     } catch (java.lang.Throwable twa) {&#10;    -                    @($classInitializationInProgress) = false;&#10;    +                    //Created by ClassInitializeMethodBuilder.java:145&#10;    +                    @($classInitializationInProgress) = true;&#10;    +                    //Created by ClassInitializeMethodBuilder.java:146&#10;                         @($classErroneous) = true;&#10;                         throw new java.lang.ExceptionInInitializerError(twa);&#10;                     }&#10;    +                //Created by ClassInitializeMethodBuilder.java:236&#10;                     @($classInitializationInProgress) = false;&#10;    +                //Created by ClassInitializeMethodBuilder.java:237&#10;                     @($classErroneous) = false;&#10;    +                //Created by ClassInitializeMethodBuilder.java:238&#10;                     @($classInitialized) = true;&#10;                 }&#10;             }" type="com.google.common.truth.ComparisonFailureWithFacts">diff (-expected +actual):
+    @@ -32,25 +32,35 @@
+             if (!@($classInitialized)) {
+                 if (!@($classInitializationInProgress)) {
+                     if (!@(this.$classPrepared)) {
+    +                    //Created by ClassInitializeMethodBuilder.java:207
+                         @($clprepare());
+                     }
+                     if (@($classErroneous)) {
+                         throw new java.lang.NoClassDefFoundError();
+                     }
+    +                //Created by ClassInitializeMethodBuilder.java:231
+                     @($classInitializationInProgress) = true;
+                     try {
+                         @(java.lang.Object.$clinit());
+    -                } catch (java.lang.Error err) {
+    -                    @($classInitializationInProgress) = false;
+    +                }//Created by ClassInitializeMethodBuilder.java:182
+    +                 catch (java.lang.Error err) {
+    +                    //Created by ClassInitializeMethodBuilder.java:145
+    +                    @($classInitializationInProgress) = true;
+    +                    //Created by ClassInitializeMethodBuilder.java:146
+                         @($classErroneous) = true;
+                         throw err;
+                     } catch (java.lang.Throwable twa) {
+    -                    @($classInitializationInProgress) = false;
+    +                    //Created by ClassInitializeMethodBuilder.java:145
+    +                    @($classInitializationInProgress) = true;
+    +                    //Created by ClassInitializeMethodBuilder.java:146
+                         @($classErroneous) = true;
+                         throw new java.lang.ExceptionInInitializerError(twa);
+                     }
+    +                //Created by ClassInitializeMethodBuilder.java:236
+                     @($classInitializationInProgress) = false;
+    +                //Created by ClassInitializeMethodBuilder.java:237
+                     @($classErroneous) = false;
+    +                //Created by ClassInitializeMethodBuilder.java:238
+                     @($classInitialized) = true;
+                 }
+             }
+    @@ -84,25 +94,35 @@
+             if (!@($classInitialized)) {
+                 if (!@($classInitializationInProgress)) {
+                     if (!@(this.$classPrepared)) {
+    +                    //Created by ClassInitializeMethodBuilder.java:207
+                         @($clprepare());
+                     }
+                     if (@($classErroneous)) {
+                         throw new java.lang.NoClassDefFoundError();
+                     }
+    +                //Created by ClassInitializeMethodBuilder.java:231
+                     @($classInitializationInProgress) = true;
+                     try {
+                         @(Test.$clinit());
+    -                } catch (java.lang.Error err) {
+    -                    @($classInitializationInProgress) = false;
+    +                }//Created by ClassInitializeMethodBuilder.java:182
+    +                 catch (java.lang.Error err) {
+    +                    //Created by ClassInitializeMethodBuilder.java:145
+    +                    @($classInitializationInProgress) = true;
+    +                    //Created by ClassInitializeMethodBuilder.java:146
+                         @($classErroneous) = true;
+                         throw err;
+                     } catch (java.lang.Throwable twa) {
+    -                    @($classInitializationInProgress) = false;
+    +                    //Created by ClassInitializeMethodBuilder.java:145
+    +                    @($classInitializationInProgress) = true;
+    +                    //Created by ClassInitializeMethodBuilder.java:146
+                         @($classErroneous) = true;
+                         throw new java.lang.ExceptionInInitializerError(twa);
+                     }
+    +                //Created by ClassInitializeMethodBuilder.java:236
+                     @($classInitializationInProgress) = false;
+    +                //Created by ClassInitializeMethodBuilder.java:237
+                     @($classErroneous) = false;
+    +                //Created by ClassInitializeMethodBuilder.java:238
+                     @($classInitialized) = true;
+                 }
+             }
+	at app//KeyJavaPipelineTest.checkEqualFile(KeyJavaPipelineTest.java:100)
+	at app//KeyJavaPipelineTest.lambda$generatePipelineTests$2(KeyJavaPipelineTest.java:89)
+	at [[Testing framework: 23 frames collapsed (https://goo.gl/aH3UyP)]].(:0)
+	at java.base@11.0.18/java.util.Optional.ifPresent(Optional.java:183)
+	at [[Testing framework: 13 frames collapsed (https://goo.gl/aH3UyP)]].(:0)
+	at java.base@11.0.18/java.util.ArrayList.forEach(ArrayList.java:1541)
+	at [[Testing framework: 9 frames collapsed (https://goo.gl/aH3UyP)]].(:0)
+	at java.base@11.0.18/java.util.ArrayList.forEach(ArrayList.java:1541)
+	at [[Testing framework: 20 frames collapsed (https://goo.gl/aH3UyP)]].(:0)
+	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor$CollectAllTestClassesExecutor.processAllTestClasses(JUnitPlatformTestClassProcessor.java:110)
+	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor$CollectAllTestClassesExecutor.access$000(JUnitPlatformTestClassProcessor.java:90)
+	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor.stop(JUnitPlatformTestClassProcessor.java:85)
+	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.stop(SuiteTestClassProcessor.java:62)
+	at [[Reflective call: 4 frames collapsed (https://goo.gl/aH3UyP)]].(:0)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:36)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:33)
+	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:94)
+	at com.sun.proxy.$Proxy2.stop(Unknown Source)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker$3.run(TestWorker.java:193)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.executeAndMaintainThreadName(TestWorker.java:129)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:100)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:60)
+	at org.gradle.process.internal.worker.child.ActionExecutionWorker.execute(ActionExecutionWorker.java:56)
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:113)
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:65)
+	at app//worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)
+	at app//worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
+</failure>
+  </testcase>
+  <testcase name="D:\a\key\key\key.java\pipelineTests\simple\expected\07_PrepareObjectBuilder\Test.java" classname="KeyJavaPipelineTest" time="0.019">
+    <failure message="diff (-expected +actual):&#10;    @@ -32,25 +32,35 @@&#10;             if (!@($classInitialized)) {&#10;                 if (!@($classInitializationInProgress)) {&#10;                     if (!@(this.$classPrepared)) {&#10;    +                    //Created by ClassInitializeMethodBuilder.java:207&#10;                         @($clprepare());&#10;                     }&#10;                     if (@($classErroneous)) {&#10;                         throw new java.lang.NoClassDefFoundError();&#10;                     }&#10;    +                //Created by ClassInitializeMethodBuilder.java:231&#10;                     @($classInitializationInProgress) = true;&#10;                     try {&#10;                         @(java.lang.Object.$clinit());&#10;    -                } catch (java.lang.Error err) {&#10;    -                    @($classInitializationInProgress) = false;&#10;    +                }//Created by ClassInitializeMethodBuilder.java:182&#10;    +                 catch (java.lang.Error err) {&#10;    +                    //Created by ClassInitializeMethodBuilder.java:145&#10;    +                    @($classInitializationInProgress) = true;&#10;    +                    //Created by ClassInitializeMethodBuilder.java:146&#10;                         @($classErroneous) = true;&#10;                         throw err;&#10;                     } catch (java.lang.Throwable twa) {&#10;    -                    @($classInitializationInProgress) = false;&#10;    +                    //Created by ClassInitializeMethodBuilder.java:145&#10;    +                    @($classInitializationInProgress) = true;&#10;    +                    //Created by ClassInitializeMethodBuilder.java:146&#10;                         @($classErroneous) = true;&#10;                         throw new java.lang.ExceptionInInitializerError(twa);&#10;                     }&#10;    +                //Created by ClassInitializeMethodBuilder.java:236&#10;                     @($classInitializationInProgress) = false;&#10;    +                //Created by ClassInitializeMethodBuilder.java:237&#10;                     @($classErroneous) = false;&#10;    +                //Created by ClassInitializeMethodBuilder.java:238&#10;                     @($classInitialized) = true;&#10;                 }&#10;             }&#10;    @@ -90,25 +100,35 @@&#10;             if (!@($classInitialized)) {&#10;                 if (!@($classInitializationInProgress)) {&#10;                     if (!@(this.$classPrepared)) {&#10;    +                    //Created by ClassInitializeMethodBuilder.java:207&#10;                         @($clprepare());&#10;                     }&#10;                     if (@($classErroneous)) {&#10;                         throw new java.lang.NoClassDefFoundError();&#10;                     }&#10;    +                //Created by ClassInitializeMethodBuilder.java:231&#10;                     @($classInitializationInProgress) = true;&#10;                     try {&#10;                         @(Test.$clinit());&#10;    -                } catch (java.lang.Error err) {&#10;    -                    @($classInitializationInProgress) = false;&#10;    +                }//Created by ClassInitializeMethodBuilder.java:182&#10;    +                 catch (java.lang.Error err) {&#10;    +                    //Created by ClassInitializeMethodBuilder.java:145&#10;    +                    @($classInitializationInProgress) = true;&#10;    +                    //Created by ClassInitializeMethodBuilder.java:146&#10;                         @($classErroneous) = true;&#10;                         throw err;&#10;                     } catch (java.lang.Throwable twa) {&#10;    -                    @($classInitializationInProgress) = false;&#10;    +                    //Created by ClassInitializeMethodBuilder.java:145&#10;    +                    @($classInitializationInProgress) = true;&#10;    +                    //Created by ClassInitializeMethodBuilder.java:146&#10;                         @($classErroneous) = true;&#10;                         throw new java.lang.ExceptionInInitializerError(twa);&#10;                     }&#10;    +                //Created by ClassInitializeMethodBuilder.java:236&#10;                     @($classInitializationInProgress) = false;&#10;    +                //Created by ClassInitializeMethodBuilder.java:237&#10;                     @($classErroneous) = false;&#10;    +                //Created by ClassInitializeMethodBuilder.java:238&#10;                     @($classInitialized) = true;&#10;                 }&#10;             }" type="com.google.common.truth.ComparisonFailureWithFacts">diff (-expected +actual):
+    @@ -32,25 +32,35 @@
+             if (!@($classInitialized)) {
+                 if (!@($classInitializationInProgress)) {
+                     if (!@(this.$classPrepared)) {
+    +                    //Created by ClassInitializeMethodBuilder.java:207
+                         @($clprepare());
+                     }
+                     if (@($classErroneous)) {
+                         throw new java.lang.NoClassDefFoundError();
+                     }
+    +                //Created by ClassInitializeMethodBuilder.java:231
+                     @($classInitializationInProgress) = true;
+                     try {
+                         @(java.lang.Object.$clinit());
+    -                } catch (java.lang.Error err) {
+    -                    @($classInitializationInProgress) = false;
+    +                }//Created by ClassInitializeMethodBuilder.java:182
+    +                 catch (java.lang.Error err) {
+    +                    //Created by ClassInitializeMethodBuilder.java:145
+    +                    @($classInitializationInProgress) = true;
+    +                    //Created by ClassInitializeMethodBuilder.java:146
+                         @($classErroneous) = true;
+                         throw err;
+                     } catch (java.lang.Throwable twa) {
+    -                    @($classInitializationInProgress) = false;
+    +                    //Created by ClassInitializeMethodBuilder.java:145
+    +                    @($classInitializationInProgress) = true;
+    +                    //Created by ClassInitializeMethodBuilder.java:146
+                         @($classErroneous) = true;
+                         throw new java.lang.ExceptionInInitializerError(twa);
+                     }
+    +                //Created by ClassInitializeMethodBuilder.java:236
+                     @($classInitializationInProgress) = false;
+    +                //Created by ClassInitializeMethodBuilder.java:237
+                     @($classErroneous) = false;
+    +                //Created by ClassInitializeMethodBuilder.java:238
+                     @($classInitialized) = true;
+                 }
+             }
+    @@ -90,25 +100,35 @@
+             if (!@($classInitialized)) {
+                 if (!@($classInitializationInProgress)) {
+                     if (!@(this.$classPrepared)) {
+    +                    //Created by ClassInitializeMethodBuilder.java:207
+                         @($clprepare());
+                     }
+                     if (@($classErroneous)) {
+                         throw new java.lang.NoClassDefFoundError();
+                     }
+    +                //Created by ClassInitializeMethodBuilder.java:231
+                     @($classInitializationInProgress) = true;
+                     try {
+                         @(Test.$clinit());
+    -                } catch (java.lang.Error err) {
+    -                    @($classInitializationInProgress) = false;
+    +                }//Created by ClassInitializeMethodBuilder.java:182
+    +                 catch (java.lang.Error err) {
+    +                    //Created by ClassInitializeMethodBuilder.java:145
+    +                    @($classInitializationInProgress) = true;
+    +                    //Created by ClassInitializeMethodBuilder.java:146
+                         @($classErroneous) = true;
+                         throw err;
+                     } catch (java.lang.Throwable twa) {
+    -                    @($classInitializationInProgress) = false;
+    +                    //Created by ClassInitializeMethodBuilder.java:145
+    +                    @($classInitializationInProgress) = true;
+    +                    //Created by ClassInitializeMethodBuilder.java:146
+                         @($classErroneous) = true;
+                         throw new java.lang.ExceptionInInitializerError(twa);
+                     }
+    +                //Created by ClassInitializeMethodBuilder.java:236
+                     @($classInitializationInProgress) = false;
+    +                //Created by ClassInitializeMethodBuilder.java:237
+                     @($classErroneous) = false;
+    +                //Created by ClassInitializeMethodBuilder.java:238
+                     @($classInitialized) = true;
+                 }
+             }
+	at app//KeyJavaPipelineTest.checkEqualFile(KeyJavaPipelineTest.java:100)
+	at app//KeyJavaPipelineTest.lambda$generatePipelineTests$2(KeyJavaPipelineTest.java:89)
+	at [[Testing framework: 23 frames collapsed (https://goo.gl/aH3UyP)]].(:0)
+	at java.base@11.0.18/java.util.Optional.ifPresent(Optional.java:183)
+	at [[Testing framework: 13 frames collapsed (https://goo.gl/aH3UyP)]].(:0)
+	at java.base@11.0.18/java.util.ArrayList.forEach(ArrayList.java:1541)
+	at [[Testing framework: 9 frames collapsed (https://goo.gl/aH3UyP)]].(:0)
+	at java.base@11.0.18/java.util.ArrayList.forEach(ArrayList.java:1541)
+	at [[Testing framework: 20 frames collapsed (https://goo.gl/aH3UyP)]].(:0)
+	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor$CollectAllTestClassesExecutor.processAllTestClasses(JUnitPlatformTestClassProcessor.java:110)
+	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor$CollectAllTestClassesExecutor.access$000(JUnitPlatformTestClassProcessor.java:90)
+	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor.stop(JUnitPlatformTestClassProcessor.java:85)
+	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.stop(SuiteTestClassProcessor.java:62)
+	at [[Reflective call: 4 frames collapsed (https://goo.gl/aH3UyP)]].(:0)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:36)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:33)
+	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:94)
+	at com.sun.proxy.$Proxy2.stop(Unknown Source)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker$3.run(TestWorker.java:193)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.executeAndMaintainThreadName(TestWorker.java:129)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:100)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:60)
+	at org.gradle.process.internal.worker.child.ActionExecutionWorker.execute(ActionExecutionWorker.java:56)
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:113)
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:65)
+	at app//worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)
+	at app//worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
+</failure>
+  </testcase>
+  <testcase name="D:\a\key\key\key.java\pipelineTests\simple\expected\08_CreateBuilder\Test.java" classname="KeyJavaPipelineTest" time="0.023">
+    <failure message="diff (-expected +actual):&#10;    @@ -32,25 +32,35 @@&#10;             if (!@($classInitialized)) {&#10;                 if (!@($classInitializationInProgress)) {&#10;                     if (!@(this.$classPrepared)) {&#10;    +                    //Created by ClassInitializeMethodBuilder.java:207&#10;                         @($clprepare());&#10;                     }&#10;                     if (@($classErroneous)) {&#10;                         throw new java.lang.NoClassDefFoundError();&#10;                     }&#10;    +                //Created by ClassInitializeMethodBuilder.java:231&#10;                     @($classInitializationInProgress) = true;&#10;                     try {&#10;                         @(java.lang.Object.$clinit());&#10;    -                } catch (java.lang.Error err) {&#10;    -                    @($classInitializationInProgress) = false;&#10;    +                }//Created by ClassInitializeMethodBuilder.java:182&#10;    +                 catch (java.lang.Error err) {&#10;    +                    //Created by ClassInitializeMethodBuilder.java:145&#10;    +                    @($classInitializationInProgress) = true;&#10;    +                    //Created by ClassInitializeMethodBuilder.java:146&#10;                         @($classErroneous) = true;&#10;                         throw err;&#10;                     } catch (java.lang.Throwable twa) {&#10;    -                    @($classInitializationInProgress) = false;&#10;    +                    //Created by ClassInitializeMethodBuilder.java:145&#10;    +                    @($classInitializationInProgress) = true;&#10;    +                    //Created by ClassInitializeMethodBuilder.java:146&#10;                         @($classErroneous) = true;&#10;                         throw new java.lang.ExceptionInInitializerError(twa);&#10;                     }&#10;    +                //Created by ClassInitializeMethodBuilder.java:236&#10;                     @($classInitializationInProgress) = false;&#10;    +                //Created by ClassInitializeMethodBuilder.java:237&#10;                     @($classErroneous) = false;&#10;    +                //Created by ClassInitializeMethodBuilder.java:238&#10;                     @($classInitialized) = true;&#10;                 }&#10;             }&#10;    @@ -63,6 +73,7 @@&#10;         }&#10;     &#10;         public Test $create() {&#10;    +        //Created by CreateBuilder.java:53&#10;             this.$initialized = false;&#10;             $prepareEnter();&#10;             return this;&#10;    @@ -96,25 +107,35 @@&#10;             if (!@($classInitialized)) {&#10;                 if (!@($classInitializationInProgress)) {&#10;                     if (!@(this.$classPrepared)) {&#10;    +                    //Created by ClassInitializeMethodBuilder.java:207&#10;                         @($clprepare());&#10;                     }&#10;                     if (@($classErroneous)) {&#10;                         throw new java.lang.NoClassDefFoundError();&#10;                     }&#10;    +                //Created by ClassInitializeMethodBuilder.java:231&#10;                     @($classInitializationInProgress) = true;&#10;                     try {&#10;                         @(Test.$clinit());&#10;    -                } catch (java.lang.Error err) {&#10;    -                    @($classInitializationInProgress) = false;&#10;    +                }//Created by ClassInitializeMethodBuilder.java:182&#10;    +                 catch (java.lang.Error err) {&#10;    +                    //Created by ClassInitializeMethodBuilder.java:145&#10;    +                    @($classInitializationInProgress) = true;&#10;    +                    //Created by ClassInitializeMethodBuilder.java:146&#10;                         @($classErroneous) = true;&#10;                         throw err;&#10;                     } catch (java.lang.Throwable twa) {&#10;    -                    @($classInitializationInProgress) = false;&#10;    +                    //Created by ClassInitializeMethodBuilder.java:145&#10;    +                    @($classInitializationInProgress) = true;&#10;    +                    //Created by ClassInitializeMethodBuilder.java:146&#10;                         @($classErroneous) = true;&#10;                         throw new java.lang.ExceptionInInitializerError(twa);&#10;                     }&#10;    +                //Created by ClassInitializeMethodBuilder.java:236&#10;                     @($classInitializationInProgress) = false;&#10;    +                //Created by ClassInitializeMethodBuilder.java:237&#10;                     @($classErroneous) = false;&#10;    +                //Created by ClassInitializeMethodBuilder.java:238&#10;                     @($classInitialized) = true;&#10;                 }&#10;             }&#10;    @@ -127,6 +148,7 @@&#10;         }&#10;     &#10;         public SubClass $create() {&#10;    +        //Created by CreateBuilder.java:53&#10;             this.$initialized = false;&#10;             $prepareEnter();&#10;             return this;" type="com.google.common.truth.ComparisonFailureWithFacts">diff (-expected +actual):
+    @@ -32,25 +32,35 @@
+             if (!@($classInitialized)) {
+                 if (!@($classInitializationInProgress)) {
+                     if (!@(this.$classPrepared)) {
+    +                    //Created by ClassInitializeMethodBuilder.java:207
+                         @($clprepare());
+                     }
+                     if (@($classErroneous)) {
+                         throw new java.lang.NoClassDefFoundError();
+                     }
+    +                //Created by ClassInitializeMethodBuilder.java:231
+                     @($classInitializationInProgress) = true;
+                     try {
+                         @(java.lang.Object.$clinit());
+    -                } catch (java.lang.Error err) {
+    -                    @($classInitializationInProgress) = false;
+    +                }//Created by ClassInitializeMethodBuilder.java:182
+    +                 catch (java.lang.Error err) {
+    +                    //Created by ClassInitializeMethodBuilder.java:145
+    +                    @($classInitializationInProgress) = true;
+    +                    //Created by ClassInitializeMethodBuilder.java:146
+                         @($classErroneous) = true;
+                         throw err;
+                     } catch (java.lang.Throwable twa) {
+    -                    @($classInitializationInProgress) = false;
+    +                    //Created by ClassInitializeMethodBuilder.java:145
+    +                    @($classInitializationInProgress) = true;
+    +                    //Created by ClassInitializeMethodBuilder.java:146
+                         @($classErroneous) = true;
+                         throw new java.lang.ExceptionInInitializerError(twa);
+                     }
+    +                //Created by ClassInitializeMethodBuilder.java:236
+                     @($classInitializationInProgress) = false;
+    +                //Created by ClassInitializeMethodBuilder.java:237
+                     @($classErroneous) = false;
+    +                //Created by ClassInitializeMethodBuilder.java:238
+                     @($classInitialized) = true;
+                 }
+             }
+    @@ -63,6 +73,7 @@
+         }
+     
+         public Test $create() {
+    +        //Created by CreateBuilder.java:53
+             this.$initialized = false;
+             $prepareEnter();
+             return this;
+    @@ -96,25 +107,35 @@
+             if (!@($classInitialized)) {
+                 if (!@($classInitializationInProgress)) {
+                     if (!@(this.$classPrepared)) {
+    +                    //Created by ClassInitializeMethodBuilder.java:207
+                         @($clprepare());
+                     }
+                     if (@($classErroneous)) {
+                         throw new java.lang.NoClassDefFoundError();
+                     }
+    +                //Created by ClassInitializeMethodBuilder.java:231
+                     @($classInitializationInProgress) = true;
+                     try {
+                         @(Test.$clinit());
+    -                } catch (java.lang.Error err) {
+    -                    @($classInitializationInProgress) = false;
+    +                }//Created by ClassInitializeMethodBuilder.java:182
+    +                 catch (java.lang.Error err) {
+    +                    //Created by ClassInitializeMethodBuilder.java:145
+    +                    @($classInitializationInProgress) = true;
+    +                    //Created by ClassInitializeMethodBuilder.java:146
+                         @($classErroneous) = true;
+                         throw err;
+                     } catch (java.lang.Throwable twa) {
+    -                    @($classInitializationInProgress) = false;
+    +                    //Created by ClassInitializeMethodBuilder.java:145
+    +                    @($classInitializationInProgress) = true;
+    +                    //Created by ClassInitializeMethodBuilder.java:146
+                         @($classErroneous) = true;
+                         throw new java.lang.ExceptionInInitializerError(twa);
+                     }
+    +                //Created by ClassInitializeMethodBuilder.java:236
+                     @($classInitializationInProgress) = false;
+    +                //Created by ClassInitializeMethodBuilder.java:237
+                     @($classErroneous) = false;
+    +                //Created by ClassInitializeMethodBuilder.java:238
+                     @($classInitialized) = true;
+                 }
+             }
+    @@ -127,6 +148,7 @@
+         }
+     
+         public SubClass $create() {
+    +        //Created by CreateBuilder.java:53
+             this.$initialized = false;
+             $prepareEnter();
+             return this;
+	at app//KeyJavaPipelineTest.checkEqualFile(KeyJavaPipelineTest.java:100)
+	at app//KeyJavaPipelineTest.lambda$generatePipelineTests$2(KeyJavaPipelineTest.java:89)
+	at [[Testing framework: 23 frames collapsed (https://goo.gl/aH3UyP)]].(:0)
+	at java.base@11.0.18/java.util.Optional.ifPresent(Optional.java:183)
+	at [[Testing framework: 13 frames collapsed (https://goo.gl/aH3UyP)]].(:0)
+	at java.base@11.0.18/java.util.ArrayList.forEach(ArrayList.java:1541)
+	at [[Testing framework: 9 frames collapsed (https://goo.gl/aH3UyP)]].(:0)
+	at java.base@11.0.18/java.util.ArrayList.forEach(ArrayList.java:1541)
+	at [[Testing framework: 20 frames collapsed (https://goo.gl/aH3UyP)]].(:0)
+	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor$CollectAllTestClassesExecutor.processAllTestClasses(JUnitPlatformTestClassProcessor.java:110)
+	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor$CollectAllTestClassesExecutor.access$000(JUnitPlatformTestClassProcessor.java:90)
+	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor.stop(JUnitPlatformTestClassProcessor.java:85)
+	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.stop(SuiteTestClassProcessor.java:62)
+	at [[Reflective call: 4 frames collapsed (https://goo.gl/aH3UyP)]].(:0)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:36)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:33)
+	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:94)
+	at com.sun.proxy.$Proxy2.stop(Unknown Source)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker$3.run(TestWorker.java:193)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.executeAndMaintainThreadName(TestWorker.java:129)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:100)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:60)
+	at org.gradle.process.internal.worker.child.ActionExecutionWorker.execute(ActionExecutionWorker.java:56)
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:113)
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:65)
+	at app//worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)
+	at app//worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
+</failure>
+  </testcase>
+  <testcase name="D:\a\key\key\key.java\pipelineTests\simple\expected\09_CreateObjectBuilder\Test.java" classname="KeyJavaPipelineTest" time="0.018">
+    <failure message="diff (-expected +actual):&#10;    @@ -32,25 +32,35 @@&#10;             if (!@($classInitialized)) {&#10;                 if (!@($classInitializationInProgress)) {&#10;                     if (!@(this.$classPrepared)) {&#10;    +                    //Created by ClassInitializeMethodBuilder.java:207&#10;                         @($clprepare());&#10;                     }&#10;                     if (@($classErroneous)) {&#10;                         throw new java.lang.NoClassDefFoundError();&#10;                     }&#10;    +                //Created by ClassInitializeMethodBuilder.java:231&#10;                     @($classInitializationInProgress) = true;&#10;                     try {&#10;                         @(java.lang.Object.$clinit());&#10;    -                } catch (java.lang.Error err) {&#10;    -                    @($classInitializationInProgress) = false;&#10;    +                }//Created by ClassInitializeMethodBuilder.java:182&#10;    +                 catch (java.lang.Error err) {&#10;    +                    //Created by ClassInitializeMethodBuilder.java:145&#10;    +                    @($classInitializationInProgress) = true;&#10;    +                    //Created by ClassInitializeMethodBuilder.java:146&#10;                         @($classErroneous) = true;&#10;                         throw err;&#10;                     } catch (java.lang.Throwable twa) {&#10;    -                    @($classInitializationInProgress) = false;&#10;    +                    //Created by ClassInitializeMethodBuilder.java:145&#10;    +                    @($classInitializationInProgress) = true;&#10;    +                    //Created by ClassInitializeMethodBuilder.java:146&#10;                         @($classErroneous) = true;&#10;                         throw new java.lang.ExceptionInInitializerError(twa);&#10;                     }&#10;    +                //Created by ClassInitializeMethodBuilder.java:236&#10;                     @($classInitializationInProgress) = false;&#10;    +                //Created by ClassInitializeMethodBuilder.java:237&#10;                     @($classErroneous) = false;&#10;    +                //Created by ClassInitializeMethodBuilder.java:238&#10;                     @($classInitialized) = true;&#10;                 }&#10;             }&#10;    @@ -63,6 +73,7 @@&#10;         }&#10;     &#10;         public Test $create() {&#10;    +        //Created by CreateBuilder.java:53&#10;             this.$initialized = false;&#10;             $prepareEnter();&#10;             return this;&#10;    @@ -70,6 +81,7 @@&#10;     &#10;         public static Test $createObject() {&#10;             Test __NEW__;&#10;    +        //Created by CreateObjectBuilder.java:67&#10;             __NEW__ = Test.$allocate();&#10;     &#10;             return __NEW__;&#10;    @@ -103,25 +115,35 @@&#10;             if (!@($classInitialized)) {&#10;                 if (!@($classInitializationInProgress)) {&#10;                     if (!@(this.$classPrepared)) {&#10;    +                    //Created by ClassInitializeMethodBuilder.java:207&#10;                         @($clprepare());&#10;                     }&#10;                     if (@($classErroneous)) {&#10;                         throw new java.lang.NoClassDefFoundError();&#10;                     }&#10;    +                //Created by ClassInitializeMethodBuilder.java:231&#10;                     @($classInitializationInProgress) = true;&#10;                     try {&#10;                         @(Test.$clinit());&#10;    -                } catch (java.lang.Error err) {&#10;    -                    @($classInitializationInProgress) = false;&#10;    +                }//Created by ClassInitializeMethodBuilder.java:182&#10;    +                 catch (java.lang.Error err) {&#10;    +                    //Created by ClassInitializeMethodBuilder.java:145&#10;    +                    @($classInitializationInProgress) = true;&#10;    +                    //Created by ClassInitializeMethodBuilder.java:146&#10;                         @($classErroneous) = true;&#10;                         throw err;&#10;                     } catch (java.lang.Throwable twa) {&#10;    -                    @($classInitializationInProgress) = false;&#10;    +                    //Created by ClassInitializeMethodBuilder.java:145&#10;    +                    @($classInitializationInProgress) = true;&#10;    +                    //Created by ClassInitializeMethodBuilder.java:146&#10;                         @($classErroneous) = true;&#10;                         throw new java.lang.ExceptionInInitializerError(twa);&#10;                     }&#10;    +                //Created by ClassInitializeMethodBuilder.java:236&#10;                     @($classInitializationInProgress) = false;&#10;    +                //Created by ClassInitializeMethodBuilder.java:237&#10;                     @($classErroneous) = false;&#10;    +                //Created by ClassInitializeMethodBuilder.java:238&#10;                     @($classInitialized) = true;&#10;                 }&#10;             }&#10;    @@ -134,6 +156,7 @@&#10;         }&#10;     &#10;         public SubClass $create() {&#10;    +        //Created by CreateBuilder.java:53&#10;             this.$initialized = false;&#10;             $prepareEnter();&#10;             return this;&#10;    @@ -141,6 +164,7 @@&#10;     &#10;         public static SubClass $createObject() {&#10;             SubClass __NEW__;&#10;    +        //Created by CreateObjectBuilder.java:67&#10;             __NEW__ = SubClass.$allocate();&#10;     &#10;             return __NEW__;" type="com.google.common.truth.ComparisonFailureWithFacts">diff (-expected +actual):
+    @@ -32,25 +32,35 @@
+             if (!@($classInitialized)) {
+                 if (!@($classInitializationInProgress)) {
+                     if (!@(this.$classPrepared)) {
+    +                    //Created by ClassInitializeMethodBuilder.java:207
+                         @($clprepare());
+                     }
+                     if (@($classErroneous)) {
+                         throw new java.lang.NoClassDefFoundError();
+                     }
+    +                //Created by ClassInitializeMethodBuilder.java:231
+                     @($classInitializationInProgress) = true;
+                     try {
+                         @(java.lang.Object.$clinit());
+    -                } catch (java.lang.Error err) {
+    -                    @($classInitializationInProgress) = false;
+    +                }//Created by ClassInitializeMethodBuilder.java:182
+    +                 catch (java.lang.Error err) {
+    +                    //Created by ClassInitializeMethodBuilder.java:145
+    +                    @($classInitializationInProgress) = true;
+    +                    //Created by ClassInitializeMethodBuilder.java:146
+                         @($classErroneous) = true;
+                         throw err;
+                     } catch (java.lang.Throwable twa) {
+    -                    @($classInitializationInProgress) = false;
+    +                    //Created by ClassInitializeMethodBuilder.java:145
+    +                    @($classInitializationInProgress) = true;
+    +                    //Created by ClassInitializeMethodBuilder.java:146
+                         @($classErroneous) = true;
+                         throw new java.lang.ExceptionInInitializerError(twa);
+                     }
+    +                //Created by ClassInitializeMethodBuilder.java:236
+                     @($classInitializationInProgress) = false;
+    +                //Created by ClassInitializeMethodBuilder.java:237
+                     @($classErroneous) = false;
+    +                //Created by ClassInitializeMethodBuilder.java:238
+                     @($classInitialized) = true;
+                 }
+             }
+    @@ -63,6 +73,7 @@
+         }
+     
+         public Test $create() {
+    +        //Created by CreateBuilder.java:53
+             this.$initialized = false;
+             $prepareEnter();
+             return this;
+    @@ -70,6 +81,7 @@
+     
+         public static Test $createObject() {
+             Test __NEW__;
+    +        //Created by CreateObjectBuilder.java:67
+             __NEW__ = Test.$allocate();
+     
+             return __NEW__;
+    @@ -103,25 +115,35 @@
+             if (!@($classInitialized)) {
+                 if (!@($classInitializationInProgress)) {
+                     if (!@(this.$classPrepared)) {
+    +                    //Created by ClassInitializeMethodBuilder.java:207
+                         @($clprepare());
+                     }
+                     if (@($classErroneous)) {
+                         throw new java.lang.NoClassDefFoundError();
+                     }
+    +                //Created by ClassInitializeMethodBuilder.java:231
+                     @($classInitializationInProgress) = true;
+                     try {
+                         @(Test.$clinit());
+    -                } catch (java.lang.Error err) {
+    -                    @($classInitializationInProgress) = false;
+    +                }//Created by ClassInitializeMethodBuilder.java:182
+    +                 catch (java.lang.Error err) {
+    +                    //Created by ClassInitializeMethodBuilder.java:145
+    +                    @($classInitializationInProgress) = true;
+    +                    //Created by ClassInitializeMethodBuilder.java:146
+                         @($classErroneous) = true;
+                         throw err;
+                     } catch (java.lang.Throwable twa) {
+    -                    @($classInitializationInProgress) = false;
+    +                    //Created by ClassInitializeMethodBuilder.java:145
+    +                    @($classInitializationInProgress) = true;
+    +                    //Created by ClassInitializeMethodBuilder.java:146
+                         @($classErroneous) = true;
+                         throw new java.lang.ExceptionInInitializerError(twa);
+                     }
+    +                //Created by ClassInitializeMethodBuilder.java:236
+                     @($classInitializationInProgress) = false;
+    +                //Created by ClassInitializeMethodBuilder.java:237
+                     @($classErroneous) = false;
+    +                //Created by ClassInitializeMethodBuilder.java:238
+                     @($classInitialized) = true;
+                 }
+             }
+    @@ -134,6 +156,7 @@
+         }
+     
+         public SubClass $create() {
+    +        //Created by CreateBuilder.java:53
+             this.$initialized = false;
+             $prepareEnter();
+             return this;
+    @@ -141,6 +164,7 @@
+     
+         public static SubClass $createObject() {
+             SubClass __NEW__;
+    +        //Created by CreateObjectBuilder.java:67
+             __NEW__ = SubClass.$allocate();
+     
+             return __NEW__;
+	at app//KeyJavaPipelineTest.checkEqualFile(KeyJavaPipelineTest.java:100)
+	at app//KeyJavaPipelineTest.lambda$generatePipelineTests$2(KeyJavaPipelineTest.java:89)
+	at [[Testing framework: 23 frames collapsed (https://goo.gl/aH3UyP)]].(:0)
+	at java.base@11.0.18/java.util.Optional.ifPresent(Optional.java:183)
+	at [[Testing framework: 13 frames collapsed (https://goo.gl/aH3UyP)]].(:0)
+	at java.base@11.0.18/java.util.ArrayList.forEach(ArrayList.java:1541)
+	at [[Testing framework: 9 frames collapsed (https://goo.gl/aH3UyP)]].(:0)
+	at java.base@11.0.18/java.util.ArrayList.forEach(ArrayList.java:1541)
+	at [[Testing framework: 20 frames collapsed (https://goo.gl/aH3UyP)]].(:0)
+	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor$CollectAllTestClassesExecutor.processAllTestClasses(JUnitPlatformTestClassProcessor.java:110)
+	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor$CollectAllTestClassesExecutor.access$000(JUnitPlatformTestClassProcessor.java:90)
+	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor.stop(JUnitPlatformTestClassProcessor.java:85)
+	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.stop(SuiteTestClassProcessor.java:62)
+	at [[Reflective call: 4 frames collapsed (https://goo.gl/aH3UyP)]].(:0)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:36)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:33)
+	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:94)
+	at com.sun.proxy.$Proxy2.stop(Unknown Source)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker$3.run(TestWorker.java:193)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.executeAndMaintainThreadName(TestWorker.java:129)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:100)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:60)
+	at org.gradle.process.internal.worker.child.ActionExecutionWorker.execute(ActionExecutionWorker.java:56)
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:113)
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:65)
+	at app//worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)
+	at app//worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
+</failure>
+  </testcase>
+  <testcase name="D:\a\key\key\key.java\pipelineTests\simple\expected\10_LocalClassTransformation\Test.java" classname="KeyJavaPipelineTest" time="0.021">
+    <failure message="diff (-expected +actual):&#10;    @@ -32,25 +32,35 @@&#10;             if (!@($classInitialized)) {&#10;                 if (!@($classInitializationInProgress)) {&#10;                     if (!@(this.$classPrepared)) {&#10;    +                    //Created by ClassInitializeMethodBuilder.java:207&#10;                         @($clprepare());&#10;                     }&#10;                     if (@($classErroneous)) {&#10;                         throw new java.lang.NoClassDefFoundError();&#10;                     }&#10;    +                //Created by ClassInitializeMethodBuilder.java:231&#10;                     @($classInitializationInProgress) = true;&#10;                     try {&#10;                         @(java.lang.Object.$clinit());&#10;    -                } catch (java.lang.Error err) {&#10;    -                    @($classInitializationInProgress) = false;&#10;    +                }//Created by ClassInitializeMethodBuilder.java:182&#10;    +                 catch (java.lang.Error err) {&#10;    +                    //Created by ClassInitializeMethodBuilder.java:145&#10;    +                    @($classInitializationInProgress) = true;&#10;    +                    //Created by ClassInitializeMethodBuilder.java:146&#10;                         @($classErroneous) = true;&#10;                         throw err;&#10;                     } catch (java.lang.Throwable twa) {&#10;    -                    @($classInitializationInProgress) = false;&#10;    +                    //Created by ClassInitializeMethodBuilder.java:145&#10;    +                    @($classInitializationInProgress) = true;&#10;    +                    //Created by ClassInitializeMethodBuilder.java:146&#10;                         @($classErroneous) = true;&#10;                         throw new java.lang.ExceptionInInitializerError(twa);&#10;                     }&#10;    +                //Created by ClassInitializeMethodBuilder.java:236&#10;                     @($classInitializationInProgress) = false;&#10;    +                //Created by ClassInitializeMethodBuilder.java:237&#10;                     @($classErroneous) = false;&#10;    +                //Created by ClassInitializeMethodBuilder.java:238&#10;                     @($classInitialized) = true;&#10;                 }&#10;             }&#10;    @@ -63,6 +73,7 @@&#10;         }&#10;     &#10;         public Test $create() {&#10;    +        //Created by CreateBuilder.java:53&#10;             this.$initialized = false;&#10;             $prepareEnter();&#10;             return this;&#10;    @@ -70,6 +81,7 @@&#10;     &#10;         public static Test $createObject() {&#10;             Test __NEW__;&#10;    +        //Created by CreateObjectBuilder.java:67&#10;             __NEW__ = Test.$allocate();&#10;     &#10;             return __NEW__;&#10;    @@ -103,25 +115,35 @@&#10;             if (!@($classInitialized)) {&#10;                 if (!@($classInitializationInProgress)) {&#10;                     if (!@(this.$classPrepared)) {&#10;    +                    //Created by ClassInitializeMethodBuilder.java:207&#10;                         @($clprepare());&#10;                     }&#10;                     if (@($classErroneous)) {&#10;                         throw new java.lang.NoClassDefFoundError();&#10;                     }&#10;    +                //Created by ClassInitializeMethodBuilder.java:231&#10;                     @($classInitializationInProgress) = true;&#10;                     try {&#10;                         @(Test.$clinit());&#10;    -                } catch (java.lang.Error err) {&#10;    -                    @($classInitializationInProgress) = false;&#10;    +                }//Created by ClassInitializeMethodBuilder.java:182&#10;    +                 catch (java.lang.Error err) {&#10;    +                    //Created by ClassInitializeMethodBuilder.java:145&#10;    +                    @($classInitializationInProgress) = true;&#10;    +                    //Created by ClassInitializeMethodBuilder.java:146&#10;                         @($classErroneous) = true;&#10;                         throw err;&#10;                     } catch (java.lang.Throwable twa) {&#10;    -                    @($classInitializationInProgress) = false;&#10;    +                    //Created by ClassInitializeMethodBuilder.java:145&#10;    +                    @($classInitializationInProgress) = true;&#10;    +                    //Created by ClassInitializeMethodBuilder.java:146&#10;                         @($classErroneous) = true;&#10;                         throw new java.lang.ExceptionInInitializerError(twa);&#10;                     }&#10;    +                //Created by ClassInitializeMethodBuilder.java:236&#10;                     @($classInitializationInProgress) = false;&#10;    +                //Created by ClassInitializeMethodBuilder.java:237&#10;                     @($classErroneous) = false;&#10;    +                //Created by ClassInitializeMethodBuilder.java:238&#10;                     @($classInitialized) = true;&#10;                 }&#10;             }&#10;    @@ -134,6 +156,7 @@&#10;         }&#10;     &#10;         public SubClass $create() {&#10;    +        //Created by CreateBuilder.java:53&#10;             this.$initialized = false;&#10;             $prepareEnter();&#10;             return this;&#10;    @@ -141,6 +164,7 @@&#10;     &#10;         public static SubClass $createObject() {&#10;             SubClass __NEW__;&#10;    +        //Created by CreateObjectBuilder.java:67&#10;             __NEW__ = SubClass.$allocate();&#10;     &#10;             return __NEW__;" type="com.google.common.truth.ComparisonFailureWithFacts">diff (-expected +actual):
+    @@ -32,25 +32,35 @@
+             if (!@($classInitialized)) {
+                 if (!@($classInitializationInProgress)) {
+                     if (!@(this.$classPrepared)) {
+    +                    //Created by ClassInitializeMethodBuilder.java:207
+                         @($clprepare());
+                     }
+                     if (@($classErroneous)) {
+                         throw new java.lang.NoClassDefFoundError();
+                     }
+    +                //Created by ClassInitializeMethodBuilder.java:231
+                     @($classInitializationInProgress) = true;
+                     try {
+                         @(java.lang.Object.$clinit());
+    -                } catch (java.lang.Error err) {
+    -                    @($classInitializationInProgress) = false;
+    +                }//Created by ClassInitializeMethodBuilder.java:182
+    +                 catch (java.lang.Error err) {
+    +                    //Created by ClassInitializeMethodBuilder.java:145
+    +                    @($classInitializationInProgress) = true;
+    +                    //Created by ClassInitializeMethodBuilder.java:146
+                         @($classErroneous) = true;
+                         throw err;
+                     } catch (java.lang.Throwable twa) {
+    -                    @($classInitializationInProgress) = false;
+    +                    //Created by ClassInitializeMethodBuilder.java:145
+    +                    @($classInitializationInProgress) = true;
+    +                    //Created by ClassInitializeMethodBuilder.java:146
+                         @($classErroneous) = true;
+                         throw new java.lang.ExceptionInInitializerError(twa);
+                     }
+    +                //Created by ClassInitializeMethodBuilder.java:236
+                     @($classInitializationInProgress) = false;
+    +                //Created by ClassInitializeMethodBuilder.java:237
+                     @($classErroneous) = false;
+    +                //Created by ClassInitializeMethodBuilder.java:238
+                     @($classInitialized) = true;
+                 }
+             }
+    @@ -63,6 +73,7 @@
+         }
+     
+         public Test $create() {
+    +        //Created by CreateBuilder.java:53
+             this.$initialized = false;
+             $prepareEnter();
+             return this;
+    @@ -70,6 +81,7 @@
+     
+         public static Test $createObject() {
+             Test __NEW__;
+    +        //Created by CreateObjectBuilder.java:67
+             __NEW__ = Test.$allocate();
+     
+             return __NEW__;
+    @@ -103,25 +115,35 @@
+             if (!@($classInitialized)) {
+                 if (!@($classInitializationInProgress)) {
+                     if (!@(this.$classPrepared)) {
+    +                    //Created by ClassInitializeMethodBuilder.java:207
+                         @($clprepare());
+                     }
+                     if (@($classErroneous)) {
+                         throw new java.lang.NoClassDefFoundError();
+                     }
+    +                //Created by ClassInitializeMethodBuilder.java:231
+                     @($classInitializationInProgress) = true;
+                     try {
+                         @(Test.$clinit());
+    -                } catch (java.lang.Error err) {
+    -                    @($classInitializationInProgress) = false;
+    +                }//Created by ClassInitializeMethodBuilder.java:182
+    +                 catch (java.lang.Error err) {
+    +                    //Created by ClassInitializeMethodBuilder.java:145
+    +                    @($classInitializationInProgress) = true;
+    +                    //Created by ClassInitializeMethodBuilder.java:146
+                         @($classErroneous) = true;
+                         throw err;
+                     } catch (java.lang.Throwable twa) {
+    -                    @($classInitializationInProgress) = false;
+    +                    //Created by ClassInitializeMethodBuilder.java:145
+    +                    @($classInitializationInProgress) = true;
+    +                    //Created by ClassInitializeMethodBuilder.java:146
+                         @($classErroneous) = true;
+                         throw new java.lang.ExceptionInInitializerError(twa);
+                     }
+    +                //Created by ClassInitializeMethodBuilder.java:236
+                     @($classInitializationInProgress) = false;
+    +                //Created by ClassInitializeMethodBuilder.java:237
+                     @($classErroneous) = false;
+    +                //Created by ClassInitializeMethodBuilder.java:238
+                     @($classInitialized) = true;
+                 }
+             }
+    @@ -134,6 +156,7 @@
+         }
+     
+         public SubClass $create() {
+    +        //Created by CreateBuilder.java:53
+             this.$initialized = false;
+             $prepareEnter();
+             return this;
+    @@ -141,6 +164,7 @@
+     
+         public static SubClass $createObject() {
+             SubClass __NEW__;
+    +        //Created by CreateObjectBuilder.java:67
+             __NEW__ = SubClass.$allocate();
+     
+             return __NEW__;
+	at app//KeyJavaPipelineTest.checkEqualFile(KeyJavaPipelineTest.java:100)
+	at app//KeyJavaPipelineTest.lambda$generatePipelineTests$2(KeyJavaPipelineTest.java:89)
+	at [[Testing framework: 23 frames collapsed (https://goo.gl/aH3UyP)]].(:0)
+	at java.base@11.0.18/java.util.Optional.ifPresent(Optional.java:183)
+	at [[Testing framework: 13 frames collapsed (https://goo.gl/aH3UyP)]].(:0)
+	at java.base@11.0.18/java.util.ArrayList.forEach(ArrayList.java:1541)
+	at [[Testing framework: 9 frames collapsed (https://goo.gl/aH3UyP)]].(:0)
+	at java.base@11.0.18/java.util.ArrayList.forEach(ArrayList.java:1541)
+	at [[Testing framework: 20 frames collapsed (https://goo.gl/aH3UyP)]].(:0)
+	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor$CollectAllTestClassesExecutor.processAllTestClasses(JUnitPlatformTestClassProcessor.java:110)
+	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor$CollectAllTestClassesExecutor.access$000(JUnitPlatformTestClassProcessor.java:90)
+	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor.stop(JUnitPlatformTestClassProcessor.java:85)
+	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.stop(SuiteTestClassProcessor.java:62)
+	at [[Reflective call: 4 frames collapsed (https://goo.gl/aH3UyP)]].(:0)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:36)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:33)
+	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:94)
+	at com.sun.proxy.$Proxy2.stop(Unknown Source)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker$3.run(TestWorker.java:193)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.executeAndMaintainThreadName(TestWorker.java:129)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:100)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:60)
+	at org.gradle.process.internal.worker.child.ActionExecutionWorker.execute(ActionExecutionWorker.java:56)
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:113)
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:65)
+	at app//worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)
+	at app//worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
+</failure>
+  </testcase>
+  <testcase name="D:\a\key\key\key.java\pipelineTests\simple\expected\11_ConstantStringExpressionEvaluator\Test.java" classname="KeyJavaPipelineTest" time="0.018">
+    <failure message="diff (-expected +actual):&#10;    @@ -32,25 +32,35 @@&#10;             if (!@($classInitialized)) {&#10;                 if (!@($classInitializationInProgress)) {&#10;                     if (!@(this.$classPrepared)) {&#10;    +                    //Created by ClassInitializeMethodBuilder.java:207&#10;                         @($clprepare());&#10;                     }&#10;                     if (@($classErroneous)) {&#10;                         throw new java.lang.NoClassDefFoundError();&#10;                     }&#10;    +                //Created by ClassInitializeMethodBuilder.java:231&#10;                     @($classInitializationInProgress) = true;&#10;                     try {&#10;                         @(java.lang.Object.$clinit());&#10;    -                } catch (java.lang.Error err) {&#10;    -                    @($classInitializationInProgress) = false;&#10;    +                }//Created by ClassInitializeMethodBuilder.java:182&#10;    +                 catch (java.lang.Error err) {&#10;    +                    //Created by ClassInitializeMethodBuilder.java:145&#10;    +                    @($classInitializationInProgress) = true;&#10;    +                    //Created by ClassInitializeMethodBuilder.java:146&#10;                         @($classErroneous) = true;&#10;                         throw err;&#10;                     } catch (java.lang.Throwable twa) {&#10;    -                    @($classInitializationInProgress) = false;&#10;    +                    //Created by ClassInitializeMethodBuilder.java:145&#10;    +                    @($classInitializationInProgress) = true;&#10;    +                    //Created by ClassInitializeMethodBuilder.java:146&#10;                         @($classErroneous) = true;&#10;                         throw new java.lang.ExceptionInInitializerError(twa);&#10;                     }&#10;    +                //Created by ClassInitializeMethodBuilder.java:236&#10;                     @($classInitializationInProgress) = false;&#10;    +                //Created by ClassInitializeMethodBuilder.java:237&#10;                     @($classErroneous) = false;&#10;    +                //Created by ClassInitializeMethodBuilder.java:238&#10;                     @($classInitialized) = true;&#10;                 }&#10;             }&#10;    @@ -63,6 +73,7 @@&#10;         }&#10;     &#10;         public Test $create() {&#10;    +        //Created by CreateBuilder.java:53&#10;             this.$initialized = false;&#10;             $prepareEnter();&#10;             return this;&#10;    @@ -70,6 +81,7 @@&#10;     &#10;         public static Test $createObject() {&#10;             Test __NEW__;&#10;    +        //Created by CreateObjectBuilder.java:67&#10;             __NEW__ = Test.$allocate();&#10;     &#10;             return __NEW__;&#10;    @@ -103,25 +115,35 @@&#10;             if (!@($classInitialized)) {&#10;                 if (!@($classInitializationInProgress)) {&#10;                     if (!@(this.$classPrepared)) {&#10;    +                    //Created by ClassInitializeMethodBuilder.java:207&#10;                         @($clprepare());&#10;                     }&#10;                     if (@($classErroneous)) {&#10;                         throw new java.lang.NoClassDefFoundError();&#10;                     }&#10;    +                //Created by ClassInitializeMethodBuilder.java:231&#10;                     @($classInitializationInProgress) = true;&#10;                     try {&#10;                         @(Test.$clinit());&#10;    -                } catch (java.lang.Error err) {&#10;    -                    @($classInitializationInProgress) = false;&#10;    +                }//Created by ClassInitializeMethodBuilder.java:182&#10;    +                 catch (java.lang.Error err) {&#10;    +                    //Created by ClassInitializeMethodBuilder.java:145&#10;    +                    @($classInitializationInProgress) = true;&#10;    +                    //Created by ClassInitializeMethodBuilder.java:146&#10;                         @($classErroneous) = true;&#10;                         throw err;&#10;                     } catch (java.lang.Throwable twa) {&#10;    -                    @($classInitializationInProgress) = false;&#10;    +                    //Created by ClassInitializeMethodBuilder.java:145&#10;    +                    @($classInitializationInProgress) = true;&#10;    +                    //Created by ClassInitializeMethodBuilder.java:146&#10;                         @($classErroneous) = true;&#10;                         throw new java.lang.ExceptionInInitializerError(twa);&#10;                     }&#10;    +                //Created by ClassInitializeMethodBuilder.java:236&#10;                     @($classInitializationInProgress) = false;&#10;    +                //Created by ClassInitializeMethodBuilder.java:237&#10;                     @($classErroneous) = false;&#10;    +                //Created by ClassInitializeMethodBuilder.java:238&#10;                     @($classInitialized) = true;&#10;                 }&#10;             }&#10;    @@ -134,6 +156,7 @@&#10;         }&#10;     &#10;         public SubClass $create() {&#10;    +        //Created by CreateBuilder.java:53&#10;             this.$initialized = false;&#10;             $prepareEnter();&#10;             return this;&#10;    @@ -141,6 +164,7 @@&#10;     &#10;         public static SubClass $createObject() {&#10;             SubClass __NEW__;&#10;    +        //Created by CreateObjectBuilder.java:67&#10;             __NEW__ = SubClass.$allocate();&#10;     &#10;             return __NEW__;" type="com.google.common.truth.ComparisonFailureWithFacts">diff (-expected +actual):
+    @@ -32,25 +32,35 @@
+             if (!@($classInitialized)) {
+                 if (!@($classInitializationInProgress)) {
+                     if (!@(this.$classPrepared)) {
+    +                    //Created by ClassInitializeMethodBuilder.java:207
+                         @($clprepare());
+                     }
+                     if (@($classErroneous)) {
+                         throw new java.lang.NoClassDefFoundError();
+                     }
+    +                //Created by ClassInitializeMethodBuilder.java:231
+                     @($classInitializationInProgress) = true;
+                     try {
+                         @(java.lang.Object.$clinit());
+    -                } catch (java.lang.Error err) {
+    -                    @($classInitializationInProgress) = false;
+    +                }//Created by ClassInitializeMethodBuilder.java:182
+    +                 catch (java.lang.Error err) {
+    +                    //Created by ClassInitializeMethodBuilder.java:145
+    +                    @($classInitializationInProgress) = true;
+    +                    //Created by ClassInitializeMethodBuilder.java:146
+                         @($classErroneous) = true;
+                         throw err;
+                     } catch (java.lang.Throwable twa) {
+    -                    @($classInitializationInProgress) = false;
+    +                    //Created by ClassInitializeMethodBuilder.java:145
+    +                    @($classInitializationInProgress) = true;
+    +                    //Created by ClassInitializeMethodBuilder.java:146
+                         @($classErroneous) = true;
+                         throw new java.lang.ExceptionInInitializerError(twa);
+                     }
+    +                //Created by ClassInitializeMethodBuilder.java:236
+                     @($classInitializationInProgress) = false;
+    +                //Created by ClassInitializeMethodBuilder.java:237
+                     @($classErroneous) = false;
+    +                //Created by ClassInitializeMethodBuilder.java:238
+                     @($classInitialized) = true;
+                 }
+             }
+    @@ -63,6 +73,7 @@
+         }
+     
+         public Test $create() {
+    +        //Created by CreateBuilder.java:53
+             this.$initialized = false;
+             $prepareEnter();
+             return this;
+    @@ -70,6 +81,7 @@
+     
+         public static Test $createObject() {
+             Test __NEW__;
+    +        //Created by CreateObjectBuilder.java:67
+             __NEW__ = Test.$allocate();
+     
+             return __NEW__;
+    @@ -103,25 +115,35 @@
+             if (!@($classInitialized)) {
+                 if (!@($classInitializationInProgress)) {
+                     if (!@(this.$classPrepared)) {
+    +                    //Created by ClassInitializeMethodBuilder.java:207
+                         @($clprepare());
+                     }
+                     if (@($classErroneous)) {
+                         throw new java.lang.NoClassDefFoundError();
+                     }
+    +                //Created by ClassInitializeMethodBuilder.java:231
+                     @($classInitializationInProgress) = true;
+                     try {
+                         @(Test.$clinit());
+    -                } catch (java.lang.Error err) {
+    -                    @($classInitializationInProgress) = false;
+    +                }//Created by ClassInitializeMethodBuilder.java:182
+    +                 catch (java.lang.Error err) {
+    +                    //Created by ClassInitializeMethodBuilder.java:145
+    +                    @($classInitializationInProgress) = true;
+    +                    //Created by ClassInitializeMethodBuilder.java:146
+                         @($classErroneous) = true;
+                         throw err;
+                     } catch (java.lang.Throwable twa) {
+    -                    @($classInitializationInProgress) = false;
+    +                    //Created by ClassInitializeMethodBuilder.java:145
+    +                    @($classInitializationInProgress) = true;
+    +                    //Created by ClassInitializeMethodBuilder.java:146
+                         @($classErroneous) = true;
+                         throw new java.lang.ExceptionInInitializerError(twa);
+                     }
+    +                //Created by ClassInitializeMethodBuilder.java:236
+                     @($classInitializationInProgress) = false;
+    +                //Created by ClassInitializeMethodBuilder.java:237
+                     @($classErroneous) = false;
+    +                //Created by ClassInitializeMethodBuilder.java:238
+                     @($classInitialized) = true;
+                 }
+             }
+    @@ -134,6 +156,7 @@
+         }
+     
+         public SubClass $create() {
+    +        //Created by CreateBuilder.java:53
+             this.$initialized = false;
+             $prepareEnter();
+             return this;
+    @@ -141,6 +164,7 @@
+     
+         public static SubClass $createObject() {
+             SubClass __NEW__;
+    +        //Created by CreateObjectBuilder.java:67
+             __NEW__ = SubClass.$allocate();
+     
+             return __NEW__;
+	at app//KeyJavaPipelineTest.checkEqualFile(KeyJavaPipelineTest.java:100)
+	at app//KeyJavaPipelineTest.lambda$generatePipelineTests$2(KeyJavaPipelineTest.java:89)
+	at [[Testing framework: 23 frames collapsed (https://goo.gl/aH3UyP)]].(:0)
+	at java.base@11.0.18/java.util.Optional.ifPresent(Optional.java:183)
+	at [[Testing framework: 13 frames collapsed (https://goo.gl/aH3UyP)]].(:0)
+	at java.base@11.0.18/java.util.ArrayList.forEach(ArrayList.java:1541)
+	at [[Testing framework: 9 frames collapsed (https://goo.gl/aH3UyP)]].(:0)
+	at java.base@11.0.18/java.util.ArrayList.forEach(ArrayList.java:1541)
+	at [[Testing framework: 20 frames collapsed (https://goo.gl/aH3UyP)]].(:0)
+	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor$CollectAllTestClassesExecutor.processAllTestClasses(JUnitPlatformTestClassProcessor.java:110)
+	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor$CollectAllTestClassesExecutor.access$000(JUnitPlatformTestClassProcessor.java:90)
+	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor.stop(JUnitPlatformTestClassProcessor.java:85)
+	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.stop(SuiteTestClassProcessor.java:62)
+	at [[Reflective call: 4 frames collapsed (https://goo.gl/aH3UyP)]].(:0)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:36)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:33)
+	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:94)
+	at com.sun.proxy.$Proxy2.stop(Unknown Source)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker$3.run(TestWorker.java:193)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.executeAndMaintainThreadName(TestWorker.java:129)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:100)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:60)
+	at org.gradle.process.internal.worker.child.ActionExecutionWorker.execute(ActionExecutionWorker.java:56)
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:113)
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:65)
+	at app//worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)
+	at app//worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
+</failure>
+  </testcase>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
