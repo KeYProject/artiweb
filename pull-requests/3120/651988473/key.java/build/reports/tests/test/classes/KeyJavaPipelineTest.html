@@ -1,0 +1,960 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta http-equiv="x-ua-compatible" content="IE=edge"/>
+<title>Test results - Class KeyJavaPipelineTest</title>
+<link href="../css/base-style.css" rel="stylesheet" type="text/css"/>
+<link href="../css/style.css" rel="stylesheet" type="text/css"/>
+<script src="../js/report.js" type="text/javascript"></script>
+</head>
+<body>
+<div id="content">
+<h1>Class KeyJavaPipelineTest</h1>
+<div class="breadcrumbs">
+<a href="../index.html">all</a> &gt; 
+<a href="../packages/default-package.html">default-package</a> &gt; KeyJavaPipelineTest</div>
+<div id="summary">
+<table>
+<tr>
+<td>
+<div class="summaryGroup">
+<table>
+<tr>
+<td>
+<div class="infoBox" id="tests">
+<div class="counter">11</div>
+<p>tests</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="failures">
+<div class="counter">6</div>
+<p>failures</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="ignored">
+<div class="counter">0</div>
+<p>ignored</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="duration">
+<div class="counter">0.542s</div>
+<p>duration</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</td>
+<td>
+<div class="infoBox failures" id="successRate">
+<div class="percent">45%</div>
+<p>successful</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div id="tabs">
+<ul class="tabLinks">
+<li>
+<a href="#tab0">Failed tests</a>
+</li>
+<li>
+<a href="#tab1">Tests</a>
+</li>
+</ul>
+<div id="tab0" class="tab">
+<h2>Failed tests</h2>
+<div class="test">
+<a name="simple()[10]"></a>
+<h3 class="failures">D:\a\key\key\key.java\pipelineTests\simple\expected\10_LocalClassTransformation\Test.java</h3>
+<span class="code">
+<pre>diff (-expected +actual):
+    @@ -32,25 +32,35 @@
+             if (!@($classInitialized)) {
+                 if (!@($classInitializationInProgress)) {
+                     if (!@(this.$classPrepared)) {
+    +                    //Created by ClassInitializeMethodBuilder.java:207
+                         @($clprepare());
+                     }
+                     if (@($classErroneous)) {
+                         throw new java.lang.NoClassDefFoundError();
+                     }
+    +                //Created by ClassInitializeMethodBuilder.java:231
+                     @($classInitializationInProgress) = true;
+                     try {
+                         @(java.lang.Object.$clinit());
+    -                } catch (java.lang.Error err) {
+    -                    @($classInitializationInProgress) = false;
+    +                }//Created by ClassInitializeMethodBuilder.java:182
+    +                 catch (java.lang.Error err) {
+    +                    //Created by ClassInitializeMethodBuilder.java:145
+    +                    @($classInitializationInProgress) = true;
+    +                    //Created by ClassInitializeMethodBuilder.java:146
+                         @($classErroneous) = true;
+                         throw err;
+                     } catch (java.lang.Throwable twa) {
+    -                    @($classInitializationInProgress) = false;
+    +                    //Created by ClassInitializeMethodBuilder.java:145
+    +                    @($classInitializationInProgress) = true;
+    +                    //Created by ClassInitializeMethodBuilder.java:146
+                         @($classErroneous) = true;
+                         throw new java.lang.ExceptionInInitializerError(twa);
+                     }
+    +                //Created by ClassInitializeMethodBuilder.java:236
+                     @($classInitializationInProgress) = false;
+    +                //Created by ClassInitializeMethodBuilder.java:237
+                     @($classErroneous) = false;
+    +                //Created by ClassInitializeMethodBuilder.java:238
+                     @($classInitialized) = true;
+                 }
+             }
+    @@ -63,6 +73,7 @@
+         }
+     
+         public Test $create() {
+    +        //Created by CreateBuilder.java:53
+             this.$initialized = false;
+             $prepareEnter();
+             return this;
+    @@ -70,6 +81,7 @@
+     
+         public static Test $createObject() {
+             Test __NEW__;
+    +        //Created by CreateObjectBuilder.java:67
+             __NEW__ = Test.$allocate();
+     
+             return __NEW__;
+    @@ -103,25 +115,35 @@
+             if (!@($classInitialized)) {
+                 if (!@($classInitializationInProgress)) {
+                     if (!@(this.$classPrepared)) {
+    +                    //Created by ClassInitializeMethodBuilder.java:207
+                         @($clprepare());
+                     }
+                     if (@($classErroneous)) {
+                         throw new java.lang.NoClassDefFoundError();
+                     }
+    +                //Created by ClassInitializeMethodBuilder.java:231
+                     @($classInitializationInProgress) = true;
+                     try {
+                         @(Test.$clinit());
+    -                } catch (java.lang.Error err) {
+    -                    @($classInitializationInProgress) = false;
+    +                }//Created by ClassInitializeMethodBuilder.java:182
+    +                 catch (java.lang.Error err) {
+    +                    //Created by ClassInitializeMethodBuilder.java:145
+    +                    @($classInitializationInProgress) = true;
+    +                    //Created by ClassInitializeMethodBuilder.java:146
+                         @($classErroneous) = true;
+                         throw err;
+                     } catch (java.lang.Throwable twa) {
+    -                    @($classInitializationInProgress) = false;
+    +                    //Created by ClassInitializeMethodBuilder.java:145
+    +                    @($classInitializationInProgress) = true;
+    +                    //Created by ClassInitializeMethodBuilder.java:146
+                         @($classErroneous) = true;
+                         throw new java.lang.ExceptionInInitializerError(twa);
+                     }
+    +                //Created by ClassInitializeMethodBuilder.java:236
+                     @($classInitializationInProgress) = false;
+    +                //Created by ClassInitializeMethodBuilder.java:237
+                     @($classErroneous) = false;
+    +                //Created by ClassInitializeMethodBuilder.java:238
+                     @($classInitialized) = true;
+                 }
+             }
+    @@ -134,6 +156,7 @@
+         }
+     
+         public SubClass $create() {
+    +        //Created by CreateBuilder.java:53
+             this.$initialized = false;
+             $prepareEnter();
+             return this;
+    @@ -141,6 +164,7 @@
+     
+         public static SubClass $createObject() {
+             SubClass __NEW__;
+    +        //Created by CreateObjectBuilder.java:67
+             __NEW__ = SubClass.$allocate();
+     
+             return __NEW__;
+	at app//KeyJavaPipelineTest.checkEqualFile(KeyJavaPipelineTest.java:100)
+	at app//KeyJavaPipelineTest.lambda$generatePipelineTests$2(KeyJavaPipelineTest.java:89)
+	at [[Testing framework: 23 frames collapsed (https://goo.gl/aH3UyP)]].(:0)
+	at java.base@11.0.18/java.util.Optional.ifPresent(Optional.java:183)
+	at [[Testing framework: 13 frames collapsed (https://goo.gl/aH3UyP)]].(:0)
+	at java.base@11.0.18/java.util.ArrayList.forEach(ArrayList.java:1541)
+	at [[Testing framework: 9 frames collapsed (https://goo.gl/aH3UyP)]].(:0)
+	at java.base@11.0.18/java.util.ArrayList.forEach(ArrayList.java:1541)
+	at [[Testing framework: 20 frames collapsed (https://goo.gl/aH3UyP)]].(:0)
+	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor$CollectAllTestClassesExecutor.processAllTestClasses(JUnitPlatformTestClassProcessor.java:110)
+	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor$CollectAllTestClassesExecutor.access$000(JUnitPlatformTestClassProcessor.java:90)
+	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor.stop(JUnitPlatformTestClassProcessor.java:85)
+	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.stop(SuiteTestClassProcessor.java:62)
+	at [[Reflective call: 4 frames collapsed (https://goo.gl/aH3UyP)]].(:0)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:36)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:33)
+	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:94)
+	at com.sun.proxy.$Proxy2.stop(Unknown Source)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker$3.run(TestWorker.java:193)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.executeAndMaintainThreadName(TestWorker.java:129)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:100)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:60)
+	at org.gradle.process.internal.worker.child.ActionExecutionWorker.execute(ActionExecutionWorker.java:56)
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:113)
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:65)
+	at app//worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)
+	at app//worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
+</pre>
+</span>
+</div>
+<div class="test">
+<a name="simple()[11]"></a>
+<h3 class="failures">D:\a\key\key\key.java\pipelineTests\simple\expected\11_ConstantStringExpressionEvaluator\Test.java</h3>
+<span class="code">
+<pre>diff (-expected +actual):
+    @@ -32,25 +32,35 @@
+             if (!@($classInitialized)) {
+                 if (!@($classInitializationInProgress)) {
+                     if (!@(this.$classPrepared)) {
+    +                    //Created by ClassInitializeMethodBuilder.java:207
+                         @($clprepare());
+                     }
+                     if (@($classErroneous)) {
+                         throw new java.lang.NoClassDefFoundError();
+                     }
+    +                //Created by ClassInitializeMethodBuilder.java:231
+                     @($classInitializationInProgress) = true;
+                     try {
+                         @(java.lang.Object.$clinit());
+    -                } catch (java.lang.Error err) {
+    -                    @($classInitializationInProgress) = false;
+    +                }//Created by ClassInitializeMethodBuilder.java:182
+    +                 catch (java.lang.Error err) {
+    +                    //Created by ClassInitializeMethodBuilder.java:145
+    +                    @($classInitializationInProgress) = true;
+    +                    //Created by ClassInitializeMethodBuilder.java:146
+                         @($classErroneous) = true;
+                         throw err;
+                     } catch (java.lang.Throwable twa) {
+    -                    @($classInitializationInProgress) = false;
+    +                    //Created by ClassInitializeMethodBuilder.java:145
+    +                    @($classInitializationInProgress) = true;
+    +                    //Created by ClassInitializeMethodBuilder.java:146
+                         @($classErroneous) = true;
+                         throw new java.lang.ExceptionInInitializerError(twa);
+                     }
+    +                //Created by ClassInitializeMethodBuilder.java:236
+                     @($classInitializationInProgress) = false;
+    +                //Created by ClassInitializeMethodBuilder.java:237
+                     @($classErroneous) = false;
+    +                //Created by ClassInitializeMethodBuilder.java:238
+                     @($classInitialized) = true;
+                 }
+             }
+    @@ -63,6 +73,7 @@
+         }
+     
+         public Test $create() {
+    +        //Created by CreateBuilder.java:53
+             this.$initialized = false;
+             $prepareEnter();
+             return this;
+    @@ -70,6 +81,7 @@
+     
+         public static Test $createObject() {
+             Test __NEW__;
+    +        //Created by CreateObjectBuilder.java:67
+             __NEW__ = Test.$allocate();
+     
+             return __NEW__;
+    @@ -103,25 +115,35 @@
+             if (!@($classInitialized)) {
+                 if (!@($classInitializationInProgress)) {
+                     if (!@(this.$classPrepared)) {
+    +                    //Created by ClassInitializeMethodBuilder.java:207
+                         @($clprepare());
+                     }
+                     if (@($classErroneous)) {
+                         throw new java.lang.NoClassDefFoundError();
+                     }
+    +                //Created by ClassInitializeMethodBuilder.java:231
+                     @($classInitializationInProgress) = true;
+                     try {
+                         @(Test.$clinit());
+    -                } catch (java.lang.Error err) {
+    -                    @($classInitializationInProgress) = false;
+    +                }//Created by ClassInitializeMethodBuilder.java:182
+    +                 catch (java.lang.Error err) {
+    +                    //Created by ClassInitializeMethodBuilder.java:145
+    +                    @($classInitializationInProgress) = true;
+    +                    //Created by ClassInitializeMethodBuilder.java:146
+                         @($classErroneous) = true;
+                         throw err;
+                     } catch (java.lang.Throwable twa) {
+    -                    @($classInitializationInProgress) = false;
+    +                    //Created by ClassInitializeMethodBuilder.java:145
+    +                    @($classInitializationInProgress) = true;
+    +                    //Created by ClassInitializeMethodBuilder.java:146
+                         @($classErroneous) = true;
+                         throw new java.lang.ExceptionInInitializerError(twa);
+                     }
+    +                //Created by ClassInitializeMethodBuilder.java:236
+                     @($classInitializationInProgress) = false;
+    +                //Created by ClassInitializeMethodBuilder.java:237
+                     @($classErroneous) = false;
+    +                //Created by ClassInitializeMethodBuilder.java:238
+                     @($classInitialized) = true;
+                 }
+             }
+    @@ -134,6 +156,7 @@
+         }
+     
+         public SubClass $create() {
+    +        //Created by CreateBuilder.java:53
+             this.$initialized = false;
+             $prepareEnter();
+             return this;
+    @@ -141,6 +164,7 @@
+     
+         public static SubClass $createObject() {
+             SubClass __NEW__;
+    +        //Created by CreateObjectBuilder.java:67
+             __NEW__ = SubClass.$allocate();
+     
+             return __NEW__;
+	at app//KeyJavaPipelineTest.checkEqualFile(KeyJavaPipelineTest.java:100)
+	at app//KeyJavaPipelineTest.lambda$generatePipelineTests$2(KeyJavaPipelineTest.java:89)
+	at [[Testing framework: 23 frames collapsed (https://goo.gl/aH3UyP)]].(:0)
+	at java.base@11.0.18/java.util.Optional.ifPresent(Optional.java:183)
+	at [[Testing framework: 13 frames collapsed (https://goo.gl/aH3UyP)]].(:0)
+	at java.base@11.0.18/java.util.ArrayList.forEach(ArrayList.java:1541)
+	at [[Testing framework: 9 frames collapsed (https://goo.gl/aH3UyP)]].(:0)
+	at java.base@11.0.18/java.util.ArrayList.forEach(ArrayList.java:1541)
+	at [[Testing framework: 20 frames collapsed (https://goo.gl/aH3UyP)]].(:0)
+	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor$CollectAllTestClassesExecutor.processAllTestClasses(JUnitPlatformTestClassProcessor.java:110)
+	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor$CollectAllTestClassesExecutor.access$000(JUnitPlatformTestClassProcessor.java:90)
+	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor.stop(JUnitPlatformTestClassProcessor.java:85)
+	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.stop(SuiteTestClassProcessor.java:62)
+	at [[Reflective call: 4 frames collapsed (https://goo.gl/aH3UyP)]].(:0)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:36)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:33)
+	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:94)
+	at com.sun.proxy.$Proxy2.stop(Unknown Source)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker$3.run(TestWorker.java:193)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.executeAndMaintainThreadName(TestWorker.java:129)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:100)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:60)
+	at org.gradle.process.internal.worker.child.ActionExecutionWorker.execute(ActionExecutionWorker.java:56)
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:113)
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:65)
+	at app//worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)
+	at app//worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
+</pre>
+</span>
+</div>
+<div class="test">
+<a name="simple()[6]"></a>
+<h3 class="failures">D:\a\key\key\key.java\pipelineTests\simple\expected\06_ClassInitializeMethodBuilder\Test.java</h3>
+<span class="code">
+<pre>diff (-expected +actual):
+    @@ -32,25 +32,35 @@
+             if (!@($classInitialized)) {
+                 if (!@($classInitializationInProgress)) {
+                     if (!@(this.$classPrepared)) {
+    +                    //Created by ClassInitializeMethodBuilder.java:207
+                         @($clprepare());
+                     }
+                     if (@($classErroneous)) {
+                         throw new java.lang.NoClassDefFoundError();
+                     }
+    +                //Created by ClassInitializeMethodBuilder.java:231
+                     @($classInitializationInProgress) = true;
+                     try {
+                         @(java.lang.Object.$clinit());
+    -                } catch (java.lang.Error err) {
+    -                    @($classInitializationInProgress) = false;
+    +                }//Created by ClassInitializeMethodBuilder.java:182
+    +                 catch (java.lang.Error err) {
+    +                    //Created by ClassInitializeMethodBuilder.java:145
+    +                    @($classInitializationInProgress) = true;
+    +                    //Created by ClassInitializeMethodBuilder.java:146
+                         @($classErroneous) = true;
+                         throw err;
+                     } catch (java.lang.Throwable twa) {
+    -                    @($classInitializationInProgress) = false;
+    +                    //Created by ClassInitializeMethodBuilder.java:145
+    +                    @($classInitializationInProgress) = true;
+    +                    //Created by ClassInitializeMethodBuilder.java:146
+                         @($classErroneous) = true;
+                         throw new java.lang.ExceptionInInitializerError(twa);
+                     }
+    +                //Created by ClassInitializeMethodBuilder.java:236
+                     @($classInitializationInProgress) = false;
+    +                //Created by ClassInitializeMethodBuilder.java:237
+                     @($classErroneous) = false;
+    +                //Created by ClassInitializeMethodBuilder.java:238
+                     @($classInitialized) = true;
+                 }
+             }
+    @@ -84,25 +94,35 @@
+             if (!@($classInitialized)) {
+                 if (!@($classInitializationInProgress)) {
+                     if (!@(this.$classPrepared)) {
+    +                    //Created by ClassInitializeMethodBuilder.java:207
+                         @($clprepare());
+                     }
+                     if (@($classErroneous)) {
+                         throw new java.lang.NoClassDefFoundError();
+                     }
+    +                //Created by ClassInitializeMethodBuilder.java:231
+                     @($classInitializationInProgress) = true;
+                     try {
+                         @(Test.$clinit());
+    -                } catch (java.lang.Error err) {
+    -                    @($classInitializationInProgress) = false;
+    +                }//Created by ClassInitializeMethodBuilder.java:182
+    +                 catch (java.lang.Error err) {
+    +                    //Created by ClassInitializeMethodBuilder.java:145
+    +                    @($classInitializationInProgress) = true;
+    +                    //Created by ClassInitializeMethodBuilder.java:146
+                         @($classErroneous) = true;
+                         throw err;
+                     } catch (java.lang.Throwable twa) {
+    -                    @($classInitializationInProgress) = false;
+    +                    //Created by ClassInitializeMethodBuilder.java:145
+    +                    @($classInitializationInProgress) = true;
+    +                    //Created by ClassInitializeMethodBuilder.java:146
+                         @($classErroneous) = true;
+                         throw new java.lang.ExceptionInInitializerError(twa);
+                     }
+    +                //Created by ClassInitializeMethodBuilder.java:236
+                     @($classInitializationInProgress) = false;
+    +                //Created by ClassInitializeMethodBuilder.java:237
+                     @($classErroneous) = false;
+    +                //Created by ClassInitializeMethodBuilder.java:238
+                     @($classInitialized) = true;
+                 }
+             }
+	at app//KeyJavaPipelineTest.checkEqualFile(KeyJavaPipelineTest.java:100)
+	at app//KeyJavaPipelineTest.lambda$generatePipelineTests$2(KeyJavaPipelineTest.java:89)
+	at [[Testing framework: 23 frames collapsed (https://goo.gl/aH3UyP)]].(:0)
+	at java.base@11.0.18/java.util.Optional.ifPresent(Optional.java:183)
+	at [[Testing framework: 13 frames collapsed (https://goo.gl/aH3UyP)]].(:0)
+	at java.base@11.0.18/java.util.ArrayList.forEach(ArrayList.java:1541)
+	at [[Testing framework: 9 frames collapsed (https://goo.gl/aH3UyP)]].(:0)
+	at java.base@11.0.18/java.util.ArrayList.forEach(ArrayList.java:1541)
+	at [[Testing framework: 20 frames collapsed (https://goo.gl/aH3UyP)]].(:0)
+	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor$CollectAllTestClassesExecutor.processAllTestClasses(JUnitPlatformTestClassProcessor.java:110)
+	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor$CollectAllTestClassesExecutor.access$000(JUnitPlatformTestClassProcessor.java:90)
+	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor.stop(JUnitPlatformTestClassProcessor.java:85)
+	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.stop(SuiteTestClassProcessor.java:62)
+	at [[Reflective call: 4 frames collapsed (https://goo.gl/aH3UyP)]].(:0)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:36)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:33)
+	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:94)
+	at com.sun.proxy.$Proxy2.stop(Unknown Source)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker$3.run(TestWorker.java:193)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.executeAndMaintainThreadName(TestWorker.java:129)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:100)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:60)
+	at org.gradle.process.internal.worker.child.ActionExecutionWorker.execute(ActionExecutionWorker.java:56)
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:113)
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:65)
+	at app//worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)
+	at app//worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
+</pre>
+</span>
+</div>
+<div class="test">
+<a name="simple()[7]"></a>
+<h3 class="failures">D:\a\key\key\key.java\pipelineTests\simple\expected\07_PrepareObjectBuilder\Test.java</h3>
+<span class="code">
+<pre>diff (-expected +actual):
+    @@ -32,25 +32,35 @@
+             if (!@($classInitialized)) {
+                 if (!@($classInitializationInProgress)) {
+                     if (!@(this.$classPrepared)) {
+    +                    //Created by ClassInitializeMethodBuilder.java:207
+                         @($clprepare());
+                     }
+                     if (@($classErroneous)) {
+                         throw new java.lang.NoClassDefFoundError();
+                     }
+    +                //Created by ClassInitializeMethodBuilder.java:231
+                     @($classInitializationInProgress) = true;
+                     try {
+                         @(java.lang.Object.$clinit());
+    -                } catch (java.lang.Error err) {
+    -                    @($classInitializationInProgress) = false;
+    +                }//Created by ClassInitializeMethodBuilder.java:182
+    +                 catch (java.lang.Error err) {
+    +                    //Created by ClassInitializeMethodBuilder.java:145
+    +                    @($classInitializationInProgress) = true;
+    +                    //Created by ClassInitializeMethodBuilder.java:146
+                         @($classErroneous) = true;
+                         throw err;
+                     } catch (java.lang.Throwable twa) {
+    -                    @($classInitializationInProgress) = false;
+    +                    //Created by ClassInitializeMethodBuilder.java:145
+    +                    @($classInitializationInProgress) = true;
+    +                    //Created by ClassInitializeMethodBuilder.java:146
+                         @($classErroneous) = true;
+                         throw new java.lang.ExceptionInInitializerError(twa);
+                     }
+    +                //Created by ClassInitializeMethodBuilder.java:236
+                     @($classInitializationInProgress) = false;
+    +                //Created by ClassInitializeMethodBuilder.java:237
+                     @($classErroneous) = false;
+    +                //Created by ClassInitializeMethodBuilder.java:238
+                     @($classInitialized) = true;
+                 }
+             }
+    @@ -90,25 +100,35 @@
+             if (!@($classInitialized)) {
+                 if (!@($classInitializationInProgress)) {
+                     if (!@(this.$classPrepared)) {
+    +                    //Created by ClassInitializeMethodBuilder.java:207
+                         @($clprepare());
+                     }
+                     if (@($classErroneous)) {
+                         throw new java.lang.NoClassDefFoundError();
+                     }
+    +                //Created by ClassInitializeMethodBuilder.java:231
+                     @($classInitializationInProgress) = true;
+                     try {
+                         @(Test.$clinit());
+    -                } catch (java.lang.Error err) {
+    -                    @($classInitializationInProgress) = false;
+    +                }//Created by ClassInitializeMethodBuilder.java:182
+    +                 catch (java.lang.Error err) {
+    +                    //Created by ClassInitializeMethodBuilder.java:145
+    +                    @($classInitializationInProgress) = true;
+    +                    //Created by ClassInitializeMethodBuilder.java:146
+                         @($classErroneous) = true;
+                         throw err;
+                     } catch (java.lang.Throwable twa) {
+    -                    @($classInitializationInProgress) = false;
+    +                    //Created by ClassInitializeMethodBuilder.java:145
+    +                    @($classInitializationInProgress) = true;
+    +                    //Created by ClassInitializeMethodBuilder.java:146
+                         @($classErroneous) = true;
+                         throw new java.lang.ExceptionInInitializerError(twa);
+                     }
+    +                //Created by ClassInitializeMethodBuilder.java:236
+                     @($classInitializationInProgress) = false;
+    +                //Created by ClassInitializeMethodBuilder.java:237
+                     @($classErroneous) = false;
+    +                //Created by ClassInitializeMethodBuilder.java:238
+                     @($classInitialized) = true;
+                 }
+             }
+	at app//KeyJavaPipelineTest.checkEqualFile(KeyJavaPipelineTest.java:100)
+	at app//KeyJavaPipelineTest.lambda$generatePipelineTests$2(KeyJavaPipelineTest.java:89)
+	at [[Testing framework: 23 frames collapsed (https://goo.gl/aH3UyP)]].(:0)
+	at java.base@11.0.18/java.util.Optional.ifPresent(Optional.java:183)
+	at [[Testing framework: 13 frames collapsed (https://goo.gl/aH3UyP)]].(:0)
+	at java.base@11.0.18/java.util.ArrayList.forEach(ArrayList.java:1541)
+	at [[Testing framework: 9 frames collapsed (https://goo.gl/aH3UyP)]].(:0)
+	at java.base@11.0.18/java.util.ArrayList.forEach(ArrayList.java:1541)
+	at [[Testing framework: 20 frames collapsed (https://goo.gl/aH3UyP)]].(:0)
+	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor$CollectAllTestClassesExecutor.processAllTestClasses(JUnitPlatformTestClassProcessor.java:110)
+	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor$CollectAllTestClassesExecutor.access$000(JUnitPlatformTestClassProcessor.java:90)
+	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor.stop(JUnitPlatformTestClassProcessor.java:85)
+	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.stop(SuiteTestClassProcessor.java:62)
+	at [[Reflective call: 4 frames collapsed (https://goo.gl/aH3UyP)]].(:0)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:36)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:33)
+	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:94)
+	at com.sun.proxy.$Proxy2.stop(Unknown Source)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker$3.run(TestWorker.java:193)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.executeAndMaintainThreadName(TestWorker.java:129)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:100)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:60)
+	at org.gradle.process.internal.worker.child.ActionExecutionWorker.execute(ActionExecutionWorker.java:56)
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:113)
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:65)
+	at app//worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)
+	at app//worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
+</pre>
+</span>
+</div>
+<div class="test">
+<a name="simple()[8]"></a>
+<h3 class="failures">D:\a\key\key\key.java\pipelineTests\simple\expected\08_CreateBuilder\Test.java</h3>
+<span class="code">
+<pre>diff (-expected +actual):
+    @@ -32,25 +32,35 @@
+             if (!@($classInitialized)) {
+                 if (!@($classInitializationInProgress)) {
+                     if (!@(this.$classPrepared)) {
+    +                    //Created by ClassInitializeMethodBuilder.java:207
+                         @($clprepare());
+                     }
+                     if (@($classErroneous)) {
+                         throw new java.lang.NoClassDefFoundError();
+                     }
+    +                //Created by ClassInitializeMethodBuilder.java:231
+                     @($classInitializationInProgress) = true;
+                     try {
+                         @(java.lang.Object.$clinit());
+    -                } catch (java.lang.Error err) {
+    -                    @($classInitializationInProgress) = false;
+    +                }//Created by ClassInitializeMethodBuilder.java:182
+    +                 catch (java.lang.Error err) {
+    +                    //Created by ClassInitializeMethodBuilder.java:145
+    +                    @($classInitializationInProgress) = true;
+    +                    //Created by ClassInitializeMethodBuilder.java:146
+                         @($classErroneous) = true;
+                         throw err;
+                     } catch (java.lang.Throwable twa) {
+    -                    @($classInitializationInProgress) = false;
+    +                    //Created by ClassInitializeMethodBuilder.java:145
+    +                    @($classInitializationInProgress) = true;
+    +                    //Created by ClassInitializeMethodBuilder.java:146
+                         @($classErroneous) = true;
+                         throw new java.lang.ExceptionInInitializerError(twa);
+                     }
+    +                //Created by ClassInitializeMethodBuilder.java:236
+                     @($classInitializationInProgress) = false;
+    +                //Created by ClassInitializeMethodBuilder.java:237
+                     @($classErroneous) = false;
+    +                //Created by ClassInitializeMethodBuilder.java:238
+                     @($classInitialized) = true;
+                 }
+             }
+    @@ -63,6 +73,7 @@
+         }
+     
+         public Test $create() {
+    +        //Created by CreateBuilder.java:53
+             this.$initialized = false;
+             $prepareEnter();
+             return this;
+    @@ -96,25 +107,35 @@
+             if (!@($classInitialized)) {
+                 if (!@($classInitializationInProgress)) {
+                     if (!@(this.$classPrepared)) {
+    +                    //Created by ClassInitializeMethodBuilder.java:207
+                         @($clprepare());
+                     }
+                     if (@($classErroneous)) {
+                         throw new java.lang.NoClassDefFoundError();
+                     }
+    +                //Created by ClassInitializeMethodBuilder.java:231
+                     @($classInitializationInProgress) = true;
+                     try {
+                         @(Test.$clinit());
+    -                } catch (java.lang.Error err) {
+    -                    @($classInitializationInProgress) = false;
+    +                }//Created by ClassInitializeMethodBuilder.java:182
+    +                 catch (java.lang.Error err) {
+    +                    //Created by ClassInitializeMethodBuilder.java:145
+    +                    @($classInitializationInProgress) = true;
+    +                    //Created by ClassInitializeMethodBuilder.java:146
+                         @($classErroneous) = true;
+                         throw err;
+                     } catch (java.lang.Throwable twa) {
+    -                    @($classInitializationInProgress) = false;
+    +                    //Created by ClassInitializeMethodBuilder.java:145
+    +                    @($classInitializationInProgress) = true;
+    +                    //Created by ClassInitializeMethodBuilder.java:146
+                         @($classErroneous) = true;
+                         throw new java.lang.ExceptionInInitializerError(twa);
+                     }
+    +                //Created by ClassInitializeMethodBuilder.java:236
+                     @($classInitializationInProgress) = false;
+    +                //Created by ClassInitializeMethodBuilder.java:237
+                     @($classErroneous) = false;
+    +                //Created by ClassInitializeMethodBuilder.java:238
+                     @($classInitialized) = true;
+                 }
+             }
+    @@ -127,6 +148,7 @@
+         }
+     
+         public SubClass $create() {
+    +        //Created by CreateBuilder.java:53
+             this.$initialized = false;
+             $prepareEnter();
+             return this;
+	at app//KeyJavaPipelineTest.checkEqualFile(KeyJavaPipelineTest.java:100)
+	at app//KeyJavaPipelineTest.lambda$generatePipelineTests$2(KeyJavaPipelineTest.java:89)
+	at [[Testing framework: 23 frames collapsed (https://goo.gl/aH3UyP)]].(:0)
+	at java.base@11.0.18/java.util.Optional.ifPresent(Optional.java:183)
+	at [[Testing framework: 13 frames collapsed (https://goo.gl/aH3UyP)]].(:0)
+	at java.base@11.0.18/java.util.ArrayList.forEach(ArrayList.java:1541)
+	at [[Testing framework: 9 frames collapsed (https://goo.gl/aH3UyP)]].(:0)
+	at java.base@11.0.18/java.util.ArrayList.forEach(ArrayList.java:1541)
+	at [[Testing framework: 20 frames collapsed (https://goo.gl/aH3UyP)]].(:0)
+	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor$CollectAllTestClassesExecutor.processAllTestClasses(JUnitPlatformTestClassProcessor.java:110)
+	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor$CollectAllTestClassesExecutor.access$000(JUnitPlatformTestClassProcessor.java:90)
+	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor.stop(JUnitPlatformTestClassProcessor.java:85)
+	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.stop(SuiteTestClassProcessor.java:62)
+	at [[Reflective call: 4 frames collapsed (https://goo.gl/aH3UyP)]].(:0)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:36)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:33)
+	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:94)
+	at com.sun.proxy.$Proxy2.stop(Unknown Source)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker$3.run(TestWorker.java:193)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.executeAndMaintainThreadName(TestWorker.java:129)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:100)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:60)
+	at org.gradle.process.internal.worker.child.ActionExecutionWorker.execute(ActionExecutionWorker.java:56)
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:113)
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:65)
+	at app//worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)
+	at app//worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
+</pre>
+</span>
+</div>
+<div class="test">
+<a name="simple()[9]"></a>
+<h3 class="failures">D:\a\key\key\key.java\pipelineTests\simple\expected\09_CreateObjectBuilder\Test.java</h3>
+<span class="code">
+<pre>diff (-expected +actual):
+    @@ -32,25 +32,35 @@
+             if (!@($classInitialized)) {
+                 if (!@($classInitializationInProgress)) {
+                     if (!@(this.$classPrepared)) {
+    +                    //Created by ClassInitializeMethodBuilder.java:207
+                         @($clprepare());
+                     }
+                     if (@($classErroneous)) {
+                         throw new java.lang.NoClassDefFoundError();
+                     }
+    +                //Created by ClassInitializeMethodBuilder.java:231
+                     @($classInitializationInProgress) = true;
+                     try {
+                         @(java.lang.Object.$clinit());
+    -                } catch (java.lang.Error err) {
+    -                    @($classInitializationInProgress) = false;
+    +                }//Created by ClassInitializeMethodBuilder.java:182
+    +                 catch (java.lang.Error err) {
+    +                    //Created by ClassInitializeMethodBuilder.java:145
+    +                    @($classInitializationInProgress) = true;
+    +                    //Created by ClassInitializeMethodBuilder.java:146
+                         @($classErroneous) = true;
+                         throw err;
+                     } catch (java.lang.Throwable twa) {
+    -                    @($classInitializationInProgress) = false;
+    +                    //Created by ClassInitializeMethodBuilder.java:145
+    +                    @($classInitializationInProgress) = true;
+    +                    //Created by ClassInitializeMethodBuilder.java:146
+                         @($classErroneous) = true;
+                         throw new java.lang.ExceptionInInitializerError(twa);
+                     }
+    +                //Created by ClassInitializeMethodBuilder.java:236
+                     @($classInitializationInProgress) = false;
+    +                //Created by ClassInitializeMethodBuilder.java:237
+                     @($classErroneous) = false;
+    +                //Created by ClassInitializeMethodBuilder.java:238
+                     @($classInitialized) = true;
+                 }
+             }
+    @@ -63,6 +73,7 @@
+         }
+     
+         public Test $create() {
+    +        //Created by CreateBuilder.java:53
+             this.$initialized = false;
+             $prepareEnter();
+             return this;
+    @@ -70,6 +81,7 @@
+     
+         public static Test $createObject() {
+             Test __NEW__;
+    +        //Created by CreateObjectBuilder.java:67
+             __NEW__ = Test.$allocate();
+     
+             return __NEW__;
+    @@ -103,25 +115,35 @@
+             if (!@($classInitialized)) {
+                 if (!@($classInitializationInProgress)) {
+                     if (!@(this.$classPrepared)) {
+    +                    //Created by ClassInitializeMethodBuilder.java:207
+                         @($clprepare());
+                     }
+                     if (@($classErroneous)) {
+                         throw new java.lang.NoClassDefFoundError();
+                     }
+    +                //Created by ClassInitializeMethodBuilder.java:231
+                     @($classInitializationInProgress) = true;
+                     try {
+                         @(Test.$clinit());
+    -                } catch (java.lang.Error err) {
+    -                    @($classInitializationInProgress) = false;
+    +                }//Created by ClassInitializeMethodBuilder.java:182
+    +                 catch (java.lang.Error err) {
+    +                    //Created by ClassInitializeMethodBuilder.java:145
+    +                    @($classInitializationInProgress) = true;
+    +                    //Created by ClassInitializeMethodBuilder.java:146
+                         @($classErroneous) = true;
+                         throw err;
+                     } catch (java.lang.Throwable twa) {
+    -                    @($classInitializationInProgress) = false;
+    +                    //Created by ClassInitializeMethodBuilder.java:145
+    +                    @($classInitializationInProgress) = true;
+    +                    //Created by ClassInitializeMethodBuilder.java:146
+                         @($classErroneous) = true;
+                         throw new java.lang.ExceptionInInitializerError(twa);
+                     }
+    +                //Created by ClassInitializeMethodBuilder.java:236
+                     @($classInitializationInProgress) = false;
+    +                //Created by ClassInitializeMethodBuilder.java:237
+                     @($classErroneous) = false;
+    +                //Created by ClassInitializeMethodBuilder.java:238
+                     @($classInitialized) = true;
+                 }
+             }
+    @@ -134,6 +156,7 @@
+         }
+     
+         public SubClass $create() {
+    +        //Created by CreateBuilder.java:53
+             this.$initialized = false;
+             $prepareEnter();
+             return this;
+    @@ -141,6 +164,7 @@
+     
+         public static SubClass $createObject() {
+             SubClass __NEW__;
+    +        //Created by CreateObjectBuilder.java:67
+             __NEW__ = SubClass.$allocate();
+     
+             return __NEW__;
+	at app//KeyJavaPipelineTest.checkEqualFile(KeyJavaPipelineTest.java:100)
+	at app//KeyJavaPipelineTest.lambda$generatePipelineTests$2(KeyJavaPipelineTest.java:89)
+	at [[Testing framework: 23 frames collapsed (https://goo.gl/aH3UyP)]].(:0)
+	at java.base@11.0.18/java.util.Optional.ifPresent(Optional.java:183)
+	at [[Testing framework: 13 frames collapsed (https://goo.gl/aH3UyP)]].(:0)
+	at java.base@11.0.18/java.util.ArrayList.forEach(ArrayList.java:1541)
+	at [[Testing framework: 9 frames collapsed (https://goo.gl/aH3UyP)]].(:0)
+	at java.base@11.0.18/java.util.ArrayList.forEach(ArrayList.java:1541)
+	at [[Testing framework: 20 frames collapsed (https://goo.gl/aH3UyP)]].(:0)
+	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor$CollectAllTestClassesExecutor.processAllTestClasses(JUnitPlatformTestClassProcessor.java:110)
+	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor$CollectAllTestClassesExecutor.access$000(JUnitPlatformTestClassProcessor.java:90)
+	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor.stop(JUnitPlatformTestClassProcessor.java:85)
+	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.stop(SuiteTestClassProcessor.java:62)
+	at [[Reflective call: 4 frames collapsed (https://goo.gl/aH3UyP)]].(:0)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:36)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:33)
+	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:94)
+	at com.sun.proxy.$Proxy2.stop(Unknown Source)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker$3.run(TestWorker.java:193)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.executeAndMaintainThreadName(TestWorker.java:129)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:100)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:60)
+	at org.gradle.process.internal.worker.child.ActionExecutionWorker.execute(ActionExecutionWorker.java:56)
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:113)
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:65)
+	at app//worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)
+	at app//worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
+</pre>
+</span>
+</div>
+</div>
+<div id="tab1" class="tab">
+<h2>Tests</h2>
+<table>
+<thead>
+<tr>
+<th>Test</th>
+<th>Method name</th>
+<th>Duration</th>
+<th>Result</th>
+</tr>
+</thead>
+<tr>
+<td class="failures">D:\a\key\key\key.java\pipelineTests\simple\expected\10_LocalClassTransformation\Test.java</td>
+<td class="failures">simple()[10]</td>
+<td class="failures">0.066s</td>
+<td class="failures">failed</td>
+</tr>
+<tr>
+<td class="failures">D:\a\key\key\key.java\pipelineTests\simple\expected\11_ConstantStringExpressionEvaluator\Test.java</td>
+<td class="failures">simple()[11]</td>
+<td class="failures">0.063s</td>
+<td class="failures">failed</td>
+</tr>
+<tr>
+<td class="success">D:\a\key\key\key.java\pipelineTests\simple\expected\01_JMLTransformer\Test.java</td>
+<td class="success">simple()[1]</td>
+<td class="success">0.039s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">D:\a\key\key\key.java\pipelineTests\simple\expected\02_ImplicitFieldAdder\Test.java</td>
+<td class="success">simple()[2]</td>
+<td class="success">0.002s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">D:\a\key\key\key.java\pipelineTests\simple\expected\03_InstanceAllocationMethodBuilder\Test.java</td>
+<td class="success">simple()[3]</td>
+<td class="success">0.001s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">D:\a\key\key\key.java\pipelineTests\simple\expected\04_ConstructorNormalformBuilder\Test.java</td>
+<td class="success">simple()[4]</td>
+<td class="success">0.002s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">D:\a\key\key\key.java\pipelineTests\simple\expected\05_ClassPreparationMethodBuilder\Test.java</td>
+<td class="success">simple()[5]</td>
+<td class="success">0.003s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="failures">D:\a\key\key\key.java\pipelineTests\simple\expected\06_ClassInitializeMethodBuilder\Test.java</td>
+<td class="failures">simple()[6]</td>
+<td class="failures">0.132s</td>
+<td class="failures">failed</td>
+</tr>
+<tr>
+<td class="failures">D:\a\key\key\key.java\pipelineTests\simple\expected\07_PrepareObjectBuilder\Test.java</td>
+<td class="failures">simple()[7]</td>
+<td class="failures">0.088s</td>
+<td class="failures">failed</td>
+</tr>
+<tr>
+<td class="failures">D:\a\key\key\key.java\pipelineTests\simple\expected\08_CreateBuilder\Test.java</td>
+<td class="failures">simple()[8]</td>
+<td class="failures">0.061s</td>
+<td class="failures">failed</td>
+</tr>
+<tr>
+<td class="failures">D:\a\key\key\key.java\pipelineTests\simple\expected\09_CreateObjectBuilder\Test.java</td>
+<td class="failures">simple()[9]</td>
+<td class="failures">0.085s</td>
+<td class="failures">failed</td>
+</tr>
+</table>
+</div>
+</div>
+<div id="footer">
+<p>
+<div>
+<label class="hidden" id="label-for-line-wrapping-toggle" for="line-wrapping-toggle">Wrap lines
+<input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
+</label>
+</div>Generated by 
+<a href="http://www.gradle.org">Gradle 8.0.2</a> at Apr 18, 2023, 1:27:26 AM</p>
+</div>
+</div>
+</body>
+</html>
