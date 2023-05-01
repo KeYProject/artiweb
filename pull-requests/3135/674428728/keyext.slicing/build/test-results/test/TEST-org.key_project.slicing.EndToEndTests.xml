@@ -1,0 +1,323 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="org.key_project.slicing.EndToEndTests" tests="11" skipped="0" failures="0" errors="0" timestamp="2023-05-01T21:26:20" hostname="fv-az593-968" time="301.064">
+  <properties/>
+  <testcase name="sliceIfThenElseSplit()" classname="org.key_project.slicing.EndToEndTests" time="65.149"/>
+  <testcase name="deduplicateChecksMergabilityCorrectly()" classname="org.key_project.slicing.EndToEndTests" time="10.487"/>
+  <testcase name="sliceDuplicatesAway()" classname="org.key_project.slicing.EndToEndTests" time="41.692"/>
+  <testcase name="sliceMultipleIterations()" classname="org.key_project.slicing.EndToEndTests" time="78.857"/>
+  <testcase name="sliceDuplicatesAwayOpenGoals()" classname="org.key_project.slicing.EndToEndTests" time="40.812"/>
+  <testcase name="sliceCutExample()" classname="org.key_project.slicing.EndToEndTests" time="10.062"/>
+  <testcase name="sliceAgathaWithOpenGoal()" classname="org.key_project.slicing.EndToEndTests" time="10.075"/>
+  <testcase name="sliceSimpleSMT()" classname="org.key_project.slicing.EndToEndTests" time="0.001"/>
+  <testcase name="sliceWithOpenGoal()" classname="org.key_project.slicing.EndToEndTests" time="20.148"/>
+  <testcase name="sliceAgatha()" classname="org.key_project.slicing.EndToEndTests" time="10.331"/>
+  <testcase name="sliceJavaProof()" classname="org.key_project.slicing.EndToEndTests" time="13.445"/>
+  <system-out><![CDATA[[21:26:20.239] ?[34mINFO ?[0;39m ?[36mEndToEndTests?[0;39m - Loading /home/runner/work/key/key/keyext.slicing/src/test/resources/testcase/ifThenElseSplit.proof
+[21:26:20.387] ?[31mWARN ?[0;39m ?[36mProofIndependentSettings?[0;39m - The settings in /home/runner/.key/proofIndependentSettings.props are *not* read due to flag 'key.disregardSettings'
+[21:26:20.397] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Loading environment from src/test/resources/testcase/ifThenElseSplit.proof
+[21:26:20.589] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Creating init config
+[21:26:20.609] ?[31mWARN ?[0;39m ?[36mProofSettings?[0;39m - The settings in /home/runner/.key/proof-settings.props are *not* read.
+[21:26:31.951] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Replaying proof ifThenElseSplit.proof
+[21:26:34.304] ?[34mINFO ?[0;39m ?[36mKeyStrokeSettings?[0;39m - Save keyboard shortcuts to: /home/runner/.key/keystrokes.properties
+[21:26:34.418] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Loading environment from /tmp/proof10136204676026372045.proof
+[21:26:34.422] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Creating init config
+[21:26:38.534] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Replaying proof proof10136204676026372045.proof
+[21:26:38.561] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Loading environment from /tmp/KeYslice6227143199621901307/ifThenElseSplit_slice1.proof
+[21:26:38.564] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Creating init config
+[21:26:42.357] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Replaying proof ifThenElseSplit_slice1.proof
+[21:26:42.369] ?[34mINFO ?[0;39m ?[36mEndToEndTests?[0;39m - Loading /home/runner/work/key/key/keyext.slicing/src/test/resources/testcase/ifThenElseSplit.proof
+[21:26:42.371] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Loading environment from src/test/resources/testcase/ifThenElseSplit.proof
+[21:26:42.373] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Creating init config
+[21:26:46.055] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Replaying proof ifThenElseSplit.proof
+[21:26:46.079] ?[34mINFO ?[0;39m ?[36mDependencyAnalyzer?[0;39m - merging 2 and 3
+[21:26:46.083] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Loading environment from /tmp/proof16227346668152004698.proof
+[21:26:46.086] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Creating init config
+[21:26:49.720] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Replaying proof proof16227346668152004698.proof
+[21:26:49.744] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Loading environment from /tmp/KeYslice14120184136226809681/ifThenElseSplit_slice1.proof
+[21:26:49.748] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Creating init config
+[21:26:53.364] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Replaying proof ifThenElseSplit_slice1.proof
+[21:26:53.375] ?[34mINFO ?[0;39m ?[36mEndToEndTests?[0;39m - Loading /tmp/KeYslice14120184136226809681/ifThenElseSplit_slice1.proof
+[21:26:53.376] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Loading environment from /tmp/KeYslice14120184136226809681/ifThenElseSplit_slice1.proof
+[21:26:53.378] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Creating init config
+[21:26:56.841] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Replaying proof ifThenElseSplit_slice1.proof
+[21:26:56.854] ?[34mINFO ?[0;39m ?[36mDependencyAnalyzer?[0;39m - merging 3 and 4
+[21:26:56.857] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Loading environment from /tmp/proof2429187505254877960.proof
+[21:26:56.859] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Creating init config
+[21:27:00.380] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Replaying proof proof2429187505254877960.proof
+[21:27:00.389] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Loading environment from /tmp/KeYslice6223700920377132813/ifThenElseSplit_slice2.proof
+[21:27:00.391] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Creating init config
+[21:27:04.025] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Replaying proof ifThenElseSplit_slice2.proof
+[21:27:04.034] ?[34mINFO ?[0;39m ?[36mEndToEndTests?[0;39m - Loading /tmp/KeYslice6223700920377132813/ifThenElseSplit_slice2.proof
+[21:27:04.034] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Loading environment from /tmp/KeYslice6223700920377132813/ifThenElseSplit_slice2.proof
+[21:27:04.036] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Creating init config
+[21:27:07.657] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Replaying proof ifThenElseSplit_slice2.proof
+[21:27:07.668] ?[34mINFO ?[0;39m ?[36mDependencyAnalyzer?[0;39m - merging 4 and 5
+[21:27:07.673] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Loading environment from /tmp/proof11681443868819071477.proof
+[21:27:07.676] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Creating init config
+[21:27:11.582] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Replaying proof proof11681443868819071477.proof
+[21:27:11.590] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Loading environment from /tmp/KeYslice6802659383576242860/ifThenElseSplit_slice3.proof
+[21:27:11.592] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Creating init config
+[21:27:15.024] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Replaying proof ifThenElseSplit_slice3.proof
+[21:27:15.036] ?[34mINFO ?[0;39m ?[36mEndToEndTests?[0;39m - Loading /tmp/KeYslice6802659383576242860/ifThenElseSplit_slice3.proof
+[21:27:15.036] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Loading environment from /tmp/KeYslice6802659383576242860/ifThenElseSplit_slice3.proof
+[21:27:15.038] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Creating init config
+[21:27:18.497] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Replaying proof ifThenElseSplit_slice3.proof
+[21:27:18.506] ?[34mINFO ?[0;39m ?[36mDependencyAnalyzer?[0;39m - merging 5 and 6
+[21:27:18.510] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Loading environment from /tmp/proof17917160442110717103.proof
+[21:27:18.512] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Creating init config
+[21:27:21.897] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Replaying proof proof17917160442110717103.proof
+[21:27:21.904] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Loading environment from /tmp/KeYslice16972150321165370617/ifThenElseSplit_slice4.proof
+[21:27:21.906] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Creating init config
+[21:27:25.371] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Replaying proof ifThenElseSplit_slice4.proof
+[21:27:25.383] ?[34mINFO ?[0;39m ?[36mEndToEndTests?[0;39m - Loading /home/runner/work/key/key/keyext.slicing/src/test/resources/testcase/deduplicateCheck4.proof
+[21:27:25.384] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Loading environment from src/test/resources/testcase/deduplicateCheck4.proof
+[21:27:25.386] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Creating init config
+[21:27:28.836] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Replaying proof deduplicateCheck4.proof
+[21:27:28.872] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Loading environment from /tmp/proof17737150827895769268.proof
+[21:27:28.874] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Creating init config
+[21:27:32.350] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Replaying proof proof17737150827895769268.proof
+[21:27:32.367] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Loading environment from /tmp/KeYslice14213123507236987920/deduplicateCheck4_slice1.proof
+[21:27:32.369] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Creating init config
+[21:27:35.858] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Replaying proof deduplicateCheck4_slice1.proof
+[21:27:35.872] ?[34mINFO ?[0;39m ?[36mEndToEndTests?[0;39m - Loading /home/runner/work/key/key/keyext.slicing/src/test/resources/testcase/exampleDuplicate.proof
+[21:27:35.873] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Loading environment from src/test/resources/testcase/exampleDuplicate.proof
+[21:27:35.874] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Creating init config
+[21:27:39.381] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Replaying proof exampleDuplicate.proof
+[21:27:39.401] ?[34mINFO ?[0;39m ?[36mDependencyAnalyzer?[0;39m - merging 2 and 3
+[21:27:39.403] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Loading environment from /tmp/proof9606820038436008832.proof
+[21:27:39.406] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Creating init config
+[21:27:42.870] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Replaying proof proof9606820038436008832.proof
+[21:27:42.883] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Loading environment from /tmp/KeYslice3053449131093728223/exampleDuplicate_slice1.proof
+[21:27:42.885] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Creating init config
+[21:27:46.272] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Replaying proof exampleDuplicate_slice1.proof
+[21:27:46.286] ?[34mINFO ?[0;39m ?[36mEndToEndTests?[0;39m - Loading /tmp/KeYslice3053449131093728223/exampleDuplicate_slice1.proof
+[21:27:46.287] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Loading environment from /tmp/KeYslice3053449131093728223/exampleDuplicate_slice1.proof
+[21:27:46.289] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Creating init config
+[21:27:49.725] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Replaying proof exampleDuplicate_slice1.proof
+[21:27:49.744] ?[34mINFO ?[0;39m ?[36mDependencyAnalyzer?[0;39m - merging 3 and 4
+[21:27:49.748] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Loading environment from /tmp/proof15666393484289987236.proof
+[21:27:49.750] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Creating init config
+[21:27:53.113] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Replaying proof proof15666393484289987236.proof
+[21:27:53.127] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Loading environment from /tmp/KeYslice13383966247822524184/exampleDuplicate_slice2.proof
+[21:27:53.129] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Creating init config
+[21:27:56.479] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Replaying proof exampleDuplicate_slice2.proof
+[21:27:56.504] ?[34mINFO ?[0;39m ?[36mEndToEndTests?[0;39m - Loading /tmp/KeYslice13383966247822524184/exampleDuplicate_slice2.proof
+[21:27:56.505] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Loading environment from /tmp/KeYslice13383966247822524184/exampleDuplicate_slice2.proof
+[21:27:56.509] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Creating init config
+[21:27:59.941] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Replaying proof exampleDuplicate_slice2.proof
+[21:27:59.955] ?[34mINFO ?[0;39m ?[36mDependencyAnalyzer?[0;39m - merging 4 and 5
+[21:27:59.957] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Loading environment from /tmp/proof18057402811433450760.proof
+[21:27:59.959] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Creating init config
+[21:28:03.364] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Replaying proof proof18057402811433450760.proof
+[21:28:03.379] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Loading environment from /tmp/KeYslice310968679075809538/exampleDuplicate_slice3.proof
+[21:28:03.381] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Creating init config
+[21:28:06.853] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Replaying proof exampleDuplicate_slice3.proof
+[21:28:06.871] ?[34mINFO ?[0;39m ?[36mEndToEndTests?[0;39m - Loading /tmp/KeYslice310968679075809538/exampleDuplicate_slice3.proof
+[21:28:06.872] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Loading environment from /tmp/KeYslice310968679075809538/exampleDuplicate_slice3.proof
+[21:28:06.874] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Creating init config
+[21:28:10.507] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Replaying proof exampleDuplicate_slice3.proof
+[21:28:10.531] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Loading environment from /tmp/proof4474625938302799372.proof
+[21:28:10.538] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Creating init config
+[21:28:14.013] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Replaying proof proof4474625938302799372.proof
+[21:28:14.026] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Loading environment from /tmp/KeYslice3974456254475935382/exampleDuplicate_slice4.proof
+[21:28:14.029] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Creating init config
+[21:28:17.549] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Replaying proof exampleDuplicate_slice4.proof
+[21:28:17.564] ?[34mINFO ?[0;39m ?[36mEndToEndTests?[0;39m - Loading /home/runner/work/key/key/keyext.slicing/src/test/resources/testcase/../../../../../key.ui/examples/firstTouch/05-ReverseArray/reverseArray.proof
+[21:28:17.564] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Loading environment from src/test/resources/testcase/../../../../../key.ui/examples/firstTouch/05-ReverseArray/reverseArray.proof
+[21:28:17.566] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Creating init config
+[21:28:21.563] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Replaying proof ReverseArray[ReverseArray::reverse()].JML normal_behavior operation contract.0
+[21:28:24.747] ?[34mINFO ?[0;39m ?[36mDependencyAnalyzer?[0;39m - merging 2591 and 3795
+[21:28:24.749] ?[34mINFO ?[0;39m ?[36mDependencyAnalyzer?[0;39m - merging 3958 and 4306
+[21:28:24.784] ?[34mINFO ?[0;39m ?[36mDependencyAnalyzer?[0;39m - merging 1010 and 4663
+[21:28:24.797] ?[34mINFO ?[0;39m ?[36mDependencyAnalyzer?[0;39m - merging 1354 and 4678
+[21:28:24.824] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Loading environment from /tmp/proof8283464511695025497.proof
+[21:28:24.827] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Creating init config
+[21:28:28.906] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Replaying proof ReverseArray[ReverseArray::reverse()].JML normal_behavior operation contract.0
+[21:28:31.010] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Loading environment from /tmp/KeYslice1771893337054672179/reverseArray_slice1.proof
+[21:28:31.012] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Creating init config
+[21:28:34.849] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Replaying proof ReverseArray[ReverseArray::reverse()].JML normal_behavior operation contract.0
+[21:28:36.827] ?[34mINFO ?[0;39m ?[36mEndToEndTests?[0;39m - Loading /tmp/KeYslice1771893337054672179/reverseArray_slice1.proof
+[21:28:36.828] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Loading environment from /tmp/KeYslice1771893337054672179/reverseArray_slice1.proof
+[21:28:36.830] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Creating init config
+[21:28:40.465] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Replaying proof ReverseArray[ReverseArray::reverse()].JML normal_behavior operation contract.0
+[21:28:42.064] ?[34mINFO ?[0;39m ?[36mDependencyAnalyzer?[0;39m - merging 2219 and 2914
+[21:28:42.091] ?[34mINFO ?[0;39m ?[36mDependencyAnalyzer?[0;39m - merging 943 and 3370
+[21:28:42.092] ?[34mINFO ?[0;39m ?[36mDependencyAnalyzer?[0;39m - merging 2973 and 3148
+[21:28:42.099] ?[34mINFO ?[0;39m ?[36mDependencyAnalyzer?[0;39m - merging 880 and 3479
+[21:28:42.104] ?[34mINFO ?[0;39m ?[36mDependencyAnalyzer?[0;39m - merging 1281 and 3384
+[21:28:42.107] ?[34mINFO ?[0;39m ?[36mDependencyAnalyzer?[0;39m - merging 947 and 3782
+[21:28:42.118] ?[34mINFO ?[0;39m ?[36mDependencyAnalyzer?[0;39m - merging 879 and 3473
+[21:28:42.231] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Loading environment from /tmp/proof5504070719593980174.proof
+[21:28:42.233] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Creating init config
+[21:28:45.896] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Replaying proof ReverseArray[ReverseArray::reverse()].JML normal_behavior operation contract.0
+[21:28:47.018] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Loading environment from /tmp/KeYslice8592116482787141688/reverseArray_slice2.proof
+[21:28:47.021] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Creating init config
+[21:28:50.835] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Replaying proof ReverseArray[ReverseArray::reverse()].JML normal_behavior operation contract.0
+[21:28:52.244] ?[34mINFO ?[0;39m ?[36mEndToEndTests?[0;39m - Loading /tmp/KeYslice8592116482787141688/reverseArray_slice2.proof
+[21:28:52.246] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Loading environment from /tmp/KeYslice8592116482787141688/reverseArray_slice2.proof
+[21:28:52.247] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Creating init config
+[21:28:55.858] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Replaying proof ReverseArray[ReverseArray::reverse()].JML normal_behavior operation contract.0
+[21:28:57.235] ?[34mINFO ?[0;39m ?[36mDependencyAnalyzer?[0;39m - merging 2220 and 2914
+[21:28:57.240] ?[34mINFO ?[0;39m ?[36mDependencyAnalyzer?[0;39m - merging 882 and 3469
+[21:28:57.247] ?[34mINFO ?[0;39m ?[36mDependencyAnalyzer?[0;39m - merging 883 and 3474
+[21:28:57.250] ?[34mINFO ?[0;39m ?[36mDependencyAnalyzer?[0;39m - merging 2973 and 3147
+[21:28:57.252] ?[34mINFO ?[0;39m ?[36mDependencyAnalyzer?[0;39m - merging 946 and 3368
+[21:28:57.256] ?[34mINFO ?[0;39m ?[36mDependencyAnalyzer?[0;39m - merging 781 and 3569
+[21:28:57.264] ?[34mINFO ?[0;39m ?[36mDependencyAnalyzer?[0;39m - merging 1301 and 3381
+[21:28:57.267] ?[34mINFO ?[0;39m ?[36mDependencyAnalyzer?[0;39m - merging 949 and 3776
+[21:28:57.272] ?[34mINFO ?[0;39m ?[36mDependencyAnalyzer?[0;39m - merging 782 and 3554
+[21:28:57.282] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Loading environment from /tmp/proof17103087272745810763.proof
+[21:28:57.284] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Creating init config
+[21:29:01.029] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Replaying proof ReverseArray[ReverseArray::reverse()].JML normal_behavior operation contract.0
+[21:29:01.958] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Loading environment from /tmp/KeYslice17595739525889944951/reverseArray_slice3.proof
+[21:29:01.960] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Creating init config
+[21:29:05.576] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Replaying proof ReverseArray[ReverseArray::reverse()].JML normal_behavior operation contract.0
+[21:29:06.928] ?[34mINFO ?[0;39m ?[36mEndToEndTests?[0;39m - Loading /tmp/KeYslice17595739525889944951/reverseArray_slice3.proof
+[21:29:06.929] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Loading environment from /tmp/KeYslice17595739525889944951/reverseArray_slice3.proof
+[21:29:06.932] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Creating init config
+[21:29:10.620] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Replaying proof ReverseArray[ReverseArray::reverse()].JML normal_behavior operation contract.0
+[21:29:12.000] ?[34mINFO ?[0;39m ?[36mDependencyAnalyzer?[0;39m - merging 885 and 3465
+[21:29:12.011] ?[34mINFO ?[0;39m ?[36mDependencyAnalyzer?[0;39m - merging 784 and 3548
+[21:29:12.015] ?[34mINFO ?[0;39m ?[36mDependencyAnalyzer?[0;39m - merging 1302 and 3378
+[21:29:12.018] ?[34mINFO ?[0;39m ?[36mDependencyAnalyzer?[0;39m - merging 1285 and 3379
+[21:29:12.025] ?[34mINFO ?[0;39m ?[36mDependencyAnalyzer?[0;39m - merging 1296 and 3803
+[21:29:12.027] ?[34mINFO ?[0;39m ?[36mDependencyAnalyzer?[0;39m - merging 2221 and 2914
+[21:29:12.030] ?[34mINFO ?[0;39m ?[36mDependencyAnalyzer?[0;39m - merging 756 and 3657
+[21:29:12.033] ?[34mINFO ?[0;39m ?[36mDependencyAnalyzer?[0;39m - merging 2973 and 3146
+[21:29:12.037] ?[34mINFO ?[0;39m ?[36mDependencyAnalyzer?[0;39m - merging 757 and 3651
+[21:29:12.041] ?[34mINFO ?[0;39m ?[36mDependencyAnalyzer?[0;39m - merging 785 and 3562
+[21:29:12.044] ?[34mINFO ?[0;39m ?[36mDependencyAnalyzer?[0;39m - merging 886 and 3469
+[21:29:12.054] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Loading environment from /tmp/proof10940823392053212364.proof
+[21:29:12.057] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Creating init config
+[21:29:15.713] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Replaying proof ReverseArray[ReverseArray::reverse()].JML normal_behavior operation contract.0
+[21:29:16.710] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Loading environment from /tmp/KeYslice16806343825972201520/reverseArray_slice4.proof
+[21:29:16.711] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Creating init config
+[21:29:20.388] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Replaying proof ReverseArray[ReverseArray::reverse()].JML normal_behavior operation contract.0
+[21:29:21.692] ?[34mINFO ?[0;39m ?[36mEndToEndTests?[0;39m - Loading /tmp/KeYslice16806343825972201520/reverseArray_slice4.proof
+[21:29:21.693] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Loading environment from /tmp/KeYslice16806343825972201520/reverseArray_slice4.proof
+[21:29:21.695] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Creating init config
+[21:29:25.420] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Replaying proof ReverseArray[ReverseArray::reverse()].JML normal_behavior operation contract.0
+[21:29:26.674] ?[34mINFO ?[0;39m ?[36mDependencyAnalyzer?[0;39m - merging 1396 and 3388
+[21:29:26.677] ?[34mINFO ?[0;39m ?[36mDependencyAnalyzer?[0;39m - merging 1288 and 3376
+[21:29:26.681] ?[34mINFO ?[0;39m ?[36mDependencyAnalyzer?[0;39m - merging 759 and 3643
+[21:29:26.686] ?[34mINFO ?[0;39m ?[36mDependencyAnalyzer?[0;39m - merging 787 and 3542
+[21:29:26.689] ?[34mINFO ?[0;39m ?[36mDependencyAnalyzer?[0;39m - merging 889 and 3465
+[21:29:26.697] ?[34mINFO ?[0;39m ?[36mDependencyAnalyzer?[0;39m - merging 1298 and 3793
+[21:29:26.700] ?[34mINFO ?[0;39m ?[36mDependencyAnalyzer?[0;39m - merging 788 and 3555
+[21:29:26.705] ?[34mINFO ?[0;39m ?[36mDependencyAnalyzer?[0;39m - merging 760 and 3648
+[21:29:26.708] ?[34mINFO ?[0;39m ?[36mDependencyAnalyzer?[0;39m - merging 621 and 3786
+[21:29:26.710] ?[34mINFO ?[0;39m ?[36mDependencyAnalyzer?[0;39m - merging 888 and 3464
+[21:29:26.714] ?[34mINFO ?[0;39m ?[36mDependencyAnalyzer?[0;39m - merging 2973 and 3145
+[21:29:26.715] ?[34mINFO ?[0;39m ?[36mDependencyAnalyzer?[0;39m - merging 2222 and 2914
+[21:29:26.723] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Loading environment from /tmp/proof2574553387338778930.proof
+[21:29:26.725] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Creating init config
+[21:29:30.537] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Replaying proof ReverseArray[ReverseArray::reverse()].JML normal_behavior operation contract.0
+[21:29:31.404] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Loading environment from /tmp/KeYslice2633513360088889829/reverseArray_slice5.proof
+[21:29:31.411] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Creating init config
+[21:29:35.068] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Replaying proof ReverseArray[ReverseArray::reverse()].JML normal_behavior operation contract.0
+[21:29:36.421] ?[34mINFO ?[0;39m ?[36mEndToEndTests?[0;39m - Loading /home/runner/work/key/key/keyext.slicing/src/test/resources/testcase/exampleDuplicateOpen.proof
+[21:29:36.422] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Loading environment from src/test/resources/testcase/exampleDuplicateOpen.proof
+[21:29:36.423] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Creating init config
+[21:29:39.847] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Replaying proof exampleDuplicateOpen.proof
+[21:29:39.859] ?[34mINFO ?[0;39m ?[36mDependencyAnalyzer?[0;39m - merging 2 and 3
+[21:29:39.862] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Loading environment from /tmp/proof11033100648327299848.proof
+[21:29:39.864] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Creating init config
+[21:29:43.140] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Replaying proof proof11033100648327299848.proof
+[21:29:43.153] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Loading environment from /tmp/KeYslice10912564499390879287/exampleDuplicateOpen_slice1.proof
+[21:29:43.155] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Creating init config
+[21:29:46.527] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Replaying proof exampleDuplicateOpen_slice1.proof
+[21:29:46.540] ?[34mINFO ?[0;39m ?[36mEndToEndTests?[0;39m - Loading /tmp/KeYslice10912564499390879287/exampleDuplicateOpen_slice1.proof
+[21:29:46.541] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Loading environment from /tmp/KeYslice10912564499390879287/exampleDuplicateOpen_slice1.proof
+[21:29:46.542] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Creating init config
+[21:29:49.968] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Replaying proof exampleDuplicateOpen_slice1.proof
+[21:29:49.980] ?[34mINFO ?[0;39m ?[36mDependencyAnalyzer?[0;39m - merging 3 and 4
+[21:29:49.981] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Loading environment from /tmp/proof17529403952530136535.proof
+[21:29:49.983] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Creating init config
+[21:29:53.345] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Replaying proof proof17529403952530136535.proof
+[21:29:53.356] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Loading environment from /tmp/KeYslice8737369177164253183/exampleDuplicateOpen_slice2.proof
+[21:29:53.360] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Creating init config
+[21:29:56.778] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Replaying proof exampleDuplicateOpen_slice2.proof
+[21:29:56.789] ?[34mINFO ?[0;39m ?[36mEndToEndTests?[0;39m - Loading /tmp/KeYslice8737369177164253183/exampleDuplicateOpen_slice2.proof
+[21:29:56.790] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Loading environment from /tmp/KeYslice8737369177164253183/exampleDuplicateOpen_slice2.proof
+[21:29:56.791] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Creating init config
+[21:30:00.197] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Replaying proof exampleDuplicateOpen_slice2.proof
+[21:30:00.209] ?[34mINFO ?[0;39m ?[36mDependencyAnalyzer?[0;39m - merging 4 and 5
+[21:30:00.211] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Loading environment from /tmp/proof18160397826059859287.proof
+[21:30:00.212] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Creating init config
+[21:30:03.641] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Replaying proof proof18160397826059859287.proof
+[21:30:03.652] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Loading environment from /tmp/KeYslice12582161623323246775/exampleDuplicateOpen_slice3.proof
+[21:30:03.653] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Creating init config
+[21:30:07.016] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Replaying proof exampleDuplicateOpen_slice3.proof
+[21:30:07.027] ?[34mINFO ?[0;39m ?[36mEndToEndTests?[0;39m - Loading /tmp/KeYslice12582161623323246775/exampleDuplicateOpen_slice3.proof
+[21:30:07.027] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Loading environment from /tmp/KeYslice12582161623323246775/exampleDuplicateOpen_slice3.proof
+[21:30:07.029] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Creating init config
+[21:30:10.446] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Replaying proof exampleDuplicateOpen_slice3.proof
+[21:30:10.458] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Loading environment from /tmp/proof10625629627394178358.proof
+[21:30:10.459] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Creating init config
+[21:30:13.820] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Replaying proof proof10625629627394178358.proof
+[21:30:13.831] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Loading environment from /tmp/KeYslice2163021612319047194/exampleDuplicateOpen_slice4.proof
+[21:30:13.832] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Creating init config
+[21:30:17.219] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Replaying proof exampleDuplicateOpen_slice4.proof
+[21:30:17.233] ?[34mINFO ?[0;39m ?[36mEndToEndTests?[0;39m - Loading /home/runner/work/key/key/keyext.slicing/src/test/resources/testcase/cutExample.proof
+[21:30:17.234] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Loading environment from src/test/resources/testcase/cutExample.proof
+[21:30:17.235] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Creating init config
+[21:30:20.620] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Replaying proof cutExample.proof
+[21:30:20.644] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Loading environment from /tmp/proof6789319276898062220.proof
+[21:30:20.650] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Creating init config
+[21:30:23.976] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Replaying proof proof6789319276898062220.proof
+[21:30:23.981] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Loading environment from /tmp/KeYslice16013634162325043310/cutExample_slice1.proof
+[21:30:23.983] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Creating init config
+[21:30:27.289] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Replaying proof cutExample_slice1.proof
+[21:30:27.296] ?[34mINFO ?[0;39m ?[36mEndToEndTests?[0;39m - Loading /home/runner/work/key/key/keyext.slicing/src/test/resources/testcase/agathaOpenGoal.proof
+[21:30:27.297] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Loading environment from src/test/resources/testcase/agathaOpenGoal.proof
+[21:30:27.298] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Creating init config
+[21:30:30.623] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Replaying proof agathaOpenGoal.proof
+[21:30:30.659] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Loading environment from /tmp/proof12592411981440239903.proof
+[21:30:30.662] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Creating init config
+[21:30:33.967] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Replaying proof proof12592411981440239903.proof
+[21:30:33.988] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Loading environment from /tmp/KeYslice4518427790454805662/agathaOpenGoal_slice1.proof
+[21:30:33.990] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Creating init config
+[21:30:37.344] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Replaying proof agathaOpenGoal_slice1.proof
+[21:30:37.373] ?[34mINFO ?[0;39m ?[36mEndToEndTests?[0;39m - Loading /home/runner/work/key/key/keyext.slicing/src/test/resources/testcase/openGoal1.proof
+[21:30:37.373] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Loading environment from src/test/resources/testcase/openGoal1.proof
+[21:30:37.375] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Creating init config
+[21:30:40.730] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Replaying proof openGoal1.proof
+[21:30:40.737] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Loading environment from /tmp/proof4945195564207553896.proof
+[21:30:40.739] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Creating init config
+[21:30:44.084] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Replaying proof proof4945195564207553896.proof
+[21:30:44.088] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Loading environment from /tmp/KeYslice2005920075882095966/openGoal1_slice1.proof
+[21:30:44.089] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Creating init config
+[21:30:47.420] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Replaying proof openGoal1_slice1.proof
+[21:30:47.424] ?[34mINFO ?[0;39m ?[36mEndToEndTests?[0;39m - Loading /home/runner/work/key/key/keyext.slicing/src/test/resources/testcase/openGoal2.proof
+[21:30:47.425] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Loading environment from src/test/resources/testcase/openGoal2.proof
+[21:30:47.426] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Creating init config
+[21:30:50.813] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Replaying proof openGoal2.proof
+[21:30:50.819] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Loading environment from /tmp/proof12320295944769613448.proof
+[21:30:50.820] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Creating init config
+[21:30:54.159] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Replaying proof proof12320295944769613448.proof
+[21:30:54.163] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Loading environment from /tmp/KeYslice14255997854254386898/openGoal2_slice1.proof
+[21:30:54.165] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Creating init config
+[21:30:57.516] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Replaying proof openGoal2_slice1.proof
+[21:30:57.521] ?[34mINFO ?[0;39m ?[36mEndToEndTests?[0;39m - Loading /home/runner/work/key/key/keyext.slicing/src/test/resources/testcase/agatha.proof
+[21:30:57.521] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Loading environment from src/test/resources/testcase/agatha.proof
+[21:30:57.523] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Creating init config
+[21:31:00.955] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Replaying proof agatha.proof
+[21:31:00.983] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Loading environment from /tmp/proof7213455301466883484.proof
+[21:31:00.985] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Creating init config
+[21:31:04.357] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Replaying proof proof7213455301466883484.proof
+[21:31:04.372] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Loading environment from /tmp/KeYslice1823165959379586703/agatha_slice1.proof
+[21:31:04.374] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Creating init config
+[21:31:07.824] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Replaying proof agatha_slice1.proof
+[21:31:07.852] ?[34mINFO ?[0;39m ?[36mEndToEndTests?[0;39m - Loading /home/runner/work/key/key/keyext.slicing/src/test/resources/testcase/../../../../../key.ui/examples/heap/verifyThis15_2_ParallelGcd/parallelGcd.proof
+[21:31:07.852] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Loading environment from src/test/resources/testcase/../../../../../key.ui/examples/heap/verifyThis15_2_ParallelGcd/parallelGcd.proof
+[21:31:07.854] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Creating init config
+[21:31:11.494] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Replaying proof ParallelGcd[ParallelGcd::parallelGcd(int,int,[Z)].JML behavior operation contract.0
+[21:31:12.565] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Loading environment from /tmp/proof10248459650000289804.proof
+[21:31:12.567] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Creating init config
+[21:31:16.139] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Replaying proof ParallelGcd[ParallelGcd::parallelGcd(int,int,[Z)].JML behavior operation contract.0
+[21:31:17.015] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Loading environment from /tmp/KeYslice6694034380240020052/parallelGcd_slice1.proof
+[21:31:17.017] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Creating init config
+[21:31:20.616] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Replaying proof ParallelGcd[ParallelGcd::parallelGcd(int,int,[Z)].JML behavior operation contract.0
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
