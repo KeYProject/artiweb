@@ -1,0 +1,2258 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="ReduxTest" tests="61" skipped="0" failures="1" errors="0" timestamp="2023-05-09T12:50:29" hostname="fv-az792-56" time="2.084">
+  <properties/>
+  <testcase name="../key.core/src/main/resources/de/uka/ilkd/key/java/JavaRedux/java/io/OutputStream.java" classname="ReduxTest" time="0.066"/>
+  <testcase name="../key.core/src/main/resources/de/uka/ilkd/key/java/JavaRedux/java/io/IOException.java" classname="ReduxTest" time="0.37"/>
+  <testcase name="../key.core/src/main/resources/de/uka/ilkd/key/java/JavaRedux/java/io/FilterOutputStream.java" classname="ReduxTest" time="0.021"/>
+  <testcase name="../key.core/src/main/resources/de/uka/ilkd/key/java/JavaRedux/java/io/InputStream.java" classname="ReduxTest" time="0.009"/>
+  <testcase name="../key.core/src/main/resources/de/uka/ilkd/key/java/JavaRedux/java/io/PrintStream.java" classname="ReduxTest" time="0.099"/>
+  <testcase name="../key.core/src/main/resources/de/uka/ilkd/key/java/JavaRedux/java/io/Serializable.java" classname="ReduxTest" time="0.006"/>
+  <testcase name="../key.core/src/main/resources/de/uka/ilkd/key/java/JavaRedux/java/lang/NoClassDefFoundError.java" classname="ReduxTest" time="0.033"/>
+  <testcase name="../key.core/src/main/resources/de/uka/ilkd/key/java/JavaRedux/java/lang/String.java" classname="ReduxTest" time="0.302"/>
+  <testcase name="../key.core/src/main/resources/de/uka/ilkd/key/java/JavaRedux/java/lang/InterruptedException.java" classname="ReduxTest" time="0.012"/>
+  <testcase name="../key.core/src/main/resources/de/uka/ilkd/key/java/JavaRedux/java/lang/ArithmeticException.java" classname="ReduxTest" time="0.016"/>
+  <testcase name="../key.core/src/main/resources/de/uka/ilkd/key/java/JavaRedux/java/lang/Class.java" classname="ReduxTest" time="0.01"/>
+  <testcase name="../key.core/src/main/resources/de/uka/ilkd/key/java/JavaRedux/java/lang/NullPointerException.java" classname="ReduxTest" time="0.011"/>
+  <testcase name="../key.core/src/main/resources/de/uka/ilkd/key/java/JavaRedux/java/lang/Double.java" classname="ReduxTest" time="0.006"/>
+  <testcase name="../key.core/src/main/resources/de/uka/ilkd/key/java/JavaRedux/java/lang/Boolean.java" classname="ReduxTest" time="0.004"/>
+  <testcase name="../key.core/src/main/resources/de/uka/ilkd/key/java/JavaRedux/java/lang/CloneNotSupportedException.java" classname="ReduxTest" time="0.056"/>
+  <testcase name="../key.core/src/main/resources/de/uka/ilkd/key/java/JavaRedux/java/lang/RuntimeException.java" classname="ReduxTest" time="0.035"/>
+  <testcase name="../key.core/src/main/resources/de/uka/ilkd/key/java/JavaRedux/java/lang/VirtualMachineError.java" classname="ReduxTest" time="0.015"/>
+  <testcase name="../key.core/src/main/resources/de/uka/ilkd/key/java/JavaRedux/java/lang/ArrayIndexOutOfBoundsException.java" classname="ReduxTest" time="0.021"/>
+  <testcase name="../key.core/src/main/resources/de/uka/ilkd/key/java/JavaRedux/java/lang/NegativeArraySizeException.java" classname="ReduxTest" time="0.015"/>
+  <testcase name="../key.core/src/main/resources/de/uka/ilkd/key/java/JavaRedux/java/lang/Iterable.java" classname="ReduxTest" time="0.012"/>
+  <testcase name="../key.core/src/main/resources/de/uka/ilkd/key/java/JavaRedux/java/lang/Error.java" classname="ReduxTest" time="0.019"/>
+  <testcase name="../key.core/src/main/resources/de/uka/ilkd/key/java/JavaRedux/java/lang/NumberFormatException.java" classname="ReduxTest" time="0.015"/>
+  <testcase name="../key.core/src/main/resources/de/uka/ilkd/key/java/JavaRedux/java/lang/Thread.java" classname="ReduxTest" time="0.001"/>
+  <testcase name="../key.core/src/main/resources/de/uka/ilkd/key/java/JavaRedux/java/lang/AssertionError.java" classname="ReduxTest" time="0.02"/>
+  <testcase name="../key.core/src/main/resources/de/uka/ilkd/key/java/JavaRedux/java/lang/Enum.java" classname="ReduxTest" time="0.02"/>
+  <testcase name="../key.core/src/main/resources/de/uka/ilkd/key/java/JavaRedux/java/lang/Object.java" classname="ReduxTest" time="0.028"/>
+  <testcase name="../key.core/src/main/resources/de/uka/ilkd/key/java/JavaRedux/java/lang/LinkageError.java" classname="ReduxTest" time="0.012"/>
+  <testcase name="../key.core/src/main/resources/de/uka/ilkd/key/java/JavaRedux/java/lang/Integer.java" classname="ReduxTest" time="0.024">
+    <failure message="java.lang.NumberFormatException: Number constant out of bounds: 2147483648" type="java.lang.NumberFormatException">java.lang.NumberFormatException: Number constant out of bounds: 2147483648
+	at de.uka.ilkd.key.java.expression.literal.IntLiteral.parseFromString(IntLiteral.java:205)
+	at de.uka.ilkd.key.java.expression.literal.IntLiteral.&lt;init&gt;(IntLiteral.java:63)
+	at de.uka.ilkd.key.java.JP2KeYVisitor.visit(JP2KeYConverter.java:598)
+	at de.uka.ilkd.key.java.JP2KeYVisitor.visit(JP2KeYConverter.java:85)
+	at com.github.javaparser.ast.expr.IntegerLiteralExpr.accept(IntegerLiteralExpr.java:86)
+	at de.uka.ilkd.key.java.JP2KeYVisitor.accept(JP2KeYConverter.java:327)
+	at de.uka.ilkd.key.java.JP2KeYVisitor.visit(JP2KeYConverter.java:853)
+	at de.uka.ilkd.key.java.JP2KeYVisitor.visit(JP2KeYConverter.java:85)
+	at com.github.javaparser.ast.expr.UnaryExpr.accept(UnaryExpr.java:114)
+	at de.uka.ilkd.key.java.JP2KeYVisitor.accept(JP2KeYConverter.java:327)
+	at de.uka.ilkd.key.java.JP2KeYVisitor.accepto(JP2KeYConverter.java:399)
+	at de.uka.ilkd.key.java.JP2KeYVisitor.visitFieldSpecification(JP2KeYConverter.java:1022)
+	at de.uka.ilkd.key.java.JP2KeYVisitor.visit(JP2KeYConverter.java:536)
+	at de.uka.ilkd.key.java.JP2KeYVisitor.visit(JP2KeYConverter.java:85)
+	at com.github.javaparser.ast.body.FieldDeclaration.accept(FieldDeclaration.java:112)
+	at de.uka.ilkd.key.java.JP2KeYVisitor.lambda$map$1(JP2KeYConverter.java:383)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+	at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1625)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+	at java.base/java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:921)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:682)
+	at de.uka.ilkd.key.java.JP2KeYVisitor.map(JP2KeYConverter.java:384)
+	at de.uka.ilkd.key.java.JP2KeYVisitor.visit(JP2KeYConverter.java:291)
+	at de.uka.ilkd.key.java.JP2KeYVisitor.visit(JP2KeYConverter.java:85)
+	at com.github.javaparser.ast.body.ClassOrInterfaceDeclaration.accept(ClassOrInterfaceDeclaration.java:94)
+	at de.uka.ilkd.key.java.JP2KeYVisitor.lambda$map$1(JP2KeYConverter.java:383)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+	at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1625)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+	at java.base/java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:921)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:682)
+	at de.uka.ilkd.key.java.JP2KeYVisitor.map(JP2KeYConverter.java:384)
+	at de.uka.ilkd.key.java.JP2KeYVisitor.visit(JP2KeYConverter.java:374)
+	at de.uka.ilkd.key.java.JP2KeYVisitor.visit(JP2KeYConverter.java:85)
+	at com.github.javaparser.ast.CompilationUnit.accept(CompilationUnit.java:126)
+	at de.uka.ilkd.key.java.JP2KeYConverter.process(JP2KeYConverter.java:79)
+	at de.uka.ilkd.key.java.JP2KeYConverter.processCompilationUnit(JP2KeYConverter.java:75)
+	at ReduxTest.parse(ReduxTest.java:77)
+	at ReduxTest.lambda$testRedux$1(ReduxTest.java:66)
+	at org.junit.jupiter.engine.descriptor.DynamicTestTestDescriptor.lambda$execute$0(DynamicTestTestDescriptor.java:53)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$ValidatingInvocation.proceed(InvocationInterceptorChain.java:131)
+	at org.junit.jupiter.api.extension.InvocationInterceptor.interceptDynamicTest(InvocationInterceptor.java:167)
+	at org.junit.jupiter.api.extension.InvocationInterceptor.interceptDynamicTest(InvocationInterceptor.java:184)
+	at org.junit.jupiter.engine.descriptor.DynamicTestTestDescriptor.lambda$execute$1(DynamicTestTestDescriptor.java:61)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$InterceptorCall.lambda$ofVoid$0(InvocationInterceptorChain.java:78)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$InterceptedInvocation.proceed(InvocationInterceptorChain.java:106)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.proceed(InvocationInterceptorChain.java:64)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.chainAndInvoke(InvocationInterceptorChain.java:45)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.invoke(InvocationInterceptorChain.java:37)
+	at org.junit.jupiter.engine.descriptor.DynamicTestTestDescriptor.execute(DynamicTestTestDescriptor.java:60)
+	at org.junit.jupiter.engine.descriptor.DynamicTestTestDescriptor.execute(DynamicTestTestDescriptor.java:32)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:151)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:35)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask$DefaultDynamicTestExecutor.execute(NodeTestTask.java:226)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask$DefaultDynamicTestExecutor.execute(NodeTestTask.java:204)
+	at java.base/java.util.Optional.ifPresent(Optional.java:178)
+	at org.junit.jupiter.engine.descriptor.TestFactoryTestDescriptor.lambda$invokeTestMethod$1(TestFactoryTestDescriptor.java:108)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.jupiter.engine.descriptor.TestFactoryTestDescriptor.invokeTestMethod(TestFactoryTestDescriptor.java:95)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:138)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:68)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:151)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:35)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:54)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:107)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:88)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:54)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:67)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:52)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:114)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:86)
+	at org.junit.platform.launcher.core.DefaultLauncherSession$DelegatingLauncher.execute(DefaultLauncherSession.java:86)
+	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor$CollectAllTestClassesExecutor.processAllTestClasses(JUnitPlatformTestClassProcessor.java:110)
+	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor$CollectAllTestClassesExecutor.access$000(JUnitPlatformTestClassProcessor.java:90)
+	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor.stop(JUnitPlatformTestClassProcessor.java:85)
+	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.stop(SuiteTestClassProcessor.java:62)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:36)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:33)
+	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:94)
+	at jdk.proxy1/jdk.proxy1.$Proxy2.stop(Unknown Source)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker$3.run(TestWorker.java:193)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.executeAndMaintainThreadName(TestWorker.java:129)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:100)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:60)
+	at org.gradle.process.internal.worker.child.ActionExecutionWorker.execute(ActionExecutionWorker.java:56)
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:113)
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:65)
+	at worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)
+	at worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
+</failure>
+  </testcase>
+  <testcase name="../key.core/src/main/resources/de/uka/ilkd/key/java/JavaRedux/java/lang/ClassCastException.java" classname="ReduxTest" time="0.018"/>
+  <testcase name="../key.core/src/main/resources/de/uka/ilkd/key/java/JavaRedux/java/lang/Throwable.java" classname="ReduxTest" time="0.032"/>
+  <testcase name="../key.core/src/main/resources/de/uka/ilkd/key/java/JavaRedux/java/lang/System.java" classname="ReduxTest" time="0.018"/>
+  <testcase name="../key.core/src/main/resources/de/uka/ilkd/key/java/JavaRedux/java/lang/ArrayStoreException.java" classname="ReduxTest" time="0.013"/>
+  <testcase name="../key.core/src/main/resources/de/uka/ilkd/key/java/JavaRedux/java/lang/Float.java" classname="ReduxTest" time="0.003"/>
+  <testcase name="../key.core/src/main/resources/de/uka/ilkd/key/java/JavaRedux/java/lang/Math.java" classname="ReduxTest" time="0.166"/>
+  <testcase name="../key.core/src/main/resources/de/uka/ilkd/key/java/JavaRedux/java/lang/Number.java" classname="ReduxTest" time="0.009"/>
+  <testcase name="../key.core/src/main/resources/de/uka/ilkd/key/java/JavaRedux/java/lang/OutOfMemoryError.java" classname="ReduxTest" time="0.015"/>
+  <testcase name="../key.core/src/main/resources/de/uka/ilkd/key/java/JavaRedux/java/lang/annotation/Annotation.java" classname="ReduxTest" time="0.01"/>
+  <testcase name="../key.core/src/main/resources/de/uka/ilkd/key/java/JavaRedux/java/lang/IllegalArgumentException.java" classname="ReduxTest" time="0.026"/>
+  <testcase name="../key.core/src/main/resources/de/uka/ilkd/key/java/JavaRedux/java/lang/Character.java" classname="ReduxTest" time="0.008"/>
+  <testcase name="../key.core/src/main/resources/de/uka/ilkd/key/java/JavaRedux/java/lang/Comparable.java" classname="ReduxTest" time="0.008"/>
+  <testcase name="../key.core/src/main/resources/de/uka/ilkd/key/java/JavaRedux/java/lang/IndexOutOfBoundsException.java" classname="ReduxTest" time="0.008"/>
+  <testcase name="../key.core/src/main/resources/de/uka/ilkd/key/java/JavaRedux/java/lang/Long.java" classname="ReduxTest" time="0.009"/>
+  <testcase name="../key.core/src/main/resources/de/uka/ilkd/key/java/JavaRedux/java/lang/Cloneable.java" classname="ReduxTest" time="0.002"/>
+  <testcase name="../key.core/src/main/resources/de/uka/ilkd/key/java/JavaRedux/java/lang/ExceptionInInitializerError.java" classname="ReduxTest" time="0.023"/>
+  <testcase name="../key.core/src/main/resources/de/uka/ilkd/key/java/JavaRedux/java/lang/StringBuffer.java" classname="ReduxTest" time="0.039"/>
+  <testcase name="../key.core/src/main/resources/de/uka/ilkd/key/java/JavaRedux/java/lang/Exception.java" classname="ReduxTest" time="0.013"/>
+  <testcase name="../key.core/src/main/resources/de/uka/ilkd/key/java/JavaRedux/java/lang/Runnable.java" classname="ReduxTest" time="0.003"/>
+  <testcase name="../key.core/src/main/resources/de/uka/ilkd/key/java/JavaRedux/java/util/Set.java" classname="ReduxTest" time="0.09"/>
+  <testcase name="../key.core/src/main/resources/de/uka/ilkd/key/java/JavaRedux/java/util/Map.java" classname="ReduxTest" time="0.024"/>
+  <testcase name="../key.core/src/main/resources/de/uka/ilkd/key/java/JavaRedux/java/util/Collection.java" classname="ReduxTest" time="0.02"/>
+  <testcase name="../key.core/src/main/resources/de/uka/ilkd/key/java/JavaRedux/java/util/Iterator.java" classname="ReduxTest" time="0.005"/>
+  <testcase name="../key.core/src/main/resources/de/uka/ilkd/key/java/JavaRedux/java/util/Arrays.java" classname="ReduxTest" time="0.07"/>
+  <testcase name="../key.core/src/main/resources/de/uka/ilkd/key/java/JavaRedux/java/util/ListIterator.java" classname="ReduxTest" time="0.013"/>
+  <testcase name="../key.core/src/main/resources/de/uka/ilkd/key/java/JavaRedux/java/util/List.java" classname="ReduxTest" time="0.018"/>
+  <testcase name="../key.core/src/main/resources/de/uka/ilkd/key/java/JavaRedux/java/util/Date.java" classname="ReduxTest" time="0.02"/>
+  <testcase name="../key.core/src/main/resources/de/uka/ilkd/key/java/JavaRedux/java/util/ArrayList.java" classname="ReduxTest" time="0.006"/>
+  <testcase name="../key.core/src/main/resources/de/uka/ilkd/key/java/JavaRedux/java/util/ListIteratorImpl.java" classname="ReduxTest" time="0.002"/>
+  <testcase name="../key.core/src/main/resources/de/uka/ilkd/key/java/JavaRedux/java/util/LinkedHashMap.java" classname="ReduxTest" time="0.004"/>
+  <testcase name="../key.core/src/main/resources/de/uka/ilkd/key/java/JavaRedux/java/util/LinkedList.java" classname="ReduxTest" time="0.006"/>
+  <testcase name="../key.core/src/main/resources/de/uka/ilkd/key/java/JavaRedux/java/math/BigInteger.java" classname="ReduxTest" time="0.038"/>
+  <testcase name="testJavaLangObject()" classname="ReduxTest" time="0.006"/>
+  <system-out><![CDATA[12:50:29.058 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 1 entries
+package java.io;
+
+public class OutputStream {}
+12:50:29.119 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: package java.io;;, formerValue: package java.io;;
+12:50:29.119 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 1 entries
+12:50:29.121 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 2 entries
+12:50:29.461 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: {}, formerValue: {}
+12:50:29.462 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 2 entries
+12:50:29.471 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: {}, formerValue: {}
+12:50:29.471 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 2 entries
+12:50:29.474 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: {}, formerValue: {}
+12:50:29.475 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 2 entries
+package java.io;
+
+public class IOException
+  extends java.lang.java.lang.Exception {
+  IOException
+  
+  IOException
+  
+  IOException
+  
+  IOException
+}
+12:50:29.487 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: package java.io;;, formerValue: package java.io;;
+12:50:29.489 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 2 entries
+12:50:29.496 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 3 entries
+package java.io;
+
+public class FilterOutputStream
+  extends java.io.java.io.OutputStream {
+  protected java.io.java.io.OutputStream java.io.FilterOutputStream::out
+}
+12:50:29.514 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: package java.io;;, formerValue: package java.io;;
+12:50:29.515 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 3 entries
+12:50:29.517 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: {}, formerValue: {}
+12:50:29.517 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 3 entries
+package java.io;
+
+public class InputStream {
+  InputStream
+}
+12:50:29.533 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: package java.io;;, formerValue: package java.io;;
+12:50:29.536 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 3 entries
+12:50:29.541 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: {}, formerValue: {}
+12:50:29.550 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 3 entries
+12:50:29.553 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: {}, formerValue: {}
+12:50:29.555 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 3 entries
+12:50:29.558 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 4 entries
+12:50:29.561 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: any;, formerValue: any;
+12:50:29.562 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 4 entries
+12:50:29.563 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: any;, formerValue: any;
+12:50:29.564 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 4 entries
+12:50:29.565 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: any;, formerValue: any;
+12:50:29.566 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 4 entries
+12:50:29.567 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: any;, formerValue: any;
+12:50:29.568 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 4 entries
+12:50:29.596 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: any;, formerValue: any;
+12:50:29.597 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 4 entries
+12:50:29.604 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: any;, formerValue: any;
+12:50:29.604 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 4 entries
+12:50:29.606 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: any;, formerValue: any;
+12:50:29.608 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 4 entries
+12:50:29.608 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: any;, formerValue: any;
+12:50:29.609 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 4 entries
+12:50:29.610 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: any;, formerValue: any;
+12:50:29.610 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 4 entries
+12:50:29.611 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: any;, formerValue: any;
+12:50:29.612 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 4 entries
+12:50:29.613 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: any;, formerValue: any;
+12:50:29.613 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 4 entries
+12:50:29.614 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: any;, formerValue: any;
+12:50:29.614 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 4 entries
+12:50:29.615 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: any;, formerValue: any;
+12:50:29.615 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 4 entries
+12:50:29.617 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: any;, formerValue: any;
+12:50:29.617 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 4 entries
+package java.io;
+
+public class PrintStream
+  extends java.io.java.io.FilterOutputStream {
+  PrintStream
+  
+  PrintStream
+  
+  print
+  
+  print
+  
+  print
+  
+  print
+  
+  print
+  
+  print
+  
+  print
+  
+  println
+  
+  println
+  
+  println
+  
+  println
+  
+  println
+  
+  println
+  
+  println
+  
+  println
+}
+12:50:29.625 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: package java.io;;, formerValue: package java.io;;
+12:50:29.625 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 4 entries
+package java.io;
+
+public interface Serializable {}
+12:50:29.632 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 5 entries
+12:50:29.633 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 6 entries
+12:50:29.661 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 7 entries
+package java.lang;
+
+public class NoClassDefFoundError
+  extends java.lang.java.lang.LinkageError {
+  NoClassDefFoundError
+  
+  NoClassDefFoundError
+}
+12:50:29.720 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: package java.lang;;, formerValue: package java.lang;;
+12:50:29.720 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 7 entries
+12:50:29.725 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 8 entries
+12:50:29.732 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: {}, formerValue: {}
+12:50:29.732 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 8 entries
+12:50:29.740 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: {}, formerValue: {}
+12:50:29.741 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 8 entries
+12:50:29.742 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: {}, formerValue: {}
+12:50:29.743 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 8 entries
+12:50:29.744 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: {}, formerValue: {}
+12:50:29.744 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 8 entries
+12:50:29.755 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: {}, formerValue: {}
+12:50:29.755 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 8 entries
+12:50:29.757 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: {}, formerValue: {}
+12:50:29.757 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 8 entries
+12:50:29.758 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: {}, formerValue: {}
+12:50:29.758 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 8 entries
+12:50:29.764 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: {}, formerValue: {}
+12:50:29.764 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 8 entries
+12:50:29.767 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: {}, formerValue: {}
+12:50:29.768 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 8 entries
+12:50:29.769 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 9 entries
+12:50:29.769 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 10 entries
+12:50:29.774 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 11 entries
+12:50:29.775 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: int;, formerValue: int;
+12:50:29.775 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 11 entries
+12:50:29.776 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: int;, formerValue: int;
+12:50:29.776 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 11 entries
+12:50:29.778 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: int;, formerValue: int;
+12:50:29.778 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 11 entries
+12:50:29.779 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: int;, formerValue: int;
+12:50:29.779 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 11 entries
+12:50:29.781 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: any;, formerValue: any;
+12:50:29.781 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 11 entries
+12:50:29.783 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: any;, formerValue: any;
+12:50:29.783 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 11 entries
+12:50:29.785 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 12 entries
+12:50:29.786 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: boolean;, formerValue: boolean;
+12:50:29.786 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 12 entries
+12:50:29.788 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: boolean;, formerValue: boolean;
+12:50:29.788 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 12 entries
+12:50:29.790 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: int;, formerValue: int;
+12:50:29.790 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 12 entries
+12:50:29.793 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: int;, formerValue: int;
+12:50:29.793 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 12 entries
+12:50:29.795 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: boolean;, formerValue: boolean;
+12:50:29.795 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 12 entries
+12:50:29.797 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: boolean;, formerValue: boolean;
+12:50:29.797 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 12 entries
+12:50:29.800 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 13 entries
+12:50:29.803 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: boolean;, formerValue: boolean;
+12:50:29.803 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 13 entries
+12:50:29.805 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: boolean;, formerValue: boolean;
+12:50:29.805 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 13 entries
+12:50:29.807 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: int;, formerValue: int;
+12:50:29.807 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 13 entries
+12:50:29.808 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: int;, formerValue: int;
+12:50:29.808 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 13 entries
+12:50:29.811 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 14 entries
+12:50:29.811 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 15 entries
+12:50:29.816 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: int;, formerValue: int;
+12:50:29.816 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 15 entries
+12:50:29.817 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: int;, formerValue: int;
+12:50:29.817 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 15 entries
+12:50:29.818 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 16 entries
+12:50:29.818 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 17 entries
+12:50:29.819 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: int;, formerValue: int;
+12:50:29.819 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 17 entries
+12:50:29.820 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: int;, formerValue: int;
+12:50:29.821 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 17 entries
+12:50:29.823 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 18 entries
+12:50:29.824 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 19 entries
+12:50:29.825 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: int;, formerValue: int;
+12:50:29.825 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 19 entries
+12:50:29.827 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: int;, formerValue: int;
+12:50:29.827 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 19 entries
+12:50:29.829 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: int;, formerValue: int;
+12:50:29.830 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 19 entries
+12:50:29.833 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 20 entries
+12:50:29.835 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: java.lang.java.lang.String;, formerValue: java.lang.java.lang.String;
+12:50:29.835 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 20 entries
+12:50:29.844 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 21 entries
+12:50:29.847 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: java.lang.java.lang.String;, formerValue: java.lang.java.lang.String;
+12:50:29.847 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 21 entries
+12:50:29.849 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: boolean;, formerValue: boolean;
+12:50:29.849 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 21 entries
+12:50:29.852 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: java.lang.java.lang.String;, formerValue: java.lang.java.lang.String;
+12:50:29.852 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 21 entries
+12:50:29.856 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: java.lang.java.lang.String;, formerValue: java.lang.java.lang.String;
+12:50:29.856 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 21 entries
+12:50:29.862 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 22 entries
+12:50:29.865 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: unknown[];, formerValue: unknown[];
+12:50:29.865 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 22 entries
+12:50:29.868 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: java.lang.java.lang.String;, formerValue: java.lang.java.lang.String;
+12:50:29.868 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 22 entries
+12:50:29.870 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: java.lang.java.lang.String;, formerValue: java.lang.java.lang.String;
+12:50:29.870 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 22 entries
+12:50:29.872 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: java.lang.java.lang.String;, formerValue: java.lang.java.lang.String;
+12:50:29.873 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 22 entries
+12:50:29.875 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: java.lang.java.lang.String;, formerValue: java.lang.java.lang.String;
+12:50:29.875 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 22 entries
+12:50:29.876 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 23 entries
+12:50:29.878 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: java.lang.java.lang.String;, formerValue: java.lang.java.lang.String;
+12:50:29.878 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 23 entries
+12:50:29.888 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: java.lang.java.lang.String;, formerValue: java.lang.java.lang.String;
+12:50:29.888 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 23 entries
+12:50:29.892 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: java.lang.java.lang.String;, formerValue: java.lang.java.lang.String;
+12:50:29.892 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 23 entries
+12:50:29.894 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: java.lang.java.lang.String;, formerValue: java.lang.java.lang.String;
+12:50:29.895 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 23 entries
+12:50:29.900 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: java.lang.java.lang.String;, formerValue: java.lang.java.lang.String;
+12:50:29.900 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 23 entries
+12:50:29.904 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: java.lang.java.lang.String;, formerValue: java.lang.java.lang.String;
+12:50:29.905 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 23 entries
+12:50:29.911 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: java.lang.java.lang.String;, formerValue: java.lang.java.lang.String;
+12:50:29.912 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 23 entries
+12:50:29.914 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: java.lang.java.lang.String;, formerValue: java.lang.java.lang.String;
+12:50:29.914 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 23 entries
+12:50:29.915 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: java.lang.java.lang.String;, formerValue: java.lang.java.lang.String;
+12:50:29.916 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 23 entries
+12:50:29.918 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: java.lang.java.lang.String;, formerValue: java.lang.java.lang.String;
+12:50:29.918 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 23 entries
+12:50:29.920 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: java.lang.java.lang.String;, formerValue: java.lang.java.lang.String;
+12:50:29.920 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 23 entries
+12:50:29.927 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 24 entries
+12:50:29.931 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: int;, formerValue: int;
+12:50:29.932 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 24 entries
+12:50:29.947 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 25 entries
+12:50:29.948 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 26 entries
+12:50:29.949 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 27 entries
+12:50:29.949 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 28 entries
+12:50:29.952 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: other, formerValue: other
+12:50:29.954 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 28 entries
+12:50:29.955 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: java.lang.java.lang.String;, formerValue: java.lang.java.lang.String;
+12:50:29.955 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 28 entries
+12:50:29.955 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 29 entries
+12:50:29.957 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 30 entries
+12:50:29.958 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 31 entries
+12:50:29.959 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 32 entries
+package java.lang;
+
+public final class String
+  extends java.lang.java.lang.Object
+  implements
+    java.io.java.io.Serializable,
+    java.lang.java.lang.Comparable {
+  length
+  
+  String
+  
+  String
+  
+  String
+  
+  String
+  
+  String
+  
+  String
+  
+  String
+  
+  String
+  
+  String
+  
+  length
+  
+  isEmpty
+  
+  charAt
+  
+  codePointAt
+  
+  codePointBefore
+  
+  codePointCount
+  
+  offsetByCodePoints
+  
+  getChars
+  
+  getBytes
+  
+  getBytes
+  
+  equals
+  
+  equalsIgnoreCase
+  
+  compareTo
+  
+  compareToIgnoreCase
+  
+  regionMatches
+  
+  regionMatches
+  
+  startsWith
+  
+  startsWith
+  
+  endsWith
+  
+  hashCode
+  
+  indexOf
+  
+  indexOf
+  
+  lastIndexOf
+  
+  lastIndexOf
+  
+  indexOf
+  
+  indexOf
+  
+  lastIndexOf
+  
+  lastIndexOf
+  
+  substring
+  
+  substring
+  
+  concat
+  
+  replace
+  
+  matches
+  
+  replaceFirst
+  
+  replaceAll
+  
+  split
+  
+  split
+  
+  toLowerCase
+  
+  toUpperCase
+  
+  trim
+  
+  toString
+  
+  toCharArray
+  
+  format
+  
+  valueOf
+  
+  valueOf
+  
+  valueOf
+  
+  copyValueOf
+  
+  copyValueOf
+  
+  valueOf
+  
+  valueOf
+  
+  valueOf
+  
+  valueOf
+  
+  intern
+  
+  compareTo
+  
+  compareTo
+}
+12:50:29.968 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: package java.lang;;, formerValue: package java.lang;;
+12:50:29.968 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 32 entries
+12:50:29.968 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: {
+  super();
+}, formerValue: {
+  super();
+}
+12:50:29.968 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 32 entries
+12:50:29.976 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: {
+  super(arg0);
+}, formerValue: {
+  super(arg0);
+}
+12:50:29.977 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 32 entries
+package java.lang;
+
+public class InterruptedException
+  extends java.lang.java.lang.Exception {
+  InterruptedException
+  
+  InterruptedException
+}
+12:50:29.982 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: package java.lang;;, formerValue: package java.lang;;
+12:50:29.982 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 32 entries
+12:50:29.983 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: {
+  super();
+}, formerValue: {
+  super();
+}
+12:50:29.984 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 32 entries
+12:50:29.987 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: {
+  super(arg0);
+}, formerValue: {
+  super(arg0);
+}
+12:50:29.989 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 32 entries
+package java.lang;
+
+public class ArithmeticException
+  extends java.lang.java.lang.RuntimeException {
+  ArithmeticException
+  
+  ArithmeticException
+}
+12:50:29.996 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: package java.lang;;, formerValue: package java.lang;;
+12:50:30.003 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 32 entries
+package java.lang;
+
+public final class Class {}
+12:50:30.006 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: package java.lang;;, formerValue: package java.lang;;
+12:50:30.007 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 32 entries
+12:50:30.007 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: {}, formerValue: {}
+12:50:30.007 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 32 entries
+12:50:30.010 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: {
+  super(arg0);
+}, formerValue: {
+  super(arg0);
+}
+12:50:30.014 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 32 entries
+package java.lang;
+
+public class NullPointerException
+  extends java.lang.java.lang.RuntimeException {
+  NullPointerException
+  
+  NullPointerException
+}
+12:50:30.017 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: package java.lang;;, formerValue: package java.lang;;
+12:50:30.018 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 32 entries
+12:50:30.018 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: boolean;, formerValue: boolean;
+12:50:30.020 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 32 entries
+12:50:30.021 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 33 entries
+12:50:30.022 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 34 entries
+package java.lang;
+
+public class Double {
+  isNaN
+}
+12:50:30.027 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: package java.lang;;, formerValue: package java.lang;;
+12:50:30.027 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 34 entries
+package java.lang;
+
+public class Boolean {}
+12:50:30.032 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: package java.lang;;, formerValue: package java.lang;;
+12:50:30.034 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 34 entries
+12:50:30.034 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: {
+  super();
+}, formerValue: {
+  super();
+}
+12:50:30.035 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 34 entries
+12:50:30.060 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: {
+  super(arg0);
+}, formerValue: {
+  super(arg0);
+}
+12:50:30.076 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 34 entries
+package java.lang;
+
+public class CloneNotSupportedException
+  extends java.lang.java.lang.Exception {
+  CloneNotSupportedException
+  
+  CloneNotSupportedException
+}
+12:50:30.108 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: package java.lang;;, formerValue: package java.lang;;
+12:50:30.108 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 34 entries
+12:50:30.108 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: {
+  super();
+}, formerValue: {
+  super();
+}
+12:50:30.109 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 34 entries
+12:50:30.111 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: {
+  super(arg0);
+}, formerValue: {
+  super(arg0);
+}
+12:50:30.111 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 34 entries
+12:50:30.114 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 35 entries
+12:50:30.117 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: {
+  super(arg0);
+}, formerValue: {
+  super(arg0);
+}
+12:50:30.121 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 35 entries
+package java.lang;
+
+public class RuntimeException
+  extends java.lang.java.lang.Exception {
+  RuntimeException
+  
+  RuntimeException
+  
+  RuntimeException
+  
+  RuntimeException
+}
+12:50:30.125 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: package java.lang;;, formerValue: package java.lang;;
+12:50:30.126 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 35 entries
+12:50:30.134 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: {}, formerValue: {}
+12:50:30.135 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 35 entries
+12:50:30.136 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: {}, formerValue: {}
+12:50:30.136 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 35 entries
+package java.lang;
+
+public abstract class VirtualMachineError
+  extends java.lang.java.lang.Error {
+  VirtualMachineError
+  
+  VirtualMachineError
+}
+12:50:30.140 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: package java.lang;;, formerValue: package java.lang;;
+12:50:30.140 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 35 entries
+12:50:30.140 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: {
+  super();
+}, formerValue: {
+  super();
+}
+12:50:30.141 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 35 entries
+12:50:30.150 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: {}, formerValue: {}
+12:50:30.151 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 35 entries
+12:50:30.153 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: {
+  super(arg0);
+}, formerValue: {
+  super(arg0);
+}
+12:50:30.157 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 35 entries
+package java.lang;
+
+public class ArrayIndexOutOfBoundsException
+  extends java.lang.java.lang.IndexOutOfBoundsException {
+  ArrayIndexOutOfBoundsException
+  
+  ArrayIndexOutOfBoundsException
+  
+  ArrayIndexOutOfBoundsException
+}
+12:50:30.161 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: package java.lang;;, formerValue: package java.lang;;
+12:50:30.161 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 35 entries
+12:50:30.167 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: {
+  super();
+}, formerValue: {
+  super();
+}
+12:50:30.168 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 35 entries
+12:50:30.173 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: {
+  super(arg0);
+}, formerValue: {
+  super(arg0);
+}
+12:50:30.173 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 35 entries
+package java.lang;
+
+public class NegativeArraySizeException
+  extends java.lang.java.lang.RuntimeException {
+  NegativeArraySizeException
+  
+  NegativeArraySizeException
+}
+12:50:30.176 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: package java.lang;;, formerValue: package java.lang;;
+12:50:30.177 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 35 entries
+12:50:30.179 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 36 entries
+package java.lang;
+
+public interface Iterable {
+  iterator
+}
+12:50:30.189 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: package java.lang;;, formerValue: package java.lang;;
+12:50:30.189 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 36 entries
+12:50:30.197 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: {
+  super();
+}, formerValue: {
+  super();
+}
+12:50:30.198 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 36 entries
+12:50:30.200 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: {
+  super(arg0);
+}, formerValue: {
+  super(arg0);
+}
+12:50:30.200 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 36 entries
+12:50:30.202 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: {
+  super(arg0, arg1);
+}, formerValue: {
+  super(arg0, arg1);
+}
+12:50:30.203 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 36 entries
+12:50:30.204 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: {
+  super(arg0);
+}, formerValue: {
+  super(arg0);
+}
+12:50:30.205 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 36 entries
+package java.lang;
+
+public class Error
+  extends java.lang.java.lang.Throwable {
+  Error
+  
+  Error
+  
+  Error
+  
+  Error
+}
+12:50:30.209 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: package java.lang;;, formerValue: package java.lang;;
+12:50:30.218 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 36 entries
+12:50:30.218 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: {
+  super();
+}, formerValue: {
+  super();
+}
+12:50:30.219 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 36 entries
+12:50:30.221 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: {
+  super(arg0);
+}, formerValue: {
+  super(arg0);
+}
+12:50:30.221 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 36 entries
+package java.lang;
+
+public class NumberFormatException
+  extends java.lang.java.lang.IllegalArgumentException {
+  NumberFormatException
+  
+  NumberFormatException
+}
+12:50:30.223 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: package java.lang;;, formerValue: package java.lang;;
+12:50:30.224 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 36 entries
+package java.lang;
+
+public class Thread {}
+12:50:30.231 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: package java.lang;;, formerValue: package java.lang;;
+12:50:30.231 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 36 entries
+12:50:30.231 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: {}, formerValue: {}
+12:50:30.231 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 36 entries
+12:50:30.232 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: {}, formerValue: {}
+12:50:30.232 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 36 entries
+12:50:30.233 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: {}, formerValue: {}
+12:50:30.233 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 36 entries
+12:50:30.233 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: {}, formerValue: {}
+12:50:30.245 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 36 entries
+12:50:30.246 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: {}, formerValue: {}
+12:50:30.246 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 36 entries
+12:50:30.247 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: {}, formerValue: {}
+12:50:30.247 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 36 entries
+package java.lang;
+
+public class AssertionError
+  extends java.lang.java.lang.Error {
+  AssertionError
+  
+  AssertionError
+  
+  AssertionError
+  
+  AssertionError
+  
+  AssertionError
+  
+  AssertionError
+}
+12:50:30.251 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: package java.lang;;, formerValue: package java.lang;;
+12:50:30.255 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 36 entries
+12:50:30.256 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: java.lang.java.lang.String;, formerValue: java.lang.java.lang.String;
+12:50:30.256 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 36 entries
+12:50:30.257 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: int;, formerValue: int;
+12:50:30.257 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 36 entries
+12:50:30.260 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: {}, formerValue: {}
+12:50:30.260 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 36 entries
+12:50:30.261 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 37 entries
+12:50:30.266 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 38 entries
+package java.lang;
+
+public abstract class Enum
+  extends java.lang.java.lang.Object
+  implements
+    java.lang.java.lang.Comparable,
+    java.io.java.io.Serializable {
+  name
+  
+  ordinal
+  
+  Enum
+  
+  getDeclaringClass
+  
+  valueOf
+}
+12:50:30.279 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: package java.lang;;, formerValue: package java.lang;;
+12:50:30.279 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 38 entries
+12:50:30.279 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: {}, formerValue: {}
+12:50:30.280 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 38 entries
+12:50:30.280 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 39 entries
+12:50:30.281 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: int;, formerValue: int;
+12:50:30.281 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 39 entries
+12:50:30.281 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: java.lang.java.lang.String;, formerValue: java.lang.java.lang.String;
+12:50:30.282 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 39 entries
+12:50:30.289 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: any;, formerValue: any;
+12:50:30.289 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 39 entries
+12:50:30.289 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: {}, formerValue: {}
+12:50:30.289 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 39 entries
+12:50:30.290 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 40 entries
+12:50:30.291 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: {}, formerValue: {}
+12:50:30.291 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 40 entries
+12:50:30.291 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: any;, formerValue: any;
+12:50:30.291 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 40 entries
+12:50:30.291 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: any;, formerValue: any;
+12:50:30.292 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 40 entries
+12:50:30.293 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: any;, formerValue: any;
+12:50:30.293 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 40 entries
+12:50:30.294 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: any;, formerValue: any;
+12:50:30.294 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 40 entries
+12:50:30.295 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: any;, formerValue: any;
+12:50:30.295 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 40 entries
+package java.lang;
+
+public class Object {
+  Object
+  
+  equals
+  
+  hashCode
+  
+  toString
+  
+  finalize
+  
+  clone
+  
+  notify
+  
+  notifyAll
+  
+  wait
+  
+  wait
+  
+  wait
+}
+12:50:30.306 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: package java.lang;;, formerValue: package java.lang;;
+12:50:30.306 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 40 entries
+12:50:30.306 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: {
+  super();
+}, formerValue: {
+  super();
+}
+12:50:30.306 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 40 entries
+12:50:30.308 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: {
+  super(arg0);
+}, formerValue: {
+  super(arg0);
+}
+12:50:30.308 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 40 entries
+package java.lang;
+
+public class LinkageError
+  extends java.lang.java.lang.Error {
+  LinkageError
+  
+  LinkageError
+}
+12:50:30.317 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: package java.lang;;, formerValue: package java.lang;;
+12:50:30.322 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 40 entries
+12:50:30.322 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: int;, formerValue: int;
+12:50:30.322 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 40 entries
+12:50:30.336 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: package java.lang;;, formerValue: package java.lang;;
+12:50:30.337 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 40 entries
+12:50:30.337 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: {
+  super();
+}, formerValue: {
+  super();
+}
+12:50:30.337 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 40 entries
+12:50:30.346 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: {
+  super(arg0);
+}, formerValue: {
+  super(arg0);
+}
+12:50:30.352 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 40 entries
+package java.lang;
+
+public class ClassCastException
+  extends java.lang.java.lang.RuntimeException {
+  ClassCastException
+  
+  ClassCastException
+}
+12:50:30.356 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: package java.lang;;, formerValue: package java.lang;;
+12:50:30.360 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 40 entries
+12:50:30.360 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: {}, formerValue: {}
+12:50:30.360 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 40 entries
+12:50:30.363 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 41 entries
+12:50:30.364 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 42 entries
+12:50:30.366 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 43 entries
+12:50:30.373 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 44 entries
+12:50:30.373 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: java.lang.java.lang.String;, formerValue: java.lang.java.lang.String;
+12:50:30.373 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 44 entries
+12:50:30.374 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 45 entries
+12:50:30.375 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: java.lang.java.lang.Throwable;, formerValue: java.lang.java.lang.Throwable;
+12:50:30.375 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 45 entries
+12:50:30.376 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 46 entries
+12:50:30.376 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 47 entries
+12:50:30.377 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: java.lang.java.lang.String;, formerValue: java.lang.java.lang.String;
+12:50:30.382 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 47 entries
+12:50:30.383 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: any;, formerValue: any;
+12:50:30.383 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 47 entries
+12:50:30.384 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: java.lang.java.lang.Throwable;, formerValue: java.lang.java.lang.Throwable;
+12:50:30.384 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 47 entries
+package java.lang;
+
+public class Throwable
+  extends java.lang.java.lang.Object
+  implements java.io.java.io.Serializable {
+  Throwable
+  
+  Throwable
+  
+  Throwable
+  
+  Throwable
+  
+  getMessage
+  
+  getLocalizedMessage
+  
+  getCause
+  
+  initCause
+  
+  toString
+  
+  printStackTrace
+  
+  fillInStackTrace
+}
+12:50:30.389 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: package java.lang;;, formerValue: package java.lang;;
+12:50:30.393 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 47 entries
+12:50:30.394 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 48 entries
+12:50:30.398 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 49 entries
+12:50:30.399 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: java.io.java.io.PrintStream;, formerValue: java.io.java.io.PrintStream;
+12:50:30.399 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 49 entries
+12:50:30.400 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: any;, formerValue: any;
+12:50:30.400 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 49 entries
+12:50:30.401 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: any;, formerValue: any;
+12:50:30.401 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 49 entries
+package java.lang;
+
+public final class System {
+  public static
+    final java.io.java.io.InputStream java.lang.System::in
+  
+  public static
+    final java.io.java.io.PrintStream java.lang.System::out
+  
+  public static
+    final java.io.java.io.PrintStream java.lang.System::err
+  
+  arraycopy
+  
+  exit
+}
+12:50:30.414 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: package java.lang;;, formerValue: package java.lang;;
+12:50:30.414 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 49 entries
+12:50:30.414 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: {
+  super();
+}, formerValue: {
+  super();
+}
+12:50:30.414 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 49 entries
+12:50:30.416 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: {
+  super(arg0);
+}, formerValue: {
+  super(arg0);
+}
+12:50:30.416 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 49 entries
+package java.lang;
+
+public class ArrayStoreException
+  extends java.lang.java.lang.RuntimeException {
+  ArrayStoreException
+  
+  ArrayStoreException
+}
+12:50:30.419 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: package java.lang;;, formerValue: package java.lang;;
+12:50:30.419 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 49 entries
+12:50:30.419 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: boolean;, formerValue: boolean;
+12:50:30.419 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 49 entries
+12:50:30.420 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: val != val;, formerValue: val != val;
+12:50:30.420 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 49 entries
+12:50:30.420 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: {
+  return val != val;
+}, formerValue: {
+  return val != val;
+}
+12:50:30.420 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 49 entries
+package java.lang;
+
+public class Float {
+  isNaN
+}
+12:50:30.447 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: package java.lang;;, formerValue: package java.lang;;
+12:50:30.454 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 49 entries
+12:50:30.462 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: {}, formerValue: {}
+12:50:30.463 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 49 entries
+12:50:30.464 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: int;, formerValue: int;
+12:50:30.464 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 49 entries
+12:50:30.465 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 50 entries
+12:50:30.466 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 51 entries
+12:50:30.470 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: double;, formerValue: double;
+12:50:30.470 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 51 entries
+12:50:30.470 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 52 entries
+12:50:30.471 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: double;, formerValue: double;
+12:50:30.477 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 52 entries
+12:50:30.483 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 53 entries
+12:50:30.485 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 54 entries
+12:50:30.486 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: double;, formerValue: double;
+12:50:30.487 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 54 entries
+12:50:30.489 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 55 entries
+12:50:30.490 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 56 entries
+12:50:30.491 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: int;, formerValue: int;
+12:50:30.491 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 56 entries
+12:50:30.493 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 57 entries
+12:50:30.493 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 58 entries
+12:50:30.494 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 59 entries
+12:50:30.494 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 60 entries
+12:50:30.495 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: a, formerValue: a
+12:50:30.495 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 60 entries
+12:50:30.495 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 61 entries
+12:50:30.495 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 62 entries
+12:50:30.496 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 63 entries
+12:50:30.496 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: a < 0;, formerValue: a < 0;
+12:50:30.497 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 63 entries
+12:50:30.498 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: ();, formerValue: ();
+12:50:30.498 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 63 entries
+12:50:30.498 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: a, formerValue: a
+12:50:30.498 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 63 entries
+12:50:30.499 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: -a;, formerValue: -a;
+12:50:30.499 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 63 entries
+12:50:30.499 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: a, formerValue: a
+12:50:30.499 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 63 entries
+12:50:30.499 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: ;, formerValue: ;
+12:50:30.500 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 63 entries
+12:50:30.500 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: {
+  return ;
+}, formerValue: {
+  return ;
+}
+12:50:30.500 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 63 entries
+12:50:30.501 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: double;, formerValue: double;
+12:50:30.502 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 63 entries
+12:50:30.503 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 64 entries
+12:50:30.503 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 65 entries
+12:50:30.503 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 66 entries
+12:50:30.504 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: a, formerValue: a
+12:50:30.504 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 66 entries
+12:50:30.504 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 67 entries
+12:50:30.505 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 68 entries
+12:50:30.508 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 69 entries
+12:50:30.509 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 70 entries
+12:50:30.509 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 71 entries
+12:50:30.509 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 72 entries
+12:50:30.510 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: a, formerValue: a
+12:50:30.510 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 72 entries
+12:50:30.511 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 73 entries
+12:50:30.511 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 74 entries
+12:50:30.512 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: int;, formerValue: int;
+12:50:30.512 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 74 entries
+12:50:30.513 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 75 entries
+12:50:30.513 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 76 entries
+12:50:30.513 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: a, formerValue: a
+12:50:30.513 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 76 entries
+12:50:30.514 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 77 entries
+12:50:30.514 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 78 entries
+12:50:30.514 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 79 entries
+12:50:30.515 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: long;, formerValue: long;
+12:50:30.515 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 79 entries
+12:50:30.516 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: a <= b;, formerValue: a <= b;
+12:50:30.516 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 79 entries
+12:50:30.516 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: ();, formerValue: ();
+12:50:30.517 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 79 entries
+12:50:30.517 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: a, formerValue: a
+12:50:30.517 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 79 entries
+12:50:30.518 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: b, formerValue: b
+12:50:30.518 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 79 entries
+12:50:30.518 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: ;, formerValue: ;
+12:50:30.518 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 79 entries
+12:50:30.519 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: {
+  return ;
+}, formerValue: {
+  return ;
+}
+12:50:30.519 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 79 entries
+12:50:30.519 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: double;, formerValue: double;
+12:50:30.520 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 79 entries
+12:50:30.521 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: a <= b;, formerValue: a <= b;
+12:50:30.521 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 79 entries
+12:50:30.521 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: ();, formerValue: ();
+12:50:30.522 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 79 entries
+12:50:30.522 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: a, formerValue: a
+12:50:30.522 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 79 entries
+12:50:30.524 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: b, formerValue: b
+12:50:30.524 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 79 entries
+12:50:30.524 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: ;, formerValue: ;
+12:50:30.525 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 79 entries
+12:50:30.525 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: {
+  return ;
+}, formerValue: {
+  return ;
+}
+12:50:30.526 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 79 entries
+12:50:30.528 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: float;, formerValue: float;
+12:50:30.528 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 79 entries
+12:50:30.530 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: a <= b;, formerValue: a <= b;
+12:50:30.530 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 79 entries
+12:50:30.530 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: ();, formerValue: ();
+12:50:30.530 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 79 entries
+12:50:30.530 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: a, formerValue: a
+12:50:30.531 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 79 entries
+12:50:30.531 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: b, formerValue: b
+12:50:30.531 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 79 entries
+12:50:30.531 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: ;, formerValue: ;
+12:50:30.531 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 79 entries
+12:50:30.532 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: {
+  return ;
+}, formerValue: {
+  return ;
+}
+12:50:30.532 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 79 entries
+12:50:30.533 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: int;, formerValue: int;
+12:50:30.533 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 79 entries
+12:50:30.534 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 80 entries
+12:50:30.534 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 81 entries
+12:50:30.534 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: a, formerValue: a
+12:50:30.534 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 81 entries
+12:50:30.535 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: b, formerValue: b
+12:50:30.535 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 81 entries
+12:50:30.536 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 82 entries
+12:50:30.551 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 83 entries
+12:50:30.553 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: long;, formerValue: long;
+12:50:30.553 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 83 entries
+12:50:30.554 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: a >= b;, formerValue: a >= b;
+12:50:30.554 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 83 entries
+12:50:30.554 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: ();, formerValue: ();
+12:50:30.554 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 83 entries
+12:50:30.555 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: a, formerValue: a
+12:50:30.555 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 83 entries
+12:50:30.555 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: b, formerValue: b
+12:50:30.556 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 83 entries
+12:50:30.556 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: ;, formerValue: ;
+12:50:30.556 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 83 entries
+12:50:30.557 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: {
+  return ;
+}, formerValue: {
+  return ;
+}
+12:50:30.557 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 83 entries
+12:50:30.558 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: double;, formerValue: double;
+12:50:30.558 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 83 entries
+12:50:30.558 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: a, formerValue: a
+12:50:30.558 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 83 entries
+12:50:30.559 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 84 entries
+12:50:30.559 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 85 entries
+12:50:30.560 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: a >= b;, formerValue: a >= b;
+12:50:30.560 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 85 entries
+12:50:30.560 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: ();, formerValue: ();
+12:50:30.560 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 85 entries
+12:50:30.561 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: a, formerValue: a
+12:50:30.561 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 85 entries
+12:50:30.561 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: b, formerValue: b
+12:50:30.561 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 85 entries
+12:50:30.561 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: ;, formerValue: ;
+12:50:30.562 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 85 entries
+12:50:30.562 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 86 entries
+12:50:30.563 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: float;, formerValue: float;
+12:50:30.563 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 86 entries
+12:50:30.563 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: a, formerValue: a
+12:50:30.563 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 86 entries
+12:50:30.564 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: return a;, formerValue: return a;
+12:50:30.565 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 86 entries
+12:50:30.565 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: a != a;, formerValue: a != a;
+12:50:30.566 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 86 entries
+12:50:30.566 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: a >= b;, formerValue: a >= b;
+12:50:30.566 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 86 entries
+12:50:30.566 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: ();, formerValue: ();
+12:50:30.567 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 86 entries
+12:50:30.567 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: a, formerValue: a
+12:50:30.567 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 86 entries
+12:50:30.567 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: b, formerValue: b
+12:50:30.567 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 86 entries
+12:50:30.568 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: ;, formerValue: ;
+12:50:30.568 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 86 entries
+12:50:30.568 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: {
+  if (a != a) return a;
+  return ;
+}, formerValue: {
+  if (a != a) return a;
+  return ;
+}
+12:50:30.568 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 86 entries
+12:50:30.569 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: double;, formerValue: double;
+12:50:30.570 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 86 entries
+12:50:30.571 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: double;, formerValue: double;
+12:50:30.571 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 86 entries
+12:50:30.571 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: double;, formerValue: double;
+12:50:30.571 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 86 entries
+12:50:30.572 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: double;, formerValue: double;
+12:50:30.572 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 86 entries
+12:50:30.573 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: double;, formerValue: double;
+12:50:30.573 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 86 entries
+12:50:30.574 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: double;, formerValue: double;
+12:50:30.574 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 86 entries
+12:50:30.577 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: double;, formerValue: double;
+12:50:30.577 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 86 entries
+12:50:30.577 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: double;, formerValue: double;
+12:50:30.577 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 86 entries
+12:50:30.580 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: double;, formerValue: double;
+12:50:30.580 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 86 entries
+12:50:30.582 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: double;, formerValue: double;
+12:50:30.582 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 86 entries
+package java.lang;
+
+public final class Math {
+  Math
+  
+  floorMod
+  
+  public static
+    final double java.lang.Math::PI = 3.14159265358979323846
+  
+  public static
+    final double java.lang.Math::E = 2.7182818284590452354
+  
+  toRadians
+  
+  toDegrees
+  
+  abs
+  
+  abs
+  
+  abs
+  
+  abs
+  
+  min
+  
+  min
+  
+  min
+  
+  min
+  
+  max
+  
+  max
+  
+  max
+  
+  max
+  
+  sin
+  
+  asin
+  
+  cos
+  
+  acos
+  
+  tan
+  
+  atan2
+  
+  sqrt
+  
+  pow
+  
+  exp
+  
+  atan
+}
+12:50:30.591 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: package java.lang;;, formerValue: package java.lang;;
+12:50:30.591 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 86 entries
+12:50:30.592 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: {}, formerValue: {}
+12:50:30.592 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 86 entries
+12:50:30.592 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: int;, formerValue: int;
+12:50:30.593 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 86 entries
+12:50:30.593 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: long;, formerValue: long;
+12:50:30.593 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 86 entries
+12:50:30.594 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 87 entries
+12:50:30.596 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 88 entries
+package java.lang;
+
+public abstract class Number
+  extends java.lang.java.lang.Object
+  implements java.io.java.io.Serializable {
+  Number
+  
+  intValue
+  
+  longValue
+  
+  byteValue
+  
+  shortValue
+}
+12:50:30.607 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: package java.lang;;, formerValue: package java.lang;;
+12:50:30.607 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 88 entries
+12:50:30.607 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: {}, formerValue: {}
+12:50:30.608 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 88 entries
+12:50:30.613 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: {}, formerValue: {}
+12:50:30.613 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 88 entries
+package java.lang;
+
+public class OutOfMemoryError
+  extends java.lang.java.lang.VirtualMachineError {
+  OutOfMemoryError
+  
+  OutOfMemoryError
+}
+12:50:30.618 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 89 entries
+12:50:30.623 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: java.lang.java.lang.Class;, formerValue: java.lang.java.lang.Class;
+12:50:30.623 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 89 entries
+package java.lang.annotation;
+
+public interface Annotation {
+  annotationType
+}
+12:50:30.631 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: package java.lang;;, formerValue: package java.lang;;
+12:50:30.631 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 89 entries
+12:50:30.632 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: {
+  super();
+}, formerValue: {
+  super();
+}
+12:50:30.632 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 89 entries
+12:50:30.634 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: {
+  super(arg0);
+}, formerValue: {
+  super(arg0);
+}
+12:50:30.636 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 89 entries
+package java.lang;
+
+public class IllegalArgumentException
+  extends java.lang.java.lang.RuntimeException {
+  IllegalArgumentException
+  
+  IllegalArgumentException
+}
+12:50:30.656 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: package java.lang;;, formerValue: package java.lang;;
+12:50:30.657 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 89 entries
+12:50:30.659 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: int;, formerValue: int;
+12:50:30.660 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 89 entries
+package java.lang;
+
+public final class Character
+  extends java.lang.java.lang.Object
+  implements
+    java.io.java.io.Serializable,
+    java.lang.java.lang.Comparable {
+  digit
+}
+12:50:30.672 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: package java.lang;;, formerValue: package java.lang;;
+12:50:30.672 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 89 entries
+12:50:30.673 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: int;, formerValue: int;
+12:50:30.673 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 89 entries
+package java.lang;
+
+public interface Comparable {
+  compareTo
+}
+12:50:30.678 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: package java.lang;;, formerValue: package java.lang;;
+12:50:30.679 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 89 entries
+12:50:30.680 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: {
+  super();
+}, formerValue: {
+  super();
+}
+12:50:30.680 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 89 entries
+12:50:30.682 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: {
+  super(arg0);
+}, formerValue: {
+  super(arg0);
+}
+12:50:30.682 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 89 entries
+package java.lang;
+
+public class IndexOutOfBoundsException
+  extends java.lang.java.lang.RuntimeException {
+  IndexOutOfBoundsException
+  
+  IndexOutOfBoundsException
+}
+12:50:30.687 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: package java.lang;;, formerValue: package java.lang;;
+12:50:30.687 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 89 entries
+12:50:30.687 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: long;, formerValue: long;
+12:50:30.687 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 89 entries
+12:50:30.688 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 90 entries
+12:50:30.688 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: long;, formerValue: long;
+12:50:30.689 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 90 entries
+12:50:30.689 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 91 entries
+12:50:30.690 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: java.lang.java.lang.Class;, formerValue: java.lang.java.lang.Class;
+12:50:30.690 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 91 entries
+12:50:30.691 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: int;, formerValue: int;
+12:50:30.691 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 91 entries
+12:50:30.691 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 92 entries
+package java.lang;
+
+public final class Long
+  implements java.lang.java.lang.Comparable {
+  public final
+    static long java.lang.Long::MIN_VALUE = 0x8000000000000000L
+  
+  public final
+    static long java.lang.Long::MAX_VALUE = 0x7fffffffffffffffL
+  
+  public final
+    static java.lang.java.lang.Class java.lang.Long::TYPE
+  
+  public final static int java.lang.Long::SIZE = 64
+}
+12:50:30.695 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: package java.lang;;, formerValue: package java.lang;;
+12:50:30.695 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 92 entries
+package java.lang;
+
+public interface Cloneable {}
+12:50:30.702 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: package java.lang;;, formerValue: package java.lang;;
+12:50:30.703 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 92 entries
+12:50:30.704 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: {
+  super();
+}, formerValue: {
+  super();
+}
+12:50:30.704 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 92 entries
+12:50:30.708 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 93 entries
+12:50:30.708 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 94 entries
+12:50:30.711 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: {
+  super(arg0);
+}, formerValue: {
+  super(arg0);
+}
+12:50:30.711 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 94 entries
+12:50:30.712 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: java.lang.java.lang.Throwable;, formerValue: java.lang.java.lang.Throwable;
+12:50:30.712 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 94 entries
+12:50:30.714 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: java.lang.java.lang.Throwable;, formerValue: java.lang.java.lang.Throwable;
+12:50:30.714 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 94 entries
+package java.lang;
+
+public class ExceptionInInitializerError
+  extends java.lang.java.lang.LinkageError {
+  ExceptionInInitializerError
+  
+  ExceptionInInitializerError
+  
+  ExceptionInInitializerError
+  
+  getException
+  
+  getCause
+}
+12:50:30.727 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: package java.lang;;, formerValue: package java.lang;;
+12:50:30.727 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 94 entries
+12:50:30.728 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: {}, formerValue: {}
+12:50:30.728 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 94 entries
+12:50:30.729 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: {}, formerValue: {}
+12:50:30.729 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 94 entries
+12:50:30.730 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: {}, formerValue: {}
+12:50:30.731 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 94 entries
+12:50:30.731 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 95 entries
+12:50:30.733 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: java.lang.java.lang.StringBuffer;, formerValue: java.lang.java.lang.StringBuffer;
+12:50:30.734 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 95 entries
+12:50:30.746 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: java.lang.java.lang.StringBuffer;, formerValue: java.lang.java.lang.StringBuffer;
+12:50:30.746 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 95 entries
+12:50:30.746 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: java.lang.java.lang.StringBuffer;, formerValue: java.lang.java.lang.StringBuffer;
+12:50:30.747 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 95 entries
+12:50:30.747 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: java.lang.java.lang.StringBuffer;, formerValue: java.lang.java.lang.StringBuffer;
+12:50:30.747 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 95 entries
+12:50:30.748 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: java.lang.java.lang.StringBuffer;, formerValue: java.lang.java.lang.StringBuffer;
+12:50:30.748 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 95 entries
+12:50:30.752 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 96 entries
+12:50:30.752 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: int;, formerValue: int;
+12:50:30.752 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 96 entries
+12:50:30.753 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: java.lang.java.lang.String;, formerValue: java.lang.java.lang.String;
+12:50:30.753 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 96 entries
+package java.lang;
+
+public class StringBuffer
+  extends java.lang.java.lang.Object
+  implements java.io.java.io.Serializable {
+  StringBuffer
+  
+  StringBuffer
+  
+  StringBuffer
+  
+  append
+  
+  append
+  
+  append
+  
+  append
+  
+  append
+  
+  append
+  
+  charAt
+  
+  length
+  
+  toString
+}
+12:50:30.762 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: package java.lang;;, formerValue: package java.lang;;
+12:50:30.763 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 96 entries
+12:50:30.765 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: {
+  super();
+}, formerValue: {
+  super();
+}
+12:50:30.765 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 96 entries
+12:50:30.767 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: {
+  super(arg0);
+}, formerValue: {
+  super(arg0);
+}
+12:50:30.767 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 96 entries
+12:50:30.770 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: {
+  super(arg0, arg1);
+}, formerValue: {
+  super(arg0, arg1);
+}
+12:50:30.770 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 96 entries
+12:50:30.771 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: {
+  super(arg0);
+}, formerValue: {
+  super(arg0);
+}
+12:50:30.772 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 96 entries
+package java.lang;
+
+public class Exception
+  extends java.lang.java.lang.Throwable {
+  Exception
+  
+  Exception
+  
+  Exception
+  
+  Exception
+}
+12:50:30.775 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: package java.lang;;, formerValue: package java.lang;;
+12:50:30.776 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 96 entries
+12:50:30.776 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: any;, formerValue: any;
+12:50:30.776 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 96 entries
+package java.lang;
+
+public interface Runnable {
+  run
+}
+12:50:30.789 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 97 entries
+12:50:30.789 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: int;, formerValue: int;
+12:50:30.789 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 97 entries
+12:50:30.796 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: boolean;, formerValue: boolean;
+12:50:30.796 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 97 entries
+12:50:30.796 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: boolean;, formerValue: boolean;
+12:50:30.796 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 97 entries
+12:50:30.845 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: java.util.java.util.Iterator;, formerValue: java.util.java.util.Iterator;
+12:50:30.845 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 97 entries
+12:50:30.853 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 98 entries
+12:50:30.854 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: unknown[];, formerValue: unknown[];
+12:50:30.854 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 98 entries
+12:50:30.858 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: boolean;, formerValue: boolean;
+12:50:30.858 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 98 entries
+12:50:30.859 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: boolean;, formerValue: boolean;
+12:50:30.859 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 98 entries
+12:50:30.860 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: boolean;, formerValue: boolean;
+12:50:30.860 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 98 entries
+12:50:30.862 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: boolean;, formerValue: boolean;
+12:50:30.862 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 98 entries
+12:50:30.863 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: boolean;, formerValue: boolean;
+12:50:30.863 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 98 entries
+12:50:30.864 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: boolean;, formerValue: boolean;
+12:50:30.864 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 98 entries
+12:50:30.864 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: any;, formerValue: any;
+12:50:30.864 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 98 entries
+12:50:30.865 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: boolean;, formerValue: boolean;
+12:50:30.865 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 98 entries
+12:50:30.866 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: int;, formerValue: int;
+12:50:30.867 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 98 entries
+package java.util;
+
+public interface Set extends
+                       java.util.java.util.Collection {
+  size
+  
+  isEmpty
+  
+  contains
+  
+  iterator
+  
+  toArray
+  
+  toArray
+  
+  add
+  
+  remove
+  
+  containsAll
+  
+  addAll
+  
+  retainAll
+  
+  removeAll
+  
+  clear
+  
+  equals
+  
+  hashCode
+}
+12:50:30.875 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: package java.util;;, formerValue: package java.util;;
+12:50:30.875 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 98 entries
+12:50:30.877 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 99 entries
+12:50:30.879 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: int;, formerValue: int;
+12:50:30.880 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 99 entries
+12:50:30.880 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: boolean;, formerValue: boolean;
+12:50:30.880 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 99 entries
+12:50:30.881 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: boolean;, formerValue: boolean;
+12:50:30.881 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 99 entries
+12:50:30.882 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: boolean;, formerValue: boolean;
+12:50:30.882 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 99 entries
+12:50:30.884 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: java.lang.java.lang.Object;, formerValue: java.lang.java.lang.Object;
+12:50:30.884 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 99 entries
+12:50:30.885 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: java.lang.java.lang.Object;, formerValue: java.lang.java.lang.Object;
+12:50:30.885 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 99 entries
+12:50:30.886 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: java.lang.java.lang.Object;, formerValue: java.lang.java.lang.Object;
+12:50:30.886 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 99 entries
+12:50:30.887 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: any;, formerValue: any;
+12:50:30.888 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 99 entries
+12:50:30.888 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: any;, formerValue: any;
+12:50:30.888 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 99 entries
+12:50:30.889 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 100 entries
+12:50:30.891 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: java.util.java.util.Set;, formerValue: java.util.java.util.Set;
+12:50:30.891 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 100 entries
+12:50:30.891 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: boolean;, formerValue: boolean;
+12:50:30.891 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 100 entries
+12:50:30.892 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: int;, formerValue: int;
+12:50:30.893 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 100 entries
+package java.util;
+
+public interface Map {
+  keySet
+  
+  size
+  
+  isEmpty
+  
+  containsKey
+  
+  containsValue
+  
+  get
+  
+  put
+  
+  remove
+  
+  putAll
+  
+  clear
+  
+  values
+  
+  entrySet
+  
+  equals
+  
+  hashCode
+}
+12:50:30.903 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: package java.util;;, formerValue: package java.util;;
+12:50:30.903 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 100 entries
+12:50:30.904 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: int;, formerValue: int;
+12:50:30.904 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 100 entries
+12:50:30.904 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: boolean;, formerValue: boolean;
+12:50:30.904 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 100 entries
+12:50:30.905 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: boolean;, formerValue: boolean;
+12:50:30.905 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 100 entries
+12:50:30.906 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: boolean;, formerValue: boolean;
+12:50:30.906 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 100 entries
+12:50:30.906 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: boolean;, formerValue: boolean;
+12:50:30.906 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 100 entries
+12:50:30.907 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: boolean;, formerValue: boolean;
+12:50:30.908 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 100 entries
+12:50:30.909 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: boolean;, formerValue: boolean;
+12:50:30.909 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 100 entries
+12:50:30.911 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: any;, formerValue: any;
+12:50:30.911 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 100 entries
+12:50:30.912 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: boolean;, formerValue: boolean;
+12:50:30.912 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 100 entries
+12:50:30.913 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: boolean;, formerValue: boolean;
+12:50:30.913 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 100 entries
+12:50:30.915 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: java.util.java.util.Iterator;, formerValue: java.util.java.util.Iterator;
+12:50:30.915 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 100 entries
+12:50:30.916 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: unknown[];, formerValue: unknown[];
+12:50:30.916 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 100 entries
+12:50:30.916 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: unknown[];, formerValue: unknown[];
+12:50:30.916 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 100 entries
+package java.util;
+
+public interface Collection extends
+                              java.lang.java.lang.Iterable {
+  size
+  
+  isEmpty
+  
+  add
+  
+  remove
+  
+  addAll
+  
+  removeAll
+  
+  retainAll
+  
+  clear
+  
+  contains
+  
+  containsAll
+  
+  iterator
+  
+  toArray
+  
+  toArray
+}
+12:50:30.923 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: package java.util;;, formerValue: package java.util;;
+12:50:30.923 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 100 entries
+12:50:30.923 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: boolean;, formerValue: boolean;
+12:50:30.923 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 100 entries
+12:50:30.924 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 101 entries
+12:50:30.924 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: any;, formerValue: any;
+12:50:30.924 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 101 entries
+package java.util;
+
+public interface Iterator {
+  hasNext
+  
+  next
+  
+  remove
+}
+12:50:30.948 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: package java.util;;, formerValue: package java.util;;
+12:50:30.948 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 101 entries
+12:50:30.952 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 102 entries
+12:50:30.953 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: java.util.java.util.ArrayList;, formerValue: java.util.java.util.ArrayList;
+12:50:30.953 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 102 entries
+12:50:30.954 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: java.util.java.util.ArrayList;, formerValue: java.util.java.util.ArrayList;
+12:50:30.954 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 102 entries
+12:50:30.956 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: java.util.java.util.ArrayList;, formerValue: java.util.java.util.ArrayList;
+12:50:30.956 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 102 entries
+12:50:30.958 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 103 entries
+12:50:30.958 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 104 entries
+12:50:30.959 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: char[];, formerValue: char[];
+12:50:30.959 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 104 entries
+12:50:30.960 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 105 entries
+12:50:30.961 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 106 entries
+12:50:30.963 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 107 entries
+12:50:30.964 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 108 entries
+12:50:30.965 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 109 entries
+12:50:30.965 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: boolean[];, formerValue: boolean[];
+12:50:30.965 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 109 entries
+12:50:30.966 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: char[];, formerValue: char[];
+12:50:30.966 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 109 entries
+12:50:30.967 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: short[];, formerValue: short[];
+12:50:30.967 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 109 entries
+12:50:30.967 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: int[];, formerValue: int[];
+12:50:30.967 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 109 entries
+12:50:30.968 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: long[];, formerValue: long[];
+12:50:30.968 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 109 entries
+12:50:30.969 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: float[];, formerValue: float[];
+12:50:30.969 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 109 entries
+12:50:30.970 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: double[];, formerValue: double[];
+12:50:30.970 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 109 entries
+12:50:30.971 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: boolean;, formerValue: boolean;
+12:50:30.971 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 109 entries
+12:50:30.972 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: boolean;, formerValue: boolean;
+12:50:30.972 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 109 entries
+12:50:30.973 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: boolean;, formerValue: boolean;
+12:50:30.973 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 109 entries
+12:50:30.974 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: boolean;, formerValue: boolean;
+12:50:30.974 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 109 entries
+12:50:30.975 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: boolean;, formerValue: boolean;
+12:50:30.975 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 109 entries
+12:50:30.975 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: any;, formerValue: any;
+12:50:30.975 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 109 entries
+12:50:30.976 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: any;, formerValue: any;
+12:50:30.976 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 109 entries
+12:50:30.977 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: any;, formerValue: any;
+12:50:30.977 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 109 entries
+12:50:30.977 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: any;, formerValue: any;
+12:50:30.977 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 109 entries
+12:50:30.978 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: any;, formerValue: any;
+12:50:30.978 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 109 entries
+12:50:30.978 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: any;, formerValue: any;
+12:50:30.979 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 109 entries
+12:50:30.979 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: any;, formerValue: any;
+12:50:30.979 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 109 entries
+12:50:30.980 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: any;, formerValue: any;
+12:50:30.980 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 109 entries
+12:50:30.981 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: any;, formerValue: any;
+12:50:30.981 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 109 entries
+12:50:30.982 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: any;, formerValue: any;
+12:50:30.982 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 109 entries
+12:50:30.982 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: any;, formerValue: any;
+12:50:30.982 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 109 entries
+12:50:30.983 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: any;, formerValue: any;
+12:50:30.983 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 109 entries
+12:50:30.984 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: any;, formerValue: any;
+12:50:30.984 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 109 entries
+12:50:30.984 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: any;, formerValue: any;
+12:50:30.986 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 109 entries
+12:50:30.987 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: any;, formerValue: any;
+12:50:30.987 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 109 entries
+12:50:30.987 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: any;, formerValue: any;
+12:50:30.987 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 109 entries
+12:50:30.988 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: any;, formerValue: any;
+12:50:30.988 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 109 entries
+12:50:30.989 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: any;, formerValue: any;
+12:50:30.989 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 109 entries
+12:50:30.989 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: any;, formerValue: any;
+12:50:30.989 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 109 entries
+12:50:30.990 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: any;, formerValue: any;
+12:50:30.990 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 109 entries
+12:50:30.991 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: any;, formerValue: any;
+12:50:30.991 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 109 entries
+12:50:30.991 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: any;, formerValue: any;
+12:50:30.991 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 109 entries
+package java.util;
+
+public final class Arrays {
+  asList
+  
+  asList
+  
+  asList
+  
+  asList
+  
+  copyOf
+  
+  copyOf
+  
+  copyOf
+  
+  copyOf
+  
+  copyOf
+  
+  copyOf
+  
+  copyOf
+  
+  copyOf
+  
+  copyOfRange
+  
+  copyOfRange
+  
+  copyOfRange
+  
+  copyOfRange
+  
+  copyOfRange
+  
+  copyOfRange
+  
+  copyOfRange
+  
+  equals
+  
+  equals
+  
+  equals
+  
+  equals
+  
+  equals
+  
+  fill
+  
+  fill
+  
+  fill
+  
+  fill
+  
+  fill
+  
+  fill
+  
+  fill
+  
+  fill
+  
+  fill
+  
+  fill
+  
+  fill
+  
+  fill
+  
+  sort
+  
+  sort
+  
+  sort
+  
+  sort
+  
+  sort
+  
+  sort
+  
+  sort
+  
+  sort
+  
+  sort
+  
+  sort
+}
+12:50:31.000 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: package java.util;;, formerValue: package java.util;;
+12:50:31.000 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 109 entries
+12:50:31.001 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: boolean;, formerValue: boolean;
+12:50:31.001 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 109 entries
+12:50:31.002 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: java.lang.java.lang.Object;, formerValue: java.lang.java.lang.Object;
+12:50:31.002 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 109 entries
+12:50:31.002 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: boolean;, formerValue: boolean;
+12:50:31.002 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 109 entries
+12:50:31.004 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: java.lang.java.lang.Object;, formerValue: java.lang.java.lang.Object;
+12:50:31.004 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 109 entries
+12:50:31.004 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: int;, formerValue: int;
+12:50:31.004 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 109 entries
+12:50:31.005 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: int;, formerValue: int;
+12:50:31.005 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 109 entries
+12:50:31.005 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: any;, formerValue: any;
+12:50:31.005 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 109 entries
+12:50:31.006 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: any;, formerValue: any;
+12:50:31.006 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 109 entries
+12:50:31.006 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: any;, formerValue: any;
+12:50:31.006 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 109 entries
+package java.util;
+
+public interface ListIterator extends
+                                java.util.java.util.Iterator {
+  hasNext
+  
+  next
+  
+  hasPrevious
+  
+  previous
+  
+  nextIndex
+  
+  previousIndex
+  
+  remove
+  
+  set
+  
+  add
+}
+12:50:31.014 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: package java.util;;, formerValue: package java.util;;
+12:50:31.015 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 109 entries
+12:50:31.018 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: any;, formerValue: any;
+12:50:31.018 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 109 entries
+12:50:31.021 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: boolean;, formerValue: boolean;
+12:50:31.022 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 109 entries
+12:50:31.022 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: java.lang.java.lang.Object;, formerValue: java.lang.java.lang.Object;
+12:50:31.022 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 109 entries
+12:50:31.023 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: java.lang.java.lang.Object;, formerValue: java.lang.java.lang.Object;
+12:50:31.023 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 109 entries
+12:50:31.024 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: int;, formerValue: int;
+12:50:31.024 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 109 entries
+12:50:31.025 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: int;, formerValue: int;
+12:50:31.025 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 109 entries
+12:50:31.026 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 110 entries
+12:50:31.026 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: java.util.java.util.ListIterator;, formerValue: java.util.java.util.ListIterator;
+12:50:31.026 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 110 entries
+12:50:31.027 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 111 entries
+package java.util;
+
+public interface List extends
+                        java.util.java.util.Collection {
+  add
+  
+  addAll
+  
+  get
+  
+  set
+  
+  indexOf
+  
+  lastIndexOf
+  
+  listIterator
+  
+  listIterator
+  
+  subList
+}
+12:50:31.045 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: package java.util;;, formerValue: package java.util;;
+12:50:31.045 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 111 entries
+12:50:31.055 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: {}, formerValue: {}
+12:50:31.055 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 111 entries
+package java.util;
+
+public final class Date {
+  Date
+}
+12:50:31.059 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: package java.util;;, formerValue: package java.util;;
+12:50:31.060 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 111 entries
+12:50:31.060 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: {}, formerValue: {}
+12:50:31.060 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 111 entries
+12:50:31.061 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: {}, formerValue: {}
+12:50:31.061 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 111 entries
+package java.util;
+
+public final class ArrayList
+  implements java.util.java.util.List {
+  ArrayList
+  
+  ArrayList
+}
+12:50:31.064 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: package java.util;;, formerValue: package java.util;;
+12:50:31.064 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 111 entries
+package java.util;
+
+public final class ListIteratorImpl
+  implements java.util.java.util.ListIterator {}
+12:50:31.067 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: package java.util;;, formerValue: package java.util;;
+12:50:31.067 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 111 entries
+12:50:31.068 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: {}, formerValue: {}
+12:50:31.069 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 111 entries
+package java.util;
+
+public final class LinkedHashMap
+  implements java.util.java.util.Map {
+  LinkedHashMap
+}
+12:50:31.074 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: package java.util;;, formerValue: package java.util;;
+12:50:31.074 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 111 entries
+12:50:31.075 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: {}, formerValue: {}
+12:50:31.075 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 111 entries
+12:50:31.076 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 112 entries
+package java.util;
+
+public final class LinkedList
+  implements java.util.java.util.List {
+  LinkedList
+  
+  toString
+}
+12:50:31.084 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 113 entries
+12:50:31.092 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 114 entries
+12:50:31.094 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 115 entries
+12:50:31.094 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 116 entries
+12:50:31.097 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 117 entries
+12:50:31.098 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: java.math.java.math.BigInteger;, formerValue: java.math.java.math.BigInteger;
+12:50:31.098 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 117 entries
+12:50:31.098 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 118 entries
+12:50:31.098 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: java.math.java.math.BigInteger;, formerValue: java.math.java.math.BigInteger;
+12:50:31.098 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 118 entries
+12:50:31.099 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 119 entries
+12:50:31.101 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 120 entries
+12:50:31.101 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 121 entries
+12:50:31.102 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: int;, formerValue: int;
+12:50:31.102 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 121 entries
+12:50:31.104 [Test worker] ERROR de.uka.ilkd.key.java.KeYJPMapping -- Duplicate registration of type: java.math.java.math.BigInteger;, formerValue: java.math.java.math.BigInteger;
+12:50:31.105 [Test worker] WARN de.uka.ilkd.key.java.KeYJPMapping -- Size of rec2key: 121 entries
+package java.math;
+
+public final class BigInteger
+  extends java.lang.java.lang.Number
+  implements java.lang.java.lang.Comparable {
+  public static
+    final java.math.java.math.BigInteger java.math.BigInteger::ZERO = BigInteger.valueOf(
+      0
+    )
+  
+  valueOf
+  
+  compareTo
+  
+  mod
+}
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

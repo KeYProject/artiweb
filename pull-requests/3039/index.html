@@ -70,7 +70,7 @@ Impact on operation in KeY is unknown. </p></details>
         new Chart(ctx, graph);
     }
 
-    createChart("runtime", ["17. Feb 2023 21:04", "11. Mar 2023 17:16"], [9828.266, 9633.159]);
+    createChart("runtime", ["17. Feb 2023 21:04", "11. Mar 2023 17:16"], [9828.266000000001, 9633.159000000001]);
 
     const ctx2 = document.getElementById('testcases');
     new Chart(ctx2, {"data": {"datasets": [{"backgroundColor": "rgb(250, 220, 220)", "borderColor": "rgb(250, 192, 192)", "data": [1, 0], "fill": true, "label": "Failures", "tension": 0.1}, {"backgroundColor": "rgb(200, 212, 212)", "borderColor": "rgb(180, 192, 192)", "data": [0, 0], "fill": true, "label": "Errors", "tension": 0.1}, {"backgroundColor": "rgb(150, 150, 150)", "borderColor": "rgb(100, 100, 100)", "data": [119, 117], "fill": true, "label": "Skipped", "tension": 0.1}, {"backgroundColor": "rgb(95, 212, 120)", "borderColor": "rgb(75, 192, 100)", "data": [3429, 3431], "fill": true, "label": "Success", "tension": 0.1}], "labels": ["17. Feb 2023 21:04", "11. Mar 2023 17:16"]}, "options": {"maintainAspectRatio": false, "responsive": true, "scales": {"y": {"stacked": true}}}, "type": "line"});
