@@ -1,0 +1,323 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="org.key_project.slicing.EndToEndTests" tests="11" skipped="0" failures="0" errors="0" timestamp="2023-05-21T22:09:14" hostname="fv-az192-933" time="282.087">
+  <properties/>
+  <testcase name="sliceIfThenElseSplit()" classname="org.key_project.slicing.EndToEndTests" time="69.409"/>
+  <testcase name="deduplicateChecksMergabilityCorrectly()" classname="org.key_project.slicing.EndToEndTests" time="9.407"/>
+  <testcase name="sliceDuplicatesAway()" classname="org.key_project.slicing.EndToEndTests" time="36.693"/>
+  <testcase name="sliceMultipleIterations()" classname="org.key_project.slicing.EndToEndTests" time="70.902"/>
+  <testcase name="sliceDuplicatesAwayOpenGoals()" classname="org.key_project.slicing.EndToEndTests" time="36.833"/>
+  <testcase name="sliceCutExample()" classname="org.key_project.slicing.EndToEndTests" time="9.145"/>
+  <testcase name="sliceAgathaWithOpenGoal()" classname="org.key_project.slicing.EndToEndTests" time="9.149"/>
+  <testcase name="sliceSimpleSMT()" classname="org.key_project.slicing.EndToEndTests" time="0.06"/>
+  <testcase name="sliceWithOpenGoal()" classname="org.key_project.slicing.EndToEndTests" time="18.557"/>
+  <testcase name="sliceAgatha()" classname="org.key_project.slicing.EndToEndTests" time="9.26"/>
+  <testcase name="sliceJavaProof()" classname="org.key_project.slicing.EndToEndTests" time="12.66"/>
+  <system-out><![CDATA[[22:09:14.906] ?[34mINFO ?[0;39m ?[36mEndToEndTests?[0;39m - Loading D:\a\key\key\keyext.slicing\src\test\resources\testcase\ifThenElseSplit.proof
+[22:09:15.077] ?[31mWARN ?[0;39m ?[36mProofIndependentSettings?[0;39m - The settings in C:\Users\runneradmin\.key\proofIndependentSettings.props are *not* read due to flag 'key.disregardSettings'
+[22:09:15.093] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Loading environment from src\test\resources\testcase\ifThenElseSplit.proof
+[22:09:15.290] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Creating init config
+[22:09:15.322] ?[31mWARN ?[0;39m ?[36mProofSettings?[0;39m - The settings in C:\Users\runneradmin\.key\proof-settings.props are *not* read.
+[22:09:27.291] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Replaying proof ifThenElseSplit.proof
+[22:09:37.362] ?[34mINFO ?[0;39m ?[36mKeyStrokeSettings?[0;39m - Save keyboard shortcuts to: C:\Users\runneradmin\.key\keystrokes.properties
+[22:09:37.503] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Loading environment from C:\Users\RUNNER~1\AppData\Local\Temp\proof12578206598214020625.proof
+[22:09:37.519] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Creating init config
+[22:09:41.897] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Replaying proof proof12578206598214020625.proof
+[22:09:41.928] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Loading environment from C:\Users\RUNNER~1\AppData\Local\Temp\KeYslice257591366870913883\ifThenElseSplit_slice1.proof
+[22:09:41.928] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Creating init config
+[22:09:45.540] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Replaying proof ifThenElseSplit_slice1.proof
+[22:09:45.555] ?[34mINFO ?[0;39m ?[36mEndToEndTests?[0;39m - Loading D:\a\key\key\keyext.slicing\src\test\resources\testcase\ifThenElseSplit.proof
+[22:09:45.555] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Loading environment from src\test\resources\testcase\ifThenElseSplit.proof
+[22:09:45.555] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Creating init config
+[22:09:48.946] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Replaying proof ifThenElseSplit.proof
+[22:09:48.977] ?[34mINFO ?[0;39m ?[36mDependencyAnalyzer?[0;39m - merging 2 and 3
+[22:09:48.993] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Loading environment from C:\Users\RUNNER~1\AppData\Local\Temp\proof14820800611663557710.proof
+[22:09:48.993] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Creating init config
+[22:09:52.273] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Replaying proof proof14820800611663557710.proof
+[22:09:52.289] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Loading environment from C:\Users\RUNNER~1\AppData\Local\Temp\KeYslice15181104261348980936\ifThenElseSplit_slice1.proof
+[22:09:52.304] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Creating init config
+[22:09:55.620] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Replaying proof ifThenElseSplit_slice1.proof
+[22:09:55.651] ?[34mINFO ?[0;39m ?[36mEndToEndTests?[0;39m - Loading C:\Users\RUNNER~1\AppData\Local\Temp\KeYslice15181104261348980936\ifThenElseSplit_slice1.proof
+[22:09:55.651] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Loading environment from C:\Users\RUNNER~1\AppData\Local\Temp\KeYslice15181104261348980936\ifThenElseSplit_slice1.proof
+[22:09:55.651] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Creating init config
+[22:09:58.826] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Replaying proof ifThenElseSplit_slice1.proof
+[22:09:58.842] ?[34mINFO ?[0;39m ?[36mDependencyAnalyzer?[0;39m - merging 3 and 4
+[22:09:58.858] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Loading environment from C:\Users\RUNNER~1\AppData\Local\Temp\proof2665644397528398268.proof
+[22:09:58.858] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Creating init config
+[22:10:02.055] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Replaying proof proof2665644397528398268.proof
+[22:10:02.086] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Loading environment from C:\Users\RUNNER~1\AppData\Local\Temp\KeYslice6504791927739194007\ifThenElseSplit_slice2.proof
+[22:10:02.086] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Creating init config
+[22:10:05.299] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Replaying proof ifThenElseSplit_slice2.proof
+[22:10:05.314] ?[34mINFO ?[0;39m ?[36mEndToEndTests?[0;39m - Loading C:\Users\RUNNER~1\AppData\Local\Temp\KeYslice6504791927739194007\ifThenElseSplit_slice2.proof
+[22:10:05.314] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Loading environment from C:\Users\RUNNER~1\AppData\Local\Temp\KeYslice6504791927739194007\ifThenElseSplit_slice2.proof
+[22:10:05.314] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Creating init config
+[22:10:08.557] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Replaying proof ifThenElseSplit_slice2.proof
+[22:10:08.589] ?[34mINFO ?[0;39m ?[36mDependencyAnalyzer?[0;39m - merging 4 and 5
+[22:10:08.589] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Loading environment from C:\Users\RUNNER~1\AppData\Local\Temp\proof14599856791619775721.proof
+[22:10:08.589] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Creating init config
+[22:10:11.743] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Replaying proof proof14599856791619775721.proof
+[22:10:11.758] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Loading environment from C:\Users\RUNNER~1\AppData\Local\Temp\KeYslice2135013442037200258\ifThenElseSplit_slice3.proof
+[22:10:11.758] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Creating init config
+[22:10:14.932] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Replaying proof ifThenElseSplit_slice3.proof
+[22:10:14.932] ?[34mINFO ?[0;39m ?[36mEndToEndTests?[0;39m - Loading C:\Users\RUNNER~1\AppData\Local\Temp\KeYslice2135013442037200258\ifThenElseSplit_slice3.proof
+[22:10:14.947] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Loading environment from C:\Users\RUNNER~1\AppData\Local\Temp\KeYslice2135013442037200258\ifThenElseSplit_slice3.proof
+[22:10:14.952] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Creating init config
+[22:10:18.080] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Replaying proof ifThenElseSplit_slice3.proof
+[22:10:18.096] ?[34mINFO ?[0;39m ?[36mDependencyAnalyzer?[0;39m - merging 5 and 6
+[22:10:18.111] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Loading environment from C:\Users\RUNNER~1\AppData\Local\Temp\proof15908984749670605450.proof
+[22:10:18.111] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Creating init config
+[22:10:21.100] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Replaying proof proof15908984749670605450.proof
+[22:10:21.116] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Loading environment from C:\Users\RUNNER~1\AppData\Local\Temp\KeYslice1619627890177077019\ifThenElseSplit_slice4.proof
+[22:10:21.116] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Creating init config
+[22:10:24.306] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Replaying proof ifThenElseSplit_slice4.proof
+[22:10:24.322] ?[34mINFO ?[0;39m ?[36mEndToEndTests?[0;39m - Loading D:\a\key\key\keyext.slicing\src\test\resources\testcase\deduplicateCheck4.proof
+[22:10:24.322] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Loading environment from src\test\resources\testcase\deduplicateCheck4.proof
+[22:10:24.322] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Creating init config
+[22:10:27.433] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Replaying proof deduplicateCheck4.proof
+[22:10:27.464] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Loading environment from C:\Users\RUNNER~1\AppData\Local\Temp\proof16289396947976640860.proof
+[22:10:27.480] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Creating init config
+[22:10:30.562] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Replaying proof proof16289396947976640860.proof
+[22:10:30.593] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Loading environment from C:\Users\RUNNER~1\AppData\Local\Temp\KeYslice13874120336037889795\deduplicateCheck4_slice1.proof
+[22:10:30.608] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Creating init config
+[22:10:33.699] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Replaying proof deduplicateCheck4_slice1.proof
+[22:10:33.730] ?[34mINFO ?[0;39m ?[36mEndToEndTests?[0;39m - Loading D:\a\key\key\keyext.slicing\src\test\resources\testcase\exampleDuplicate.proof
+[22:10:33.730] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Loading environment from src\test\resources\testcase\exampleDuplicate.proof
+[22:10:33.746] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Creating init config
+[22:10:36.763] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Replaying proof exampleDuplicate.proof
+[22:10:36.778] ?[34mINFO ?[0;39m ?[36mDependencyAnalyzer?[0;39m - merging 2 and 3
+[22:10:36.794] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Loading environment from C:\Users\RUNNER~1\AppData\Local\Temp\proof8935079245160504297.proof
+[22:10:36.794] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Creating init config
+[22:10:39.844] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Replaying proof proof8935079245160504297.proof
+[22:10:39.860] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Loading environment from C:\Users\RUNNER~1\AppData\Local\Temp\KeYslice11845989048328681441\exampleDuplicate_slice1.proof
+[22:10:39.875] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Creating init config
+[22:10:42.933] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Replaying proof exampleDuplicate_slice1.proof
+[22:10:42.949] ?[34mINFO ?[0;39m ?[36mEndToEndTests?[0;39m - Loading C:\Users\RUNNER~1\AppData\Local\Temp\KeYslice11845989048328681441\exampleDuplicate_slice1.proof
+[22:10:42.949] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Loading environment from C:\Users\RUNNER~1\AppData\Local\Temp\KeYslice11845989048328681441\exampleDuplicate_slice1.proof
+[22:10:42.949] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Creating init config
+[22:10:45.965] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Replaying proof exampleDuplicate_slice1.proof
+[22:10:45.996] ?[34mINFO ?[0;39m ?[36mDependencyAnalyzer?[0;39m - merging 3 and 4
+[22:10:45.996] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Loading environment from C:\Users\RUNNER~1\AppData\Local\Temp\proof9242621203674626646.proof
+[22:10:45.996] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Creating init config
+[22:10:48.994] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Replaying proof proof9242621203674626646.proof
+[22:10:49.010] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Loading environment from C:\Users\RUNNER~1\AppData\Local\Temp\KeYslice2512422630590735958\exampleDuplicate_slice2.proof
+[22:10:49.010] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Creating init config
+[22:10:52.087] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Replaying proof exampleDuplicate_slice2.proof
+[22:10:52.103] ?[34mINFO ?[0;39m ?[36mEndToEndTests?[0;39m - Loading C:\Users\RUNNER~1\AppData\Local\Temp\KeYslice2512422630590735958\exampleDuplicate_slice2.proof
+[22:10:52.103] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Loading environment from C:\Users\RUNNER~1\AppData\Local\Temp\KeYslice2512422630590735958\exampleDuplicate_slice2.proof
+[22:10:52.118] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Creating init config
+[22:10:55.106] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Replaying proof exampleDuplicate_slice2.proof
+[22:10:55.122] ?[34mINFO ?[0;39m ?[36mDependencyAnalyzer?[0;39m - merging 4 and 5
+[22:10:55.137] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Loading environment from C:\Users\RUNNER~1\AppData\Local\Temp\proof407262061589379469.proof
+[22:10:55.137] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Creating init config
+[22:10:58.199] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Replaying proof proof407262061589379469.proof
+[22:10:58.215] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Loading environment from C:\Users\RUNNER~1\AppData\Local\Temp\KeYslice835102739469716782\exampleDuplicate_slice3.proof
+[22:10:58.231] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Creating init config
+[22:11:01.218] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Replaying proof exampleDuplicate_slice3.proof
+[22:11:01.242] ?[34mINFO ?[0;39m ?[36mEndToEndTests?[0;39m - Loading C:\Users\RUNNER~1\AppData\Local\Temp\KeYslice835102739469716782\exampleDuplicate_slice3.proof
+[22:11:01.242] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Loading environment from C:\Users\RUNNER~1\AppData\Local\Temp\KeYslice835102739469716782\exampleDuplicate_slice3.proof
+[22:11:01.242] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Creating init config
+[22:11:04.330] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Replaying proof exampleDuplicate_slice3.proof
+[22:11:04.346] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Loading environment from C:\Users\RUNNER~1\AppData\Local\Temp\proof10772339791890936748.proof
+[22:11:04.361] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Creating init config
+[22:11:07.389] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Replaying proof proof10772339791890936748.proof
+[22:11:07.404] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Loading environment from C:\Users\RUNNER~1\AppData\Local\Temp\KeYslice276253315819886485\exampleDuplicate_slice4.proof
+[22:11:07.404] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Creating init config
+[22:11:10.408] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Replaying proof exampleDuplicate_slice4.proof
+[22:11:10.424] ?[34mINFO ?[0;39m ?[36mEndToEndTests?[0;39m - Loading D:\a\key\key\keyext.slicing\src\test\resources\testcase\..\..\..\..\..\key.ui\examples\firstTouch\05-ReverseArray\reverseArray.proof
+[22:11:10.424] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Loading environment from src\test\resources\testcase\..\..\..\..\..\key.ui\examples\firstTouch\05-ReverseArray\reverseArray.proof
+[22:11:10.439] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Creating init config
+[22:11:13.936] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Replaying proof ReverseArray[ReverseArray::reverse()].JML normal_behavior operation contract.0
+[22:11:17.321] ?[34mINFO ?[0;39m ?[36mDependencyAnalyzer?[0;39m - merging 1354 and 4678
+[22:11:17.352] ?[34mINFO ?[0;39m ?[36mDependencyAnalyzer?[0;39m - merging 2591 and 3795
+[22:11:17.352] ?[34mINFO ?[0;39m ?[36mDependencyAnalyzer?[0;39m - merging 3958 and 4306
+[22:11:17.384] ?[34mINFO ?[0;39m ?[36mDependencyAnalyzer?[0;39m - merging 1010 and 4663
+[22:11:17.438] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Loading environment from C:\Users\RUNNER~1\AppData\Local\Temp\proof10346653157609388540.proof
+[22:11:17.443] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Creating init config
+[22:11:20.954] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Replaying proof ReverseArray[ReverseArray::reverse()].JML normal_behavior operation contract.0
+[22:11:22.251] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Loading environment from C:\Users\RUNNER~1\AppData\Local\Temp\KeYslice17802709438500068687\reverseArray_slice1.proof
+[22:11:22.251] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Creating init config
+[22:11:25.633] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Replaying proof ReverseArray[ReverseArray::reverse()].JML normal_behavior operation contract.0
+[22:11:27.227] ?[34mINFO ?[0;39m ?[36mEndToEndTests?[0;39m - Loading C:\Users\RUNNER~1\AppData\Local\Temp\KeYslice17802709438500068687\reverseArray_slice1.proof
+[22:11:27.227] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Loading environment from C:\Users\RUNNER~1\AppData\Local\Temp\KeYslice17802709438500068687\reverseArray_slice1.proof
+[22:11:27.243] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Creating init config
+[22:11:30.562] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Replaying proof ReverseArray[ReverseArray::reverse()].JML normal_behavior operation contract.0
+[22:11:32.090] ?[34mINFO ?[0;39m ?[36mDependencyAnalyzer?[0;39m - merging 943 and 3370
+[22:11:32.090] ?[34mINFO ?[0;39m ?[36mDependencyAnalyzer?[0;39m - merging 879 and 3479
+[22:11:32.105] ?[34mINFO ?[0;39m ?[36mDependencyAnalyzer?[0;39m - merging 2219 and 2914
+[22:11:32.121] ?[34mINFO ?[0;39m ?[36mDependencyAnalyzer?[0;39m - merging 2973 and 3148
+[22:11:32.152] ?[34mINFO ?[0;39m ?[36mDependencyAnalyzer?[0;39m - merging 1281 and 3384
+[22:11:32.152] ?[34mINFO ?[0;39m ?[36mDependencyAnalyzer?[0;39m - merging 947 and 3782
+[22:11:32.152] ?[34mINFO ?[0;39m ?[36mDependencyAnalyzer?[0;39m - merging 880 and 3473
+[22:11:32.184] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Loading environment from C:\Users\RUNNER~1\AppData\Local\Temp\proof9220365706290488279.proof
+[22:11:32.184] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Creating init config
+[22:11:35.630] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Replaying proof ReverseArray[ReverseArray::reverse()].JML normal_behavior operation contract.0
+[22:11:36.631] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Loading environment from C:\Users\RUNNER~1\AppData\Local\Temp\KeYslice14092627244305675090\reverseArray_slice2.proof
+[22:11:36.631] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Creating init config
+[22:11:39.950] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Replaying proof ReverseArray[ReverseArray::reverse()].JML normal_behavior operation contract.0
+[22:11:41.232] ?[34mINFO ?[0;39m ?[36mEndToEndTests?[0;39m - Loading C:\Users\RUNNER~1\AppData\Local\Temp\KeYslice14092627244305675090\reverseArray_slice2.proof
+[22:11:41.232] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Loading environment from C:\Users\RUNNER~1\AppData\Local\Temp\KeYslice14092627244305675090\reverseArray_slice2.proof
+[22:11:41.232] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Creating init config
+[22:11:44.550] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Replaying proof ReverseArray[ReverseArray::reverse()].JML normal_behavior operation contract.0
+[22:11:45.831] ?[34mINFO ?[0;39m ?[36mDependencyAnalyzer?[0;39m - merging 781 and 3569
+[22:11:45.831] ?[34mINFO ?[0;39m ?[36mDependencyAnalyzer?[0;39m - merging 882 and 3469
+[22:11:45.847] ?[34mINFO ?[0;39m ?[36mDependencyAnalyzer?[0;39m - merging 949 and 3776
+[22:11:45.847] ?[34mINFO ?[0;39m ?[36mDependencyAnalyzer?[0;39m - merging 2220 and 2914
+[22:11:45.863] ?[34mINFO ?[0;39m ?[36mDependencyAnalyzer?[0;39m - merging 2973 and 3147
+[22:11:45.863] ?[34mINFO ?[0;39m ?[36mDependencyAnalyzer?[0;39m - merging 946 and 3368
+[22:11:45.863] ?[34mINFO ?[0;39m ?[36mDependencyAnalyzer?[0;39m - merging 1301 and 3381
+[22:11:45.863] ?[34mINFO ?[0;39m ?[36mDependencyAnalyzer?[0;39m - merging 782 and 3554
+[22:11:45.878] ?[34mINFO ?[0;39m ?[36mDependencyAnalyzer?[0;39m - merging 883 and 3474
+[22:11:45.894] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Loading environment from C:\Users\RUNNER~1\AppData\Local\Temp\proof17218147641828575935.proof
+[22:11:45.894] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Creating init config
+[22:11:49.393] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Replaying proof ReverseArray[ReverseArray::reverse()].JML normal_behavior operation contract.0
+[22:11:50.229] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Loading environment from C:\Users\RUNNER~1\AppData\Local\Temp\KeYslice13205592728308076992\reverseArray_slice3.proof
+[22:11:50.229] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Creating init config
+[22:11:53.651] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Replaying proof ReverseArray[ReverseArray::reverse()].JML normal_behavior operation contract.0
+[22:11:54.893] ?[34mINFO ?[0;39m ?[36mEndToEndTests?[0;39m - Loading C:\Users\RUNNER~1\AppData\Local\Temp\KeYslice13205592728308076992\reverseArray_slice3.proof
+[22:11:54.893] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Loading environment from C:\Users\RUNNER~1\AppData\Local\Temp\KeYslice13205592728308076992\reverseArray_slice3.proof
+[22:11:54.893] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Creating init config
+[22:11:58.240] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Replaying proof ReverseArray[ReverseArray::reverse()].JML normal_behavior operation contract.0
+[22:11:59.365] ?[34mINFO ?[0;39m ?[36mDependencyAnalyzer?[0;39m - merging 1296 and 3803
+[22:11:59.365] ?[34mINFO ?[0;39m ?[36mDependencyAnalyzer?[0;39m - merging 886 and 3469
+[22:11:59.365] ?[34mINFO ?[0;39m ?[36mDependencyAnalyzer?[0;39m - merging 785 and 3562
+[22:11:59.380] ?[34mINFO ?[0;39m ?[36mDependencyAnalyzer?[0;39m - merging 1285 and 3379
+[22:11:59.380] ?[34mINFO ?[0;39m ?[36mDependencyAnalyzer?[0;39m - merging 757 and 3651
+[22:11:59.380] ?[34mINFO ?[0;39m ?[36mDependencyAnalyzer?[0;39m - merging 2973 and 3146
+[22:11:59.396] ?[34mINFO ?[0;39m ?[36mDependencyAnalyzer?[0;39m - merging 1302 and 3378
+[22:11:59.396] ?[34mINFO ?[0;39m ?[36mDependencyAnalyzer?[0;39m - merging 756 and 3657
+[22:11:59.411] ?[34mINFO ?[0;39m ?[36mDependencyAnalyzer?[0;39m - merging 784 and 3548
+[22:11:59.411] ?[34mINFO ?[0;39m ?[36mDependencyAnalyzer?[0;39m - merging 885 and 3465
+[22:11:59.411] ?[34mINFO ?[0;39m ?[36mDependencyAnalyzer?[0;39m - merging 2221 and 2914
+[22:11:59.427] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Loading environment from C:\Users\RUNNER~1\AppData\Local\Temp\proof4530727088465064997.proof
+[22:11:59.427] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Creating init config
+[22:12:02.834] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Replaying proof ReverseArray[ReverseArray::reverse()].JML normal_behavior operation contract.0
+[22:12:03.678] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Loading environment from C:\Users\RUNNER~1\AppData\Local\Temp\KeYslice11447644713303210124\reverseArray_slice4.proof
+[22:12:03.678] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Creating init config
+[22:12:07.025] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Replaying proof ReverseArray[ReverseArray::reverse()].JML normal_behavior operation contract.0
+[22:12:08.042] ?[34mINFO ?[0;39m ?[36mEndToEndTests?[0;39m - Loading C:\Users\RUNNER~1\AppData\Local\Temp\KeYslice11447644713303210124\reverseArray_slice4.proof
+[22:12:08.042] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Loading environment from C:\Users\RUNNER~1\AppData\Local\Temp\KeYslice11447644713303210124\reverseArray_slice4.proof
+[22:12:08.057] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Creating init config
+[22:12:11.439] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Replaying proof ReverseArray[ReverseArray::reverse()].JML normal_behavior operation contract.0
+[22:12:12.625] ?[34mINFO ?[0;39m ?[36mDependencyAnalyzer?[0;39m - merging 888 and 3465
+[22:12:12.625] ?[34mINFO ?[0;39m ?[36mDependencyAnalyzer?[0;39m - merging 2973 and 3145
+[22:12:12.625] ?[34mINFO ?[0;39m ?[36mDependencyAnalyzer?[0;39m - merging 1288 and 3376
+[22:12:12.640] ?[34mINFO ?[0;39m ?[36mDependencyAnalyzer?[0;39m - merging 622 and 3786
+[22:12:12.640] ?[34mINFO ?[0;39m ?[36mDependencyAnalyzer?[0;39m - merging 787 and 3555
+[22:12:12.640] ?[34mINFO ?[0;39m ?[36mDependencyAnalyzer?[0;39m - merging 1298 and 3793
+[22:12:12.640] ?[34mINFO ?[0;39m ?[36mDependencyAnalyzer?[0;39m - merging 2222 and 2914
+[22:12:12.656] ?[34mINFO ?[0;39m ?[36mDependencyAnalyzer?[0;39m - merging 788 and 3542
+[22:12:12.656] ?[34mINFO ?[0;39m ?[36mDependencyAnalyzer?[0;39m - merging 759 and 3648
+[22:12:12.656] ?[34mINFO ?[0;39m ?[36mDependencyAnalyzer?[0;39m - merging 760 and 3643
+[22:12:12.671] ?[34mINFO ?[0;39m ?[36mDependencyAnalyzer?[0;39m - merging 1396 and 3388
+[22:12:12.671] ?[34mINFO ?[0;39m ?[36mDependencyAnalyzer?[0;39m - merging 889 and 3464
+[22:12:12.781] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Loading environment from C:\Users\RUNNER~1\AppData\Local\Temp\proof10267990204407218705.proof
+[22:12:12.781] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Creating init config
+[22:12:16.147] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Replaying proof ReverseArray[ReverseArray::reverse()].JML normal_behavior operation contract.0
+[22:12:16.861] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Loading environment from C:\Users\RUNNER~1\AppData\Local\Temp\KeYslice15380318226178098226\reverseArray_slice5.proof
+[22:12:16.877] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Creating init config
+[22:12:20.292] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Replaying proof ReverseArray[ReverseArray::reverse()].JML normal_behavior operation contract.0
+[22:12:21.342] ?[34mINFO ?[0;39m ?[36mEndToEndTests?[0;39m - Loading D:\a\key\key\keyext.slicing\src\test\resources\testcase\exampleDuplicateOpen.proof
+[22:12:21.342] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Loading environment from src\test\resources\testcase\exampleDuplicateOpen.proof
+[22:12:21.342] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Creating init config
+[22:12:24.467] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Replaying proof exampleDuplicateOpen.proof
+[22:12:24.482] ?[34mINFO ?[0;39m ?[36mDependencyAnalyzer?[0;39m - merging 2 and 3
+[22:12:24.482] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Loading environment from C:\Users\RUNNER~1\AppData\Local\Temp\proof4194782683123931582.proof
+[22:12:24.482] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Creating init config
+[22:12:27.456] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Replaying proof proof4194782683123931582.proof
+[22:12:27.472] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Loading environment from C:\Users\RUNNER~1\AppData\Local\Temp\KeYslice14839244306356037086\exampleDuplicateOpen_slice1.proof
+[22:12:27.472] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Creating init config
+[22:12:30.469] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Replaying proof exampleDuplicateOpen_slice1.proof
+[22:12:30.485] ?[34mINFO ?[0;39m ?[36mEndToEndTests?[0;39m - Loading C:\Users\RUNNER~1\AppData\Local\Temp\KeYslice14839244306356037086\exampleDuplicateOpen_slice1.proof
+[22:12:30.485] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Loading environment from C:\Users\RUNNER~1\AppData\Local\Temp\KeYslice14839244306356037086\exampleDuplicateOpen_slice1.proof
+[22:12:30.485] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Creating init config
+[22:12:33.566] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Replaying proof exampleDuplicateOpen_slice1.proof
+[22:12:33.581] ?[34mINFO ?[0;39m ?[36mDependencyAnalyzer?[0;39m - merging 3 and 4
+[22:12:33.581] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Loading environment from C:\Users\RUNNER~1\AppData\Local\Temp\proof3643934498890843348.proof
+[22:12:33.581] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Creating init config
+[22:12:36.722] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Replaying proof proof3643934498890843348.proof
+[22:12:36.753] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Loading environment from C:\Users\RUNNER~1\AppData\Local\Temp\KeYslice8616483418803724865\exampleDuplicateOpen_slice2.proof
+[22:12:36.753] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Creating init config
+[22:12:39.760] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Replaying proof exampleDuplicateOpen_slice2.proof
+[22:12:39.760] ?[34mINFO ?[0;39m ?[36mEndToEndTests?[0;39m - Loading C:\Users\RUNNER~1\AppData\Local\Temp\KeYslice8616483418803724865\exampleDuplicateOpen_slice2.proof
+[22:12:39.776] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Loading environment from C:\Users\RUNNER~1\AppData\Local\Temp\KeYslice8616483418803724865\exampleDuplicateOpen_slice2.proof
+[22:12:39.776] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Creating init config
+[22:12:42.869] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Replaying proof exampleDuplicateOpen_slice2.proof
+[22:12:42.885] ?[34mINFO ?[0;39m ?[36mDependencyAnalyzer?[0;39m - merging 4 and 5
+[22:12:42.885] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Loading environment from C:\Users\RUNNER~1\AppData\Local\Temp\proof1784091758829011157.proof
+[22:12:42.885] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Creating init config
+[22:12:45.958] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Replaying proof proof1784091758829011157.proof
+[22:12:45.974] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Loading environment from C:\Users\RUNNER~1\AppData\Local\Temp\KeYslice13818520196286649761\exampleDuplicateOpen_slice3.proof
+[22:12:45.989] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Creating init config
+[22:12:49.029] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Replaying proof exampleDuplicateOpen_slice3.proof
+[22:12:49.044] ?[34mINFO ?[0;39m ?[36mEndToEndTests?[0;39m - Loading C:\Users\RUNNER~1\AppData\Local\Temp\KeYslice13818520196286649761\exampleDuplicateOpen_slice3.proof
+[22:12:49.044] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Loading environment from C:\Users\RUNNER~1\AppData\Local\Temp\KeYslice13818520196286649761\exampleDuplicateOpen_slice3.proof
+[22:12:49.044] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Creating init config
+[22:12:52.058] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Replaying proof exampleDuplicateOpen_slice3.proof
+[22:12:52.074] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Loading environment from C:\Users\RUNNER~1\AppData\Local\Temp\proof4191187550481410165.proof
+[22:12:52.074] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Creating init config
+[22:12:55.096] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Replaying proof proof4191187550481410165.proof
+[22:12:55.111] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Loading environment from C:\Users\RUNNER~1\AppData\Local\Temp\KeYslice1977151494343168297\exampleDuplicateOpen_slice4.proof
+[22:12:55.111] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Creating init config
+[22:12:58.161] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Replaying proof exampleDuplicateOpen_slice4.proof
+[22:12:58.161] ?[34mINFO ?[0;39m ?[36mEndToEndTests?[0;39m - Loading D:\a\key\key\keyext.slicing\src\test\resources\testcase\cutExample.proof
+[22:12:58.161] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Loading environment from src\test\resources\testcase\cutExample.proof
+[22:12:58.176] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Creating init config
+[22:13:01.175] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Replaying proof cutExample.proof
+[22:13:01.175] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Loading environment from C:\Users\RUNNER~1\AppData\Local\Temp\proof12502970965992694313.proof
+[22:13:01.190] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Creating init config
+[22:13:04.247] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Replaying proof proof12502970965992694313.proof
+[22:13:04.262] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Loading environment from C:\Users\RUNNER~1\AppData\Local\Temp\KeYslice2211199552844576270\cutExample_slice1.proof
+[22:13:04.262] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Creating init config
+[22:13:07.306] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Replaying proof cutExample_slice1.proof
+[22:13:07.306] ?[34mINFO ?[0;39m ?[36mEndToEndTests?[0;39m - Loading D:\a\key\key\keyext.slicing\src\test\resources\testcase\agathaOpenGoal.proof
+[22:13:07.322] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Loading environment from src\test\resources\testcase\agathaOpenGoal.proof
+[22:13:07.322] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Creating init config
+[22:13:10.293] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Replaying proof agathaOpenGoal.proof
+[22:13:10.355] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Loading environment from C:\Users\RUNNER~1\AppData\Local\Temp\proof8529359657918904523.proof
+[22:13:10.355] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Creating init config
+[22:13:13.320] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Replaying proof proof8529359657918904523.proof
+[22:13:13.367] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Loading environment from C:\Users\RUNNER~1\AppData\Local\Temp\KeYslice3790048517069468254\agathaOpenGoal_slice1.proof
+[22:13:13.367] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Creating init config
+[22:13:16.440] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Replaying proof agathaOpenGoal_slice1.proof
+[22:13:16.518] ?[34mINFO ?[0;39m ?[36mEndToEndTests?[0;39m - Loading D:\a\key\key\keyext.slicing\src\test\resources\testcase\openGoal1.proof
+[22:13:16.518] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Loading environment from src\test\resources\testcase\openGoal1.proof
+[22:13:16.534] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Creating init config
+[22:13:19.604] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Replaying proof openGoal1.proof
+[22:13:19.620] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Loading environment from C:\Users\RUNNER~1\AppData\Local\Temp\proof7989799743757339916.proof
+[22:13:19.620] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Creating init config
+[22:13:22.713] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Replaying proof proof7989799743757339916.proof
+[22:13:22.728] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Loading environment from C:\Users\RUNNER~1\AppData\Local\Temp\KeYslice14522698746845553651\openGoal1_slice1.proof
+[22:13:22.728] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Creating init config
+[22:13:25.849] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Replaying proof openGoal1_slice1.proof
+[22:13:25.865] ?[34mINFO ?[0;39m ?[36mEndToEndTests?[0;39m - Loading D:\a\key\key\keyext.slicing\src\test\resources\testcase\openGoal2.proof
+[22:13:25.865] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Loading environment from src\test\resources\testcase\openGoal2.proof
+[22:13:25.865] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Creating init config
+[22:13:28.880] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Replaying proof openGoal2.proof
+[22:13:28.895] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Loading environment from C:\Users\RUNNER~1\AppData\Local\Temp\proof18065401768011415229.proof
+[22:13:28.895] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Creating init config
+[22:13:31.943] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Replaying proof proof18065401768011415229.proof
+[22:13:31.958] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Loading environment from C:\Users\RUNNER~1\AppData\Local\Temp\KeYslice12794504851383324246\openGoal2_slice1.proof
+[22:13:31.958] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Creating init config
+[22:13:35.062] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Replaying proof openGoal2_slice1.proof
+[22:13:35.078] ?[34mINFO ?[0;39m ?[36mEndToEndTests?[0;39m - Loading D:\a\key\key\keyext.slicing\src\test\resources\testcase\agatha.proof
+[22:13:35.078] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Loading environment from src\test\resources\testcase\agatha.proof
+[22:13:35.078] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Creating init config
+[22:13:38.133] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Replaying proof agatha.proof
+[22:13:38.164] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Loading environment from C:\Users\RUNNER~1\AppData\Local\Temp\proof11616094634150448905.proof
+[22:13:38.164] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Creating init config
+[22:13:41.184] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Replaying proof proof11616094634150448905.proof
+[22:13:41.215] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Loading environment from C:\Users\RUNNER~1\AppData\Local\Temp\KeYslice9828601362714515718\agatha_slice1.proof
+[22:13:41.215] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Creating init config
+[22:13:44.323] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Replaying proof agatha_slice1.proof
+[22:13:44.339] ?[34mINFO ?[0;39m ?[36mEndToEndTests?[0;39m - Loading D:\a\key\key\keyext.slicing\src\test\resources\testcase\..\..\..\..\..\key.ui\examples\heap\verifyThis15_2_ParallelGcd\parallelGcd.proof
+[22:13:44.339] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Loading environment from src\test\resources\testcase\..\..\..\..\..\key.ui\examples\heap\verifyThis15_2_ParallelGcd\parallelGcd.proof
+[22:13:44.339] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Creating init config
+[22:13:47.834] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Replaying proof ParallelGcd[ParallelGcd::parallelGcd(int,int,[Z)].JML behavior operation contract.0
+[22:13:48.827] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Loading environment from C:\Users\RUNNER~1\AppData\Local\Temp\proof6201997113975379880.proof
+[22:13:48.827] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Creating init config
+[22:13:52.205] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Replaying proof ParallelGcd[ParallelGcd::parallelGcd(int,int,[Z)].JML behavior operation contract.0
+[22:13:52.936] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Loading environment from C:\Users\RUNNER~1\AppData\Local\Temp\KeYslice3530310055133804500\parallelGcd_slice1.proof
+[22:13:52.939] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Creating init config
+[22:13:56.328] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Replaying proof ParallelGcd[ParallelGcd::parallelGcd(int,int,[Z)].JML behavior operation contract.0
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
