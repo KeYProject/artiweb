@@ -21,7 +21,11 @@
     <summary>
         <p><a href="https://github.com/KeYProject/key/pull/3140">Github</a></p>
         <span>Description</span>
-        <details><p>After #3129, this was broken. Clearing all highlights also removes the assocation to the stored tags (<code>defaultHighlight</code> / <code>additionalJavaHighlight</code>), so they have to be added again.</p></details>
+        <details><p>After #3129, this was broken. Clearing all highlights also removes the assocation to the stored tags (<code>defaultHighlight</code> / <code>additionalJavaHighlight</code>), so they have to be added again.</p>
+<h3>Bug description</h3>
+<p>When hovering the mouse over terms in the sequent view on closed nodes (inner nodes in the proof tree or closed goals), these terms are not highlighted anymore. However, the tooltips for the corresponding terms are still shown correctly, which means that the highlights are just not painted.</p>
+<h3>Expected behavior</h3>
+<p>The marked terms should be shown highlighted, in particular the active statement in the modality should have a darker color.</p></details>
     </summary>
 </section>
 
