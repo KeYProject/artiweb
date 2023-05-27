@@ -1,0 +1,64 @@
+<testsuites> <testsuite name="runallproofs.ToyVoting" tests="6" id="0" disabled="0" errors="0" failures="0" time="0.000000"><testcase name="Voter(Voter__insecure_voting()).JML normal_behavior operation contract.0.key"  classname="runallproofs.ToyVoting.ToyVoting" time="0.000000"><system-out><![CDATA[359        INFO  Timeout watchdog d.u.i.k.p.r.p.ForkedTestFileRunner Timeout watcher launched (1000 secs.) 
+379        WARN  main            d.u.i.k.s.ProofSettings   No proof-settings could be loaded, using defaults java.io.FileNotFoundException: /home/runner/.key/proof-settings.props (No such file or directory)
+	at java.base/java.io.FileInputStream.open0(Native Method)
+
+422        INFO  main            d.u.i.k.p.r.p.TestFile    Now processing file /home/runner/work/key/key/key.core/../key.ui/examples/InformationFlow/ToyVoting/Voter(Voter__insecure_voting()).JML normal_behavior operation contract.0.key 
+536        INFO  main            d.u.i.k.p.i.AbstractProblemLoader Loading environment from /home/runner/work/key/key/key.core/../key.ui/examples/InformationFlow/ToyVoting/Voter(Voter__insecure_voting()).JML normal_behavior operation contract.0.key 
+555        DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Environment load took 3.38ms 
+781        INFO  main            d.u.i.k.p.i.AbstractProblemLoader Creating init config 
+1565       DEBUG main            d.u.i.k.j.TypeConverter   No LDT found for Meta 
+1566       DEBUG main            d.u.i.k.j.TypeConverter   No LDT found for Meta 
+1567       DEBUG main            d.u.i.k.j.TypeConverter   No LDT found for Meta 
+1569       DEBUG main            d.u.i.k.j.TypeConverter   No LDT found for Meta 
+2772       DEBUG main            d.u.i.k.j.TypeConverter   No LDT found for JavaBigintExpression 
+7548       DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Init config took 6.77s 
+7672       INFO  main            d.u.i.k.p.i.AbstractProblemLoader Replaying proof Voter[Voter::insecure_voting()].JML normal_behavior operation contract.0 
+7744       DEBUG main            d.u.i.k.p.i.IntermediateProofReplayer Proof replay took 371.4ns 
+8685       INFO  main            d.u.i.k.p.r.p.TestFile    ... finished proof: closed. 
+
+pass: Verifying property "provable" was successful for file: /home/runner/work/key/key/key.core/../key.ui/examples/InformationFlow/ToyVoting/Voter(Voter__insecure_voting()).JML normal_behavior operation contract.0.key]]></system-out></testcase><testcase name="Voter(Voter__publishVoterParticipation()).JML normal_behavior operation contract.0.key"  classname="runallproofs.ToyVoting.ToyVoting" time="0.000000"><system-out><![CDATA[8813       INFO  main            d.u.i.k.p.r.p.TestFile    Now processing file /home/runner/work/key/key/key.core/../key.ui/examples/InformationFlow/ToyVoting/Voter(Voter__publishVoterParticipation()).JML normal_behavior operation contract.0.key 
+8813       INFO  main            d.u.i.k.p.i.AbstractProblemLoader Loading environment from /home/runner/work/key/key/key.core/../key.ui/examples/InformationFlow/ToyVoting/Voter(Voter__publishVoterParticipation()).JML normal_behavior operation contract.0.key 
+8813       DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Environment load took 82.8ns 
+8816       INFO  main            d.u.i.k.p.i.AbstractProblemLoader Creating init config 
+11620      DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Init config took 2.8s 
+11724      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Replaying proof Voter[Voter::publishVoterParticipation()].JML normal_behavior operation contract.0 
+11730      DEBUG main            d.u.i.k.p.i.IntermediateProofReplayer Proof replay took 44.5ns 
+11832      INFO  main            d.u.i.k.p.r.p.TestFile    ... finished proof: closed. 
+
+pass: Verifying property "provable" was successful for file: /home/runner/work/key/key/key.core/../key.ui/examples/InformationFlow/ToyVoting/Voter(Voter__publishVoterParticipation()).JML normal_behavior operation contract.0.key]]></system-out></testcase><testcase name="Voter(Voter__isValid(int)).JML normal_behavior operation contract.0.key"  classname="runallproofs.ToyVoting.ToyVoting" time="0.000000"><system-out><![CDATA[11936      INFO  main            d.u.i.k.p.r.p.TestFile    Now processing file /home/runner/work/key/key/key.core/../key.ui/examples/InformationFlow/ToyVoting/Voter(Voter__isValid(int)).JML normal_behavior operation contract.0.key 
+11938      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Loading environment from /home/runner/work/key/key/key.core/../key.ui/examples/InformationFlow/ToyVoting/Voter(Voter__isValid(int)).JML normal_behavior operation contract.0.key 
+11938      DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Environment load took 138ns 
+11940      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Creating init config 
+14590      DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Init config took 2.65s 
+14648      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Replaying proof Voter[Voter::isValid(int)].JML normal_behavior operation contract.0 
+14652      DEBUG main            d.u.i.k.p.i.IntermediateProofReplayer Proof replay took 10.7ns 
+14754      INFO  main            d.u.i.k.p.r.p.TestFile    ... finished proof: closed. 
+
+pass: Verifying property "provable" was successful for file: /home/runner/work/key/key/key.core/../key.ui/examples/InformationFlow/ToyVoting/Voter(Voter__isValid(int)).JML normal_behavior operation contract.0.key]]></system-out></testcase><testcase name="Voter(Voter__sendVote(int)).JML normal_behavior operation contract.0.key"  classname="runallproofs.ToyVoting.ToyVoting" time="0.000000"><system-out><![CDATA[14893      INFO  main            d.u.i.k.p.r.p.TestFile    Now processing file /home/runner/work/key/key/key.core/../key.ui/examples/InformationFlow/ToyVoting/Voter(Voter__sendVote(int)).JML normal_behavior operation contract.0.key 
+14893      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Loading environment from /home/runner/work/key/key/key.core/../key.ui/examples/InformationFlow/ToyVoting/Voter(Voter__sendVote(int)).JML normal_behavior operation contract.0.key 
+14894      DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Environment load took 108.3ns 
+14896      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Creating init config 
+17513      DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Init config took 2.62s 
+17583      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Replaying proof Voter[Voter::sendVote(int)].JML normal_behavior operation contract.0 
+17588      DEBUG main            d.u.i.k.p.i.IntermediateProofReplayer Proof replay took 13.1ns 
+17690      INFO  main            d.u.i.k.p.r.p.TestFile    ... finished proof: closed. 
+
+pass: Verifying property "provable" was successful for file: /home/runner/work/key/key/key.core/../key.ui/examples/InformationFlow/ToyVoting/Voter(Voter__sendVote(int)).JML normal_behavior operation contract.0.key]]></system-out></testcase><testcase name="Voter(Voter__inputVote()).JML normal_behavior operation contract.0.key"  classname="runallproofs.ToyVoting.ToyVoting" time="0.000000"><system-out><![CDATA[17799      INFO  main            d.u.i.k.p.r.p.TestFile    Now processing file /home/runner/work/key/key/key.core/../key.ui/examples/InformationFlow/ToyVoting/Voter(Voter__inputVote()).JML normal_behavior operation contract.0.key 
+17799      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Loading environment from /home/runner/work/key/key/key.core/../key.ui/examples/InformationFlow/ToyVoting/Voter(Voter__inputVote()).JML normal_behavior operation contract.0.key 
+17799      DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Environment load took 64.2ns 
+17807      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Creating init config 
+20326      DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Init config took 2.52s 
+20392      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Replaying proof Voter[Voter::inputVote()].JML normal_behavior operation contract.0 
+20396      DEBUG main            d.u.i.k.p.i.IntermediateProofReplayer Proof replay took 12.6ns 
+20499      INFO  main            d.u.i.k.p.r.p.TestFile    ... finished proof: closed. 
+
+pass: Verifying property "provable" was successful for file: /home/runner/work/key/key/key.core/../key.ui/examples/InformationFlow/ToyVoting/Voter(Voter__inputVote()).JML normal_behavior operation contract.0.key]]></system-out></testcase><testcase name="Voter(Voter__secure_voting()).JML normal_behavior operation contract.0.key"  classname="runallproofs.ToyVoting.ToyVoting" time="0.000000"><system-out><![CDATA[20607      INFO  main            d.u.i.k.p.r.p.TestFile    Now processing file /home/runner/work/key/key/key.core/../key.ui/examples/InformationFlow/ToyVoting/Voter(Voter__secure_voting()).JML normal_behavior operation contract.0.key 
+20607      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Loading environment from /home/runner/work/key/key/key.core/../key.ui/examples/InformationFlow/ToyVoting/Voter(Voter__secure_voting()).JML normal_behavior operation contract.0.key 
+20607      DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Environment load took 77.3ns 
+20611      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Creating init config 
+23242      DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Init config took 2.63s 
+23285      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Replaying proof Voter[Voter::secure_voting()].JML normal_behavior operation contract.0 
+23287      DEBUG main            d.u.i.k.p.i.IntermediateProofReplayer Proof replay took 12.1ns 
+24095      INFO  main            d.u.i.k.p.r.p.TestFile    ... finished proof: closed. 
+
+pass: Verifying property "provable" was successful for file: /home/runner/work/key/key/key.core/../key.ui/examples/InformationFlow/ToyVoting/Voter(Voter__secure_voting()).JML normal_behavior operation contract.0.key]]></system-out></testcase></testsuite></testsuites>

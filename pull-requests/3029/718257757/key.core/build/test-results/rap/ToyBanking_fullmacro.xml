@@ -1,0 +1,144 @@
+<testsuites> <testsuite name="runallproofs.ToyBanking_fullmacro" tests="11" id="0" disabled="0" errors="0" failures="0" time="0.000000"><testcase name="banking_example.UserAccount(banking_example.UserAccount__getBankAccount(int)).Non-interference contract.0.m.key"  classname="runallproofs.ToyBanking_fullmacro.ToyBanking_fullmacro" time="0.000000"><system-out><![CDATA[351        INFO  Timeout watchdog d.u.i.k.p.r.p.ForkedTestFileRunner Timeout watcher launched (1000 secs.) 
+373        WARN  main            d.u.i.k.s.ProofSettings   The settings in /home/runner/.key/proof-settings.props are *not* read. 
+408        INFO  main            d.u.i.k.p.r.p.TestFile    Now processing file /home/runner/work/key/key/key.core/../key.ui/examples/InformationFlow/ToyBanking/banking_example.UserAccount(banking_example.UserAccount__getBankAccount(int)).Non-interference contract.0.m.key 
+536        INFO  main            d.u.i.k.p.i.AbstractProblemLoader Loading environment from /home/runner/work/key/key/key.core/../key.ui/examples/InformationFlow/ToyBanking/banking_example.UserAccount(banking_example.UserAccount__getBankAccount(int)).Non-interference contract.0.m.key 
+571        DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Environment load took 2.04ms 
+786        INFO  main            d.u.i.k.p.i.AbstractProblemLoader Creating init config 
+1650       DEBUG main            d.u.i.k.j.TypeConverter   No LDT found for Meta 
+1650       DEBUG main            d.u.i.k.j.TypeConverter   No LDT found for Meta 
+1653       DEBUG main            d.u.i.k.j.TypeConverter   No LDT found for Meta 
+1653       DEBUG main            d.u.i.k.j.TypeConverter   No LDT found for Meta 
+2903       DEBUG main            d.u.i.k.j.TypeConverter   No LDT found for JavaBigintExpression 
+8368       DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Init config took 7.58s 
+8641       INFO  main            d.u.i.k.p.i.AbstractProblemLoader Replaying proof banking_example.UserAccount[banking_example.UserAccount::getBankAccount(int)].Non-interference contract.0 
+8765       DEBUG main            d.u.i.k.p.i.IntermediateProofReplayer Proof replay took 411.61ns 
+8841       DEBUG main            d.u.i.k.m.s.ProofScriptEngine 1: 'macro 'infflow-autopilot'' 
+9190       DEBUG main            d.u.i.k.p.m.ProofCorrectnessMgt No justification found for rule Class_invariant_axiom_for_banking_example_UserAccount 
+13136      INFO  main            d.u.i.k.p.r.p.TestFile    ... finished proof: closed. 
+
+pass: Verifying property "provable" was successful for file: /home/runner/work/key/key/key.core/../key.ui/examples/InformationFlow/ToyBanking/banking_example.UserAccount(banking_example.UserAccount__getBankAccount(int)).Non-interference contract.0.m.key]]></system-out></testcase><testcase name="banking_example.UserAccount(banking_example.UserAccount__tryLogin(int,(C)).Non-interference contract.0.m.key"  classname="runallproofs.ToyBanking_fullmacro.ToyBanking_fullmacro" time="0.000000"><system-out><![CDATA[13326      INFO  main            d.u.i.k.p.r.p.TestFile    Now processing file /home/runner/work/key/key/key.core/../key.ui/examples/InformationFlow/ToyBanking/banking_example.UserAccount(banking_example.UserAccount__tryLogin(int,(C)).Non-interference contract.0.m.key 
+13328      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Loading environment from /home/runner/work/key/key/key.core/../key.ui/examples/InformationFlow/ToyBanking/banking_example.UserAccount(banking_example.UserAccount__tryLogin(int,(C)).Non-interference contract.0.m.key 
+13328      DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Environment load took 349.31ns 
+13331      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Creating init config 
+16531      DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Init config took 3.2s 
+16616      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Replaying proof banking_example.UserAccount[banking_example.UserAccount::tryLogin(int,[C)].Non-interference contract.0 
+16619      DEBUG main            d.u.i.k.p.i.IntermediateProofReplayer Proof replay took 13.2ns 
+16620      DEBUG main            d.u.i.k.m.s.ProofScriptEngine 1: 'macro 'infflow-autopilot'' 
+16681      DEBUG main            d.u.i.k.p.m.ProofCorrectnessMgt No justification found for rule Class_invariant_axiom_for_banking_example_UserAccount 
+70995      INFO  main            d.u.i.k.p.r.p.TestFile    ... finished proof: closed. 
+
+pass: Verifying property "provable" was successful for file: /home/runner/work/key/key/key.core/../key.ui/examples/InformationFlow/ToyBanking/banking_example.UserAccount(banking_example.UserAccount__tryLogin(int,(C)).Non-interference contract.0.m.key]]></system-out></testcase><testcase name="banking_example.BankAccount(banking_example.BankAccount__depositMoney(int)).Non-interference contract.0.m.key"  classname="runallproofs.ToyBanking_fullmacro.ToyBanking_fullmacro" time="0.000000"><system-out><![CDATA[71323      INFO  main            d.u.i.k.p.r.p.TestFile    Now processing file /home/runner/work/key/key/key.core/../key.ui/examples/InformationFlow/ToyBanking/banking_example.BankAccount(banking_example.BankAccount__depositMoney(int)).Non-interference contract.0.m.key 
+71323      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Loading environment from /home/runner/work/key/key/key.core/../key.ui/examples/InformationFlow/ToyBanking/banking_example.BankAccount(banking_example.BankAccount__depositMoney(int)).Non-interference contract.0.m.key 
+71324      DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Environment load took 110.3ns 
+71325      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Creating init config 
+74416      DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Init config took 3.09s 
+74481      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Replaying proof banking_example.BankAccount[banking_example.BankAccount::depositMoney(int)].Non-interference contract.0 
+74483      DEBUG main            d.u.i.k.p.i.IntermediateProofReplayer Proof replay took 15.8ns 
+74484      DEBUG main            d.u.i.k.m.s.ProofScriptEngine 1: 'macro 'infflow-autopilot'' 
+74540      DEBUG main            d.u.i.k.p.m.ProofCorrectnessMgt No justification found for rule Class_invariant_axiom_for_banking_example_BankAccount 
+75285      INFO  main            d.u.i.k.p.r.p.TestFile    ... finished proof: closed. 
+
+pass: Verifying property "provable" was successful for file: /home/runner/work/key/key/key.core/../key.ui/examples/InformationFlow/ToyBanking/banking_example.BankAccount(banking_example.BankAccount__depositMoney(int)).Non-interference contract.0.m.key]]></system-out></testcase><testcase name="banking_example.BankAccount(banking_example.BankAccount__getBalance()).Non-interference contract.0.m.key"  classname="runallproofs.ToyBanking_fullmacro.ToyBanking_fullmacro" time="0.000000"><system-out><![CDATA[75531      INFO  main            d.u.i.k.p.r.p.TestFile    Now processing file /home/runner/work/key/key/key.core/../key.ui/examples/InformationFlow/ToyBanking/banking_example.BankAccount(banking_example.BankAccount__getBalance()).Non-interference contract.0.m.key 
+75531      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Loading environment from /home/runner/work/key/key/key.core/../key.ui/examples/InformationFlow/ToyBanking/banking_example.BankAccount(banking_example.BankAccount__getBalance()).Non-interference contract.0.m.key 
+75531      DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Environment load took 81.9ns 
+75534      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Creating init config 
+78486      DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Init config took 2.95s 
+78552      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Replaying proof banking_example.BankAccount[banking_example.BankAccount::getBalance()].Non-interference contract.0 
+78559      DEBUG main            d.u.i.k.p.i.IntermediateProofReplayer Proof replay took 15.8ns 
+78560      DEBUG main            d.u.i.k.m.s.ProofScriptEngine 1: 'macro 'infflow-autopilot'' 
+78601      DEBUG main            d.u.i.k.p.m.ProofCorrectnessMgt No justification found for rule Class_invariant_axiom_for_banking_example_BankAccount 
+78727      INFO  main            d.u.i.k.p.r.p.TestFile    ... finished proof: closed. 
+
+pass: Verifying property "provable" was successful for file: /home/runner/work/key/key/key.core/../key.ui/examples/InformationFlow/ToyBanking/banking_example.BankAccount(banking_example.BankAccount__getBalance()).Non-interference contract.0.m.key]]></system-out></testcase><testcase name="banking_example.BankAccount(banking_example.BankAccount__getId()).Non-interference contract.0.m.key"  classname="runallproofs.ToyBanking_fullmacro.ToyBanking_fullmacro" time="0.000000"><system-out><![CDATA[78880      INFO  main            d.u.i.k.p.r.p.TestFile    Now processing file /home/runner/work/key/key/key.core/../key.ui/examples/InformationFlow/ToyBanking/banking_example.BankAccount(banking_example.BankAccount__getId()).Non-interference contract.0.m.key 
+78880      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Loading environment from /home/runner/work/key/key/key.core/../key.ui/examples/InformationFlow/ToyBanking/banking_example.BankAccount(banking_example.BankAccount__getId()).Non-interference contract.0.m.key 
+78880      DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Environment load took 75.7ns 
+78881      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Creating init config 
+81848      DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Init config took 2.97s 
+81908      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Replaying proof banking_example.BankAccount[banking_example.BankAccount::getId()].Non-interference contract.0 
+81911      DEBUG main            d.u.i.k.p.i.IntermediateProofReplayer Proof replay took 175.8ns 
+81912      DEBUG main            d.u.i.k.m.s.ProofScriptEngine 1: 'macro 'infflow-autopilot'' 
+81947      DEBUG main            d.u.i.k.p.m.ProofCorrectnessMgt No justification found for rule Class_invariant_axiom_for_banking_example_BankAccount 
+82062      INFO  main            d.u.i.k.p.r.p.TestFile    ... finished proof: closed. 
+
+pass: Verifying property "provable" was successful for file: /home/runner/work/key/key/key.core/../key.ui/examples/InformationFlow/ToyBanking/banking_example.BankAccount(banking_example.BankAccount__getId()).Non-interference contract.0.m.key]]></system-out></testcase><testcase name="banking_example.Bank(banking_example.Bank__login(int,(C)).Non-interference contract.0.m.key"  classname="runallproofs.ToyBanking_fullmacro.ToyBanking_fullmacro" time="0.000000"><system-out><![CDATA[82218      INFO  main            d.u.i.k.p.r.p.TestFile    Now processing file /home/runner/work/key/key/key.core/../key.ui/examples/InformationFlow/ToyBanking/banking_example.Bank(banking_example.Bank__login(int,(C)).Non-interference contract.0.m.key 
+82219      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Loading environment from /home/runner/work/key/key/key.core/../key.ui/examples/InformationFlow/ToyBanking/banking_example.Bank(banking_example.Bank__login(int,(C)).Non-interference contract.0.m.key 
+82219      DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Environment load took 74.1ns 
+82220      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Creating init config 
+85173      DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Init config took 2.95s 
+85241      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Replaying proof banking_example.Bank[banking_example.Bank::login(int,[C)].Non-interference contract.0 
+85244      DEBUG main            d.u.i.k.p.i.IntermediateProofReplayer Proof replay took 30.5ns 
+85245      DEBUG main            d.u.i.k.m.s.ProofScriptEngine 1: 'macro 'infflow-autopilot'' 
+85287      DEBUG main            d.u.i.k.p.m.ProofCorrectnessMgt No justification found for rule Class_invariant_axiom_for_banking_example_Bank 
+86534      DEBUG main            d.u.i.k.p.m.ProofCorrectnessMgt No justification found for rule Partial_inv_axiom_for_JML_class_invariant_nr_13_in_UserAccount 
+86716      DEBUG main            d.u.i.k.p.m.ProofCorrectnessMgt No justification found for rule Partial_inv_axiom_for_JML_class_invariant_nr_9_in_UserAccount_EQ 
+86725      DEBUG main            d.u.i.k.p.m.ProofCorrectnessMgt No justification found for rule Partial_inv_axiom_for_JML_class_invariant_nr_13_in_UserAccount_EQ 
+86750      DEBUG main            d.u.i.k.p.m.ProofCorrectnessMgt No justification found for rule Partial_inv_axiom_for_JML_class_invariant_nr_9_in_UserAccount 
+86758      DEBUG main            d.u.i.k.p.m.ProofCorrectnessMgt No justification found for rule Partial_inv_axiom_for_JML_class_invariant_nr_11_in_UserAccount 
+86833      DEBUG main            d.u.i.k.p.m.ProofCorrectnessMgt No justification found for rule Partial_inv_axiom_for_JML_class_invariant_nr_15_in_UserAccount 
+86843      DEBUG main            d.u.i.k.p.m.ProofCorrectnessMgt No justification found for rule Partial_inv_axiom_for_JML_class_invariant_nr_11_in_UserAccount_EQ 
+86862      DEBUG main            d.u.i.k.p.m.ProofCorrectnessMgt No justification found for rule Partial_inv_axiom_for_JML_class_invariant_nr_15_in_UserAccount_EQ 
+86878      DEBUG main            d.u.i.k.p.m.ProofCorrectnessMgt No justification found for rule Partial_inv_axiom_for_JML_class_invariant_nr_13_in_UserAccount 
+88057      DEBUG main            d.u.i.k.p.m.ProofCorrectnessMgt No justification found for rule Partial_inv_axiom_for_JML_class_invariant_nr_15_in_UserAccount 
+88115      DEBUG main            d.u.i.k.p.m.ProofCorrectnessMgt No justification found for rule Partial_inv_axiom_for_JML_class_invariant_nr_13_in_UserAccount 
+88301      DEBUG main            d.u.i.k.p.m.ProofCorrectnessMgt No justification found for rule Partial_inv_axiom_for_JML_class_invariant_nr_15_in_UserAccount 
+88468      DEBUG main            d.u.i.k.p.m.ProofCorrectnessMgt No justification found for rule Partial_inv_axiom_for_JML_class_invariant_nr_9_in_UserAccount 
+88476      DEBUG main            d.u.i.k.p.m.ProofCorrectnessMgt No justification found for rule Partial_inv_axiom_for_JML_class_invariant_nr_11_in_UserAccount 
+89104      DEBUG main            d.u.i.k.p.m.ProofCorrectnessMgt No justification found for rule Partial_inv_axiom_for_JML_class_invariant_nr_13_in_UserAccount 
+247541     INFO  main            d.u.i.k.p.r.p.TestFile    ... finished proof: open goal(s) 
+
+pass: Verifying property "notprovable" was successful for file: /home/runner/work/key/key/key.core/../key.ui/examples/InformationFlow/ToyBanking/banking_example.Bank(banking_example.Bank__login(int,(C)).Non-interference contract.0.m.key]]></system-out></testcase><testcase name="banking_example2.UserAccount(banking_example2.UserAccount__getBankAccount(int)).Non-interference contract.0.m.key"  classname="runallproofs.ToyBanking_fullmacro.ToyBanking_fullmacro" time="0.000000"><system-out><![CDATA[247907     INFO  main            d.u.i.k.p.r.p.TestFile    Now processing file /home/runner/work/key/key/key.core/../key.ui/examples/InformationFlow/ToyBanking/banking_example2.UserAccount(banking_example2.UserAccount__getBankAccount(int)).Non-interference contract.0.m.key 
+247907     INFO  main            d.u.i.k.p.i.AbstractProblemLoader Loading environment from /home/runner/work/key/key/key.core/../key.ui/examples/InformationFlow/ToyBanking/banking_example2.UserAccount(banking_example2.UserAccount__getBankAccount(int)).Non-interference contract.0.m.key 
+247907     DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Environment load took 81.8ns 
+247908     INFO  main            d.u.i.k.p.i.AbstractProblemLoader Creating init config 
+250769     DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Init config took 2.86s 
+250827     INFO  main            d.u.i.k.p.i.AbstractProblemLoader Replaying proof banking_example2.UserAccount[banking_example2.UserAccount::getBankAccount(int)].Non-interference contract.0 
+250830     DEBUG main            d.u.i.k.p.i.IntermediateProofReplayer Proof replay took 18.6ns 
+250831     DEBUG main            d.u.i.k.m.s.ProofScriptEngine 1: 'macro 'infflow-autopilot'' 
+250874     DEBUG main            d.u.i.k.p.m.ProofCorrectnessMgt No justification found for rule Class_invariant_axiom_for_banking_example2_UserAccount 
+252989     INFO  main            d.u.i.k.p.r.p.TestFile    ... finished proof: closed. 
+
+pass: Verifying property "provable" was successful for file: /home/runner/work/key/key/key.core/../key.ui/examples/InformationFlow/ToyBanking/banking_example2.UserAccount(banking_example2.UserAccount__getBankAccount(int)).Non-interference contract.0.m.key]]></system-out></testcase><testcase name="banking_example2.UserAccount(banking_example2.UserAccount__tryLogin(int,(C)).Non-interference contract.0.m.key"  classname="runallproofs.ToyBanking_fullmacro.ToyBanking_fullmacro" time="0.000000"><system-out><![CDATA[253430     INFO  main            d.u.i.k.p.r.p.TestFile    Now processing file /home/runner/work/key/key/key.core/../key.ui/examples/InformationFlow/ToyBanking/banking_example2.UserAccount(banking_example2.UserAccount__tryLogin(int,(C)).Non-interference contract.0.m.key 
+253430     INFO  main            d.u.i.k.p.i.AbstractProblemLoader Loading environment from /home/runner/work/key/key/key.core/../key.ui/examples/InformationFlow/ToyBanking/banking_example2.UserAccount(banking_example2.UserAccount__tryLogin(int,(C)).Non-interference contract.0.m.key 
+253431     DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Environment load took 645.32ns 
+253432     INFO  main            d.u.i.k.p.i.AbstractProblemLoader Creating init config 
+256252     DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Init config took 2.82s 
+256306     INFO  main            d.u.i.k.p.i.AbstractProblemLoader Replaying proof banking_example2.UserAccount[banking_example2.UserAccount::tryLogin(int,[C)].Non-interference contract.0 
+256310     DEBUG main            d.u.i.k.p.i.IntermediateProofReplayer Proof replay took 19.3ns 
+256311     DEBUG main            d.u.i.k.m.s.ProofScriptEngine 1: 'macro 'infflow-autopilot'' 
+256358     DEBUG main            d.u.i.k.p.m.ProofCorrectnessMgt No justification found for rule Class_invariant_axiom_for_banking_example2_UserAccount 
+270479     INFO  main            d.u.i.k.p.r.p.TestFile    ... finished proof: closed. 
+
+pass: Verifying property "provable" was successful for file: /home/runner/work/key/key/key.core/../key.ui/examples/InformationFlow/ToyBanking/banking_example2.UserAccount(banking_example2.UserAccount__tryLogin(int,(C)).Non-interference contract.0.m.key]]></system-out></testcase><testcase name="banking_example2.BankAccount(banking_example2.BankAccount__depositMoney(int)).Non-interference contract.0.m.key"  classname="runallproofs.ToyBanking_fullmacro.ToyBanking_fullmacro" time="0.000000"><system-out><![CDATA[270771     INFO  main            d.u.i.k.p.r.p.TestFile    Now processing file /home/runner/work/key/key/key.core/../key.ui/examples/InformationFlow/ToyBanking/banking_example2.BankAccount(banking_example2.BankAccount__depositMoney(int)).Non-interference contract.0.m.key 
+270771     INFO  main            d.u.i.k.p.i.AbstractProblemLoader Loading environment from /home/runner/work/key/key/key.core/../key.ui/examples/InformationFlow/ToyBanking/banking_example2.BankAccount(banking_example2.BankAccount__depositMoney(int)).Non-interference contract.0.m.key 
+270771     DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Environment load took 94.1ns 
+270772     INFO  main            d.u.i.k.p.i.AbstractProblemLoader Creating init config 
+273636     DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Init config took 2.86s 
+273683     INFO  main            d.u.i.k.p.i.AbstractProblemLoader Replaying proof banking_example2.BankAccount[banking_example2.BankAccount::depositMoney(int)].Non-interference contract.0 
+273685     DEBUG main            d.u.i.k.p.i.IntermediateProofReplayer Proof replay took 17.5ns 
+273686     DEBUG main            d.u.i.k.m.s.ProofScriptEngine 1: 'macro 'infflow-autopilot'' 
+273721     DEBUG main            d.u.i.k.p.m.ProofCorrectnessMgt No justification found for rule Class_invariant_axiom_for_banking_example2_BankAccount 
+274257     INFO  main            d.u.i.k.p.r.p.TestFile    ... finished proof: closed. 
+
+pass: Verifying property "provable" was successful for file: /home/runner/work/key/key/key.core/../key.ui/examples/InformationFlow/ToyBanking/banking_example2.BankAccount(banking_example2.BankAccount__depositMoney(int)).Non-interference contract.0.m.key]]></system-out></testcase><testcase name="banking_example2.BankAccount(banking_example2.BankAccount__getBalance()).Non-interference contract.0.m.key"  classname="runallproofs.ToyBanking_fullmacro.ToyBanking_fullmacro" time="0.000000"><system-out><![CDATA[274475     INFO  main            d.u.i.k.p.r.p.TestFile    Now processing file /home/runner/work/key/key/key.core/../key.ui/examples/InformationFlow/ToyBanking/banking_example2.BankAccount(banking_example2.BankAccount__getBalance()).Non-interference contract.0.m.key 
+274475     INFO  main            d.u.i.k.p.i.AbstractProblemLoader Loading environment from /home/runner/work/key/key/key.core/../key.ui/examples/InformationFlow/ToyBanking/banking_example2.BankAccount(banking_example2.BankAccount__getBalance()).Non-interference contract.0.m.key 
+274475     DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Environment load took 87.3ns 
+274476     INFO  main            d.u.i.k.p.i.AbstractProblemLoader Creating init config 
+277367     DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Init config took 2.89s 
+277411     INFO  main            d.u.i.k.p.i.AbstractProblemLoader Replaying proof banking_example2.BankAccount[banking_example2.BankAccount::getBalance()].Non-interference contract.0 
+277414     DEBUG main            d.u.i.k.p.i.IntermediateProofReplayer Proof replay took 18.4ns 
+277415     DEBUG main            d.u.i.k.m.s.ProofScriptEngine 1: 'macro 'infflow-autopilot'' 
+277449     DEBUG main            d.u.i.k.p.m.ProofCorrectnessMgt No justification found for rule Class_invariant_axiom_for_banking_example2_BankAccount 
+277557     INFO  main            d.u.i.k.p.r.p.TestFile    ... finished proof: closed. 
+
+pass: Verifying property "provable" was successful for file: /home/runner/work/key/key/key.core/../key.ui/examples/InformationFlow/ToyBanking/banking_example2.BankAccount(banking_example2.BankAccount__getBalance()).Non-interference contract.0.m.key]]></system-out></testcase><testcase name="banking_example2.BankAccount(banking_example2.BankAccount__getId()).Non-interference contract.0.m.key"  classname="runallproofs.ToyBanking_fullmacro.ToyBanking_fullmacro" time="0.000000"><system-out><![CDATA[277750     INFO  main            d.u.i.k.p.r.p.TestFile    Now processing file /home/runner/work/key/key/key.core/../key.ui/examples/InformationFlow/ToyBanking/banking_example2.BankAccount(banking_example2.BankAccount__getId()).Non-interference contract.0.m.key 
+277750     INFO  main            d.u.i.k.p.i.AbstractProblemLoader Loading environment from /home/runner/work/key/key/key.core/../key.ui/examples/InformationFlow/ToyBanking/banking_example2.BankAccount(banking_example2.BankAccount__getId()).Non-interference contract.0.m.key 
+277750     DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Environment load took 141.3ns 
+277751     INFO  main            d.u.i.k.p.i.AbstractProblemLoader Creating init config 
+280657     DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Init config took 2.91s 
+280711     INFO  main            d.u.i.k.p.i.AbstractProblemLoader Replaying proof banking_example2.BankAccount[banking_example2.BankAccount::getId()].Non-interference contract.0 
+280717     DEBUG main            d.u.i.k.p.i.IntermediateProofReplayer Proof replay took 21.1ns 
+280718     DEBUG main            d.u.i.k.m.s.ProofScriptEngine 1: 'macro 'infflow-autopilot'' 
+280754     DEBUG main            d.u.i.k.p.m.ProofCorrectnessMgt No justification found for rule Class_invariant_axiom_for_banking_example2_BankAccount 
+280867     INFO  main            d.u.i.k.p.r.p.TestFile    ... finished proof: closed. 
+
+pass: Verifying property "provable" was successful for file: /home/runner/work/key/key/key.core/../key.ui/examples/InformationFlow/ToyBanking/banking_example2.BankAccount(banking_example2.BankAccount__getId()).Non-interference contract.0.m.key]]></system-out></testcase></testsuite></testsuites>

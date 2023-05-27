@@ -1,0 +1,330 @@
+<testsuites> <testsuite name="runallproofs.blockContracts" tests="21" id="0" disabled="0" errors="0" failures="0" time="0.000000"><testcase name="Simple__add.key"  classname="runallproofs.blockContracts.blockContracts" time="0.000000"><system-out><![CDATA[455        INFO  Timeout watchdog d.u.i.k.p.r.p.ForkedTestFileRunner Timeout watcher launched (2000 secs.) 
+480        WARN  main            d.u.i.k.s.ProofSettings   The settings in /home/runner/.key/proof-settings.props are *not* read. 
+528        INFO  main            d.u.i.k.p.r.p.TestFile    Now processing file /home/runner/work/key/key/key.core/../key.ui/examples/heap/block_contracts/Simple__add.key 
+707        INFO  main            d.u.i.k.p.i.AbstractProblemLoader Loading environment from /home/runner/work/key/key/key.core/../key.ui/examples/heap/block_contracts/Simple__add.key 
+728        DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Environment load took 2.78ms 
+1020       INFO  main            d.u.i.k.p.i.AbstractProblemLoader Creating init config 
+2098       DEBUG main            d.u.i.k.j.TypeConverter   No LDT found for Meta 
+2100       DEBUG main            d.u.i.k.j.TypeConverter   No LDT found for Meta 
+2104       DEBUG main            d.u.i.k.j.TypeConverter   No LDT found for Meta 
+2104       DEBUG main            d.u.i.k.j.TypeConverter   No LDT found for Meta 
+3829       DEBUG main            d.u.i.k.j.TypeConverter   No LDT found for JavaBigintExpression 
+10687      DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Init config took 9.67s 
+10842      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Replaying proof Simple[Simple::add(int,int)].JML operation contract.0 
+10954      DEBUG main            d.u.i.k.p.i.IntermediateProofReplayer Proof replay took 356.31ns 
+11802      INFO  main            d.u.i.k.p.r.p.TestFile    ... finished proof: closed. 
+11934      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Loading environment from /home/runner/work/key/key/key.core/../key.ui/examples/heap/block_contracts/Simple__add.key.proof 
+11935      DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Environment load took 570.81ns 
+11938      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Creating init config 
+15979      DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Init config took 4.04s 
+16071      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Replaying proof Simple[Simple::add(int,int)].JML operation contract.0 
+16178      DEBUG main            d.u.i.k.p.i.IntermediateProofReplayer Proof replay took 101.06ms 
+16185      DEBUG main            d.u.i.k.p.r.p.TestFile    ... success: reloaded. 
+
+pass: Verifying property "provable" was successful for file: /home/runner/work/key/key/key.core/../key.ui/examples/heap/block_contracts/Simple__add.key]]></system-out></testcase><testcase name="Simple__addAbsoluteValues.key"  classname="runallproofs.blockContracts.blockContracts" time="0.000000"><system-out><![CDATA[16188      INFO  main            d.u.i.k.p.r.p.TestFile    Now processing file /home/runner/work/key/key/key.core/../key.ui/examples/heap/block_contracts/Simple__addAbsoluteValues.key 
+16188      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Loading environment from /home/runner/work/key/key/key.core/../key.ui/examples/heap/block_contracts/Simple__addAbsoluteValues.key 
+16189      DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Environment load took 293.21ns 
+16190      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Creating init config 
+20005      DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Init config took 3.81s 
+20076      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Replaying proof Simple[Simple::addAbsoluteValues(int,int)].JML normal_behavior operation contract.0 
+20080      DEBUG main            d.u.i.k.p.i.IntermediateProofReplayer Proof replay took 14ns 
+21313      INFO  main            d.u.i.k.p.r.p.TestFile    ... finished proof: closed. 
+21523      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Loading environment from /home/runner/work/key/key/key.core/../key.ui/examples/heap/block_contracts/Simple__addAbsoluteValues.key.proof 
+21523      DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Environment load took 546.81ns 
+21525      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Creating init config 
+25326      DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Init config took 3.8s 
+25390      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Replaying proof Simple[Simple::addAbsoluteValues(int,int)].JML normal_behavior operation contract.0 
+25720      DEBUG main            d.u.i.k.p.i.IntermediateProofReplayer Proof replay took 308.47ms 
+25722      DEBUG main            d.u.i.k.p.r.p.TestFile    ... success: reloaded. 
+
+pass: Verifying property "provable" was successful for file: /home/runner/work/key/key/key.core/../key.ui/examples/heap/block_contracts/Simple__addAbsoluteValues.key]]></system-out></testcase><testcase name="Simple__addWithJump.key"  classname="runallproofs.blockContracts.blockContracts" time="0.000000"><system-out><![CDATA[25724      INFO  main            d.u.i.k.p.r.p.TestFile    Now processing file /home/runner/work/key/key/key.core/../key.ui/examples/heap/block_contracts/Simple__addWithJump.key 
+25724      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Loading environment from /home/runner/work/key/key/key.core/../key.ui/examples/heap/block_contracts/Simple__addWithJump.key 
+25725      DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Environment load took 175.9ns 
+25728      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Creating init config 
+29585      DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Init config took 3.86s 
+29641      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Replaying proof Simple[Simple::addWithJump(int,int,int)].JML operation contract.0 
+29644      DEBUG main            d.u.i.k.p.i.IntermediateProofReplayer Proof replay took 12.2ns 
+29848      INFO  main            d.u.i.k.p.r.p.TestFile    ... finished proof: closed. 
+30047      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Loading environment from /home/runner/work/key/key/key.core/../key.ui/examples/heap/block_contracts/Simple__addWithJump.key.proof 
+30048      DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Environment load took 131.7ns 
+30049      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Creating init config 
+33736      DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Init config took 3.69s 
+33792      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Replaying proof Simple[Simple::addWithJump(int,int,int)].JML operation contract.0 
+33853      DEBUG main            d.u.i.k.p.i.IntermediateProofReplayer Proof replay took 57.51ms 
+33855      DEBUG main            d.u.i.k.p.r.p.TestFile    ... success: reloaded. 
+
+pass: Verifying property "provable" was successful for file: /home/runner/work/key/key/key.core/../key.ui/examples/heap/block_contracts/Simple__addWithJump.key]]></system-out></testcase><testcase name="Simple__addWithTwoBlockContracts.key"  classname="runallproofs.blockContracts.blockContracts" time="0.000000"><system-out><![CDATA[33856      INFO  main            d.u.i.k.p.r.p.TestFile    Now processing file /home/runner/work/key/key/key.core/../key.ui/examples/heap/block_contracts/Simple__addWithTwoBlockContracts.key 
+33857      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Loading environment from /home/runner/work/key/key/key.core/../key.ui/examples/heap/block_contracts/Simple__addWithTwoBlockContracts.key 
+33857      DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Environment load took 285.71ns 
+33859      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Creating init config 
+37573      DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Init config took 3.71s 
+37628      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Replaying proof Simple[Simple::addWithTwoBlockContracts(int,int,int)].JML operation contract.0 
+37631      DEBUG main            d.u.i.k.p.i.IntermediateProofReplayer Proof replay took 13.6ns 
+37934      INFO  main            d.u.i.k.p.r.p.TestFile    ... finished proof: closed. 
+38161      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Loading environment from /home/runner/work/key/key/key.core/../key.ui/examples/heap/block_contracts/Simple__addWithTwoBlockContracts.key.proof 
+38161      DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Environment load took 629.11ns 
+38163      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Creating init config 
+41831      DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Init config took 3.67s 
+41886      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Replaying proof Simple[Simple::addWithTwoBlockContracts(int,int,int)].JML operation contract.0 
+41973      DEBUG main            d.u.i.k.p.i.IntermediateProofReplayer Proof replay took 83.17ms 
+41975      DEBUG main            d.u.i.k.p.r.p.TestFile    ... success: reloaded. 
+
+pass: Verifying property "provable" was successful for file: /home/runner/work/key/key/key.core/../key.ui/examples/heap/block_contracts/Simple__addWithTwoBlockContracts.key]]></system-out></testcase><testcase name="Simple__generateByteArray.key"  classname="runallproofs.blockContracts.blockContracts" time="0.000000"><system-out><![CDATA[41976      INFO  main            d.u.i.k.p.r.p.TestFile    Now processing file /home/runner/work/key/key/key.core/../key.ui/examples/heap/block_contracts/Simple__generateByteArray.key 
+41977      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Loading environment from /home/runner/work/key/key/key.core/../key.ui/examples/heap/block_contracts/Simple__generateByteArray.key 
+41977      DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Environment load took 274.11ns 
+41978      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Creating init config 
+45671      DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Init config took 3.69s 
+45724      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Replaying proof Simple[Simple::generateByteArray()].JML normal_behavior operation contract.0 
+45727      DEBUG main            d.u.i.k.p.i.IntermediateProofReplayer Proof replay took 11.6ns 
+48544      INFO  main            d.u.i.k.p.r.p.TestFile    ... finished proof: closed. 
+48793      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Loading environment from /home/runner/work/key/key/key.core/../key.ui/examples/heap/block_contracts/Simple__generateByteArray.key.proof 
+48794      DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Environment load took 565.11ns 
+48796      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Creating init config 
+52439      DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Init config took 3.64s 
+52499      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Replaying proof Simple[Simple::generateByteArray()].JML normal_behavior operation contract.0 
+52910      DEBUG main            d.u.i.k.p.i.IntermediateProofReplayer Proof replay took 395.02ms 
+52912      DEBUG main            d.u.i.k.p.r.p.TestFile    ... success: reloaded. 
+
+pass: Verifying property "provable" was successful for file: /home/runner/work/key/key/key.core/../key.ui/examples/heap/block_contracts/Simple__generateByteArray.key]]></system-out></testcase><testcase name="Simple__getLength.key"  classname="runallproofs.blockContracts.blockContracts" time="0.000000"><system-out><![CDATA[52913      INFO  main            d.u.i.k.p.r.p.TestFile    Now processing file /home/runner/work/key/key/key.core/../key.ui/examples/heap/block_contracts/Simple__getLength.key 
+52914      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Loading environment from /home/runner/work/key/key/key.core/../key.ui/examples/heap/block_contracts/Simple__getLength.key 
+52914      DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Environment load took 173.9ns 
+52916      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Creating init config 
+56678      DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Init config took 3.76s 
+56730      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Replaying proof Simple[Simple::getLength()].JML normal_behavior operation contract.0 
+56733      DEBUG main            d.u.i.k.p.i.IntermediateProofReplayer Proof replay took 13.1ns 
+56839      INFO  main            d.u.i.k.p.r.p.TestFile    ... finished proof: closed. 
+57074      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Loading environment from /home/runner/work/key/key/key.core/../key.ui/examples/heap/block_contracts/Simple__getLength.key.proof 
+57074      DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Environment load took 158.7ns 
+57075      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Creating init config 
+60601      DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Init config took 3.53s 
+60650      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Replaying proof Simple[Simple::getLength()].JML normal_behavior operation contract.0 
+60661      DEBUG main            d.u.i.k.p.i.IntermediateProofReplayer Proof replay took 8.85ms 
+60662      DEBUG main            d.u.i.k.p.r.p.TestFile    ... success: reloaded. 
+
+pass: Verifying property "provable" was successful for file: /home/runner/work/key/key/key.core/../key.ui/examples/heap/block_contracts/Simple__getLength.key]]></system-out></testcase><testcase name="Simple__square.key"  classname="runallproofs.blockContracts.blockContracts" time="0.000000"><system-out><![CDATA[60663      INFO  main            d.u.i.k.p.r.p.TestFile    Now processing file /home/runner/work/key/key/key.core/../key.ui/examples/heap/block_contracts/Simple__square.key 
+60664      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Loading environment from /home/runner/work/key/key/key.core/../key.ui/examples/heap/block_contracts/Simple__square.key 
+60664      DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Environment load took 180.9ns 
+60665      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Creating init config 
+64265      DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Init config took 3.6s 
+64313      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Replaying proof Simple[Simple::square(int)].JML operation contract.0 
+64316      DEBUG main            d.u.i.k.p.i.IntermediateProofReplayer Proof replay took 14.1ns 
+64720      INFO  main            d.u.i.k.p.r.p.TestFile    ... finished proof: closed. 
+64977      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Loading environment from /home/runner/work/key/key/key.core/../key.ui/examples/heap/block_contracts/Simple__square.key.proof 
+64977      DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Environment load took 130.1ns 
+64980      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Creating init config 
+68481      DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Init config took 3.5s 
+68539      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Replaying proof Simple[Simple::square(int)].JML operation contract.0 
+68669      DEBUG main            d.u.i.k.p.i.IntermediateProofReplayer Proof replay took 125.97ms 
+68671      DEBUG main            d.u.i.k.p.r.p.TestFile    ... success: reloaded. 
+
+pass: Verifying property "provable" was successful for file: /home/runner/work/key/key/key.core/../key.ui/examples/heap/block_contracts/Simple__square.key]]></system-out></testcase><testcase name="Simple__unnecessaryBlockContract.key"  classname="runallproofs.blockContracts.blockContracts" time="0.000000"><system-out><![CDATA[68673      INFO  main            d.u.i.k.p.r.p.TestFile    Now processing file /home/runner/work/key/key/key.core/../key.ui/examples/heap/block_contracts/Simple__unnecessaryBlockContract.key 
+68674      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Loading environment from /home/runner/work/key/key/key.core/../key.ui/examples/heap/block_contracts/Simple__unnecessaryBlockContract.key 
+68674      DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Environment load took 332.91ns 
+68675      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Creating init config 
+72207      DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Init config took 3.53s 
+72256      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Replaying proof Simple[Simple::unnecessaryBlockContract()].JML operation contract.0 
+72258      DEBUG main            d.u.i.k.p.i.IntermediateProofReplayer Proof replay took 13.9ns 
+72360      INFO  main            d.u.i.k.p.r.p.TestFile    ... finished proof: closed. 
+72595      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Loading environment from /home/runner/work/key/key/key.core/../key.ui/examples/heap/block_contracts/Simple__unnecessaryBlockContract.key.proof 
+72595      DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Environment load took 216ns 
+72597      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Creating init config 
+76058      DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Init config took 3.46s 
+76101      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Replaying proof Simple[Simple::unnecessaryBlockContract()].JML operation contract.0 
+76131      DEBUG main            d.u.i.k.p.i.IntermediateProofReplayer Proof replay took 27.42ms 
+76132      DEBUG main            d.u.i.k.p.r.p.TestFile    ... success: reloaded. 
+
+pass: Verifying property "provable" was successful for file: /home/runner/work/key/key/key.core/../key.ui/examples/heap/block_contracts/Simple__unnecessaryBlockContract.key]]></system-out></testcase><testcase name="Simple__unnecessaryLoopInvariant.key"  classname="runallproofs.blockContracts.blockContracts" time="0.000000"><system-out><![CDATA[76133      INFO  main            d.u.i.k.p.r.p.TestFile    Now processing file /home/runner/work/key/key/key.core/../key.ui/examples/heap/block_contracts/Simple__unnecessaryLoopInvariant.key 
+76134      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Loading environment from /home/runner/work/key/key/key.core/../key.ui/examples/heap/block_contracts/Simple__unnecessaryLoopInvariant.key 
+76134      DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Environment load took 133.2ns 
+76135      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Creating init config 
+79678      DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Init config took 3.54s 
+79721      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Replaying proof Simple[Simple::unnecessaryLoopInvariant()].JML operation contract.0 
+79726      DEBUG main            d.u.i.k.p.i.IntermediateProofReplayer Proof replay took 13.1ns 
+79831      INFO  main            d.u.i.k.p.r.p.TestFile    ... finished proof: closed. 
+80080      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Loading environment from /home/runner/work/key/key/key.core/../key.ui/examples/heap/block_contracts/Simple__unnecessaryLoopInvariant.key.proof 
+80080      DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Environment load took 133.7ns 
+80081      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Creating init config 
+83511      DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Init config took 3.43s 
+83553      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Replaying proof Simple[Simple::unnecessaryLoopInvariant()].JML operation contract.0 
+83570      DEBUG main            d.u.i.k.p.i.IntermediateProofReplayer Proof replay took 14.85ms 
+83571      DEBUG main            d.u.i.k.p.r.p.TestFile    ... success: reloaded. 
+
+pass: Verifying property "provable" was successful for file: /home/runner/work/key/key/key.core/../key.ui/examples/heap/block_contracts/Simple__unnecessaryLoopInvariant.key]]></system-out></testcase><testcase name="assert.key"  classname="runallproofs.blockContracts.blockContracts" time="0.000000"><system-out><![CDATA[83572      INFO  main            d.u.i.k.p.r.p.TestFile    Now processing file /home/runner/work/key/key/key.core/../key.ui/examples/standard_key/java_dl/jml-assert/assert.key 
+83573      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Loading environment from /home/runner/work/key/key/key.core/../key.ui/examples/standard_key/java_dl/jml-assert/assert.key 
+83573      DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Environment load took 137.1ns 
+83574      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Creating init config 
+86703      DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Init config took 3.13s 
+86754      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Replaying proof Assert[Assert::createArray(int)].JML normal_behavior operation contract.0 
+86756      DEBUG main            d.u.i.k.p.i.IntermediateProofReplayer Proof replay took 7.3ns 
+87058      INFO  main            d.u.i.k.p.r.p.TestFile    ... finished proof: closed. 
+87335      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Loading environment from /home/runner/work/key/key/key.core/../key.ui/examples/standard_key/java_dl/jml-assert/assert.key.proof 
+87335      DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Environment load took 140.4ns 
+87336      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Creating init config 
+90374      DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Init config took 3.04s 
+90416      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Replaying proof Assert[Assert::createArray(int)].JML normal_behavior operation contract.0 
+90482      DEBUG main            d.u.i.k.p.i.IntermediateProofReplayer Proof replay took 62.45ms 
+90483      DEBUG main            d.u.i.k.p.r.p.TestFile    ... success: reloaded. 
+
+pass: Verifying property "provable" was successful for file: /home/runner/work/key/key/key.core/../key.ui/examples/standard_key/java_dl/jml-assert/assert.key]]></system-out></testcase><testcase name="assert_assume_order.key"  classname="runallproofs.blockContracts.blockContracts" time="0.000000"><system-out><![CDATA[90485      INFO  main            d.u.i.k.p.r.p.TestFile    Now processing file /home/runner/work/key/key/key.core/../key.ui/examples/standard_key/java_dl/jml-assert/assert_assume_order.key 
+90485      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Loading environment from /home/runner/work/key/key/key.core/../key.ui/examples/standard_key/java_dl/jml-assert/assert_assume_order.key 
+90485      DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Environment load took 268.41ns 
+90486      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Creating init config 
+93650      DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Init config took 3.16s 
+93695      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Replaying proof AssertAssume[AssertAssume::singleAssumeAssert(int)].JML normal_behavior operation contract.0 
+93697      DEBUG main            d.u.i.k.p.i.IntermediateProofReplayer Proof replay took 5.9ns 
+93799      INFO  main            d.u.i.k.p.r.p.TestFile    ... finished proof: closed. 
+94044      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Loading environment from /home/runner/work/key/key/key.core/../key.ui/examples/standard_key/java_dl/jml-assert/assert_assume_order.key.proof 
+94045      DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Environment load took 139.3ns 
+94046      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Creating init config 
+97041      DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Init config took 2.99s 
+97082      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Replaying proof AssertAssume[AssertAssume::singleAssumeAssert(int)].JML normal_behavior operation contract.0 
+97095      DEBUG main            d.u.i.k.p.i.IntermediateProofReplayer Proof replay took 10.24ms 
+97097      DEBUG main            d.u.i.k.p.r.p.TestFile    ... success: reloaded. 
+
+pass: Verifying property "provable" was successful for file: /home/runner/work/key/key/key.core/../key.ui/examples/standard_key/java_dl/jml-assert/assert_assume_order.key]]></system-out></testcase><testcase name="sum_onBlock_external.key"  classname="runallproofs.blockContracts.blockContracts" time="0.000000"><system-out><![CDATA[97098      INFO  main            d.u.i.k.p.r.p.TestFile    Now processing file /home/runner/work/key/key/key.core/../key.ui/examples/heap/block_loop_contracts/SimpleVariants/sum_onBlock_external.key 
+97099      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Loading environment from /home/runner/work/key/key/key.core/../key.ui/examples/heap/block_loop_contracts/SimpleVariants/sum_onBlock_external.key 
+97099      DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Environment load took 167.8ns 
+97100      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Creating init config 
+100489     DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Init config took 3.39s 
+100527     INFO  main            d.u.i.k.p.i.AbstractProblemLoader Replaying proof LoopContractExamplesAll[LoopContractExamplesAll::sum_loopContract_onBlock([I)].JML normal_behavior operation contract.0 
+100530     DEBUG main            d.u.i.k.p.i.IntermediateProofReplayer Proof replay took 11.5ns 
+100732     INFO  main            d.u.i.k.p.r.p.TestFile    ... finished proof: closed. 
+100996     INFO  main            d.u.i.k.p.i.AbstractProblemLoader Loading environment from /home/runner/work/key/key/key.core/../key.ui/examples/heap/block_loop_contracts/SimpleVariants/sum_onBlock_external.key.proof 
+100996     DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Environment load took 142.5ns 
+100997     INFO  main            d.u.i.k.p.i.AbstractProblemLoader Creating init config 
+104303     DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Init config took 3.31s 
+104347     INFO  main            d.u.i.k.p.i.AbstractProblemLoader Replaying proof LoopContractExamplesAll[LoopContractExamplesAll::sum_loopContract_onBlock([I)].JML normal_behavior operation contract.0 
+104389     DEBUG main            d.u.i.k.p.i.IntermediateProofReplayer Proof replay took 39.91ms 
+104390     DEBUG main            d.u.i.k.p.r.p.TestFile    ... success: reloaded. 
+
+pass: Verifying property "provable" was successful for file: /home/runner/work/key/key/key.core/../key.ui/examples/heap/block_loop_contracts/SimpleVariants/sum_onBlock_external.key]]></system-out></testcase><testcase name="sum_onBlock_internal.key"  classname="runallproofs.blockContracts.blockContracts" time="0.000000"><system-out><![CDATA[104391     INFO  main            d.u.i.k.p.r.p.TestFile    Now processing file /home/runner/work/key/key/key.core/../key.ui/examples/heap/block_loop_contracts/SimpleVariants/sum_onBlock_internal.key 
+104391     INFO  main            d.u.i.k.p.i.AbstractProblemLoader Loading environment from /home/runner/work/key/key/key.core/../key.ui/examples/heap/block_loop_contracts/SimpleVariants/sum_onBlock_internal.key 
+104391     DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Environment load took 130.6ns 
+104392     INFO  main            d.u.i.k.p.i.AbstractProblemLoader Creating init config 
+107701     DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Init config took 3.31s 
+107743     INFO  main            d.u.i.k.p.i.AbstractProblemLoader Replaying proof LoopContractExamplesAll[LoopContractExamplesAll::sum_loopContract_onBlock([I)].JML normal_behavior operation contract.0 
+107745     DEBUG main            d.u.i.k.p.i.IntermediateProofReplayer Proof replay took 13ns 
+108548     INFO  main            d.u.i.k.p.r.p.TestFile    ... finished proof: closed. 
+108856     INFO  main            d.u.i.k.p.i.AbstractProblemLoader Loading environment from /home/runner/work/key/key/key.core/../key.ui/examples/heap/block_loop_contracts/SimpleVariants/sum_onBlock_internal.key.proof 
+108856     DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Environment load took 618.21ns 
+108858     INFO  main            d.u.i.k.p.i.AbstractProblemLoader Creating init config 
+112096     DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Init config took 3.24s 
+112136     INFO  main            d.u.i.k.p.i.AbstractProblemLoader Replaying proof LoopContractExamplesAll[LoopContractExamplesAll::sum_loopContract_onBlock([I)].JML normal_behavior operation contract.0 
+112447     DEBUG main            d.u.i.k.p.i.IntermediateProofReplayer Proof replay took 307.76ms 
+112448     DEBUG main            d.u.i.k.p.r.p.TestFile    ... success: reloaded. 
+
+pass: Verifying property "provable" was successful for file: /home/runner/work/key/key/key.core/../key.ui/examples/heap/block_loop_contracts/SimpleVariants/sum_onBlock_internal.key]]></system-out></testcase><testcase name="sum_onBlock_loop.key"  classname="runallproofs.blockContracts.blockContracts" time="0.000000"><system-out><![CDATA[112450     INFO  main            d.u.i.k.p.r.p.TestFile    Now processing file /home/runner/work/key/key/key.core/../key.ui/examples/heap/block_loop_contracts/SimpleVariants/sum_onBlock_loop.key 
+112450     INFO  main            d.u.i.k.p.i.AbstractProblemLoader Loading environment from /home/runner/work/key/key/key.core/../key.ui/examples/heap/block_loop_contracts/SimpleVariants/sum_onBlock_loop.key 
+112451     DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Environment load took 280.01ns 
+112452     INFO  main            d.u.i.k.p.i.AbstractProblemLoader Creating init config 
+115786     DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Init config took 3.33s 
+115829     INFO  main            d.u.i.k.p.i.AbstractProblemLoader Replaying proof LoopContractExamplesAll[LoopContractExamplesAll::sum_loopContract_onBlock([I)].JML normal_behavior loop contract.0 
+115831     DEBUG main            d.u.i.k.p.i.IntermediateProofReplayer Proof replay took 25.1ns 
+116780     INFO  main            d.u.i.k.p.r.p.TestFile    ... finished proof: closed. 
+117102     INFO  main            d.u.i.k.p.i.AbstractProblemLoader Loading environment from /home/runner/work/key/key/key.core/../key.ui/examples/heap/block_loop_contracts/SimpleVariants/sum_onBlock_loop.key.proof 
+117102     DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Environment load took 127.5ns 
+117103     INFO  main            d.u.i.k.p.i.AbstractProblemLoader Creating init config 
+120323     DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Init config took 3.22s 
+120379     INFO  main            d.u.i.k.p.i.AbstractProblemLoader Replaying proof LoopContractExamplesAll[LoopContractExamplesAll::sum_loopContract_onBlock([I)].JML normal_behavior loop contract.0 
+120708     DEBUG main            d.u.i.k.p.i.IntermediateProofReplayer Proof replay took 323.29ms 
+120709     DEBUG main            d.u.i.k.p.r.p.TestFile    ... success: reloaded. 
+
+pass: Verifying property "provable" was successful for file: /home/runner/work/key/key/key.core/../key.ui/examples/heap/block_loop_contracts/SimpleVariants/sum_onBlock_loop.key]]></system-out></testcase><testcase name="sum_onLoop_external.key"  classname="runallproofs.blockContracts.blockContracts" time="0.000000"><system-out><![CDATA[120710     INFO  main            d.u.i.k.p.r.p.TestFile    Now processing file /home/runner/work/key/key/key.core/../key.ui/examples/heap/block_loop_contracts/SimpleVariants/sum_onLoop_external.key 
+120710     INFO  main            d.u.i.k.p.i.AbstractProblemLoader Loading environment from /home/runner/work/key/key/key.core/../key.ui/examples/heap/block_loop_contracts/SimpleVariants/sum_onLoop_external.key 
+120710     DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Environment load took 117ns 
+120711     INFO  main            d.u.i.k.p.i.AbstractProblemLoader Creating init config 
+124064     DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Init config took 3.35s 
+124103     INFO  main            d.u.i.k.p.i.AbstractProblemLoader Replaying proof LoopContractExamplesAll[LoopContractExamplesAll::sum_loopContract_onLoop([I)].JML normal_behavior operation contract.0 
+124105     DEBUG main            d.u.i.k.p.i.IntermediateProofReplayer Proof replay took 13.3ns 
+124211     INFO  main            d.u.i.k.p.r.p.TestFile    ... finished proof: closed. 
+124521     INFO  main            d.u.i.k.p.i.AbstractProblemLoader Loading environment from /home/runner/work/key/key/key.core/../key.ui/examples/heap/block_loop_contracts/SimpleVariants/sum_onLoop_external.key.proof 
+124521     DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Environment load took 125ns 
+124522     INFO  main            d.u.i.k.p.i.AbstractProblemLoader Creating init config 
+127760     DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Init config took 3.24s 
+127803     INFO  main            d.u.i.k.p.i.AbstractProblemLoader Replaying proof LoopContractExamplesAll[LoopContractExamplesAll::sum_loopContract_onLoop([I)].JML normal_behavior operation contract.0 
+127839     DEBUG main            d.u.i.k.p.i.IntermediateProofReplayer Proof replay took 34.05ms 
+127840     DEBUG main            d.u.i.k.p.r.p.TestFile    ... success: reloaded. 
+
+pass: Verifying property "provable" was successful for file: /home/runner/work/key/key/key.core/../key.ui/examples/heap/block_loop_contracts/SimpleVariants/sum_onLoop_external.key]]></system-out></testcase><testcase name="sum_onLoop_internal.key"  classname="runallproofs.blockContracts.blockContracts" time="0.000000"><system-out><![CDATA[127841     INFO  main            d.u.i.k.p.r.p.TestFile    Now processing file /home/runner/work/key/key/key.core/../key.ui/examples/heap/block_loop_contracts/SimpleVariants/sum_onLoop_internal.key 
+127842     INFO  main            d.u.i.k.p.i.AbstractProblemLoader Loading environment from /home/runner/work/key/key/key.core/../key.ui/examples/heap/block_loop_contracts/SimpleVariants/sum_onLoop_internal.key 
+127842     DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Environment load took 128.7ns 
+127843     INFO  main            d.u.i.k.p.i.AbstractProblemLoader Creating init config 
+131209     DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Init config took 3.37s 
+131248     INFO  main            d.u.i.k.p.i.AbstractProblemLoader Replaying proof LoopContractExamplesAll[LoopContractExamplesAll::sum_loopContract_onLoop([I)].JML normal_behavior operation contract.0 
+131250     DEBUG main            d.u.i.k.p.i.IntermediateProofReplayer Proof replay took 12.7ns 
+132053     INFO  main            d.u.i.k.p.r.p.TestFile    ... finished proof: closed. 
+132373     INFO  main            d.u.i.k.p.i.AbstractProblemLoader Loading environment from /home/runner/work/key/key/key.core/../key.ui/examples/heap/block_loop_contracts/SimpleVariants/sum_onLoop_internal.key.proof 
+132373     DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Environment load took 136ns 
+132374     INFO  main            d.u.i.k.p.i.AbstractProblemLoader Creating init config 
+135626     DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Init config took 3.25s 
+135669     INFO  main            d.u.i.k.p.i.AbstractProblemLoader Replaying proof LoopContractExamplesAll[LoopContractExamplesAll::sum_loopContract_onLoop([I)].JML normal_behavior operation contract.0 
+135986     DEBUG main            d.u.i.k.p.i.IntermediateProofReplayer Proof replay took 308.36ms 
+135987     DEBUG main            d.u.i.k.p.r.p.TestFile    ... success: reloaded. 
+
+pass: Verifying property "provable" was successful for file: /home/runner/work/key/key/key.core/../key.ui/examples/heap/block_loop_contracts/SimpleVariants/sum_onLoop_internal.key]]></system-out></testcase><testcase name="sum_onLoop_loop.key"  classname="runallproofs.blockContracts.blockContracts" time="0.000000"><system-out><![CDATA[135988     INFO  main            d.u.i.k.p.r.p.TestFile    Now processing file /home/runner/work/key/key/key.core/../key.ui/examples/heap/block_loop_contracts/SimpleVariants/sum_onLoop_loop.key 
+135989     INFO  main            d.u.i.k.p.i.AbstractProblemLoader Loading environment from /home/runner/work/key/key/key.core/../key.ui/examples/heap/block_loop_contracts/SimpleVariants/sum_onLoop_loop.key 
+135989     DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Environment load took 383.41ns 
+135991     INFO  main            d.u.i.k.p.i.AbstractProblemLoader Creating init config 
+139371     DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Init config took 3.38s 
+139415     INFO  main            d.u.i.k.p.i.AbstractProblemLoader Replaying proof LoopContractExamplesAll[LoopContractExamplesAll::sum_loopContract_onLoop([I)].JML normal_behavior loop contract.0 
+139419     DEBUG main            d.u.i.k.p.i.IntermediateProofReplayer Proof replay took 23.1ns 
+140325     INFO  main            d.u.i.k.p.r.p.TestFile    ... finished proof: closed. 
+140667     INFO  main            d.u.i.k.p.i.AbstractProblemLoader Loading environment from /home/runner/work/key/key/key.core/../key.ui/examples/heap/block_loop_contracts/SimpleVariants/sum_onLoop_loop.key.proof 
+140670     DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Environment load took 3.29ms 
+140671     INFO  main            d.u.i.k.p.i.AbstractProblemLoader Creating init config 
+143898     DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Init config took 3.23s 
+143940     INFO  main            d.u.i.k.p.i.AbstractProblemLoader Replaying proof LoopContractExamplesAll[LoopContractExamplesAll::sum_loopContract_onLoop([I)].JML normal_behavior loop contract.0 
+144247     DEBUG main            d.u.i.k.p.i.IntermediateProofReplayer Proof replay took 302.02ms 
+144248     DEBUG main            d.u.i.k.p.r.p.TestFile    ... success: reloaded. 
+
+pass: Verifying property "provable" was successful for file: /home/runner/work/key/key/key.core/../key.ui/examples/heap/block_loop_contracts/SimpleVariants/sum_onLoop_loop.key]]></system-out></testcase><testcase name="blockContracts0.key"  classname="runallproofs.blockContracts.blockContracts" time="0.000000"><system-out><![CDATA[144249     INFO  main            d.u.i.k.p.r.p.TestFile    Now processing file /home/runner/work/key/key/key.core/../key.ui/examples/heap/block_loop_contracts/Free/blockContracts0.key 
+144249     INFO  main            d.u.i.k.p.i.AbstractProblemLoader Loading environment from /home/runner/work/key/key/key.core/../key.ui/examples/heap/block_loop_contracts/Free/blockContracts0.key 
+144250     DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Environment load took 254.71ns 
+144251     INFO  main            d.u.i.k.p.i.AbstractProblemLoader Creating init config 
+147207     DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Init config took 2.96s 
+147246     INFO  main            d.u.i.k.p.i.AbstractProblemLoader Replaying proof FreeConditions[FreeConditions::blockContract0()].JML normal_behavior operation contract.0 
+147248     DEBUG main            d.u.i.k.p.i.IntermediateProofReplayer Proof replay took 12.8ns 
+147351     INFO  main            d.u.i.k.p.r.p.TestFile    ... finished proof: closed. 
+147676     INFO  main            d.u.i.k.p.i.AbstractProblemLoader Loading environment from /home/runner/work/key/key/key.core/../key.ui/examples/heap/block_loop_contracts/Free/blockContracts0.key.proof 
+147676     DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Environment load took 142.7ns 
+147677     INFO  main            d.u.i.k.p.i.AbstractProblemLoader Creating init config 
+150528     DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Init config took 2.85s 
+150565     INFO  main            d.u.i.k.p.i.AbstractProblemLoader Replaying proof FreeConditions[FreeConditions::blockContract0()].JML normal_behavior operation contract.0 
+150592     DEBUG main            d.u.i.k.p.i.IntermediateProofReplayer Proof replay took 24.52ms 
+150593     DEBUG main            d.u.i.k.p.r.p.TestFile    ... success: reloaded. 
+
+pass: Verifying property "provable" was successful for file: /home/runner/work/key/key/key.core/../key.ui/examples/heap/block_loop_contracts/Free/blockContracts0.key]]></system-out></testcase><testcase name="blockContracts1.key"  classname="runallproofs.blockContracts.blockContracts" time="0.000000"><system-out><![CDATA[150594     INFO  main            d.u.i.k.p.r.p.TestFile    Now processing file /home/runner/work/key/key/key.core/../key.ui/examples/heap/block_loop_contracts/Free/blockContracts1.key 
+150594     INFO  main            d.u.i.k.p.i.AbstractProblemLoader Loading environment from /home/runner/work/key/key/key.core/../key.ui/examples/heap/block_loop_contracts/Free/blockContracts1.key 
+150594     DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Environment load took 148.8ns 
+150595     INFO  main            d.u.i.k.p.i.AbstractProblemLoader Creating init config 
+153438     DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Init config took 2.84s 
+153496     INFO  main            d.u.i.k.p.i.AbstractProblemLoader Replaying proof FreeConditions[FreeConditions::blockContract1()].JML normal_behavior operation contract.0 
+153498     DEBUG main            d.u.i.k.p.i.IntermediateProofReplayer Proof replay took 12.8ns 
+153600     INFO  main            d.u.i.k.p.r.p.TestFile    ... finished proof: closed. 
+153904     INFO  main            d.u.i.k.p.i.AbstractProblemLoader Loading environment from /home/runner/work/key/key/key.core/../key.ui/examples/heap/block_loop_contracts/Free/blockContracts1.key.proof 
+153904     DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Environment load took 162ns 
+153906     INFO  main            d.u.i.k.p.i.AbstractProblemLoader Creating init config 
+156712     DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Init config took 2.81s 
+156759     INFO  main            d.u.i.k.p.i.AbstractProblemLoader Replaying proof FreeConditions[FreeConditions::blockContract1()].JML normal_behavior operation contract.0 
+156784     DEBUG main            d.u.i.k.p.i.IntermediateProofReplayer Proof replay took 21.64ms 
+156785     DEBUG main            d.u.i.k.p.r.p.TestFile    ... success: reloaded. 
+
+pass: Verifying property "provable" was successful for file: /home/runner/work/key/key/key.core/../key.ui/examples/heap/block_loop_contracts/Free/blockContracts1.key]]></system-out></testcase><testcase name="block_finally.key"  classname="runallproofs.blockContracts.blockContracts" time="0.000000"><system-out><![CDATA[156787     INFO  main            d.u.i.k.p.r.p.TestFile    Now processing file /home/runner/work/key/key/key.core/../key.ui/examples/heap/block_loop_contracts/Finally/block_finally.key 
+156787     INFO  main            d.u.i.k.p.i.AbstractProblemLoader Loading environment from /home/runner/work/key/key/key.core/../key.ui/examples/heap/block_loop_contracts/Finally/block_finally.key 
+156787     DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Environment load took 282.81ns 
+156788     INFO  main            d.u.i.k.p.i.AbstractProblemLoader Creating init config 
+159687     DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Init config took 2.9s 
+159725     INFO  main            d.u.i.k.p.i.AbstractProblemLoader Replaying proof AuxiliaryContractsFinally[AuxiliaryContractsFinally::breakThrowContinueBlockContract(java.lang.Exception)].JML block contract.0 
+159727     DEBUG main            d.u.i.k.p.i.IntermediateProofReplayer Proof replay took 12.4ns 
+160432     INFO  main            d.u.i.k.p.r.p.TestFile    ... finished proof: open goal(s) 
+
+pass: Verifying property "notprovable" was successful for file: /home/runner/work/key/key/key.core/../key.ui/examples/heap/block_loop_contracts/Finally/block_finally.key]]></system-out></testcase><testcase name="loop_finally.key"  classname="runallproofs.blockContracts.blockContracts" time="0.000000"><system-out><![CDATA[160770     INFO  main            d.u.i.k.p.r.p.TestFile    Now processing file /home/runner/work/key/key/key.core/../key.ui/examples/heap/block_loop_contracts/Finally/loop_finally.key 
+160771     INFO  main            d.u.i.k.p.i.AbstractProblemLoader Loading environment from /home/runner/work/key/key/key.core/../key.ui/examples/heap/block_loop_contracts/Finally/loop_finally.key 
+160771     DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Environment load took 83.3ns 
+160772     INFO  main            d.u.i.k.p.i.AbstractProblemLoader Creating init config 
+163628     DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Init config took 2.86s 
+163673     INFO  main            d.u.i.k.p.i.AbstractProblemLoader Replaying proof AuxiliaryContractsFinally[AuxiliaryContractsFinally::breakThrowContinueLoopContract(java.lang.Exception)].JML normal_behavior loop contract.0 
+163676     DEBUG main            d.u.i.k.p.i.IntermediateProofReplayer Proof replay took 13ns 
+164487     INFO  main            d.u.i.k.p.r.p.TestFile    ... finished proof: open goal(s) 
+
+pass: Verifying property "notprovable" was successful for file: /home/runner/work/key/key/key.core/../key.ui/examples/heap/block_loop_contracts/Finally/loop_finally.key]]></system-out></testcase></testsuite></testsuites>

@@ -1,0 +1,217 @@
+<testsuites> <testsuite name="runallproofs.comprehensions" tests="11" id="0" disabled="0" errors="0" failures="0" time="0.000000"><testcase name="general_sum.key"  classname="runallproofs.comprehensions.comprehensions" time="0.000000"><system-out><![CDATA[430        INFO  Timeout watchdog d.u.i.k.p.r.p.ForkedTestFileRunner Timeout watcher launched (2000 secs.) 
+447        WARN  main            d.u.i.k.s.ProofSettings   The settings in /home/runner/.key/proof-settings.props are *not* read. 
+493        INFO  main            d.u.i.k.p.r.p.TestFile    Now processing file /home/runner/work/key/key/key.core/../key.ui/examples/heap/comprehensions/general_sum.key 
+613        INFO  main            d.u.i.k.p.i.AbstractProblemLoader Loading environment from /home/runner/work/key/key/key.core/../key.ui/examples/heap/comprehensions/general_sum.key 
+633        DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Environment load took 1.99ms 
+910        INFO  main            d.u.i.k.p.i.AbstractProblemLoader Creating init config 
+2031       DEBUG main            d.u.i.k.j.TypeConverter   No LDT found for Meta 
+2031       DEBUG main            d.u.i.k.j.TypeConverter   No LDT found for Meta 
+2037       DEBUG main            d.u.i.k.j.TypeConverter   No LDT found for Meta 
+2037       DEBUG main            d.u.i.k.j.TypeConverter   No LDT found for Meta 
+3756       DEBUG main            d.u.i.k.j.TypeConverter   No LDT found for JavaBigintExpression 
+9767       DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Init config took 8.86s 
+9907       INFO  main            d.u.i.k.p.i.AbstractProblemLoader Replaying proof GSum[GSum::doNothing()].JML operation contract.0 
+9945       DEBUG main            d.u.i.k.p.i.IntermediateProofReplayer Proof replay took 37.7ns 
+10448      INFO  main            d.u.i.k.p.r.p.TestFile    ... finished proof: closed. 
+10573      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Loading environment from /home/runner/work/key/key/key.core/../key.ui/examples/heap/comprehensions/general_sum.key.proof 
+10574      DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Environment load took 823.86ns 
+10576      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Creating init config 
+13943      DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Init config took 3.37s 
+14022      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Replaying proof GSum[GSum::doNothing()].JML operation contract.0 
+14066      DEBUG main            d.u.i.k.p.i.IntermediateProofReplayer Proof replay took 35.3ms 
+14077      DEBUG main            d.u.i.k.p.r.p.TestFile    ... success: reloaded. 
+
+pass: Verifying property "provable" was successful for file: /home/runner/work/key/key/key.core/../key.ui/examples/heap/comprehensions/general_sum.key]]></system-out></testcase><testcase name="sum0.key"  classname="runallproofs.comprehensions.comprehensions" time="0.000000"><system-out><![CDATA[14079      INFO  main            d.u.i.k.p.r.p.TestFile    Now processing file /home/runner/work/key/key/key.core/../key.ui/examples/heap/comprehensions/sum0.key 
+14079      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Loading environment from /home/runner/work/key/key/key.core/../key.ui/examples/heap/comprehensions/sum0.key 
+14079      DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Environment load took 90.91ns 
+14081      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Creating init config 
+17331      DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Init config took 3.25s 
+17400      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Replaying proof Sum[Sum::sum0([I)].JML normal_behavior operation contract.0 
+17403      DEBUG main            d.u.i.k.p.i.IntermediateProofReplayer Proof replay took 7.91ns 
+17511      DEBUG Thread-4        d.u.i.k.l.l.OriginTermLabel commonFileName is null! 
+17511      DEBUG Thread-4        d.u.i.k.l.l.OriginTermLabel commonFileName is null! 
+17715      DEBUG Thread-4        d.u.i.k.l.l.OriginTermLabel commonFileName is null! 
+17716      DEBUG Thread-4        d.u.i.k.l.l.OriginTermLabel commonFileName is null! 
+17919      DEBUG Thread-4        d.u.i.k.l.l.OriginTermLabel commonFileName is null! 
+18116      INFO  main            d.u.i.k.p.r.p.TestFile    ... finished proof: closed. 
+18305      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Loading environment from /home/runner/work/key/key/key.core/../key.ui/examples/heap/comprehensions/sum0.key.proof 
+18305      DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Environment load took 158.51ns 
+18314      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Creating init config 
+21515      DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Init config took 3.2s 
+21585      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Replaying proof Sum[Sum::sum0([I)].JML normal_behavior operation contract.0 
+21640      DEBUG main            d.u.i.k.l.l.OriginTermLabel commonFileName is null! 
+21641      DEBUG main            d.u.i.k.l.l.OriginTermLabel commonFileName is null! 
+21753      DEBUG main            d.u.i.k.l.l.OriginTermLabel commonFileName is null! 
+21824      DEBUG main            d.u.i.k.l.l.OriginTermLabel commonFileName is null! 
+21825      DEBUG main            d.u.i.k.l.l.OriginTermLabel commonFileName is null! 
+21829      DEBUG main            d.u.i.k.p.i.IntermediateProofReplayer Proof replay took 239.12ms 
+21830      DEBUG main            d.u.i.k.p.r.p.TestFile    ... success: reloaded. 
+
+pass: Verifying property "provable" was successful for file: /home/runner/work/key/key/key.core/../key.ui/examples/heap/comprehensions/sum0.key]]></system-out></testcase><testcase name="sum1.key"  classname="runallproofs.comprehensions.comprehensions" time="0.000000"><system-out><![CDATA[21833      INFO  main            d.u.i.k.p.r.p.TestFile    Now processing file /home/runner/work/key/key/key.core/../key.ui/examples/heap/comprehensions/sum1.key 
+21834      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Loading environment from /home/runner/work/key/key/key.core/../key.ui/examples/heap/comprehensions/sum1.key 
+21834      DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Environment load took 343.93ns 
+21838      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Creating init config 
+24977      DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Init config took 3.14s 
+25031      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Replaying proof Sum[Sum::sum1([I)].JML normal_behavior operation contract.0 
+25033      DEBUG main            d.u.i.k.p.i.IntermediateProofReplayer Proof replay took 6.8ns 
+25100      DEBUG Thread-7        d.u.i.k.l.l.OriginTermLabel commonFileName is null! 
+25102      DEBUG Thread-7        d.u.i.k.l.l.OriginTermLabel commonFileName is null! 
+25266      DEBUG Thread-7        d.u.i.k.l.l.OriginTermLabel commonFileName is null! 
+25267      DEBUG Thread-7        d.u.i.k.l.l.OriginTermLabel commonFileName is null! 
+25411      DEBUG Thread-7        d.u.i.k.l.l.OriginTermLabel commonFileName is null! 
+25644      INFO  main            d.u.i.k.p.r.p.TestFile    ... finished proof: closed. 
+25828      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Loading environment from /home/runner/work/key/key/key.core/../key.ui/examples/heap/comprehensions/sum1.key.proof 
+25828      DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Environment load took 143.01ns 
+25830      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Creating init config 
+28950      DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Init config took 3.12s 
+29024      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Replaying proof Sum[Sum::sum1([I)].JML normal_behavior operation contract.0 
+29063      DEBUG main            d.u.i.k.l.l.OriginTermLabel commonFileName is null! 
+29066      DEBUG main            d.u.i.k.l.l.OriginTermLabel commonFileName is null! 
+29129      DEBUG main            d.u.i.k.l.l.OriginTermLabel commonFileName is null! 
+29173      DEBUG main            d.u.i.k.l.l.OriginTermLabel commonFileName is null! 
+29176      DEBUG main            d.u.i.k.l.l.OriginTermLabel commonFileName is null! 
+29179      DEBUG main            d.u.i.k.p.i.IntermediateProofReplayer Proof replay took 149ms 
+29185      DEBUG main            d.u.i.k.p.r.p.TestFile    ... success: reloaded. 
+
+pass: Verifying property "provable" was successful for file: /home/runner/work/key/key/key.core/../key.ui/examples/heap/comprehensions/sum1.key]]></system-out></testcase><testcase name="sum2.key"  classname="runallproofs.comprehensions.comprehensions" time="0.000000"><system-out><![CDATA[29186      INFO  main            d.u.i.k.p.r.p.TestFile    Now processing file /home/runner/work/key/key/key.core/../key.ui/examples/heap/comprehensions/sum2.key 
+29188      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Loading environment from /home/runner/work/key/key/key.core/../key.ui/examples/heap/comprehensions/sum2.key 
+29188      DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Environment load took 404.24ns 
+29189      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Creating init config 
+32323      DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Init config took 3.13s 
+32374      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Replaying proof Sum[Sum::sum2([I)].JML normal_behavior operation contract.0 
+32379      DEBUG main            d.u.i.k.p.i.IntermediateProofReplayer Proof replay took 7.2ns 
+32448      DEBUG Thread-10       d.u.i.k.l.l.OriginTermLabel commonFileName is null! 
+32450      DEBUG Thread-10       d.u.i.k.l.l.OriginTermLabel commonFileName is null! 
+32590      DEBUG Thread-10       d.u.i.k.l.l.OriginTermLabel commonFileName is null! 
+32591      DEBUG Thread-10       d.u.i.k.l.l.OriginTermLabel commonFileName is null! 
+32690      DEBUG Thread-10       d.u.i.k.l.l.OriginTermLabel commonFileName is null! 
+32884      INFO  main            d.u.i.k.p.r.p.TestFile    ... finished proof: closed. 
+33090      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Loading environment from /home/runner/work/key/key/key.core/../key.ui/examples/heap/comprehensions/sum2.key.proof 
+33091      DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Environment load took 1ms 
+33093      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Creating init config 
+36100      DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Init config took 3.01s 
+36149      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Replaying proof Sum[Sum::sum2([I)].JML normal_behavior operation contract.0 
+36196      DEBUG main            d.u.i.k.l.l.OriginTermLabel commonFileName is null! 
+36197      DEBUG main            d.u.i.k.l.l.OriginTermLabel commonFileName is null! 
+36244      DEBUG main            d.u.i.k.l.l.OriginTermLabel commonFileName is null! 
+36278      DEBUG main            d.u.i.k.l.l.OriginTermLabel commonFileName is null! 
+36279      DEBUG main            d.u.i.k.l.l.OriginTermLabel commonFileName is null! 
+36282      DEBUG main            d.u.i.k.p.i.IntermediateProofReplayer Proof replay took 124.87ms 
+36283      DEBUG main            d.u.i.k.p.r.p.TestFile    ... success: reloaded. 
+
+pass: Verifying property "provable" was successful for file: /home/runner/work/key/key/key.core/../key.ui/examples/heap/comprehensions/sum2.key]]></system-out></testcase><testcase name="sum3.key"  classname="runallproofs.comprehensions.comprehensions" time="0.000000"><system-out><![CDATA[36284      INFO  main            d.u.i.k.p.r.p.TestFile    Now processing file /home/runner/work/key/key/key.core/../key.ui/examples/heap/comprehensions/sum3.key 
+36285      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Loading environment from /home/runner/work/key/key/key.core/../key.ui/examples/heap/comprehensions/sum3.key 
+36286      DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Environment load took 641.15ns 
+36287      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Creating init config 
+39401      DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Init config took 3.11s 
+39449      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Replaying proof Sum[Sum::sum3([I)].JML normal_behavior operation contract.0 
+39451      DEBUG main            d.u.i.k.p.i.IntermediateProofReplayer Proof replay took 25.3ns 
+39547      DEBUG Thread-13       d.u.i.k.l.l.OriginTermLabel commonFileName is null! 
+39548      DEBUG Thread-13       d.u.i.k.l.l.OriginTermLabel commonFileName is null! 
+39721      DEBUG Thread-13       d.u.i.k.l.l.OriginTermLabel commonFileName is null! 
+39722      DEBUG Thread-13       d.u.i.k.l.l.OriginTermLabel commonFileName is null! 
+39827      DEBUG Thread-13       d.u.i.k.l.l.OriginTermLabel commonFileName is null! 
+39954      INFO  main            d.u.i.k.p.r.p.TestFile    ... finished proof: closed. 
+40129      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Loading environment from /home/runner/work/key/key/key.core/../key.ui/examples/heap/comprehensions/sum3.key.proof 
+40129      DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Environment load took 164.01ns 
+40134      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Creating init config 
+43165      DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Init config took 3.03s 
+43214      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Replaying proof Sum[Sum::sum3([I)].JML normal_behavior operation contract.0 
+43245      DEBUG main            d.u.i.k.l.l.OriginTermLabel commonFileName is null! 
+43247      DEBUG main            d.u.i.k.l.l.OriginTermLabel commonFileName is null! 
+43291      DEBUG main            d.u.i.k.l.l.OriginTermLabel commonFileName is null! 
+43320      DEBUG main            d.u.i.k.l.l.OriginTermLabel commonFileName is null! 
+43322      DEBUG main            d.u.i.k.l.l.OriginTermLabel commonFileName is null! 
+43325      DEBUG main            d.u.i.k.p.i.IntermediateProofReplayer Proof replay took 107.23ms 
+43326      DEBUG main            d.u.i.k.p.r.p.TestFile    ... success: reloaded. 
+
+pass: Verifying property "provable" was successful for file: /home/runner/work/key/key/key.core/../key.ui/examples/heap/comprehensions/sum3.key]]></system-out></testcase><testcase name="segsum.key"  classname="runallproofs.comprehensions.comprehensions" time="0.000000"><system-out><![CDATA[43330      INFO  main            d.u.i.k.p.r.p.TestFile    Now processing file /home/runner/work/key/key/key.core/../key.ui/examples/heap/comprehensions/segsum.key 
+43332      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Loading environment from /home/runner/work/key/key/key.core/../key.ui/examples/heap/comprehensions/segsum.key 
+43332      DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Environment load took 453.44ns 
+43333      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Creating init config 
+46376      DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Init config took 3.04s 
+46423      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Replaying proof SegSum[SegSum::segSum([I,int,int)].JML normal_behavior operation contract.0 
+46424      DEBUG main            d.u.i.k.p.i.IntermediateProofReplayer Proof replay took 6.9ns 
+46928      INFO  main            d.u.i.k.p.r.p.TestFile    ... finished proof: closed. 
+47142      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Loading environment from /home/runner/work/key/key/key.core/../key.ui/examples/heap/comprehensions/segsum.key.proof 
+47142      DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Environment load took 141.51ns 
+47144      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Creating init config 
+50133      DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Init config took 2.99s 
+50205      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Replaying proof SegSum[SegSum::segSum([I,int,int)].JML normal_behavior operation contract.0 
+50320      DEBUG main            d.u.i.k.p.i.IntermediateProofReplayer Proof replay took 104.66ms 
+50321      DEBUG main            d.u.i.k.p.r.p.TestFile    ... success: reloaded. 
+
+pass: Verifying property "provable" was successful for file: /home/runner/work/key/key/key.core/../key.ui/examples/heap/comprehensions/segsum.key]]></system-out></testcase><testcase name="bsum_negative.key"  classname="runallproofs.comprehensions.comprehensions" time="0.000000"><system-out><![CDATA[50322      INFO  main            d.u.i.k.p.r.p.TestFile    Now processing file /home/runner/work/key/key/key.core/../key.ui/examples/heap/comprehensions/bsum_negative.key 
+50322      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Loading environment from /home/runner/work/key/key/key.core/../key.ui/examples/heap/comprehensions/bsum_negative.key 
+50322      DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Environment load took 72.51ns 
+50324      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Creating init config 
+53176      DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Init config took 2.85s 
+53197      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Replaying proof bsum_negative.key 
+53198      DEBUG main            d.u.i.k.p.i.IntermediateProofReplayer Proof replay took 6.6ns 
+53304      INFO  main            d.u.i.k.p.r.p.TestFile    ... finished proof: closed. 
+53492      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Loading environment from /home/runner/work/key/key/key.core/../key.ui/examples/heap/comprehensions/bsum_negative.key.proof 
+53492      DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Environment load took 138.11ns 
+53493      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Creating init config 
+56283      DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Init config took 2.79s 
+56304      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Replaying proof bsum_negative.key.proof 
+56308      DEBUG main            d.u.i.k.p.i.IntermediateProofReplayer Proof replay took 1.8ms 
+56310      DEBUG main            d.u.i.k.p.r.p.TestFile    ... success: reloaded. 
+
+pass: Verifying property "provable" was successful for file: /home/runner/work/key/key/key.core/../key.ui/examples/heap/comprehensions/bsum_negative.key]]></system-out></testcase><testcase name="bsum_neg2.key"  classname="runallproofs.comprehensions.comprehensions" time="0.000000"><system-out><![CDATA[56311      INFO  main            d.u.i.k.p.r.p.TestFile    Now processing file /home/runner/work/key/key/key.core/../key.ui/examples/heap/comprehensions/bsum_neg2.key 
+56311      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Loading environment from /home/runner/work/key/key/key.core/../key.ui/examples/heap/comprehensions/bsum_neg2.key 
+56312      DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Environment load took 390.13ns 
+56313      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Creating init config 
+59145      DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Init config took 2.83s 
+59187      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Replaying proof bsum_neg2.key 
+59189      DEBUG main            d.u.i.k.p.i.IntermediateProofReplayer Proof replay took 7.9ns 
+59291      INFO  main            d.u.i.k.p.r.p.TestFile    ... finished proof: closed. 
+59474      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Loading environment from /home/runner/work/key/key/key.core/../key.ui/examples/heap/comprehensions/bsum_neg2.key.proof 
+59474      DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Environment load took 150.41ns 
+59475      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Creating init config 
+62262      DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Init config took 2.79s 
+62287      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Replaying proof bsum_neg2.key.proof 
+62290      DEBUG main            d.u.i.k.p.i.IntermediateProofReplayer Proof replay took 1.55ms 
+62291      DEBUG main            d.u.i.k.p.r.p.TestFile    ... success: reloaded. 
+
+pass: Verifying property "provable" was successful for file: /home/runner/work/key/key/key.core/../key.ui/examples/heap/comprehensions/bsum_neg2.key]]></system-out></testcase><testcase name="bsumSplit.key"  classname="runallproofs.comprehensions.comprehensions" time="0.000000"><system-out><![CDATA[62292      INFO  main            d.u.i.k.p.r.p.TestFile    Now processing file /home/runner/work/key/key/key.core/../key.ui/examples/heap/comprehensions/bsumSplit.key 
+62292      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Loading environment from /home/runner/work/key/key/key.core/../key.ui/examples/heap/comprehensions/bsumSplit.key 
+62292      DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Environment load took 119.81ns 
+62293      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Creating init config 
+65112      DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Init config took 2.82s 
+65132      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Replaying proof bsumSplit.key 
+65133      DEBUG main            d.u.i.k.p.i.IntermediateProofReplayer Proof replay took 7.2ns 
+65236      INFO  main            d.u.i.k.p.r.p.TestFile    ... finished proof: closed. 
+65493      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Loading environment from /home/runner/work/key/key/key.core/../key.ui/examples/heap/comprehensions/bsumSplit.key.proof 
+65493      DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Environment load took 139.91ns 
+65494      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Creating init config 
+68340      DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Init config took 2.85s 
+68360      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Replaying proof bsumSplit.key.proof 
+68366      DEBUG main            d.u.i.k.p.i.IntermediateProofReplayer Proof replay took 4.32ms 
+68367      DEBUG main            d.u.i.k.p.r.p.TestFile    ... success: reloaded. 
+
+pass: Verifying property "provable" was successful for file: /home/runner/work/key/key/key.core/../key.ui/examples/heap/comprehensions/bsumSplit.key]]></system-out></testcase><testcase name="bprodSplit.key"  classname="runallproofs.comprehensions.comprehensions" time="0.000000"><system-out><![CDATA[68368      INFO  main            d.u.i.k.p.r.p.TestFile    Now processing file /home/runner/work/key/key/key.core/../key.ui/examples/heap/comprehensions/bprodSplit.key 
+68368      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Loading environment from /home/runner/work/key/key/key.core/../key.ui/examples/heap/comprehensions/bprodSplit.key 
+68368      DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Environment load took 141.51ns 
+68369      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Creating init config 
+71111      DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Init config took 2.74s 
+71130      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Replaying proof bprodSplit.key 
+71131      DEBUG main            d.u.i.k.p.i.IntermediateProofReplayer Proof replay took 7.1ns 
+71234      INFO  main            d.u.i.k.p.r.p.TestFile    ... finished proof: closed. 
+71444      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Loading environment from /home/runner/work/key/key/key.core/../key.ui/examples/heap/comprehensions/bprodSplit.key.proof 
+71444      DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Environment load took 135.21ns 
+71445      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Creating init config 
+74200      DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Init config took 2.75s 
+74232      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Replaying proof bprodSplit.key.proof 
+74241      DEBUG main            d.u.i.k.p.i.IntermediateProofReplayer Proof replay took 5.75ms 
+74243      DEBUG main            d.u.i.k.p.r.p.TestFile    ... success: reloaded. 
+
+pass: Verifying property "provable" was successful for file: /home/runner/work/key/key/key.core/../key.ui/examples/heap/comprehensions/bprodSplit.key]]></system-out></testcase><testcase name="bsumSplitInvalid.key"  classname="runallproofs.comprehensions.comprehensions" time="0.000000"><system-out><![CDATA[74244      INFO  main            d.u.i.k.p.r.p.TestFile    Now processing file /home/runner/work/key/key/key.core/../key.ui/examples/heap/comprehensions/bsumSplitInvalid.key 
+74244      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Loading environment from /home/runner/work/key/key/key.core/../key.ui/examples/heap/comprehensions/bsumSplitInvalid.key 
+74244      DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Environment load took 142.91ns 
+74245      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Creating init config 
+77052      DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Init config took 2.81s 
+77070      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Replaying proof bsumSplitInvalid.key 
+77072      DEBUG main            d.u.i.k.p.i.IntermediateProofReplayer Proof replay took 7.7ns 
+77175      INFO  main            d.u.i.k.p.r.p.TestFile    ... finished proof: open goal(s) 
+
+pass: Verifying property "notprovable" was successful for file: /home/runner/work/key/key/key.core/../key.ui/examples/heap/comprehensions/bsumSplitInvalid.key]]></system-out></testcase></testsuite></testsuites>

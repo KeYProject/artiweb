@@ -1,0 +1,89 @@
+<testsuites> <testsuite name="runallproofs.ToyBanking_nomacro" tests="9" id="0" disabled="0" errors="0" failures="0" time="0.000000"><testcase name="banking_example.UserAccount(banking_example.UserAccount__getBankAccount(int)).Non-interference contract.0.key"  classname="runallproofs.ToyBanking_nomacro.ToyBanking_nomacro" time="0.000000"><system-out><![CDATA[309        INFO  Timeout watchdog d.u.i.k.p.r.p.ForkedTestFileRunner Timeout watcher launched (1000 secs.) 
+325        WARN  main            d.u.i.k.s.ProofSettings   The settings in /home/runner/.key/proof-settings.props are *not* read. 
+364        INFO  main            d.u.i.k.p.r.p.TestFile    Now processing file /home/runner/work/key/key/key.core/../key.ui/examples/InformationFlow/ToyBanking/banking_example.UserAccount(banking_example.UserAccount__getBankAccount(int)).Non-interference contract.0.key 
+501        INFO  main            d.u.i.k.p.i.AbstractProblemLoader Loading environment from /home/runner/work/key/key/key.core/../key.ui/examples/InformationFlow/ToyBanking/banking_example.UserAccount(banking_example.UserAccount__getBankAccount(int)).Non-interference contract.0.key 
+522        DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Environment load took 2.67ms 
+754        INFO  main            d.u.i.k.p.i.AbstractProblemLoader Creating init config 
+1650       DEBUG main            d.u.i.k.j.TypeConverter   No LDT found for Meta 
+1650       DEBUG main            d.u.i.k.j.TypeConverter   No LDT found for Meta 
+1653       DEBUG main            d.u.i.k.j.TypeConverter   No LDT found for Meta 
+1653       DEBUG main            d.u.i.k.j.TypeConverter   No LDT found for Meta 
+2971       DEBUG main            d.u.i.k.j.TypeConverter   No LDT found for JavaBigintExpression 
+8541       DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Init config took 7.79s 
+8693       INFO  main            d.u.i.k.p.i.AbstractProblemLoader Replaying proof banking_example.UserAccount[banking_example.UserAccount::getBankAccount(int)].Non-interference contract.0 
+8779       DEBUG main            d.u.i.k.p.i.IntermediateProofReplayer Proof replay took 417.51ns 
+12229      INFO  main            d.u.i.k.p.r.p.TestFile    ... finished proof: closed. 
+
+pass: Verifying property "provable" was successful for file: /home/runner/work/key/key/key.core/../key.ui/examples/InformationFlow/ToyBanking/banking_example.UserAccount(banking_example.UserAccount__getBankAccount(int)).Non-interference contract.0.key]]></system-out></testcase><testcase name="banking_example.BankAccount(banking_example.BankAccount__depositMoney(int)).Non-interference contract.0.key"  classname="runallproofs.ToyBanking_nomacro.ToyBanking_nomacro" time="0.000000"><system-out><![CDATA[12379      INFO  main            d.u.i.k.p.r.p.TestFile    Now processing file /home/runner/work/key/key/key.core/../key.ui/examples/InformationFlow/ToyBanking/banking_example.BankAccount(banking_example.BankAccount__depositMoney(int)).Non-interference contract.0.key 
+12380      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Loading environment from /home/runner/work/key/key/key.core/../key.ui/examples/InformationFlow/ToyBanking/banking_example.BankAccount(banking_example.BankAccount__depositMoney(int)).Non-interference contract.0.key 
+12380      DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Environment load took 104.3ns 
+12381      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Creating init config 
+15519      DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Init config took 3.14s 
+15608      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Replaying proof banking_example.BankAccount[banking_example.BankAccount::depositMoney(int)].Non-interference contract.0 
+15612      DEBUG main            d.u.i.k.p.i.IntermediateProofReplayer Proof replay took 14.2ns 
+16718      INFO  main            d.u.i.k.p.r.p.TestFile    ... finished proof: closed. 
+
+pass: Verifying property "provable" was successful for file: /home/runner/work/key/key/key.core/../key.ui/examples/InformationFlow/ToyBanking/banking_example.BankAccount(banking_example.BankAccount__depositMoney(int)).Non-interference contract.0.key]]></system-out></testcase><testcase name="banking_example.BankAccount(banking_example.BankAccount__getBalance()).Non-interference contract.0.key"  classname="runallproofs.ToyBanking_nomacro.ToyBanking_nomacro" time="0.000000"><system-out><![CDATA[16866      INFO  main            d.u.i.k.p.r.p.TestFile    Now processing file /home/runner/work/key/key/key.core/../key.ui/examples/InformationFlow/ToyBanking/banking_example.BankAccount(banking_example.BankAccount__getBalance()).Non-interference contract.0.key 
+16867      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Loading environment from /home/runner/work/key/key/key.core/../key.ui/examples/InformationFlow/ToyBanking/banking_example.BankAccount(banking_example.BankAccount__getBalance()).Non-interference contract.0.key 
+16867      DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Environment load took 588.31ns 
+16869      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Creating init config 
+19803      DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Init config took 2.93s 
+19880      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Replaying proof banking_example.BankAccount[banking_example.BankAccount::getBalance()].Non-interference contract.0 
+19888      DEBUG main            d.u.i.k.p.i.IntermediateProofReplayer Proof replay took 12.2ns 
+20191      INFO  main            d.u.i.k.p.r.p.TestFile    ... finished proof: closed. 
+
+pass: Verifying property "provable" was successful for file: /home/runner/work/key/key/key.core/../key.ui/examples/InformationFlow/ToyBanking/banking_example.BankAccount(banking_example.BankAccount__getBalance()).Non-interference contract.0.key]]></system-out></testcase><testcase name="banking_example.BankAccount(banking_example.BankAccount__getId()).Non-interference contract.0.key"  classname="runallproofs.ToyBanking_nomacro.ToyBanking_nomacro" time="0.000000"><system-out><![CDATA[20325      INFO  main            d.u.i.k.p.r.p.TestFile    Now processing file /home/runner/work/key/key/key.core/../key.ui/examples/InformationFlow/ToyBanking/banking_example.BankAccount(banking_example.BankAccount__getId()).Non-interference contract.0.key 
+20325      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Loading environment from /home/runner/work/key/key/key.core/../key.ui/examples/InformationFlow/ToyBanking/banking_example.BankAccount(banking_example.BankAccount__getId()).Non-interference contract.0.key 
+20327      DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Environment load took 1.67ms 
+20328      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Creating init config 
+23232      DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Init config took 2.9s 
+23292      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Replaying proof banking_example.BankAccount[banking_example.BankAccount::getId()].Non-interference contract.0 
+23295      DEBUG main            d.u.i.k.p.i.IntermediateProofReplayer Proof replay took 14ns 
+23602      INFO  main            d.u.i.k.p.r.p.TestFile    ... finished proof: closed. 
+
+pass: Verifying property "provable" was successful for file: /home/runner/work/key/key/key.core/../key.ui/examples/InformationFlow/ToyBanking/banking_example.BankAccount(banking_example.BankAccount__getId()).Non-interference contract.0.key]]></system-out></testcase><testcase name="banking_example.Bank(banking_example.Bank__login(int,(C)).Non-interference contract.0.key"  classname="runallproofs.ToyBanking_nomacro.ToyBanking_nomacro" time="0.000000"><system-out><![CDATA[23745      INFO  main            d.u.i.k.p.r.p.TestFile    Now processing file /home/runner/work/key/key/key.core/../key.ui/examples/InformationFlow/ToyBanking/banking_example.Bank(banking_example.Bank__login(int,(C)).Non-interference contract.0.key 
+23745      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Loading environment from /home/runner/work/key/key/key.core/../key.ui/examples/InformationFlow/ToyBanking/banking_example.Bank(banking_example.Bank__login(int,(C)).Non-interference contract.0.key 
+23746      DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Environment load took 379.21ns 
+23747      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Creating init config 
+26640      DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Init config took 2.89s 
+26724      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Replaying proof banking_example.Bank[banking_example.Bank::login(int,[C)].Non-interference contract.0 
+26727      DEBUG main            d.u.i.k.p.i.IntermediateProofReplayer Proof replay took 13.7ns 
+69128      INFO  main            d.u.i.k.p.r.p.TestFile    ... finished proof: open goal(s) 
+
+pass: Verifying property "notprovable" was successful for file: /home/runner/work/key/key/key.core/../key.ui/examples/InformationFlow/ToyBanking/banking_example.Bank(banking_example.Bank__login(int,(C)).Non-interference contract.0.key]]></system-out></testcase><testcase name="banking_example2.UserAccount(banking_example2.UserAccount__getBankAccount(int)).Non-interference contract.0.key"  classname="runallproofs.ToyBanking_nomacro.ToyBanking_nomacro" time="0.000000"><system-out><![CDATA[69389      INFO  main            d.u.i.k.p.r.p.TestFile    Now processing file /home/runner/work/key/key/key.core/../key.ui/examples/InformationFlow/ToyBanking/banking_example2.UserAccount(banking_example2.UserAccount__getBankAccount(int)).Non-interference contract.0.key 
+69389      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Loading environment from /home/runner/work/key/key/key.core/../key.ui/examples/InformationFlow/ToyBanking/banking_example2.UserAccount(banking_example2.UserAccount__getBankAccount(int)).Non-interference contract.0.key 
+69389      DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Environment load took 105.2ns 
+69390      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Creating init config 
+72147      DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Init config took 2.76s 
+72223      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Replaying proof banking_example2.UserAccount[banking_example2.UserAccount::getBankAccount(int)].Non-interference contract.0 
+72227      DEBUG main            d.u.i.k.p.i.IntermediateProofReplayer Proof replay took 11.4ns 
+74054      INFO  main            d.u.i.k.p.r.p.TestFile    ... finished proof: closed. 
+
+pass: Verifying property "provable" was successful for file: /home/runner/work/key/key/key.core/../key.ui/examples/InformationFlow/ToyBanking/banking_example2.UserAccount(banking_example2.UserAccount__getBankAccount(int)).Non-interference contract.0.key]]></system-out></testcase><testcase name="banking_example2.BankAccount(banking_example2.BankAccount__depositMoney(int)).Non-interference contract.0.key"  classname="runallproofs.ToyBanking_nomacro.ToyBanking_nomacro" time="0.000000"><system-out><![CDATA[74345      INFO  main            d.u.i.k.p.r.p.TestFile    Now processing file /home/runner/work/key/key/key.core/../key.ui/examples/InformationFlow/ToyBanking/banking_example2.BankAccount(banking_example2.BankAccount__depositMoney(int)).Non-interference contract.0.key 
+74345      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Loading environment from /home/runner/work/key/key/key.core/../key.ui/examples/InformationFlow/ToyBanking/banking_example2.BankAccount(banking_example2.BankAccount__depositMoney(int)).Non-interference contract.0.key 
+74346      DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Environment load took 66.6ns 
+74347      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Creating init config 
+77048      DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Init config took 2.7s 
+77116      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Replaying proof banking_example2.BankAccount[banking_example2.BankAccount::depositMoney(int)].Non-interference contract.0 
+77120      DEBUG main            d.u.i.k.p.i.IntermediateProofReplayer Proof replay took 15.7ns 
+78030      INFO  main            d.u.i.k.p.r.p.TestFile    ... finished proof: closed. 
+
+pass: Verifying property "provable" was successful for file: /home/runner/work/key/key/key.core/../key.ui/examples/InformationFlow/ToyBanking/banking_example2.BankAccount(banking_example2.BankAccount__depositMoney(int)).Non-interference contract.0.key]]></system-out></testcase><testcase name="banking_example2.BankAccount(banking_example2.BankAccount__getBalance()).Non-interference contract.0.key"  classname="runallproofs.ToyBanking_nomacro.ToyBanking_nomacro" time="0.000000"><system-out><![CDATA[78205      INFO  main            d.u.i.k.p.r.p.TestFile    Now processing file /home/runner/work/key/key/key.core/../key.ui/examples/InformationFlow/ToyBanking/banking_example2.BankAccount(banking_example2.BankAccount__getBalance()).Non-interference contract.0.key 
+78206      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Loading environment from /home/runner/work/key/key/key.core/../key.ui/examples/InformationFlow/ToyBanking/banking_example2.BankAccount(banking_example2.BankAccount__getBalance()).Non-interference contract.0.key 
+78206      DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Environment load took 75.1ns 
+78207      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Creating init config 
+80995      DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Init config took 2.79s 
+81053      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Replaying proof banking_example2.BankAccount[banking_example2.BankAccount::getBalance()].Non-interference contract.0 
+81059      DEBUG main            d.u.i.k.p.i.IntermediateProofReplayer Proof replay took 12.6ns 
+81362      INFO  main            d.u.i.k.p.r.p.TestFile    ... finished proof: closed. 
+
+pass: Verifying property "provable" was successful for file: /home/runner/work/key/key/key.core/../key.ui/examples/InformationFlow/ToyBanking/banking_example2.BankAccount(banking_example2.BankAccount__getBalance()).Non-interference contract.0.key]]></system-out></testcase><testcase name="banking_example2.BankAccount(banking_example2.BankAccount__getId()).Non-interference contract.0.key"  classname="runallproofs.ToyBanking_nomacro.ToyBanking_nomacro" time="0.000000"><system-out><![CDATA[81545      INFO  main            d.u.i.k.p.r.p.TestFile    Now processing file /home/runner/work/key/key/key.core/../key.ui/examples/InformationFlow/ToyBanking/banking_example2.BankAccount(banking_example2.BankAccount__getId()).Non-interference contract.0.key 
+81546      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Loading environment from /home/runner/work/key/key/key.core/../key.ui/examples/InformationFlow/ToyBanking/banking_example2.BankAccount(banking_example2.BankAccount__getId()).Non-interference contract.0.key 
+81547      DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Environment load took 1.68ms 
+81548      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Creating init config 
+84314      DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Init config took 2.77s 
+84364      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Replaying proof banking_example2.BankAccount[banking_example2.BankAccount::getId()].Non-interference contract.0 
+84367      DEBUG main            d.u.i.k.p.i.IntermediateProofReplayer Proof replay took 13.5ns 
+84670      INFO  main            d.u.i.k.p.r.p.TestFile    ... finished proof: closed. 
+
+pass: Verifying property "provable" was successful for file: /home/runner/work/key/key/key.core/../key.ui/examples/InformationFlow/ToyBanking/banking_example2.BankAccount(banking_example2.BankAccount__getId()).Non-interference contract.0.key]]></system-out></testcase></testsuite></testsuites>
