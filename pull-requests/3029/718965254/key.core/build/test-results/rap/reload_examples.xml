@@ -1,0 +1,79 @@
+<testsuites> <testsuite name="runallproofs.reload_examples" tests="7" id="0" disabled="0" errors="0" failures="0" time="0.000000"><testcase name="reverseArray.key"  classname="runallproofs.reload_examples.reload_examples" time="0.000000"><system-out><![CDATA[393        INFO  Timeout watchdog d.u.i.k.p.r.p.ForkedTestFileRunner Timeout watcher launched (2000 secs.) 
+416        WARN  main            d.u.i.k.s.ProofSettings   The settings in /home/runner/.key/proof-settings.props are *not* read. 
+442        INFO  main            d.u.i.k.p.r.p.TestFile    Now processing file /home/runner/work/key/key/key.core/../key.ui/examples/firstTouch/05-ReverseArray/reverseArray.key 
+579        INFO  main            d.u.i.k.p.i.AbstractProblemLoader Loading environment from /home/runner/work/key/key/key.core/../key.ui/examples/firstTouch/05-ReverseArray/reverseArray.key 
+596        DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Environment load took 1.88ms 
+821        INFO  main            d.u.i.k.p.i.AbstractProblemLoader Creating init config 
+1734       DEBUG main            d.u.i.k.j.TypeConverter   No LDT found for Meta 
+1735       DEBUG main            d.u.i.k.j.TypeConverter   No LDT found for Meta 
+1738       DEBUG main            d.u.i.k.j.TypeConverter   No LDT found for Meta 
+1738       DEBUG main            d.u.i.k.j.TypeConverter   No LDT found for Meta 
+3205       DEBUG main            d.u.i.k.j.TypeConverter   No LDT found for JavaBigintExpression 
+8120       DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Init config took 7.3s 
+8230       INFO  main            d.u.i.k.p.i.AbstractProblemLoader Replaying proof ReverseArray[ReverseArray::reverse()].JML normal_behavior operation contract.0 
+8279       DEBUG main            d.u.i.k.p.i.IntermediateProofReplayer Proof replay took 29.5ns 
+17605      INFO  main            d.u.i.k.p.r.p.TestFile    ... finished proof: closed. 
+17840      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Loading environment from /home/runner/work/key/key/key.core/../key.ui/examples/firstTouch/05-ReverseArray/reverseArray.key.proof 
+17841      DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Environment load took 350.41ns 
+17844      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Creating init config 
+20475      DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Init config took 2.63s 
+20531      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Replaying proof ReverseArray[ReverseArray::reverse()].JML normal_behavior operation contract.0 
+21656      DEBUG main            d.u.i.k.p.i.IntermediateProofReplayer Proof replay took 1.07s 
+21667      DEBUG main            d.u.i.k.p.r.p.TestFile    ... success: reloaded. 
+
+pass: Verifying property "provable" was successful for file: /home/runner/work/key/key/key.core/../key.ui/examples/firstTouch/05-ReverseArray/reverseArray.key]]></system-out></testcase><testcase name="saveProofTest.key.proof"  classname="runallproofs.reload_examples.reload_examples" time="0.000000"><system-out><![CDATA[21669      INFO  main            d.u.i.k.p.r.p.TestFile    Now processing file /home/runner/work/key/key/key.core/../key.ui/examples/standard_key/arith/saveProofTest.key.proof 
+21670      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Loading environment from /home/runner/work/key/key/key.core/../key.ui/examples/standard_key/arith/saveProofTest.key.proof 
+21670      DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Environment load took 188ns 
+21672      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Creating init config 
+24071      DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Init config took 2.4s 
+24098      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Replaying proof saveProofTest.key.proof 
+24105      DEBUG main            d.u.i.k.p.i.IntermediateProofReplayer Proof replay took 2.83ms 
+24105      INFO  main            d.u.i.k.p.r.p.TestFile    ... success: loaded 
+
+pass: Verifying property "loadable" was successful for file: /home/runner/work/key/key/key.core/../key.ui/examples/standard_key/arith/saveProofTest.key.proof]]></system-out></testcase><testcase name="perm.proof"  classname="runallproofs.reload_examples.reload_examples" time="0.000000"><system-out><![CDATA[24107      INFO  main            d.u.i.k.p.r.p.TestFile    Now processing file /home/runner/work/key/key/key.core/../key.ui/examples/heap/permutedSum/perm.proof 
+24107      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Loading environment from /home/runner/work/key/key/key.core/../key.ui/examples/heap/permutedSum/perm.proof 
+24107      DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Environment load took 186.21ns 
+24110      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Creating init config 
+26623      DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Init config took 2.51s 
+26689      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Replaying proof Perm[Perm::foo()].JML normal_behavior operation contract.0 
+27776      DEBUG main            d.u.i.k.p.i.IntermediateProofReplayer Proof replay took 1.03s 
+27778      INFO  main            d.u.i.k.p.r.p.TestFile    ... success: loaded 
+
+pass: Verifying property "loadable" was successful for file: /home/runner/work/key/key/key.core/../key.ui/examples/heap/permutedSum/perm.proof]]></system-out></testcase><testcase name="reverseArray.proof"  classname="runallproofs.reload_examples.reload_examples" time="0.000000"><system-out><![CDATA[27779      INFO  main            d.u.i.k.p.r.p.TestFile    Now processing file /home/runner/work/key/key/key.core/../key.ui/examples/firstTouch/05-ReverseArray/reverseArray.proof 
+27780      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Loading environment from /home/runner/work/key/key/key.core/../key.ui/examples/firstTouch/05-ReverseArray/reverseArray.proof 
+27780      DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Environment load took 170.31ns 
+27782      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Creating init config 
+30291      DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Init config took 2.51s 
+30329      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Replaying proof ReverseArray[ReverseArray::reverse()].JML normal_behavior operation contract.0 
+31342      DEBUG main            d.u.i.k.p.i.IntermediateProofReplayer Proof replay took 974.52ms 
+31345      INFO  main            d.u.i.k.p.r.p.TestFile    ... success: loaded 
+
+pass: Verifying property "loadable" was successful for file: /home/runner/work/key/key/key.core/../key.ui/examples/firstTouch/05-ReverseArray/reverseArray.proof]]></system-out></testcase><testcase name="relax.proof"  classname="runallproofs.reload_examples.reload_examples" time="0.000000"><system-out><![CDATA[31346      INFO  main            d.u.i.k.p.r.p.TestFile    Now processing file /home/runner/work/key/key/key.core/../key.ui/examples/heap/verifyThis15_1_RelaxedPrefix/relax.proof 
+31346      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Loading environment from /home/runner/work/key/key/key.core/../key.ui/examples/heap/verifyThis15_1_RelaxedPrefix/relax.proof 
+31346      DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Environment load took 211.41ns 
+31348      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Creating init config 
+33777      DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Init config took 2.43s 
+33827      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Replaying proof Relaxed[Relaxed::isRelaxedPrefix([I,[I)].JML operation contract.0 
+34287      DEBUG main            d.u.i.k.p.i.IntermediateProofReplayer Proof replay took 439.25ms 
+34288      INFO  main            d.u.i.k.p.r.p.TestFile    ... success: loaded 
+
+pass: Verifying property "loadable" was successful for file: /home/runner/work/key/key/key.core/../key.ui/examples/heap/verifyThis15_1_RelaxedPrefix/relax.proof]]></system-out></testcase><testcase name="doUndo.proof"  classname="runallproofs.reload_examples.reload_examples" time="0.000000"><system-out><![CDATA[34290      INFO  main            d.u.i.k.p.r.p.TestFile    Now processing file /home/runner/work/key/key/key.core/../key.ui/examples/heap/verifyThis15_3_DLL/doUndo.proof 
+34290      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Loading environment from /home/runner/work/key/key/key.core/../key.ui/examples/heap/verifyThis15_3_DLL/doUndo.proof 
+34290      DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Environment load took 167ns 
+34292      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Creating init config 
+35189      DEBUG main            d.u.i.k.j.r.ClassPreparationMethodBuilder clPrepBuilder: Inner Class detected. Reject building class initialisation methods. 
+36959      DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Init config took 2.67s 
+37034      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Replaying proof DoubleLinkedList[DoubleLinkedList::doUndo(DoubleLinkedList.Node,int)].JML normal_behavior operation contract.0 
+37728      DEBUG main            d.u.i.k.p.i.IntermediateProofReplayer Proof replay took 661.99ms 
+37729      INFO  main            d.u.i.k.p.r.p.TestFile    ... success: loaded 
+
+pass: Verifying property "loadable" was successful for file: /home/runner/work/key/key/key.core/../key.ui/examples/heap/verifyThis15_3_DLL/doUndo.proof]]></system-out></testcase><testcase name="parallelGcd.proof"  classname="runallproofs.reload_examples.reload_examples" time="0.000000"><system-out><![CDATA[37731      INFO  main            d.u.i.k.p.r.p.TestFile    Now processing file /home/runner/work/key/key/key.core/../key.ui/examples/heap/verifyThis15_2_ParallelGcd/parallelGcd.proof 
+37731      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Loading environment from /home/runner/work/key/key/key.core/../key.ui/examples/heap/verifyThis15_2_ParallelGcd/parallelGcd.proof 
+37731      DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Environment load took 163.91ns 
+37732      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Creating init config 
+40172      DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Init config took 2.44s 
+40246      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Replaying proof ParallelGcd[ParallelGcd::parallelGcd(int,int,[Z)].JML behavior operation contract.0 
+40801      DEBUG main            d.u.i.k.p.i.IntermediateProofReplayer Proof replay took 540.35ms 
+40802      INFO  main            d.u.i.k.p.r.p.TestFile    ... success: loaded 
+
+pass: Verifying property "loadable" was successful for file: /home/runner/work/key/key/key.core/../key.ui/examples/heap/verifyThis15_2_ParallelGcd/parallelGcd.proof]]></system-out></testcase></testsuite></testsuites>

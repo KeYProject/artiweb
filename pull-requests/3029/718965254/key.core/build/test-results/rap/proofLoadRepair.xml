@@ -1,0 +1,57 @@
+<testsuites> <testsuite name="runallproofs.proofLoadRepair" tests="5" id="0" disabled="0" errors="0" failures="0" time="0.000000"><testcase name="disjConj-manipulated.proof"  classname="runallproofs.proofLoadRepair.proofLoadRepair" time="0.000000"><system-out><![CDATA[385        INFO  Timeout watchdog d.u.i.k.p.r.p.ForkedTestFileRunner Timeout watcher launched (2000 secs.) 
+401        WARN  main            d.u.i.k.s.ProofSettings   The settings in /home/runner/.key/proof-settings.props are *not* read. 
+444        INFO  main            d.u.i.k.p.r.p.TestFile    Now processing file /home/runner/work/key/key/key.core/../key.ui/examples/proofLoadRepair/disjConj-manipulated.proof 
+563        INFO  main            d.u.i.k.p.i.AbstractProblemLoader Loading environment from /home/runner/work/key/key/key.core/../key.ui/examples/proofLoadRepair/disjConj-manipulated.proof 
+579        DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Environment load took 1.92ms 
+811        INFO  main            d.u.i.k.p.i.AbstractProblemLoader Creating init config 
+1749       DEBUG main            d.u.i.k.j.TypeConverter   No LDT found for Meta 
+1749       DEBUG main            d.u.i.k.j.TypeConverter   No LDT found for Meta 
+1755       DEBUG main            d.u.i.k.j.TypeConverter   No LDT found for Meta 
+1755       DEBUG main            d.u.i.k.j.TypeConverter   No LDT found for Meta 
+3357       DEBUG main            d.u.i.k.j.TypeConverter   No LDT found for JavaBigintExpression 
+7974       DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Init config took 7.16s 
+8031       INFO  main            d.u.i.k.p.i.AbstractProblemLoader Replaying proof disjConj-manipulated.proof 
+8073       WARN  main            d.u.i.k.p.i.IntermediateProofReplayer Proof contains wrong number of \assumes instatiations for andLeft 
+8074       WARN  main            d.u.i.k.p.i.IntermediateProofReplayer Proof contains wrong number of \assumes instatiations for replace_known_right 
+8077       WARN  main            d.u.i.k.p.i.IntermediateProofReplayer Proof contains wrong number of \assumes instatiations for close 
+8078       DEBUG main            d.u.i.k.p.i.IntermediateProofReplayer Proof replay took 15.75ms 
+8082       INFO  main            d.u.i.k.p.r.p.TestFile    ... success: loaded 
+
+pass: Verifying property "loadable" was successful for file: /home/runner/work/key/key/key.core/../key.ui/examples/proofLoadRepair/disjConj-manipulated.proof]]></system-out></testcase><testcase name="insufficient-manipulated.proof"  classname="runallproofs.proofLoadRepair.proofLoadRepair" time="0.000000"><system-out><![CDATA[8086       INFO  main            d.u.i.k.p.r.p.TestFile    Now processing file /home/runner/work/key/key/key.core/../key.ui/examples/proofLoadRepair/insufficient-manipulated.proof 
+8086       INFO  main            d.u.i.k.p.i.AbstractProblemLoader Loading environment from /home/runner/work/key/key/key.core/../key.ui/examples/proofLoadRepair/insufficient-manipulated.proof 
+8086       DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Environment load took 245.61ns 
+8090       INFO  main            d.u.i.k.p.i.AbstractProblemLoader Creating init config 
+10716      DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Init config took 2.63s 
+10757      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Replaying proof insufficient-manipulated.proof 
+10785      WARN  main            d.u.i.k.p.i.IntermediateProofReplayer Proof contains wrong number of \assumes instatiations for applyEq 
+10797      DEBUG main            d.u.i.k.p.i.IntermediateProofReplayer Proof replay took 18.17ms 
+10800      INFO  main            d.u.i.k.p.r.p.TestFile    ... success: loading failed 
+
+pass: Verifying property "notloadable" was successful for file: /home/runner/work/key/key/key.core/../key.ui/examples/proofLoadRepair/insufficient-manipulated.proof]]></system-out></testcase><testcase name="incorrectPolarity.proof"  classname="runallproofs.proofLoadRepair.proofLoadRepair" time="0.000000"><system-out><![CDATA[10802      INFO  main            d.u.i.k.p.r.p.TestFile    Now processing file /home/runner/work/key/key/key.core/../key.ui/examples/../../key.core/src/test/resources/testcase/issues/1716/incorrectPolarity.proof 
+10802      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Loading environment from /home/runner/work/key/key/key.core/../key.ui/examples/../../key.core/src/test/resources/testcase/issues/1716/incorrectPolarity.proof 
+10802      DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Environment load took 105.9ns 
+10805      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Creating init config 
+13435      DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Init config took 2.63s 
+13464      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Replaying proof incorrectPolarity.proof 
+13466      DEBUG main            d.u.i.k.p.i.IntermediateProofReplayer Proof replay took 172.41ns 
+13466      INFO  main            d.u.i.k.p.r.p.TestFile    ... success: loading failed 
+
+pass: Verifying property "notloadable" was successful for file: /home/runner/work/key/key/key.core/../key.ui/examples/../../key.core/src/test/resources/testcase/issues/1716/incorrectPolarity.proof]]></system-out></testcase><testcase name="incorrectPolarity2.proof"  classname="runallproofs.proofLoadRepair.proofLoadRepair" time="0.000000"><system-out><![CDATA[13467      INFO  main            d.u.i.k.p.r.p.TestFile    Now processing file /home/runner/work/key/key/key.core/../key.ui/examples/../../key.core/src/test/resources/testcase/issues/1716/incorrectPolarity2.proof 
+13468      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Loading environment from /home/runner/work/key/key/key.core/../key.ui/examples/../../key.core/src/test/resources/testcase/issues/1716/incorrectPolarity2.proof 
+13468      DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Environment load took 165.31ns 
+13469      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Creating init config 
+15755      DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Init config took 2.29s 
+15778      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Replaying proof incorrectPolarity2.proof 
+15780      DEBUG main            d.u.i.k.p.i.IntermediateProofReplayer Proof replay took 314.01ns 
+15781      INFO  main            d.u.i.k.p.r.p.TestFile    ... success: loading failed 
+
+pass: Verifying property "notloadable" was successful for file: /home/runner/work/key/key/key.core/../key.ui/examples/../../key.core/src/test/resources/testcase/issues/1716/incorrectPolarity2.proof]]></system-out></testcase><testcase name="incorrectPolarity3.proof"  classname="runallproofs.proofLoadRepair.proofLoadRepair" time="0.000000"><system-out><![CDATA[15782      INFO  main            d.u.i.k.p.r.p.TestFile    Now processing file /home/runner/work/key/key/key.core/../key.ui/examples/../../key.core/src/test/resources/testcase/issues/1716/incorrectPolarity3.proof 
+15782      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Loading environment from /home/runner/work/key/key/key.core/../key.ui/examples/../../key.core/src/test/resources/testcase/issues/1716/incorrectPolarity3.proof 
+15782      DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Environment load took 157.6ns 
+15783      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Creating init config 
+18126      DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Init config took 2.34s 
+18150      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Replaying proof incorrectPolarity3.proof 
+18158      DEBUG main            d.u.i.k.p.i.IntermediateProofReplayer Proof replay took 2.68ms 
+18162      INFO  main            d.u.i.k.p.r.p.TestFile    ... success: loading failed 
+
+pass: Verifying property "notloadable" was successful for file: /home/runner/work/key/key/key.core/../key.ui/examples/../../key.core/src/test/resources/testcase/issues/1716/incorrectPolarity3.proof]]></system-out></testcase></testsuite></testsuites>
