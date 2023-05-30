@@ -27,7 +27,7 @@
 
 <section>
     <h3>Artifacts</h3>
-    <ul></ul>
+    <ul><li><a href="722322507">30. May 2023 18:20</a> <small>(8005.67 kB large)</small></li><li><a href="722312897">30. May 2023 18:15</a> <small>(8003.50 kB large)</small></li><li><a href="722301055">30. May 2023 18:08</a> <small>(8003.28 kB large)</small></li></ul>
 </section>
 
 
@@ -68,10 +68,10 @@
         new Chart(ctx, graph);
     }
 
-    createChart("runtime", [], []);
+    createChart("runtime", ["30. May 2023 18:08", "30. May 2023 18:15", "30. May 2023 18:20"], [9813.086999999998, 10164.981999999998, 11192.705]);
 
     const ctx2 = document.getElementById('testcases');
-    new Chart(ctx2, {"data": {"datasets": [{"backgroundColor": "rgb(250, 220, 220)", "borderColor": "rgb(250, 192, 192)", "data": [], "fill": true, "label": "Failures", "tension": 0.1}, {"backgroundColor": "rgb(200, 212, 212)", "borderColor": "rgb(180, 192, 192)", "data": [], "fill": true, "label": "Errors", "tension": 0.1}, {"backgroundColor": "rgb(150, 150, 150)", "borderColor": "rgb(100, 100, 100)", "data": [], "fill": true, "label": "Skipped", "tension": 0.1}, {"backgroundColor": "rgb(95, 212, 120)", "borderColor": "rgb(75, 192, 100)", "data": [], "fill": true, "label": "Success", "tension": 0.1}], "labels": []}, "options": {"maintainAspectRatio": false, "responsive": true, "scales": {"y": {"stacked": true}}}, "type": "line"});
+    new Chart(ctx2, {"data": {"datasets": [{"backgroundColor": "rgb(250, 220, 220)", "borderColor": "rgb(250, 192, 192)", "data": [0, 0, 0], "fill": true, "label": "Failures", "tension": 0.1}, {"backgroundColor": "rgb(200, 212, 212)", "borderColor": "rgb(180, 192, 192)", "data": [0, 0, 0], "fill": true, "label": "Errors", "tension": 0.1}, {"backgroundColor": "rgb(150, 150, 150)", "borderColor": "rgb(100, 100, 100)", "data": [117, 117, 117], "fill": true, "label": "Skipped", "tension": 0.1}, {"backgroundColor": "rgb(95, 212, 120)", "borderColor": "rgb(75, 192, 100)", "data": [3433, 3433, 3433], "fill": true, "label": "Success", "tension": 0.1}], "labels": ["30. May 2023 18:08", "30. May 2023 18:15", "30. May 2023 18:20"]}, "options": {"maintainAspectRatio": false, "responsive": true, "scales": {"y": {"stacked": true}}}, "type": "line"});
 </script>
     </main>
 </body>
