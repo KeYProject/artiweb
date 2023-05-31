@@ -1,0 +1,96 @@
+
+
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=1024px, initial-scale=1.0">
+    <title>#3152 - mu/exceptionalJMLTests</title>
+    <link rel="stylesheet" href="https://unpkg.com/@picocss/pico@1.*/css/pico.min.css">
+    <link rel="stylesheet" href="/artiweb/css/style.css">
+    <script type="application/javascript" src="/artiweb/js/main.js"></script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <main class="container">
+    <section>
+    <a href="/artiweb/">Artiweb</a> > <span>Pull Request #3152</span>
+    <h1>mu/exceptionalJMLTests <span class="color-muted">#3152</span></h1>
+    <summary>
+        <p><a href="https://github.com/KeYProject/key/pull/3152">Github</a></p>
+        <span>Description</span>
+        <details><p>JML parsing and error reporting is not yet ideal, we should fix these case.
+They can also serve as valuable test cases for future replacement frameworks.</p>
+<p>This also fixes a bug in the position treatement of Recoder2KeY.</p>
+<p>From the javadoc:</p>
+<p>This test case is used to ensure that errors in JML (and perhaps also in Java)
+are reported with a reasonable error message and the right position pointing
+into the file.
+To add a test case, locate the "exceptional" directory in the resources
+(below the directory for this package here) and add your single Java file
+that contains an error that should be presented to the user (like syntax
+error, unresolved names, ...)
+The first lines of the Java file may contain meta data on what to expect
+from the exception.</p>
+<ul>
+<li>introducing exceptional JML tests</li>
+<li>more test cases for exceptional jml cases</li>
+<li>fixing an NPE bug in the error reporting of Recoder2KeY</li>
+<li>spotless and documentation</li>
+</ul></details>
+    </summary>
+</section>
+
+<section>
+    <h3>Artifacts</h3>
+    <ul></ul>
+</section>
+
+
+<div style="height:10em;"><canvas id="runtime"></canvas></div>     
+<div style="height:10em;"><canvas id="testcases"></canvas></div>     
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script type="text/javascript">
+    function createChart(name, labels, data) {
+        const ctx = document.getElementById(name);
+        const graph = {
+            type: 'bar',
+            data: {
+                labels: labels,
+                datasets: [{
+                    label: "Runtime",
+                    data: data,
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        };
+        graph.options.plugins = {
+            tooltip: {
+                callbacks: {
+                    label: formatLabel
+                }
+            }
+        };
+        new Chart(ctx, graph);
+    }
+
+    createChart("runtime", [], []);
+
+    const ctx2 = document.getElementById('testcases');
+    new Chart(ctx2, {"data": {"datasets": [{"backgroundColor": "rgb(250, 220, 220)", "borderColor": "rgb(250, 192, 192)", "data": [], "fill": true, "label": "Failures", "tension": 0.1}, {"backgroundColor": "rgb(200, 212, 212)", "borderColor": "rgb(180, 192, 192)", "data": [], "fill": true, "label": "Errors", "tension": 0.1}, {"backgroundColor": "rgb(150, 150, 150)", "borderColor": "rgb(100, 100, 100)", "data": [], "fill": true, "label": "Skipped", "tension": 0.1}, {"backgroundColor": "rgb(95, 212, 120)", "borderColor": "rgb(75, 192, 100)", "data": [], "fill": true, "label": "Success", "tension": 0.1}], "labels": []}, "options": {"maintainAspectRatio": false, "responsive": true, "scales": {"y": {"stacked": true}}}, "type": "line"});
+</script>
+    </main>
+</body>
+</html>
