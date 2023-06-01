@@ -68,7 +68,7 @@
         new Chart(ctx, graph);
     }
 
-    createChart("runtime", ["11. May 2023 01:28", "11. May 2023 01:31", "11. May 2023 11:52"], [10332.796, 11517.398000000001, 11871.266999999998]);
+    createChart("runtime", ["11. May 2023 01:28", "11. May 2023 01:31", "11. May 2023 11:52"], [10332.796, 11517.398, 11871.266999999998]);
 
     const ctx2 = document.getElementById('testcases');
     new Chart(ctx2, {"data": {"datasets": [{"backgroundColor": "rgb(250, 220, 220)", "borderColor": "rgb(250, 192, 192)", "data": [0, 0, 0], "fill": true, "label": "Failures", "tension": 0.1}, {"backgroundColor": "rgb(200, 212, 212)", "borderColor": "rgb(180, 192, 192)", "data": [0, 0, 0], "fill": true, "label": "Errors", "tension": 0.1}, {"backgroundColor": "rgb(150, 150, 150)", "borderColor": "rgb(100, 100, 100)", "data": [117, 117, 117], "fill": true, "label": "Skipped", "tension": 0.1}, {"backgroundColor": "rgb(95, 212, 120)", "borderColor": "rgb(75, 192, 100)", "data": [3429, 3429, 3429], "fill": true, "label": "Success", "tension": 0.1}], "labels": ["11. May 2023 01:28", "11. May 2023 01:31", "11. May 2023 11:52"]}, "options": {"maintainAspectRatio": false, "responsive": true, "scales": {"y": {"stacked": true}}}, "type": "line"});
