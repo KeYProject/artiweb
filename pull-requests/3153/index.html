@@ -24,7 +24,26 @@
         <details><ul>
 <li>Fix pretty printing of some previously unsupported terms</li>
 <li>Interface changes around <code>Location</code></li>
-</ul></details>
+<li>Proof script logging: Strongly type and improve console and dialog output. New dialog output (quicksort):
+```
+Running script from URL 'file:/key/key.ui/examples/heap/quicksort/sort.key':</li>
+</ul>
+<hr />
+<p>file:/key/key.ui/examples/heap/quicksort/sort.key:7: Executing on goal 0
+'script 'sort.script''</p>
+<hr />
+<p>file:/key/key.ui/examples/heap/quicksort/sort.script:1: Executing on goal 0
+'macro autopilot-prep'</p>
+<hr />
+<p>file:/key/key.ui/examples/heap/quicksort/sort.script:7: Executing on goal 346
+'select formula="{heapAtPre:=heap || exc:=null || heap:=heapAfter_sort_0}
+   se ...'</p>
+<hr />
+<p>file:/key/key.ui/examples/heap/quicksort/sort.script:9: Executing on goal 346
+'macro simp-upd'</p>
+<hr />
+<p>```
+* Fix proof script position information to point to the start of the command</p></details>
     </summary>
 </section>
 
