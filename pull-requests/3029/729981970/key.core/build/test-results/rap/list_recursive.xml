@@ -1,0 +1,44 @@
+<testsuites> <testsuite name="runallproofs.list_recursive" tests="2" id="0" disabled="0" errors="0" failures="0" time="0.000000"><testcase name="ListOperationsNonNull_getNextNN_normal_behavior.key"  classname="runallproofs.list_recursive.list_recursive" time="0.000000"><system-out><![CDATA[375        INFO  Timeout watchdog d.u.i.k.p.r.p.ForkedTestFileRunner Timeout watcher launched (2000 secs.) 
+383        WARN  main            d.u.i.k.s.ProofSettings   The settings in /home/runner/.key/proof-settings.props are *not* read. 
+410        INFO  main            d.u.i.k.p.r.p.TestFile    Now processing file /home/runner/work/key/key/key.core/../key.ui/examples/heap/list_recursiveSpec/ListOperationsNonNull_getNextNN_normal_behavior.key 
+512        INFO  main            d.u.i.k.p.i.AbstractProblemLoader Loading environment from /home/runner/work/key/key/key.core/../key.ui/examples/heap/list_recursiveSpec/ListOperationsNonNull_getNextNN_normal_behavior.key 
+534        DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Environment load took 2.1ms 
+745        INFO  main            d.u.i.k.p.i.AbstractProblemLoader Creating init config 
+1570       DEBUG main            d.u.i.k.j.TypeConverter   No LDT found for Meta 
+1571       DEBUG main            d.u.i.k.j.TypeConverter   No LDT found for Meta 
+1572       DEBUG main            d.u.i.k.j.TypeConverter   No LDT found for Meta 
+1572       DEBUG main            d.u.i.k.j.TypeConverter   No LDT found for Meta 
+2983       DEBUG main            d.u.i.k.j.TypeConverter   No LDT found for JavaBigintExpression 
+7981       DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Init config took 7.24s 
+8152       INFO  main            d.u.i.k.p.i.AbstractProblemLoader Replaying proof ListOperationsNonNull[ListOperationsNonNull::getNextNN(ListNN,int)].JML normal_behavior operation contract.0 
+8186       DEBUG main            d.u.i.k.p.i.IntermediateProofReplayer Proof replay took 32ns 
+9318       INFO  main            d.u.i.k.p.r.p.TestFile    ... finished proof: closed. 
+9449       INFO  main            d.u.i.k.p.i.AbstractProblemLoader Loading environment from /home/runner/work/key/key/key.core/../key.ui/examples/heap/list_recursiveSpec/ListOperationsNonNull_getNextNN_normal_behavior.key.proof 
+9449       DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Environment load took 145.6ns 
+9451       INFO  main            d.u.i.k.p.i.AbstractProblemLoader Creating init config 
+12338      DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Init config took 2.89s 
+12409      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Replaying proof ListOperationsNonNull[ListOperationsNonNull::getNextNN(ListNN,int)].JML normal_behavior operation contract.0 
+12552      DEBUG main            d.u.i.k.p.i.IntermediateProofReplayer Proof replay took 135.05ms 
+12559      DEBUG main            d.u.i.k.p.r.p.TestFile    ... success: reloaded. 
+
+pass: Verifying property "provable" was successful for file: /home/runner/work/key/key/key.core/../key.ui/examples/heap/list_recursiveSpec/ListOperationsNonNull_getNextNN_normal_behavior.key]]></system-out></testcase><testcase name="ListOperationsNonNull_setValueAt_normal_behavior.key"  classname="runallproofs.list_recursive.list_recursive" time="0.000000"><system-out><![CDATA[12560      INFO  main            d.u.i.k.p.r.p.TestFile    Now processing file /home/runner/work/key/key/key.core/../key.ui/examples/heap/list_recursiveSpec/ListOperationsNonNull_setValueAt_normal_behavior.key 
+12561      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Loading environment from /home/runner/work/key/key/key.core/../key.ui/examples/heap/list_recursiveSpec/ListOperationsNonNull_setValueAt_normal_behavior.key 
+12561      DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Environment load took 227.5ns 
+12563      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Creating init config 
+15331      DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Init config took 2.77s 
+15396      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Replaying proof ListOperationsNonNull[ListOperationsNonNull::setValueAt_NN(ListNN,int,int)].JML normal_behavior operation contract.0 
+15399      DEBUG main            d.u.i.k.p.i.IntermediateProofReplayer Proof replay took 5.4ns 
+15423      DEBUG main            d.u.i.k.m.s.ProofScriptEngine 1: 'macro autopilot' 
+17881      DEBUG main            d.u.i.k.m.s.ProofScriptEngine 2: 'macro simp-upd' 
+17917      DEBUG main            d.u.i.k.m.s.ProofScriptEngine 3: 'rule observerDependencyEQ' 
+17930      DEBUG main            d.u.i.k.m.s.ProofScriptEngine 4: 'tryclose' 
+17959      INFO  main            d.u.i.k.p.r.p.TestFile    ... finished proof: closed. 
+18101      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Loading environment from /home/runner/work/key/key/key.core/../key.ui/examples/heap/list_recursiveSpec/ListOperationsNonNull_setValueAt_normal_behavior.key.proof 
+18102      DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Environment load took 600.9ns 
+18103      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Creating init config 
+20801      DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Init config took 2.7s 
+20859      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Replaying proof ListOperationsNonNull[ListOperationsNonNull::setValueAt_NN(ListNN,int,int)].JML normal_behavior operation contract.0 
+20958      DEBUG main            d.u.i.k.p.i.IntermediateProofReplayer Proof replay took 92.91ms 
+20959      DEBUG main            d.u.i.k.p.r.p.TestFile    ... success: reloaded. 
+
+pass: Verifying property "provable" was successful for file: /home/runner/work/key/key/key.core/../key.ui/examples/heap/list_recursiveSpec/ListOperationsNonNull_setValueAt_normal_behavior.key]]></system-out></testcase></testsuite></testsuites>

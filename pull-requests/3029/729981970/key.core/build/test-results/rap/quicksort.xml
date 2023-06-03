@@ -1,0 +1,93 @@
+<testsuites> <testsuite name="runallproofs.quicksort" tests="3" id="0" disabled="0" errors="0" failures="0" time="0.000000"><testcase name="toplevel.key"  classname="runallproofs.quicksort.quicksort" time="0.000000"><system-out><![CDATA[332        INFO  Timeout watchdog d.u.i.k.p.r.p.ForkedTestFileRunner Timeout watcher launched (2000 secs.) 
+347        WARN  main            d.u.i.k.s.ProofSettings   The settings in /home/runner/.key/proof-settings.props are *not* read. 
+379        INFO  main            d.u.i.k.p.r.p.TestFile    Now processing file /home/runner/work/key/key/key.core/../key.ui/examples/heap/quicksort/toplevel.key 
+499        INFO  main            d.u.i.k.p.i.AbstractProblemLoader Loading environment from /home/runner/work/key/key/key.core/../key.ui/examples/heap/quicksort/toplevel.key 
+514        DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Environment load took 1.98ms 
+715        INFO  main            d.u.i.k.p.i.AbstractProblemLoader Creating init config 
+1643       DEBUG main            d.u.i.k.j.TypeConverter   No LDT found for Meta 
+1644       DEBUG main            d.u.i.k.j.TypeConverter   No LDT found for Meta 
+1647       DEBUG main            d.u.i.k.j.TypeConverter   No LDT found for Meta 
+1648       DEBUG main            d.u.i.k.j.TypeConverter   No LDT found for Meta 
+2943       DEBUG main            d.u.i.k.j.TypeConverter   No LDT found for JavaBigintExpression 
+7972       DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Init config took 7.26s 
+8144       INFO  main            d.u.i.k.p.i.AbstractProblemLoader Replaying proof Quicksort[Quicksort::sort([I)].JML normal_behavior operation contract.0 
+8178       DEBUG main            d.u.i.k.p.i.IntermediateProofReplayer Proof replay took 28.7ns 
+9453       INFO  main            d.u.i.k.p.r.p.TestFile    ... finished proof: closed. 
+9595       INFO  main            d.u.i.k.p.i.AbstractProblemLoader Loading environment from /home/runner/work/key/key/key.core/../key.ui/examples/heap/quicksort/toplevel.key.proof 
+9595       DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Environment load took 432.4ns 
+9598       INFO  main            d.u.i.k.p.i.AbstractProblemLoader Creating init config 
+12294      DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Init config took 2.7s 
+12357      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Replaying proof Quicksort[Quicksort::sort([I)].JML normal_behavior operation contract.0 
+12488      DEBUG main            d.u.i.k.p.i.IntermediateProofReplayer Proof replay took 123.39ms 
+12494      DEBUG main            d.u.i.k.p.r.p.TestFile    ... success: reloaded. 
+
+pass: Verifying property "provable" was successful for file: /home/runner/work/key/key/key.core/../key.ui/examples/heap/quicksort/toplevel.key]]></system-out></testcase><testcase name="sort.key"  classname="runallproofs.quicksort.quicksort" time="0.000000"><system-out><![CDATA[12496      INFO  main            d.u.i.k.p.r.p.TestFile    Now processing file /home/runner/work/key/key/key.core/../key.ui/examples/heap/quicksort/sort.key 
+12497      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Loading environment from /home/runner/work/key/key/key.core/../key.ui/examples/heap/quicksort/sort.key 
+12497      DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Environment load took 227ns 
+12499      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Creating init config 
+15186      DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Init config took 2.69s 
+15244      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Replaying proof Quicksort[Quicksort::sort([I,int,int)].JML normal_behavior operation contract.0 
+15247      DEBUG main            d.u.i.k.p.i.IntermediateProofReplayer Proof replay took 5.8ns 
+15271      DEBUG main            d.u.i.k.m.s.ProofScriptEngine 1: 'script 'sort.script'' 
+15274      INFO  main            d.u.i.k.m.s.ProofScriptCommand Included script /home/runner/work/key/key/key.core/../key.ui/examples/heap/quicksort/sort.script 
+15274      DEBUG main            d.u.i.k.m.s.ProofScriptEngine 1: 'macro autopilot-prep' 
+16215      DEBUG main            d.u.i.k.m.s.ProofScriptEngine 2: 'select formula="{heapAtPre:=heap || exc:=null || heap:=heapAfter_sort_0}
+   seq ...' 
+16218      DEBUG main            d.u.i.k.m.s.ProofScriptEngine 3: 'macro simp-upd' 
+16227      DEBUG main            d.u.i.k.m.s.ProofScriptEngine 4: 'let   @seqPre="seqDef{int u;}(0, array.length, array[u])"
+    @seqSplit="seqDef ...' 
+16229      DEBUG main            d.u.i.k.m.s.ProofScriptEngine 5: 'rule seqPermSym 
+  formula="seqPerm(@seqSplit, @seqPre)"' 
+16242      DEBUG main            d.u.i.k.m.s.ProofScriptEngine 6: 'rule seqPermSym
+  formula="seqPerm(@seqSort, @seqSplit)"' 
+16244      DEBUG main            d.u.i.k.m.s.ProofScriptEngine 7: 'rule seqPermSym
+  formula="seqPerm(@seqSort0, @seqSort)"' 
+16245      DEBUG main            d.u.i.k.m.s.ProofScriptEngine 8: 'rule seqPermTrans
+  formula="seqPerm(@seqPre, @seqSplit)"' 
+16246      DEBUG main            d.u.i.k.m.s.ProofScriptEngine 9: 'rule seqPermTrans
+  formula="seqPerm(@seqPre, @seqSort)"' 
+16247      DEBUG main            d.u.i.k.m.s.ProofScriptEngine 10: 'rule seqPermSym
+  formula="seqPerm(@seqPre, @seqSort0)"' 
+16248      DEBUG main            d.u.i.k.m.s.ProofScriptEngine 11: 'tryclose' 
+40332      INFO  main            d.u.i.k.p.r.p.TestFile    ... finished proof: closed. 
+40596      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Loading environment from /home/runner/work/key/key/key.core/../key.ui/examples/heap/quicksort/sort.key.proof 
+40604      DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Environment load took 7.27ms 
+40632      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Creating init config 
+43282      DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Init config took 2.65s 
+43331      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Replaying proof Quicksort[Quicksort::sort([I,int,int)].JML normal_behavior operation contract.0 
+44839      DEBUG main            d.u.i.k.p.i.IntermediateProofReplayer Proof replay took 1.35s 
+44881      DEBUG main            d.u.i.k.p.r.p.TestFile    ... success: reloaded. 
+
+pass: Verifying property "provable" was successful for file: /home/runner/work/key/key/key.core/../key.ui/examples/heap/quicksort/sort.key]]></system-out></testcase><testcase name="split.key"  classname="runallproofs.quicksort.quicksort" time="0.000000"><system-out><![CDATA[44885      INFO  main            d.u.i.k.p.r.p.TestFile    Now processing file /home/runner/work/key/key/key.core/../key.ui/examples/heap/quicksort/split.key 
+44900      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Loading environment from /home/runner/work/key/key/key.core/../key.ui/examples/heap/quicksort/split.key 
+44901      DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Environment load took 289.9ns 
+44902      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Creating init config 
+47735      DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Init config took 2.83s 
+47780      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Replaying proof Quicksort[Quicksort::split([I,int,int)].JML normal_behavior operation contract.0 
+47783      DEBUG main            d.u.i.k.p.i.IntermediateProofReplayer Proof replay took 5ns 
+47783      DEBUG main            d.u.i.k.m.s.ProofScriptEngine 1: 'macro autopilot-prep' 
+48955      DEBUG main            d.u.i.k.m.s.ProofScriptEngine 2: 'tryclose' 
+84750      DEBUG main            d.u.i.k.m.s.ProofScriptEngine 3: 'macro simp-upd' 
+84860      DEBUG main            d.u.i.k.m.s.ProofScriptEngine 4: 'rule seqPermFromSwap' 
+84875      DEBUG main            d.u.i.k.m.s.ProofScriptEngine 5: 'rule andRight' 
+84879      DEBUG main            d.u.i.k.m.s.ProofScriptEngine 6: 'auto' 
+84903      DEBUG main            d.u.i.k.m.s.ProofScriptEngine 7: 'instantiate hide var=iv with=i_0' 
+84905      DEBUG main            d.u.i.k.m.s.ProofScriptEngine 8: 'instantiate hide var=jv with=j_0' 
+84908      DEBUG main            d.u.i.k.m.s.ProofScriptEngine 9: 'auto' 
+90884      DEBUG main            d.u.i.k.m.s.ProofScriptEngine 10: 'macro simp-upd' 
+90954      DEBUG main            d.u.i.k.m.s.ProofScriptEngine 11: 'rule seqPermFromSwap' 
+90956      DEBUG main            d.u.i.k.m.s.ProofScriptEngine 12: 'rule andRight' 
+90959      DEBUG main            d.u.i.k.m.s.ProofScriptEngine 13: 'auto' 
+90974      DEBUG main            d.u.i.k.m.s.ProofScriptEngine 14: 'instantiate hide var=iv with=i_0' 
+90975      DEBUG main            d.u.i.k.m.s.ProofScriptEngine 15: 'instantiate hide var=jv with=to' 
+90978      DEBUG main            d.u.i.k.m.s.ProofScriptEngine 16: 'auto' 
+95675      INFO  main            d.u.i.k.p.r.p.TestFile    ... finished proof: closed. 
+96115      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Loading environment from /home/runner/work/key/key/key.core/../key.ui/examples/heap/quicksort/split.key.proof 
+96115      DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Environment load took 189.3ns 
+96125      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Creating init config 
+98597      DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Init config took 2.47s 
+98644      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Replaying proof Quicksort[Quicksort::split([I,int,int)].JML normal_behavior operation contract.0 
+101129     DEBUG main            d.u.i.k.p.i.IntermediateProofReplayer Proof replay took 2.28s 
+101181     DEBUG main            d.u.i.k.p.r.p.TestFile    ... success: reloaded. 
+
+pass: Verifying property "provable" was successful for file: /home/runner/work/key/key/key.core/../key.ui/examples/heap/quicksort/split.key]]></system-out></testcase></testsuite></testsuites>
