@@ -1,0 +1,173 @@
+
+
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=1024px, initial-scale=1.0">
+    <title>#3161 - ADTs for KeY</title>
+    <link rel="stylesheet" href="https://unpkg.com/@picocss/pico@1.*/css/pico.min.css">
+    <link rel="stylesheet" href="/artiweb/css/style.css">
+    <script type="application/javascript" src="/artiweb/js/main.js"></script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <main class="container">
+    <section>
+    <a href="/artiweb/">Artiweb</a> > <span>Pull Request #3161</span>
+    <h1>ADTs for KeY <span class="color-muted">#3161</span></h1>
+    <summary>
+        <p><a href="https://github.com/KeYProject/key/pull/3161">Github</a></p>
+        <span>Description</span>
+        <details><p>Extension of the KeY grammar to allow the definition of ADTs. 
+The grammar for ADTs follows the typical defintions in KeY. ADTs are defined within a <code>\datatypes { ... }</code> block, and are translated onto the existing infrastructure (Sorts, Functions, Taclets). The grammar is as follows:</p>
+<p><code>\datatypes {
+   &lt;name&gt; := &lt;constructor&gt; | ... | &lt;constructor&gt;;
+   ...
+ }</code></p>
+<p>where constructor is a function definition <code>&lt;cname&gt;( &lt;sort&gt; &lt;argName&gt;, ...)</code>. </p>
+<p>Currently, three taclets are generated for each datatype definiton:</p>
+<ol>
+<li>Axiom taclets that adds the induction as an axiom on the sequence 
+   ```
+   (\forall ADT a; phi) &lt;-&gt; phi[a/C1] &amp; ... &amp; phi[a/Cn] ==&gt; </li>
+</ol>
+<hr />
+<pre><code>                \forall ADT a; phi
+</code></pre>
+<p>```</p>
+<ol>
+<li>Induction taclets for proving a sentence for all ADTs.
+   ```
+   \forall ADT a; phi ==&gt; 
+   ==&gt; phi[a/C1] 
+   ==&gt; ... 
+   ==&gt; phi[a/Cn]</li>
+</ol>
+<hr />
+<pre><code>                ==&gt; \forall ADT a; phi
+</code></pre>
+<p>```</p>
+<p>A direct consequence of (1)</p>
+<ol>
+<li>A case distinction taclet</li>
+</ol>
+<p>```
+   x = C1 ==&gt; 
+   ...
+   x = Cn ==&gt; </p>
+<hr />
+<pre><code>                  x : ADT (anywhere)
+</code></pre>
+<p>```</p>
+<p>This is a direct consequence of the disjunction <code>x = C1 | ... | x = Cn</code>.</p>
+<h3>Example</h3>
+<p><strong>Input</strong>
+<code>\datatypes {
+  MyList = MNil | MCons(any head, MyList tail);
+}</code></p>
+<p><strong>Generated Taclets</strong></p>
+<p>```
+MyList_Axiom {
+    \schemaVar \formula phi;
+    \schemaVar \variables MyList x;</p>
+<pre><code>\find(\forall x; phi)
+\varcond(\notFreeIn(x, phi))
+\add(
+         \forall x; phi
+     &lt;-&gt;   {\subst x;MNil}phi
+         &amp; \forall tail; \forall head; ({\subst x;tail}phi -&gt; {\subst x;MCons(head, tail)}phi)
+    ==&gt;
+  )
+\displayname "Axiom for MyList"
+</code></pre>
+<p>}</p>
+<p>MyList_Ind {
+       \schemaVar \formula phi;</p>
+<pre><code>   "MNil":
+       \add(==&gt; {\subst x;MNil}phi);
+   "MCons(anyhead,MyListtail)":
+       \add(
+           ==&gt;
+            \forall tail; \forall head; ({\subst x;tail}phi -&gt; {\subst x;MCons(head, tail)}phi)
+         );
+   "Use case of MyList":
+       \add(\forall x; phi ==&gt;)
+   \displayname "Induction for MyList"
+ }
+</code></pre>
+<p>MyList_ctor_split {
+          \schemaVar \term MyList var;
+          \schemaVar \skolemTerm any head;
+          \schemaVar \skolemTerm MyList tail;</p>
+<pre><code>      \find(var)
+      \sameUpdateLevel
+      "#var = MNil":
+          \add(var = MNil ==&gt;);
+      "#var = MCons":
+          \add(var = MCons(head, tail) ==&gt;)
+      \displayname "case distinction of MyList"
+    }
+</code></pre>
+<p>```</p>
+<h3>Current Problems / TODO</h3>
+<ul>
+<li>[ ] Matching/Application of taclets not working </li>
+<li>[ ] Test cases</li>
+</ul></details>
+    </summary>
+</section>
+
+<section>
+    <h3>Artifacts</h3>
+    <ul></ul>
+</section>
+
+
+<div style="height:10em;"><canvas id="runtime"></canvas></div>     
+<div style="height:10em;"><canvas id="testcases"></canvas></div>     
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script type="text/javascript">
+    function createChart(name, labels, data) {
+        const ctx = document.getElementById(name);
+        const graph = {
+            type: 'bar',
+            data: {
+                labels: labels,
+                datasets: [{
+                    label: "Runtime",
+                    data: data,
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        };
+        graph.options.plugins = {
+            tooltip: {
+                callbacks: {
+                    label: formatLabel
+                }
+            }
+        };
+        new Chart(ctx, graph);
+    }
+
+    createChart("runtime", [], []);
+
+    const ctx2 = document.getElementById('testcases');
+    new Chart(ctx2, {"data": {"datasets": [{"backgroundColor": "rgb(250, 220, 220)", "borderColor": "rgb(250, 192, 192)", "data": [], "fill": true, "label": "Failures", "tension": 0.1}, {"backgroundColor": "rgb(200, 212, 212)", "borderColor": "rgb(180, 192, 192)", "data": [], "fill": true, "label": "Errors", "tension": 0.1}, {"backgroundColor": "rgb(150, 150, 150)", "borderColor": "rgb(100, 100, 100)", "data": [], "fill": true, "label": "Skipped", "tension": 0.1}, {"backgroundColor": "rgb(95, 212, 120)", "borderColor": "rgb(75, 192, 100)", "data": [], "fill": true, "label": "Success", "tension": 0.1}], "labels": []}, "options": {"maintainAspectRatio": false, "responsive": true, "scales": {"y": {"stacked": true}}}, "type": "line"});
+</script>
+    </main>
+</body>
+</html>
