@@ -21,8 +21,8 @@
     <summary>
         <p><a href="https://github.com/KeYProject/key/pull/3161">Github</a></p>
         <span>Description</span>
-        <details><p>Extension of the KeY grammar to allow the definition of ADTs. 
-The grammar for ADTs follows the typical defintions in KeY. ADTs are defined within a <code>\datatypes { ... }</code> block, and are translated onto the existing infrastructure (Sorts, Functions, Taclets). The grammar is as follows:</p>
+        <details><p>Extension of the KeY grammar to allow the definition of ADTs. </p>
+<p>The grammar for ADTs follows the typical defintions in KeY. ADTs are defined within a <code>\datatypes { ... }</code> block, and are translated onto the existing infrastructure (Sorts, Functions, Taclets). The grammar is as follows:</p>
 <p><code>\datatypes {
    &lt;name&gt; := &lt;constructor&gt; | ... | &lt;constructor&gt;;
    ...
@@ -30,22 +30,38 @@ The grammar for ADTs follows the typical defintions in KeY. ADTs are defined wit
 <p>where constructor is a function definition <code>&lt;cname&gt;( &lt;sort&gt; &lt;argName&gt;, ...)</code>. </p>
 <p>Currently, three taclets are generated for each datatype definiton:</p>
 <ol>
-<li>Axiom taclets that adds the induction as an axiom on the sequence 
-   ```
-   (\forall ADT a; phi) &lt;-&gt; phi[a/C1] &amp; ... &amp; phi[a/Cn] ==&gt; </li>
+<li>Axiom taclets that adds the induction as an axiom on the sequence </li>
 </ol>
-<hr />
-<pre><code>                \forall ADT a; phi
-</code></pre>
-<p>```</p>
+<p>$$
+\frac{
+(\forall a \in ADT.~ \phi) \leftrightarrow  \phi[a/c_1] \wedge \ldots \wedge \phi[a/c_n] 
+\Longrightarrow
+}{
+\forall a \in ADT.~ \phi[a]
+}
+$$</p>
 <ol>
-<li>Induction taclets for proving a sentence for all ADTs.
-   ```
+<li>Induction taclets for proving a sentence for all ADTs.</li>
+</ol>
+<p>$$
+\frac{
+\begin{matrix}
+   \forall a \in ADT; \phi \Longrightarrow \
+   \Longrightarrow \phi[a/c_1]  \
+   \Longrightarrow \ldots      \
+   \Longrightarrow phi[a/c_n]
+\end{matrix}
+(\forall a \in ADT.~ \phi) \leftrightarrow  \phi[a/c_1] \wedge \ldots \wedge \phi[a/c_n] 
+\Longrightarrow
+}{
+\Longrightarrow \forall a \in ADT.~ \phi[a]
+}
+$$</p>
+<p>```
    \forall ADT a; phi ==&gt; 
    ==&gt; phi[a/C1] 
    ==&gt; ... 
-   ==&gt; phi[a/Cn]</li>
-</ol>
+   ==&gt; phi[a/Cn]</p>
 <hr />
 <pre><code>                ==&gt; \forall ADT a; phi
 </code></pre>
@@ -114,7 +130,7 @@ MyList_Axiom {
 <p>```</p>
 <h3>Current Problems / TODO</h3>
 <ul>
-<li>[ ] Matching/Application of taclets not working </li>
+<li>[x] Matching/Application of taclets not working </li>
 <li>[ ] Test cases</li>
 </ul></details>
     </summary>
