@@ -1,0 +1,2006 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="org.key_project.slicing.EndToEndTests" tests="11" skipped="0" failures="1" errors="0" timestamp="2023-06-12T07:11:52" hostname="fv-az799-972" time="317.387">
+  <properties/>
+  <testcase name="sliceIfThenElseSplit()" classname="org.key_project.slicing.EndToEndTests" time="90.317"/>
+  <testcase name="deduplicateChecksMergabilityCorrectly()" classname="org.key_project.slicing.EndToEndTests" time="14.546"/>
+  <testcase name="sliceDuplicatesAway()" classname="org.key_project.slicing.EndToEndTests" time="58.214"/>
+  <testcase name="sliceMultipleIterations()" classname="org.key_project.slicing.EndToEndTests" time="7.374">
+    <failure message="org.opentest4j.AssertionFailedError: expected: &lt;4229&gt; but was: &lt;4231&gt;" type="org.opentest4j.AssertionFailedError">org.opentest4j.AssertionFailedError: expected: &lt;4229&gt; but was: &lt;4231&gt;
+	at app//org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+	at app//org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+	at app//org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+	at app//org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:150)
+	at app//org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:145)
+	at app//org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:528)
+	at app//org.key_project.slicing.EndToEndTests.sliceProofFullFilename(EndToEndTests.java:267)
+	at app//org.key_project.slicing.EndToEndTests.sliceMultipleIterations(EndToEndTests.java:75)
+	at java.base@11.0.19/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base@11.0.19/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base@11.0.19/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base@11.0.19/java.lang.reflect.Method.invoke(Method.java:566)
+	at app//org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:727)
+	at app//org.junit.jupiter.engine.execution.MethodInvocation.proceed(MethodInvocation.java:60)
+	at app//org.junit.jupiter.engine.execution.InvocationInterceptorChain$ValidatingInvocation.proceed(InvocationInterceptorChain.java:131)
+	at app//org.junit.jupiter.engine.extension.TimeoutExtension.intercept(TimeoutExtension.java:156)
+	at app//org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestableMethod(TimeoutExtension.java:147)
+	at app//org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestMethod(TimeoutExtension.java:86)
+	at app//org.junit.jupiter.engine.execution.InterceptingExecutableInvoker$ReflectiveInterceptorCall.lambda$ofVoidMethod$0(InterceptingExecutableInvoker.java:103)
+	at app//org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.lambda$invoke$0(InterceptingExecutableInvoker.java:93)
+	at app//org.junit.jupiter.engine.execution.InvocationInterceptorChain$InterceptedInvocation.proceed(InvocationInterceptorChain.java:106)
+	at app//org.junit.jupiter.engine.execution.InvocationInterceptorChain.proceed(InvocationInterceptorChain.java:64)
+	at app//org.junit.jupiter.engine.execution.InvocationInterceptorChain.chainAndInvoke(InvocationInterceptorChain.java:45)
+	at app//org.junit.jupiter.engine.execution.InvocationInterceptorChain.invoke(InvocationInterceptorChain.java:37)
+	at app//org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:92)
+	at app//org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:86)
+	at app//org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeTestMethod$7(TestMethodTestDescriptor.java:217)
+	at app//org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at app//org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeTestMethod(TestMethodTestDescriptor.java:213)
+	at app//org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:138)
+	at app//org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:68)
+	at app//org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:151)
+	at app//org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at app//org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at app//org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at app//org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at app//org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at app//org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at app//org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at java.base@11.0.19/java.util.ArrayList.forEach(ArrayList.java:1541)
+	at app//org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at app//org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+	at app//org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at app//org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at app//org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at app//org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at app//org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at app//org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at app//org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at java.base@11.0.19/java.util.ArrayList.forEach(ArrayList.java:1541)
+	at app//org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at app//org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+	at app//org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at app//org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at app//org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at app//org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at app//org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at app//org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at app//org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at app//org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:35)
+	at app//org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57)
+	at app//org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:54)
+	at app//org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:107)
+	at app//org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:88)
+	at app//org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:54)
+	at app//org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:67)
+	at app//org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:52)
+	at app//org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:114)
+	at app//org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:86)
+	at app//org.junit.platform.launcher.core.DefaultLauncherSession$DelegatingLauncher.execute(DefaultLauncherSession.java:86)
+	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor$CollectAllTestClassesExecutor.processAllTestClasses(JUnitPlatformTestClassProcessor.java:110)
+	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor$CollectAllTestClassesExecutor.access$000(JUnitPlatformTestClassProcessor.java:90)
+	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor.stop(JUnitPlatformTestClassProcessor.java:85)
+	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.stop(SuiteTestClassProcessor.java:62)
+	at java.base@11.0.19/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base@11.0.19/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base@11.0.19/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base@11.0.19/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:36)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:33)
+	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:94)
+	at com.sun.proxy.$Proxy5.stop(Unknown Source)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker$3.run(TestWorker.java:193)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.executeAndMaintainThreadName(TestWorker.java:129)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:100)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:60)
+	at org.gradle.process.internal.worker.child.ActionExecutionWorker.execute(ActionExecutionWorker.java:56)
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:113)
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:65)
+	at app//worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)
+	at app//worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
+</failure>
+  </testcase>
+  <testcase name="sliceDuplicatesAwayOpenGoals()" classname="org.key_project.slicing.EndToEndTests" time="57.225"/>
+  <testcase name="sliceCutExample()" classname="org.key_project.slicing.EndToEndTests" time="14.314"/>
+  <testcase name="sliceAgathaWithOpenGoal()" classname="org.key_project.slicing.EndToEndTests" time="14.758"/>
+  <testcase name="sliceSimpleSMT()" classname="org.key_project.slicing.EndToEndTests" time="0.003"/>
+  <testcase name="sliceWithOpenGoal()" classname="org.key_project.slicing.EndToEndTests" time="28.794"/>
+  <testcase name="sliceAgatha()" classname="org.key_project.slicing.EndToEndTests" time="14.188"/>
+  <testcase name="sliceJavaProof()" classname="org.key_project.slicing.EndToEndTests" time="17.644"/>
+  <system-out><![CDATA[[07:11:52.592] ?[34mINFO ?[0;39m ?[36mEndToEndTests?[0;39m - Loading /home/runner/work/key/key/keyext.slicing/src/test/resources/testcase/ifThenElseSplit.proof
+[07:11:52.894] ?[31mWARN ?[0;39m ?[36mProofIndependentSettings?[0;39m - The settings in /home/runner/.key/proofIndependentSettings.props are *not* read due to flag 'key.disregardSettings'
+[07:11:52.912] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Loading environment from src/test/resources/testcase/ifThenElseSplit.proof
+[07:11:53.441] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Creating init config
+[07:11:53.504] ?[31mWARN ?[0;39m ?[36mProofSettings?[0;39m - The settings in /home/runner/.key/proof-settings.props are *not* read.
+[07:12:08.299] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Replaying proof ifThenElseSplit.proof
+[07:12:10.884] ?[34mINFO ?[0;39m ?[36mKeyStrokeSettings?[0;39m - Save keyboard shortcuts to: /home/runner/.key/keystrokes.properties
+[07:12:11.061] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Loading environment from /tmp/proof3413880517588822098.proof
+[07:12:11.067] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Creating init config
+[07:12:16.681] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Replaying proof proof3413880517588822098.proof
+reapplying 0 orRight on node 0
+reapplying 2 impRight on node 1
+reapplying 4 andLeft on node 2
+reapplying 5 replace_known_left on node 3
+reapplying 6 One Step Simplification on node 4
+reapplying 7 closeFalse on node 5
+[07:12:16.713] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Loading environment from /tmp/KeYslice18278065123619301726/ifThenElseSplit_slice1.proof
+[07:12:16.723] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Creating init config
+[07:12:22.110] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Replaying proof ifThenElseSplit_slice1.proof
+[07:12:22.127] ?[34mINFO ?[0;39m ?[36mEndToEndTests?[0;39m - Loading /home/runner/work/key/key/keyext.slicing/src/test/resources/testcase/ifThenElseSplit.proof
+[07:12:22.128] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Loading environment from src/test/resources/testcase/ifThenElseSplit.proof
+[07:12:22.130] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Creating init config
+[07:12:27.394] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Replaying proof ifThenElseSplit.proof
+[07:12:27.417] ?[34mINFO ?[0;39m ?[36mDependencyAnalyzer?[0;39m - merging 2 and 3
+[07:12:27.420] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Loading environment from /tmp/proof10852202413068441654.proof
+[07:12:27.423] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Creating init config
+[07:12:32.638] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Replaying proof proof10852202413068441654.proof
+reapplying 0 orRight on node 0
+reapplying 2 impRight on node 1
+reapplying 1 ifthenelse_split on node 2
+reapplying 4 andLeft on node 3
+reapplying 5 replace_known_left on node 5
+reapplying 6 One Step Simplification on node 6
+reapplying 7 closeFalse on node 7
+reapplying 9 andLeft on node 4
+reapplying 10 replace_known_left on node 9
+reapplying 11 One Step Simplification on node 10
+reapplying 12 closeFalse on node 11
+[07:12:32.663] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Loading environment from /tmp/KeYslice9548480244496002809/ifThenElseSplit_slice1.proof
+[07:12:32.665] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Creating init config
+[07:12:37.775] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Replaying proof ifThenElseSplit_slice1.proof
+[07:12:37.786] ?[34mINFO ?[0;39m ?[36mEndToEndTests?[0;39m - Loading /tmp/KeYslice9548480244496002809/ifThenElseSplit_slice1.proof
+[07:12:37.787] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Loading environment from /tmp/KeYslice9548480244496002809/ifThenElseSplit_slice1.proof
+[07:12:37.788] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Creating init config
+[07:12:42.713] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Replaying proof ifThenElseSplit_slice1.proof
+[07:12:42.726] ?[34mINFO ?[0;39m ?[36mDependencyAnalyzer?[0;39m - merging 3 and 4
+[07:12:42.728] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Loading environment from /tmp/proof8198748239172523408.proof
+[07:12:42.731] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Creating init config
+[07:12:47.608] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Replaying proof proof8198748239172523408.proof
+reapplying 0 orRight on node 0
+reapplying 1 impRight on node 1
+reapplying 3 andLeft on node 2
+reapplying 2 ifthenelse_split on node 3
+reapplying 5 replace_known_left on node 4
+reapplying 6 One Step Simplification on node 6
+reapplying 7 closeFalse on node 7
+reapplying 9 replace_known_left on node 5
+reapplying 10 One Step Simplification on node 9
+reapplying 11 closeFalse on node 10
+[07:12:47.621] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Loading environment from /tmp/KeYslice13956092427869785914/ifThenElseSplit_slice2.proof
+[07:12:47.622] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Creating init config
+[07:12:52.539] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Replaying proof ifThenElseSplit_slice2.proof
+[07:12:52.548] ?[34mINFO ?[0;39m ?[36mEndToEndTests?[0;39m - Loading /tmp/KeYslice13956092427869785914/ifThenElseSplit_slice2.proof
+[07:12:52.549] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Loading environment from /tmp/KeYslice13956092427869785914/ifThenElseSplit_slice2.proof
+[07:12:52.551] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Creating init config
+[07:12:57.640] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Replaying proof ifThenElseSplit_slice2.proof
+[07:12:57.651] ?[34mINFO ?[0;39m ?[36mDependencyAnalyzer?[0;39m - merging 4 and 5
+[07:12:57.654] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Loading environment from /tmp/proof15988422940870054278.proof
+[07:12:57.656] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Creating init config
+[07:13:02.807] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Replaying proof proof15988422940870054278.proof
+reapplying 0 orRight on node 0
+reapplying 1 impRight on node 1
+reapplying 2 andLeft on node 2
+reapplying 4 replace_known_left on node 3
+reapplying 3 ifthenelse_split on node 4
+reapplying 6 One Step Simplification on node 5
+reapplying 7 closeFalse on node 7
+reapplying 9 One Step Simplification on node 6
+reapplying 10 closeFalse on node 9
+[07:13:02.823] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Loading environment from /tmp/KeYslice9314413454632796021/ifThenElseSplit_slice3.proof
+[07:13:02.831] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Creating init config
+[07:13:07.801] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Replaying proof ifThenElseSplit_slice3.proof
+[07:13:07.811] ?[34mINFO ?[0;39m ?[36mEndToEndTests?[0;39m - Loading /tmp/KeYslice9314413454632796021/ifThenElseSplit_slice3.proof
+[07:13:07.811] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Loading environment from /tmp/KeYslice9314413454632796021/ifThenElseSplit_slice3.proof
+[07:13:07.813] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Creating init config
+[07:13:12.986] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Replaying proof ifThenElseSplit_slice3.proof
+[07:13:12.995] ?[34mINFO ?[0;39m ?[36mDependencyAnalyzer?[0;39m - merging 5 and 6
+[07:13:12.997] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Loading environment from /tmp/proof9488280592765900189.proof
+[07:13:12.999] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Creating init config
+[07:13:18.092] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Replaying proof proof9488280592765900189.proof
+reapplying 0 orRight on node 0
+reapplying 1 impRight on node 1
+reapplying 2 andLeft on node 2
+reapplying 3 replace_known_left on node 3
+reapplying 5 One Step Simplification on node 4
+reapplying 4 ifthenelse_split on node 5
+reapplying 7 closeFalse on node 6
+reapplying 9 closeFalse on node 7
+[07:13:18.101] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Loading environment from /tmp/KeYslice9367737012424973790/ifThenElseSplit_slice4.proof
+[07:13:18.103] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Creating init config
+[07:13:22.896] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Replaying proof ifThenElseSplit_slice4.proof
+[07:13:22.906] ?[34mINFO ?[0;39m ?[36mEndToEndTests?[0;39m - Loading /home/runner/work/key/key/keyext.slicing/src/test/resources/testcase/deduplicateCheck4.proof
+[07:13:22.907] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Loading environment from src/test/resources/testcase/deduplicateCheck4.proof
+[07:13:22.908] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Creating init config
+[07:13:27.579] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Replaying proof deduplicateCheck4.proof
+[07:13:27.598] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Loading environment from /tmp/proof16290803165023966133.proof
+[07:13:27.600] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Creating init config
+[07:13:32.549] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Replaying proof proof16290803165023966133.proof
+reapplying 0 impRight on node 0
+reapplying 1 andLeft on node 1
+reapplying 2 andLeft on node 2
+reapplying 3 andLeft on node 3
+reapplying 4 andLeft on node 4
+reapplying 5 notLeft on node 5
+reapplying 6 orLeft on node 6
+reapplying 7 replace_known_left on node 7
+reapplying 9 One Step Simplification on node 9
+reapplying 10 hide_left on node 10
+reapplying 11 notRight on node 11
+reapplying 12 hide_left on node 12
+reapplying 13 close on node 13
+reapplying 8 replace_known_left on node 8
+reapplying 15 One Step Simplification on node 15
+reapplying 16 hide_left on node 16
+reapplying 17 notRight on node 17
+reapplying 18 hide_left on node 18
+reapplying 19 close on node 19
+[07:13:32.568] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Loading environment from /tmp/KeYslice12925430870162320989/deduplicateCheck4_slice1.proof
+[07:13:32.569] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Creating init config
+[07:13:37.437] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Replaying proof deduplicateCheck4_slice1.proof
+[07:13:37.452] ?[34mINFO ?[0;39m ?[36mEndToEndTests?[0;39m - Loading /home/runner/work/key/key/keyext.slicing/src/test/resources/testcase/exampleDuplicate.proof
+[07:13:37.453] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Loading environment from src/test/resources/testcase/exampleDuplicate.proof
+[07:13:37.454] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Creating init config
+[07:13:42.117] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Replaying proof exampleDuplicate.proof
+[07:13:42.134] ?[34mINFO ?[0;39m ?[36mDependencyAnalyzer?[0;39m - merging 2 and 3
+[07:13:42.135] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Loading environment from /tmp/proof15138087731028387246.proof
+[07:13:42.137] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Creating init config
+[07:13:46.967] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Replaying proof proof15138087731028387246.proof
+reapplying 0 impRight on node 0
+reapplying 2 andLeft on node 1
+reapplying 1 andRight on node 2
+reapplying 4 replace_known_left on node 3
+reapplying 5 concrete_impl_1 on node 5
+reapplying 6 close on node 6
+reapplying 8 replace_known_left on node 4
+reapplying 9 concrete_impl_1 on node 8
+reapplying 10 close on node 9
+[07:13:46.984] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Loading environment from /tmp/KeYslice11495626584209911491/exampleDuplicate_slice1.proof
+[07:13:46.986] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Creating init config
+[07:13:51.936] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Replaying proof exampleDuplicate_slice1.proof
+[07:13:51.951] ?[34mINFO ?[0;39m ?[36mEndToEndTests?[0;39m - Loading /tmp/KeYslice11495626584209911491/exampleDuplicate_slice1.proof
+[07:13:51.952] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Loading environment from /tmp/KeYslice11495626584209911491/exampleDuplicate_slice1.proof
+[07:13:51.953] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Creating init config
+[07:13:56.932] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Replaying proof exampleDuplicate_slice1.proof
+[07:13:56.954] ?[34mINFO ?[0;39m ?[36mDependencyAnalyzer?[0;39m - merging 3 and 4
+[07:13:56.956] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Loading environment from /tmp/proof18298213532893843006.proof
+[07:13:56.958] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Creating init config
+[07:14:01.896] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Replaying proof proof18298213532893843006.proof
+reapplying 0 impRight on node 0
+reapplying 1 andLeft on node 1
+reapplying 3 replace_known_left on node 2
+reapplying 2 andRight on node 3
+reapplying 5 concrete_impl_1 on node 4
+reapplying 6 close on node 6
+reapplying 8 concrete_impl_1 on node 5
+reapplying 9 close on node 8
+[07:14:01.912] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Loading environment from /tmp/KeYslice16078984183869273824/exampleDuplicate_slice2.proof
+[07:14:01.913] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Creating init config
+[07:14:06.810] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Replaying proof exampleDuplicate_slice2.proof
+[07:14:06.831] ?[34mINFO ?[0;39m ?[36mEndToEndTests?[0;39m - Loading /tmp/KeYslice16078984183869273824/exampleDuplicate_slice2.proof
+[07:14:06.832] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Loading environment from /tmp/KeYslice16078984183869273824/exampleDuplicate_slice2.proof
+[07:14:06.835] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Creating init config
+[07:14:11.548] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Replaying proof exampleDuplicate_slice2.proof
+[07:14:11.566] ?[34mINFO ?[0;39m ?[36mDependencyAnalyzer?[0;39m - merging 4 and 5
+[07:14:11.568] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Loading environment from /tmp/proof17363507576527540277.proof
+[07:14:11.570] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Creating init config
+[07:14:16.417] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Replaying proof proof17363507576527540277.proof
+reapplying 0 impRight on node 0
+reapplying 1 andLeft on node 1
+reapplying 2 replace_known_left on node 2
+reapplying 4 concrete_impl_1 on node 3
+reapplying 3 andRight on node 4
+reapplying 6 close on node 5
+reapplying 8 close on node 6
+[07:14:16.431] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Loading environment from /tmp/KeYslice16545165364011079302/exampleDuplicate_slice3.proof
+[07:14:16.432] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Creating init config
+[07:14:21.110] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Replaying proof exampleDuplicate_slice3.proof
+[07:14:21.124] ?[34mINFO ?[0;39m ?[36mEndToEndTests?[0;39m - Loading /tmp/KeYslice16545165364011079302/exampleDuplicate_slice3.proof
+[07:14:21.124] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Loading environment from /tmp/KeYslice16545165364011079302/exampleDuplicate_slice3.proof
+[07:14:21.126] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Creating init config
+[07:14:25.852] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Replaying proof exampleDuplicate_slice3.proof
+[07:14:25.869] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Loading environment from /tmp/proof1495556336035076417.proof
+[07:14:25.872] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Creating init config
+[07:14:30.728] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Replaying proof proof1495556336035076417.proof
+reapplying 0 impRight on node 0
+reapplying 1 andLeft on node 1
+reapplying 2 replace_known_left on node 2
+reapplying 3 concrete_impl_1 on node 3
+reapplying 4 andRight on node 4
+reapplying 5 close on node 5
+reapplying 6 close on node 6
+[07:14:30.742] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Loading environment from /tmp/KeYslice10597663363378625109/exampleDuplicate_slice4.proof
+[07:14:30.748] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Creating init config
+[07:14:35.651] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Replaying proof exampleDuplicate_slice4.proof
+[07:14:35.666] ?[34mINFO ?[0;39m ?[36mEndToEndTests?[0;39m - Loading /home/runner/work/key/key/keyext.slicing/src/test/resources/testcase/../../../../../key.ui/examples/firstTouch/05-ReverseArray/reverseArray.proof
+[07:14:35.667] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Loading environment from src/test/resources/testcase/../../../../../key.ui/examples/firstTouch/05-ReverseArray/reverseArray.proof
+[07:14:35.668] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Creating init config
+[07:14:40.847] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Replaying proof ReverseArray[ReverseArray::reverse()].JML normal_behavior operation contract.0
+[07:14:42.749] ?[34mINFO ?[0;39m ?[36mDependencyAnalyzer?[0;39m - merging 1354 and 4678
+[07:14:42.762] ?[34mINFO ?[0;39m ?[36mDependencyAnalyzer?[0;39m - merging 3958 and 4306
+[07:14:43.043] ?[34mINFO ?[0;39m ?[36mEndToEndTests?[0;39m - Loading /home/runner/work/key/key/keyext.slicing/src/test/resources/testcase/exampleDuplicateOpen.proof
+[07:14:43.044] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Loading environment from src/test/resources/testcase/exampleDuplicateOpen.proof
+[07:14:43.045] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Creating init config
+[07:14:47.890] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Replaying proof exampleDuplicateOpen.proof
+[07:14:47.909] ?[34mINFO ?[0;39m ?[36mDependencyAnalyzer?[0;39m - merging 2 and 3
+[07:14:47.912] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Loading environment from /tmp/proof13454085758918309355.proof
+[07:14:47.916] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Creating init config
+[07:14:52.579] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Replaying proof proof13454085758918309355.proof
+reapplying 0 impRight on node 0
+reapplying 2 andLeft on node 1
+reapplying 1 andRight on node 2
+reapplying 4 replace_known_left on node 3
+reapplying 5 concrete_impl_1 on node 5
+reapplying 7 replace_known_left on node 4
+reapplying 8 concrete_impl_1 on node 7
+[07:14:52.595] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Loading environment from /tmp/KeYslice848475422582016630/exampleDuplicateOpen_slice1.proof
+[07:14:52.596] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Creating init config
+[07:14:57.465] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Replaying proof exampleDuplicateOpen_slice1.proof
+[07:14:57.478] ?[34mINFO ?[0;39m ?[36mEndToEndTests?[0;39m - Loading /tmp/KeYslice848475422582016630/exampleDuplicateOpen_slice1.proof
+[07:14:57.479] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Loading environment from /tmp/KeYslice848475422582016630/exampleDuplicateOpen_slice1.proof
+[07:14:57.480] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Creating init config
+[07:15:02.420] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Replaying proof exampleDuplicateOpen_slice1.proof
+[07:15:02.433] ?[34mINFO ?[0;39m ?[36mDependencyAnalyzer?[0;39m - merging 3 and 4
+[07:15:02.435] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Loading environment from /tmp/proof4227100986286621551.proof
+[07:15:02.437] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Creating init config
+[07:15:07.111] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Replaying proof proof4227100986286621551.proof
+reapplying 0 impRight on node 0
+reapplying 1 andLeft on node 1
+reapplying 3 replace_known_left on node 2
+reapplying 2 andRight on node 3
+reapplying 5 concrete_impl_1 on node 4
+reapplying 7 concrete_impl_1 on node 5
+[07:15:07.125] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Loading environment from /tmp/KeYslice3906120601810205837/exampleDuplicateOpen_slice2.proof
+[07:15:07.127] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Creating init config
+[07:15:11.900] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Replaying proof exampleDuplicateOpen_slice2.proof
+[07:15:11.912] ?[34mINFO ?[0;39m ?[36mEndToEndTests?[0;39m - Loading /tmp/KeYslice3906120601810205837/exampleDuplicateOpen_slice2.proof
+[07:15:11.913] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Loading environment from /tmp/KeYslice3906120601810205837/exampleDuplicateOpen_slice2.proof
+[07:15:11.915] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Creating init config
+[07:15:16.716] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Replaying proof exampleDuplicateOpen_slice2.proof
+[07:15:16.729] ?[34mINFO ?[0;39m ?[36mDependencyAnalyzer?[0;39m - merging 4 and 5
+[07:15:16.731] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Loading environment from /tmp/proof8719397057286177971.proof
+[07:15:16.733] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Creating init config
+[07:15:21.494] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Replaying proof proof8719397057286177971.proof
+reapplying 0 impRight on node 0
+reapplying 1 andLeft on node 1
+reapplying 2 replace_known_left on node 2
+reapplying 4 concrete_impl_1 on node 3
+reapplying 3 andRight on node 4
+[07:15:21.508] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Loading environment from /tmp/KeYslice17872960884182430100/exampleDuplicateOpen_slice3.proof
+[07:15:21.509] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Creating init config
+[07:15:26.347] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Replaying proof exampleDuplicateOpen_slice3.proof
+[07:15:26.360] ?[34mINFO ?[0;39m ?[36mEndToEndTests?[0;39m - Loading /tmp/KeYslice17872960884182430100/exampleDuplicateOpen_slice3.proof
+[07:15:26.360] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Loading environment from /tmp/KeYslice17872960884182430100/exampleDuplicateOpen_slice3.proof
+[07:15:26.362] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Creating init config
+[07:15:31.011] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Replaying proof exampleDuplicateOpen_slice3.proof
+[07:15:31.025] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Loading environment from /tmp/proof11641470979262397579.proof
+[07:15:31.027] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Creating init config
+[07:15:35.645] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Replaying proof proof11641470979262397579.proof
+reapplying 0 impRight on node 0
+reapplying 1 andLeft on node 1
+reapplying 2 replace_known_left on node 2
+reapplying 3 concrete_impl_1 on node 3
+reapplying 4 andRight on node 4
+[07:15:35.656] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Loading environment from /tmp/KeYslice4803776317900718416/exampleDuplicateOpen_slice4.proof
+[07:15:35.658] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Creating init config
+[07:15:40.254] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Replaying proof exampleDuplicateOpen_slice4.proof
+[07:15:40.267] ?[34mINFO ?[0;39m ?[36mEndToEndTests?[0;39m - Loading /home/runner/work/key/key/keyext.slicing/src/test/resources/testcase/cutExample.proof
+[07:15:40.267] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Loading environment from src/test/resources/testcase/cutExample.proof
+[07:15:40.268] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Creating init config
+[07:15:44.866] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Replaying proof cutExample.proof
+[07:15:44.876] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Loading environment from /tmp/proof16973298188584176336.proof
+[07:15:44.878] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Creating init config
+[07:15:49.658] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Replaying proof proof16973298188584176336.proof
+reapplying 3 impRight on node 0
+reapplying 4 impRight on node 1
+reapplying 5 notRight on node 2
+reapplying 6 notLeft on node 3
+reapplying 7 replace_known_left on node 4
+reapplying 8 One Step Simplification on node 5
+reapplying 9 closeFalse on node 6
+[07:15:49.664] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Loading environment from /tmp/KeYslice15003053242357978694/cutExample_slice1.proof
+[07:15:49.665] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Creating init config
+[07:15:54.575] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Replaying proof cutExample_slice1.proof
+[07:15:54.581] ?[34mINFO ?[0;39m ?[36mEndToEndTests?[0;39m - Loading /home/runner/work/key/key/keyext.slicing/src/test/resources/testcase/agathaOpenGoal.proof
+[07:15:54.581] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Loading environment from src/test/resources/testcase/agathaOpenGoal.proof
+[07:15:54.582] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Creating init config
+[07:15:59.479] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Replaying proof agathaOpenGoal.proof
+[07:15:59.516] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Loading environment from /tmp/proof16972952634529090791.proof
+[07:15:59.519] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Creating init config
+[07:16:04.340] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Replaying proof proof16972952634529090791.proof
+reapplying 0 impRight on node 0
+reapplying 1 andLeft on node 1
+reapplying 2 andLeft on node 2
+reapplying 3 notLeft on node 3
+reapplying 4 andLeft on node 4
+reapplying 5 andLeft on node 5
+reapplying 6 andLeft on node 6
+reapplying 7 andLeft on node 7
+reapplying 8 andLeft on node 8
+reapplying 9 andLeft on node 9
+reapplying 10 andLeft on node 10
+reapplying 11 andLeft on node 11
+reapplying 12 andLeft on node 12
+reapplying 13 andLeft on node 13
+reapplying 14 exLeft on node 14
+reapplying 15 andLeft on node 15
+reapplying 16 eqSymm on node 16
+reapplying 17 nnf_imp2or on node 17
+reapplying 18 nnf_imp2or on node 18
+reapplying 19 double_not on node 19
+reapplying 20 nnf_imp2or on node 20
+reapplying 21 double_not on node 21
+reapplying 22 nnf_imp2or on node 22
+reapplying 23 nnf_imp2or on node 23
+reapplying 24 nnf_imp2or on node 24
+reapplying 25 nnf_imp2or on node 25
+reapplying 26 commute_or on node 26
+reapplying 27 commute_or on node 27
+reapplying 28 shift_paren_or on node 28
+reapplying 29 shift_paren_or on node 29
+reapplying 30 shift_paren_or on node 30
+reapplying 31 allLeft on node 31
+reapplying 32 allLeft on node 32
+reapplying 33 exLeft on node 33
+reapplying 34 notLeft on node 34
+reapplying 35 allLeft on node 35
+reapplying 36 exLeft on node 36
+reapplying 37 notLeft on node 37
+reapplying 38 allLeft on node 38
+reapplying 39 exLeft on node 39
+reapplying 40 notLeft on node 40
+reapplying 41 allLeft on node 41
+reapplying 42 allLeft on node 42
+reapplying 43 exLeft on node 43
+reapplying 44 notLeft on node 44
+reapplying 45 allLeft on node 45
+reapplying 46 replace_known_left on node 46
+reapplying 47 concrete_not_1 on node 47
+reapplying 48 concrete_or_4 on node 48
+reapplying 49 allLeft on node 49
+reapplying 50 replace_known_right on node 50
+reapplying 51 concrete_or_2 on node 51
+reapplying 52 allLeft on node 52
+reapplying 53 allLeft on node 53
+reapplying 54 replace_known_right on node 54
+reapplying 55 concrete_or_4 on node 55
+reapplying 56 notLeft on node 56
+reapplying 57 allLeft on node 57
+reapplying 58 replace_known_right on node 58
+reapplying 59 concrete_or_4 on node 59
+reapplying 60 applyEq on node 60
+reapplying 61 allLeft on node 61
+reapplying 62 allLeft on node 62
+reapplying 63 allLeft on node 63
+reapplying 64 replace_known_right on node 64
+reapplying 65 concrete_or_2 on node 65
+reapplying 66 notLeft on node 66
+reapplying 67 allLeft on node 67
+reapplying 68 replace_known_left on node 68
+reapplying 69 concrete_not_1 on node 69
+reapplying 70 concrete_or_2 on node 70
+reapplying 71 notLeft on node 71
+reapplying 72 allLeft on node 72
+reapplying 73 allLeft on node 73
+reapplying 74 replace_known_right on node 74
+reapplying 75 concrete_or_4 on node 75
+reapplying 76 applyEq on node 76
+reapplying 78 applyEq on node 77
+reapplying 79 applyEq on node 78
+reapplying 80 applyEq on node 79
+reapplying 81 allLeft on node 80
+reapplying 82 replace_known_right on node 81
+reapplying 83 concrete_or_4 on node 82
+reapplying 84 allLeft on node 83
+reapplying 85 replace_known_right on node 84
+reapplying 86 concrete_or_2 on node 85
+reapplying 87 notLeft on node 86
+reapplying 88 allLeft on node 87
+reapplying 89 replace_known_right on node 88
+reapplying 90 concrete_or_2 on node 89
+reapplying 91 notLeft on node 90
+reapplying 93 allLeft on node 91
+reapplying 94 replace_known_left on node 92
+reapplying 95 concrete_not_1 on node 93
+reapplying 96 concrete_or_4 on node 94
+reapplying 97 notLeft on node 95
+reapplying 98 allLeft on node 96
+reapplying 99 replace_known_right on node 97
+reapplying 100 concrete_or_2 on node 98
+reapplying 101 notLeft on node 99
+reapplying 102 allLeft on node 100
+reapplying 103 replace_known_left on node 101
+reapplying 104 concrete_not_1 on node 102
+reapplying 105 concrete_or_2 on node 103
+reapplying 106 cut_direct on node 104
+reapplying 119 applyEq on node 105
+reapplying 121 allLeft on node 107
+reapplying 122 replace_known_left on node 108
+reapplying 123 concrete_not_1 on node 109
+reapplying 124 concrete_or_4 on node 110
+reapplying 125 notLeft on node 111
+reapplying 126 allLeft on node 112
+reapplying 127 eqSymm on node 113
+reapplying 128 replace_known_right on node 114
+reapplying 129 concrete_or_2 on node 115
+reapplying 130 close on node 116
+reapplying 108 concrete_or_4 on node 106
+reapplying 132 cut_direct on node 118
+reapplying 136 applyEq on node 119
+reapplying 137 applyEq on node 121
+reapplying 134 concrete_or_2 on node 120
+reapplying 144 applyEq on node 123
+reapplying 145 close on node 124
+[07:16:04.428] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Loading environment from /tmp/KeYslice4741905455132921851/agathaOpenGoal_slice1.proof
+[07:16:04.465] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Creating init config
+[07:16:09.296] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Replaying proof agathaOpenGoal_slice1.proof
+[07:16:09.345] ?[34mINFO ?[0;39m ?[36mEndToEndTests?[0;39m - Loading /home/runner/work/key/key/keyext.slicing/src/test/resources/testcase/openGoal1.proof
+[07:16:09.345] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Loading environment from src/test/resources/testcase/openGoal1.proof
+[07:16:09.347] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Creating init config
+[07:16:14.246] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Replaying proof openGoal1.proof
+[07:16:14.253] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Loading environment from /tmp/proof16260567596423165904.proof
+[07:16:14.255] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Creating init config
+[07:16:18.918] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Replaying proof proof16260567596423165904.proof
+reapplying 3 impRight on node 0
+reapplying 4 impRight on node 1
+reapplying 5 notRight on node 2
+reapplying 6 notLeft on node 3
+reapplying 7 replace_known_left on node 4
+reapplying 8 One Step Simplification on node 5
+reapplying 9 closeFalse on node 6
+[07:16:18.923] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Loading environment from /tmp/KeYslice8933959707950169860/openGoal1_slice1.proof
+[07:16:18.925] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Creating init config
+[07:16:23.759] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Replaying proof openGoal1_slice1.proof
+[07:16:23.765] ?[34mINFO ?[0;39m ?[36mEndToEndTests?[0;39m - Loading /home/runner/work/key/key/keyext.slicing/src/test/resources/testcase/openGoal2.proof
+[07:16:23.766] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Loading environment from src/test/resources/testcase/openGoal2.proof
+[07:16:23.767] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Creating init config
+[07:16:28.405] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Replaying proof openGoal2.proof
+[07:16:28.411] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Loading environment from /tmp/proof1849670090655493756.proof
+[07:16:28.413] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Creating init config
+[07:16:33.143] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Replaying proof proof1849670090655493756.proof
+reapplying 3 impRight on node 0
+reapplying 4 impRight on node 1
+reapplying 5 notRight on node 2
+reapplying 6 notLeft on node 3
+reapplying 7 replace_known_left on node 4
+reapplying 8 One Step Simplification on node 5
+[07:16:33.152] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Loading environment from /tmp/KeYslice7139521602036809953/openGoal2_slice1.proof
+[07:16:33.154] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Creating init config
+[07:16:38.134] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Replaying proof openGoal2_slice1.proof
+[07:16:38.140] ?[34mINFO ?[0;39m ?[36mEndToEndTests?[0;39m - Loading /home/runner/work/key/key/keyext.slicing/src/test/resources/testcase/agatha.proof
+[07:16:38.141] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Loading environment from src/test/resources/testcase/agatha.proof
+[07:16:38.142] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Creating init config
+[07:16:42.798] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Replaying proof agatha.proof
+[07:16:42.829] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Loading environment from /tmp/proof9125642744088990102.proof
+[07:16:42.831] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Creating init config
+[07:16:47.452] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Replaying proof proof9125642744088990102.proof
+reapplying 0 impRight on node 0
+reapplying 1 andLeft on node 1
+reapplying 2 andLeft on node 2
+reapplying 3 notLeft on node 3
+reapplying 4 andLeft on node 4
+reapplying 5 andLeft on node 5
+reapplying 6 andLeft on node 6
+reapplying 7 andLeft on node 7
+reapplying 8 andLeft on node 8
+reapplying 9 andLeft on node 9
+reapplying 10 andLeft on node 10
+reapplying 11 andLeft on node 11
+reapplying 12 andLeft on node 12
+reapplying 13 andLeft on node 13
+reapplying 14 exLeft on node 14
+reapplying 15 andLeft on node 15
+reapplying 16 eqSymm on node 16
+reapplying 17 nnf_imp2or on node 17
+reapplying 18 nnf_imp2or on node 18
+reapplying 19 double_not on node 19
+reapplying 20 nnf_imp2or on node 20
+reapplying 21 double_not on node 21
+reapplying 22 nnf_imp2or on node 22
+reapplying 23 nnf_imp2or on node 23
+reapplying 24 nnf_imp2or on node 24
+reapplying 25 nnf_imp2or on node 25
+reapplying 26 commute_or on node 26
+reapplying 27 commute_or on node 27
+reapplying 28 shift_paren_or on node 28
+reapplying 29 shift_paren_or on node 29
+reapplying 30 shift_paren_or on node 30
+reapplying 31 allLeft on node 31
+reapplying 32 allLeft on node 32
+reapplying 33 exLeft on node 33
+reapplying 34 notLeft on node 34
+reapplying 41 allLeft on node 35
+reapplying 45 allLeft on node 36
+reapplying 46 replace_known_left on node 37
+reapplying 47 concrete_not_1 on node 38
+reapplying 48 concrete_or_4 on node 39
+reapplying 49 allLeft on node 40
+reapplying 50 replace_known_right on node 41
+reapplying 51 concrete_or_2 on node 42
+reapplying 53 allLeft on node 43
+reapplying 54 replace_known_right on node 44
+reapplying 55 concrete_or_4 on node 45
+reapplying 56 notLeft on node 46
+reapplying 67 allLeft on node 47
+reapplying 68 replace_known_left on node 48
+reapplying 69 concrete_not_1 on node 49
+reapplying 70 concrete_or_2 on node 50
+reapplying 71 notLeft on node 51
+reapplying 73 allLeft on node 52
+reapplying 74 replace_known_right on node 53
+reapplying 75 concrete_or_4 on node 54
+reapplying 80 applyEq on node 55
+reapplying 102 allLeft on node 56
+reapplying 103 replace_known_left on node 57
+reapplying 104 concrete_not_1 on node 58
+reapplying 105 concrete_or_2 on node 59
+reapplying 106 cut_direct on node 60
+reapplying 119 applyEq on node 61
+reapplying 121 allLeft on node 63
+reapplying 122 replace_known_left on node 64
+reapplying 123 concrete_not_1 on node 65
+reapplying 124 concrete_or_4 on node 66
+reapplying 125 notLeft on node 67
+reapplying 126 allLeft on node 68
+reapplying 127 eqSymm on node 69
+reapplying 128 replace_known_right on node 70
+reapplying 129 concrete_or_2 on node 71
+reapplying 130 close on node 72
+reapplying 108 concrete_or_4 on node 62
+reapplying 132 cut_direct on node 74
+reapplying 137 applyEq on node 75
+reapplying 138 close on node 77
+reapplying 134 concrete_or_2 on node 76
+reapplying 145 applyEq on node 79
+reapplying 146 close on node 80
+[07:16:47.474] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Loading environment from /tmp/KeYslice8760885414295457490/agatha_slice1.proof
+[07:16:47.475] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Creating init config
+[07:16:52.294] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Replaying proof agatha_slice1.proof
+[07:16:52.331] ?[34mINFO ?[0;39m ?[36mEndToEndTests?[0;39m - Loading /home/runner/work/key/key/keyext.slicing/src/test/resources/testcase/../../../../../key.ui/examples/heap/verifyThis15_2_ParallelGcd/parallelGcd.proof
+[07:16:52.333] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Loading environment from src/test/resources/testcase/../../../../../key.ui/examples/heap/verifyThis15_2_ParallelGcd/parallelGcd.proof
+[07:16:52.335] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Creating init config
+[07:16:57.316] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Replaying proof ParallelGcd[ParallelGcd::parallelGcd(int,int,[Z)].JML behavior operation contract.0
+[07:16:58.491] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Loading environment from /tmp/proof15515734839018339970.proof
+[07:16:58.493] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Creating init config
+[07:17:03.517] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Replaying proof ParallelGcd[ParallelGcd::parallelGcd(int,int,[Z)].JML behavior operation contract.0
+reapplying 0 One Step Simplification on node 0
+reapplying 1 impRight on node 1
+reapplying 2 andLeft on node 2
+reapplying 3 andLeft on node 3
+reapplying 4 andLeft on node 4
+reapplying 5 andLeft on node 5
+reapplying 6 notLeft on node 6
+reapplying 7 andLeft on node 7
+reapplying 8 eqSymm on node 8
+reapplying 9 eqSymm on node 9
+reapplying 10 inEqSimp_ltToLeq on node 10
+reapplying 11 add_zero_right on node 11
+reapplying 12 polySimp_mulComm0 on node 12
+reapplying 13 assignment on node 13
+reapplying 14 One Step Simplification on node 14
+reapplying 15 inEqSimp_sepNegMonomial0 on node 15
+reapplying 16 polySimp_mulLiterals on node 16
+reapplying 17 polySimp_elimOne on node 17
+reapplying 18 methodBodyExpand on node 18
+reapplying 19 One Step Simplification on node 19
+reapplying 20 variableDeclaration on node 20
+reapplying 21 variableDeclaration on node 21
+reapplying 22 assignment on node 22
+reapplying 23 One Step Simplification on node 23
+reapplying 24 variableDeclaration on node 24
+reapplying 25 variableDeclaration on node 25
+reapplying 26 assignment on node 26
+reapplying 27 One Step Simplification on node 27
+reapplying 28 variableDeclaration on node 28
+reapplying 29 variableDeclaration on node 29
+reapplying 30 assignment on node 30
+reapplying 31 One Step Simplification on node 31
+reapplying 32 replace_known_right on node 32
+reapplying 33 One Step Simplification on node 33
+reapplying 34 Loop Invariant on node 34
+reapplying 35 One Step Simplification on node 35
+reapplying 38 Contract_axiom_for_gcd_in_ParallelGcd on node 38
+reapplying 39 One Step Simplification on node 39
+reapplying 40 leq_literals on node 40
+reapplying 41 One Step Simplification on node 41
+reapplying 42 andLeft on node 42
+reapplying 43 andLeft on node 43
+reapplying 49 eqSymm on node 44
+reapplying 50 eqSymm on node 45
+reapplying 51 eqSymm on node 46
+reapplying 52 eqSymm on node 47
+reapplying 54 replace_known_left on node 48
+reapplying 55 One Step Simplification on node 49
+reapplying 56 closeTrue on node 50
+reapplying 36 One Step Simplification on node 36
+reapplying 58 One Step Simplification on node 52
+reapplying 59 impRight on node 53
+reapplying 60 andLeft on node 54
+reapplying 61 andLeft on node 55
+reapplying 62 andLeft on node 56
+reapplying 63 andLeft on node 57
+reapplying 64 andLeft on node 58
+reapplying 65 boxToDiamond on node 59
+reapplying 66 notLeft on node 60
+reapplying 67 variableDeclaration on node 61
+reapplying 68 variableDeclaration on node 62
+reapplying 69 inequality comparison on node 63
+reapplying 70 One Step Simplification on node 64
+reapplying 71 eqSymm on node 65
+reapplying 72 methodCallEmpty on node 66
+reapplying 73 One Step Simplification on node 67
+reapplying 74 emptyModality on node 68
+reapplying 75 One Step Simplification on node 69
+reapplying 76 eqSymm on node 70
+reapplying 77 eqSymm on node 71
+reapplying 78 eqSymm on node 72
+reapplying 79 eqSymm on node 73
+reapplying 80 eqSymm on node 74
+reapplying 81 polySimp_elimSub on node 75
+reapplying 82 polySimp_elimSub on node 76
+reapplying 83 polySimp_elimSub on node 77
+reapplying 84 polySimp_elimSub on node 78
+reapplying 85 polySimp_elimSub on node 79
+reapplying 86 polySimp_elimSub on node 80
+reapplying 87 polySimp_addComm0 on node 81
+reapplying 88 polySimp_addComm0 on node 82
+reapplying 89 polySimp_addComm0 on node 83
+reapplying 90 polySimp_addComm0 on node 84
+reapplying 91 inEqSimp_commuteLeq on node 85
+reapplying 92 inEqSimp_commuteLeq on node 86
+reapplying 93 variableDeclaration on node 87
+reapplying 94 variableDeclaration on node 88
+reapplying 95 assignment on node 89
+reapplying 96 One Step Simplification on node 90
+reapplying 97 variableDeclaration on node 91
+reapplying 98 applyEq on node 92
+reapplying 99 applyEq on node 93
+reapplying 100 blockThrow on node 94
+reapplying 101 ifElseUnfold on node 95
+reapplying 102 variableDeclaration on node 96
+reapplying 103 inequality comparison on node 97
+reapplying 104 One Step Simplification on node 98
+reapplying 105 eqSymm on node 99
+reapplying 106 replace_known_right on node 100
+reapplying 107 One Step Simplification on node 101
+reapplying 108 ifElseSplit on node 102
+reapplying 109 One Step Simplification on node 103
+reapplying 113 ifElseUnfold on node 105
+reapplying 114 variableDeclaration on node 106
+reapplying 115 less_or_equal on node 107
+reapplying 116 variableDeclaration on node 108
+reapplying 117 variableDeclaration on node 109
+reapplying 118 assignment_read_length on node 110
+reapplying 119 One Step Simplification on node 111
+reapplying 123 less-or-equal than distinction on node 113
+reapplying 124 One Step Simplification on node 114
+reapplying 125 ifElseSplit on node 115
+reapplying 126 One Step Simplification on node 116
+reapplying 129 blockThrow on node 118
+reapplying 130 throwUnfold on node 119
+reapplying 131 variableDeclaration on node 120
+reapplying 132 variableDeclaration on node 121
+reapplying 135 methodCallThrow on node 122
+reapplying 136 tryCatchThrow on node 123
+reapplying 137 ifElseUnfold on node 124
+reapplying 138 variableDeclaration on node 125
+reapplying 139 equality comparison on node 126
+reapplying 140 instanceCreationAssignment on node 127
+reapplying 141 variableDeclaration on node 128
+reapplying 142 variableDeclaration on node 129
+reapplying 143 methodCall on node 130
+reapplying 144 variableDeclaration on node 131
+reapplying 145 methodBodyExpand on node 132
+reapplying 146 One Step Simplification on node 133
+reapplying 147 variableDeclaration on node 134
+reapplying 148 methodCall on node 135
+reapplying 149 variableDeclaration on node 136
+reapplying 150 allocateInstance on node 137
+reapplying 151 One Step Simplification on node 138
+reapplying 152 One Step Simplification on node 139
+reapplying 153 wellFormedAnon on node 140
+reapplying 154 andLeft on node 141
+reapplying 155 andLeft on node 142
+reapplying 156 notLeft on node 143
+reapplying 157 replace_known_left on node 144
+reapplying 158 One Step Simplification on node 145
+reapplying 159 notLeft on node 146
+reapplying 160 blockEmpty on node 147
+reapplying 161 assignment on node 148
+reapplying 162 One Step Simplification on node 149
+reapplying 163 selectCreatedOfAnonAsFormula on node 150
+reapplying 164 orRight on node 151
+reapplying 165 methodBodyExpand on node 152
+reapplying 166 One Step Simplification on node 153
+reapplying 167 assignmentThis on node 154
+reapplying 168 One Step Simplification on node 155
+reapplying 169 methodCall on node 156
+reapplying 170 methodBodyExpand on node 157
+reapplying 171 One Step Simplification on node 158
+reapplying 172 methodCallSuper on node 159
+reapplying 173 methodBodyExpand on node 160
+reapplying 174 One Step Simplification on node 161
+reapplying 175 methodCallSuper on node 162
+reapplying 176 methodBodyExpand on node 163
+reapplying 177 One Step Simplification on node 164
+reapplying 178 methodCallEmpty on node 165
+reapplying 179 blockEmpty on node 166
+reapplying 180 assignmentThis on node 167
+reapplying 181 One Step Simplification on node 168
+reapplying 182 assignmentThis on node 169
+reapplying 183 One Step Simplification on node 170
+reapplying 184 methodCallEmpty on node 171
+reapplying 185 methodCallEmpty on node 172
+reapplying 186 blockEmpty on node 173
+reapplying 187 methodCallReturn on node 174
+reapplying 188 methodCallReturn on node 175
+reapplying 189 assignment on node 176
+reapplying 190 One Step Simplification on node 177
+reapplying 191 methodCallEmpty on node 178
+reapplying 192 blockEmpty on node 179
+reapplying 193 assignment on node 180
+reapplying 194 One Step Simplification on node 181
+reapplying 195 methodBodyExpand on node 182
+reapplying 196 One Step Simplification on node 183
+reapplying 197 methodCallSuper on node 184
+reapplying 198 methodBodyExpand on node 185
+reapplying 199 One Step Simplification on node 186
+reapplying 200 methodCallSuper on node 187
+reapplying 201 methodBodyExpand on node 188
+reapplying 202 One Step Simplification on node 189
+reapplying 203 methodCallEmpty on node 190
+reapplying 204 blockEmpty on node 191
+reapplying 205 assignmentThis on node 192
+reapplying 206 One Step Simplification on node 193
+reapplying 207 assignmentThis on node 194
+reapplying 208 One Step Simplification on node 195
+reapplying 209 methodCallEmpty on node 196
+reapplying 210 methodCallEmpty on node 197
+reapplying 211 blockEmpty on node 198
+reapplying 212 assignment on node 199
+reapplying 213 One Step Simplification on node 200
+reapplying 217 assignment on node 202
+reapplying 218 One Step Simplification on node 203
+reapplying 219 tryCatchThrow on node 204
+reapplying 220 ifElseUnfold on node 205
+reapplying 221 variableDeclaration on node 206
+reapplying 222 equality comparison on node 207
+reapplying 223 One Step Simplification on node 208
+reapplying 224 replace_known_right on node 209
+reapplying 225 One Step Simplification on node 210
+reapplying 226 ifElseSplit on node 211
+reapplying 227 One Step Simplification on node 212
+reapplying 229 closeFalse on node 214
+reapplying 228 One Step Simplification on node 213
+reapplying 233 ifElseSplit on node 216
+reapplying 237 variableDeclaration on node 217
+reapplying 238 delete_unnecessary_cast on node 219
+reapplying 239 One Step Simplification on node 220
+reapplying 242 assignment on node 221
+reapplying 243 One Step Simplification on node 222
+reapplying 244 assignment on node 223
+reapplying 245 One Step Simplification on node 224
+reapplying 246 methodCallEmpty on node 225
+reapplying 247 emptyModality on node 226
+reapplying 248 One Step Simplification on node 227
+reapplying 249 replace_known_right on node 228
+reapplying 250 One Step Simplification on node 229
+reapplying 251 ifElseSplit on node 230
+reapplying 254 One Step Simplification on node 231
+reapplying 255 closeFalse on node 233
+reapplying 253 One Step Simplification on node 232
+reapplying 259 elim_double_block on node 235
+reapplying 260 ifElseSplit on node 236
+reapplying 264 variableDeclaration on node 237
+reapplying 265 delete_unnecessary_cast on node 239
+reapplying 266 One Step Simplification on node 240
+reapplying 269 assignment on node 241
+reapplying 270 One Step Simplification on node 242
+reapplying 271 emptyModality on node 243
+reapplying 272 andRight on node 244
+reapplying 273 andRight on node 245
+reapplying 275 impRight on node 247
+reapplying 278 One Step Simplification on node 249
+reapplying 280 closeFalse on node 250
+reapplying 276 impRight on node 248
+reapplying 284 orRight on node 252
+reapplying 287 One Step Simplification on node 253
+reapplying 288 closeTrue on node 254
+reapplying 274 One Step Simplification on node 246
+reapplying 292 allRight on node 256
+reapplying 293 allRight on node 257
+reapplying 294 orRight on node 258
+reapplying 295 eqSymm on node 259
+reapplying 334 pullOutSelect on node 260
+reapplying 335 simplifySelectOfStore on node 261
+reapplying 336 One Step Simplification on node 262
+reapplying 337 castDel on node 263
+reapplying 338 eqSymm on node 264
+reapplying 339 eqSymm on node 265
+reapplying 340 eqSymm on node 266
+reapplying 344 pullOutSelect on node 267
+reapplying 345 simplifySelectOfStore on node 268
+reapplying 346 One Step Simplification on node 269
+reapplying 347 castDel on node 270
+reapplying 348 eqSymm on node 271
+reapplying 349 eqSymm on node 272
+reapplying 350 pullOutSelect on node 273
+reapplying 351 simplifySelectOfStore on node 274
+reapplying 352 One Step Simplification on node 275
+reapplying 353 castDel on node 276
+reapplying 354 eqSymm on node 277
+reapplying 355 eqSymm on node 278
+reapplying 356 pullOutSelect on node 279
+reapplying 357 simplifySelectOfCreate on node 280
+reapplying 358 castDel on node 281
+reapplying 359 eqSymm on node 282
+reapplying 360 replace_known_right on node 283
+reapplying 361 One Step Simplification on node 284
+reapplying 362 pullOutSelect on node 285
+reapplying 363 simplifySelectOfAnon on node 286
+reapplying 364 One Step Simplification on node 287
+reapplying 365 applyEqReverse on node 288
+reapplying 367 commute_and on node 289
+reapplying 368 commute_and on node 290
+reapplying 369 commute_and on node 291
+reapplying 370 commute_and on node 292
+reapplying 372 cut_direct on node 293
+reapplying 376 applyEq on node 294
+reapplying 377 eqSymm on node 296
+reapplying 378 replace_known_right on node 297
+reapplying 379 One Step Simplification on node 298
+reapplying 380 applyEqReverse on node 299
+reapplying 382 applyEq on node 300
+reapplying 383 applyEq on node 301
+reapplying 384 eqSymm on node 302
+reapplying 385 replace_known_right on node 303
+reapplying 386 One Step Simplification on node 304
+reapplying 387 applyEqReverse on node 305
+reapplying 389 applyEq on node 306
+reapplying 390 eqSymm on node 307
+reapplying 391 replace_known_right on node 308
+reapplying 392 One Step Simplification on node 309
+reapplying 393 applyEqReverse on node 310
+reapplying 395 applyEq on node 311
+reapplying 396 applyEq on node 312
+reapplying 397 eqSymm on node 313
+reapplying 398 replace_known_right on node 314
+reapplying 399 One Step Simplification on node 315
+reapplying 400 closeFalse on node 316
+reapplying 374 One Step Simplification on node 295
+reapplying 402 notRight on node 318
+reapplying 406 ifthenelse_split on node 319
+reapplying 407 andLeft on node 320
+reapplying 422 applyEq on node 322
+reapplying 423 close on node 323
+reapplying 408 applyEqReverse on node 321
+reapplying 426 ifthenelse_split on node 325
+reapplying 427 andLeft on node 326
+reapplying 446 applyEq on node 328
+reapplying 447 close on node 329
+reapplying 428 applyEqReverse on node 327
+reapplying 450 ifthenelse_split on node 331
+reapplying 451 andLeft on node 332
+reapplying 475 applyEq on node 334
+reapplying 476 close on node 335
+reapplying 452 applyEqReverse on node 333
+reapplying 479 ifthenelse_split on node 337
+reapplying 480 andLeft on node 338
+reapplying 501 applyEq on node 340
+reapplying 502 close on node 341
+reapplying 481 close on node 339
+reapplying 262 One Step Simplification on node 238
+reapplying 505 closeFalse on node 344
+reapplying 235 One Step Simplification on node 218
+reapplying 507 closeFalse on node 346
+reapplying 214 One Step Simplification on node 201
+reapplying 509 closeFalse on node 348
+reapplying 127 One Step Simplification on node 117
+reapplying 511 One Step Simplification on node 350
+reapplying 512 notLeft on node 351
+reapplying 513 ifElseUnfold on node 352
+reapplying 514 variableDeclaration on node 353
+reapplying 515 assignment_array2 on node 354
+reapplying 516 One Step Simplification on node 355
+reapplying 520 pullOutSelect on node 358
+reapplying 521 simplifySelectOfAnon on node 359
+reapplying 522 One Step Simplification on node 360
+reapplying 523 applyEqReverse on node 361
+reapplying 525 ifElseSplit on node 362
+reapplying 526 One Step Simplification on node 363
+reapplying 529 ifElseUnfold on node 365
+reapplying 530 variableDeclaration on node 366
+reapplying 531 greater than distinction on node 367
+reapplying 532 One Step Simplification on node 368
+reapplying 533 ifElseSplit on node 369
+reapplying 534 One Step Simplification on node 370
+reapplying 536 One Step Simplification on node 372
+reapplying 537 elim_double_block on node 373
+reapplying 538 subtraction on node 374
+reapplying 539 One Step Simplification on node 375
+reapplying 540 translateJavaSub on node 376
+reapplying 541 polySimp_elimSub on node 377
+reapplying 542 blockEmpty on node 378
+reapplying 543 postincrement on node 379
+reapplying 544 cast on node 380
+reapplying 545 variableDeclaration on node 381
+reapplying 546 variableDeclaration on node 382
+reapplying 547 remove_parentheses_right on node 383
+reapplying 548 addition on node 384
+reapplying 549 One Step Simplification on node 385
+reapplying 550 translateJavaAdd on node 386
+reapplying 551 polySimp_addComm0 on node 387
+reapplying 552 cast on node 388
+reapplying 553 assignment on node 389
+reapplying 554 One Step Simplification on node 390
+reapplying 555 tryEmpty on node 391
+reapplying 556 methodCallEmpty on node 392
+reapplying 557 emptyModality on node 393
+reapplying 558 One Step Simplification on node 394
+reapplying 559 andRight on node 395
+reapplying 560 andRight on node 396
+reapplying 562 andRight on node 398
+reapplying 564 andRight on node 400
+reapplying 566 andRight on node 402
+reapplying 568 andRight on node 404
+reapplying 570 inEqSimp_geqRight on node 406
+reapplying 572 times_zero on node 408
+reapplying 573 add_zero_right on node 409
+reapplying 574 polySimp_addAssoc on node 410
+reapplying 575 add_literals on node 411
+reapplying 601 inEqSimp_sepPosMonomial0 on node 412
+reapplying 602 mul_literals on node 413
+reapplying 644 inEqSimp_contradInEq0 on node 414
+reapplying 645 qeq_literals on node 415
+reapplying 646 One Step Simplification on node 416
+reapplying 647 closeFalse on node 417
+reapplying 653 inEqSimp_ltRight on node 407
+reapplying 654 add_zero_right on node 419
+reapplying 655 polySimp_rightDist on node 420
+reapplying 656 polySimp_mulLiterals on node 421
+reapplying 657 polySimp_elimOne on node 422
+reapplying 658 polySimp_mulComm0 on node 423
+reapplying 659 inEqSimp_gtToGeq on node 424
+reapplying 660 polySimp_mulComm0 on node 425
+reapplying 661 polySimp_addComm1 on node 426
+reapplying 685 inEqSimp_sepPosMonomial1 on node 427
+reapplying 686 polySimp_mulLiterals on node 428
+reapplying 687 polySimp_elimOne on node 429
+reapplying 688 inEqSimp_sepNegMonomial1 on node 430
+reapplying 689 polySimp_mulLiterals on node 431
+reapplying 690 polySimp_elimOne on node 432
+reapplying 723 inEqSimp_contradInEq0 on node 433
+reapplying 724 andLeft on node 434
+reapplying 725 inEqSimp_homoInEq1 on node 435
+reapplying 726 polySimp_mulComm0 on node 436
+reapplying 727 polySimp_rightDist on node 437
+reapplying 728 mul_literals on node 438
+reapplying 729 polySimp_addAssoc on node 439
+reapplying 730 polySimp_addComm0 on node 440
+reapplying 731 polySimp_pullOutFactor1b on node 441
+reapplying 732 add_literals on node 442
+reapplying 733 times_zero on node 443
+reapplying 734 add_zero_right on node 444
+reapplying 735 leq_literals on node 445
+reapplying 736 closeFalse on node 446
+reapplying 569 replace_known_right on node 405
+reapplying 738 One Step Simplification on node 448
+reapplying 739 notLeft on node 449
+reapplying 745 inEqSimp_ltRight on node 450
+reapplying 746 polySimp_mulComm0 on node 451
+reapplying 756 inEqSimp_gtToGeq on node 452
+reapplying 757 polySimp_mulComm0 on node 453
+reapplying 758 polySimp_addComm1 on node 454
+reapplying 771 inEqSimp_sepPosMonomial1 on node 455
+reapplying 772 polySimp_mulLiterals on node 456
+reapplying 773 polySimp_elimOne on node 457
+reapplying 783 inEqSimp_sepNegMonomial1 on node 458
+reapplying 784 polySimp_mulLiterals on node 459
+reapplying 785 polySimp_elimOne on node 460
+reapplying 801 inEqSimp_contradInEq0 on node 461
+reapplying 802 andLeft on node 462
+reapplying 803 inEqSimp_homoInEq1 on node 463
+reapplying 804 polySimp_mulComm0 on node 464
+reapplying 805 polySimp_rightDist on node 465
+reapplying 806 mul_literals on node 466
+reapplying 807 polySimp_addAssoc on node 467
+reapplying 808 polySimp_addComm0 on node 468
+reapplying 809 polySimp_pullOutFactor1b on node 469
+reapplying 810 add_literals on node 470
+reapplying 811 times_zero on node 471
+reapplying 812 add_zero_right on node 472
+reapplying 813 leq_literals on node 473
+reapplying 814 closeFalse on node 474
+reapplying 567 impRight on node 403
+reapplying 816 Contract_axiom_for_gcd_in_ParallelGcd on node 476
+reapplying 817 One Step Simplification on node 477
+reapplying 818 wellFormedAnon on node 478
+reapplying 819 eqSymm on node 479
+reapplying 820 eqSymm on node 480
+reapplying 821 replace_known_left on node 481
+reapplying 822 One Step Simplification on node 482
+reapplying 823 polySimp_pullOutFactor0b on node 483
+reapplying 824 add_literals on node 484
+reapplying 825 polySimp_elimSub on node 485
+reapplying 826 polySimp_homoEq on node 486
+reapplying 827 polySimp_elimSub on node 487
+reapplying 828 polySimp_pullOutFactor0b on node 488
+reapplying 829 add_literals on node 489
+reapplying 830 replace_known_right on node 490
+reapplying 831 One Step Simplification on node 491
+reapplying 832 notLeft on node 492
+reapplying 845 inEqSimp_gtToGeq on node 493
+reapplying 846 polySimp_mulComm0 on node 494
+reapplying 847 polySimp_addComm1 on node 495
+reapplying 865 inEqSimp_ltRight on node 496
+reapplying 866 add_zero_right on node 497
+reapplying 867 polySimp_rightDist on node 498
+reapplying 868 polySimp_mulLiterals on node 499
+reapplying 869 polySimp_elimOne on node 500
+reapplying 870 polySimp_mulComm0 on node 501
+reapplying 883 inEqSimp_sepNegMonomial1 on node 502
+reapplying 884 polySimp_mulLiterals on node 503
+reapplying 885 polySimp_elimOne on node 504
+reapplying 910 inEqSimp_sepPosMonomial1 on node 505
+reapplying 911 polySimp_mulLiterals on node 506
+reapplying 912 polySimp_elimOne on node 507
+reapplying 922 inEqSimp_contradInEq1 on node 508
+reapplying 923 andLeft on node 509
+reapplying 924 inEqSimp_homoInEq1 on node 510
+reapplying 925 polySimp_mulComm0 on node 511
+reapplying 926 polySimp_rightDist on node 512
+reapplying 927 mul_literals on node 513
+reapplying 928 polySimp_addAssoc on node 514
+reapplying 929 polySimp_addComm0 on node 515
+reapplying 930 polySimp_pullOutFactor1b on node 516
+reapplying 931 add_literals on node 517
+reapplying 932 times_zero on node 518
+reapplying 933 add_zero_right on node 519
+reapplying 934 leq_literals on node 520
+reapplying 935 closeFalse on node 521
+reapplying 565 impRight on node 401
+reapplying 937 Contract_axiom_for_gcd_in_ParallelGcd on node 523
+reapplying 938 One Step Simplification on node 524
+reapplying 939 wellFormedAnon on node 525
+reapplying 940 eqSymm on node 526
+reapplying 941 eqSymm on node 527
+reapplying 942 replace_known_left on node 528
+reapplying 943 One Step Simplification on node 529
+reapplying 944 polySimp_homoEq on node 530
+reapplying 945 polySimp_elimSub on node 531
+reapplying 946 polySimp_elimSub on node 532
+reapplying 947 polySimp_pullOutFactor0b on node 533
+reapplying 948 add_literals on node 534
+reapplying 949 polySimp_mulComm0 on node 535
+reapplying 950 polySimp_mulComm0 on node 536
+reapplying 951 polySimp_mulComm0 on node 537
+reapplying 952 polySimp_rightDist on node 538
+reapplying 953 polySimp_mulLiterals on node 539
+reapplying 954 polySimp_elimOne on node 540
+reapplying 955 polySimp_pullOutFactor3b on node 541
+reapplying 956 polySimp_mulComm0 on node 542
+reapplying 957 polySimp_rightDist on node 543
+reapplying 958 polySimp_mulLiterals on node 544
+reapplying 959 polySimp_elimOne on node 545
+reapplying 960 polySimp_mulComm0 on node 546
+reapplying 961 polySimp_rightDist on node 547
+reapplying 962 polySimp_mulLiterals on node 548
+reapplying 963 polySimp_elimOne on node 549
+reapplying 964 polySimp_mulComm0 on node 550
+reapplying 970 polySimp_addAssoc on node 551
+reapplying 971 polySimp_addComm0 on node 552
+reapplying 972 polySimp_pullOutFactor3b on node 553
+reapplying 973 polySimp_addAssoc on node 554
+reapplying 974 polySimp_addComm0 on node 555
+reapplying 975 polySimp_pullOutFactor3b on node 556
+reapplying 976 replace_known_right on node 557
+reapplying 977 One Step Simplification on node 558
+reapplying 978 notLeft on node 559
+reapplying 998 inEqSimp_gtToGeq on node 560
+reapplying 999 polySimp_mulComm0 on node 561
+reapplying 1000 polySimp_addComm1 on node 562
+reapplying 1005 inEqSimp_ltRight on node 563
+reapplying 1006 add_zero_right on node 564
+reapplying 1007 polySimp_rightDist on node 565
+reapplying 1008 polySimp_mulLiterals on node 566
+reapplying 1009 polySimp_elimOne on node 567
+reapplying 1010 polySimp_mulComm0 on node 568
+reapplying 1038 inEqSimp_sepNegMonomial1 on node 569
+reapplying 1039 polySimp_mulLiterals on node 570
+reapplying 1040 polySimp_elimOne on node 571
+reapplying 1046 inEqSimp_sepPosMonomial1 on node 572
+reapplying 1047 polySimp_mulLiterals on node 573
+reapplying 1048 polySimp_elimOne on node 574
+reapplying 1058 inEqSimp_contradInEq0 on node 575
+reapplying 1059 andLeft on node 576
+reapplying 1060 inEqSimp_homoInEq1 on node 577
+reapplying 1061 polySimp_mulComm0 on node 578
+reapplying 1062 polySimp_rightDist on node 579
+reapplying 1063 mul_literals on node 580
+reapplying 1064 polySimp_addAssoc on node 581
+reapplying 1065 polySimp_addComm0 on node 582
+reapplying 1066 polySimp_pullOutFactor1b on node 583
+reapplying 1067 add_literals on node 584
+reapplying 1068 times_zero on node 585
+reapplying 1069 add_zero_right on node 586
+reapplying 1070 leq_literals on node 587
+reapplying 1071 closeFalse on node 588
+reapplying 563 allRight on node 399
+reapplying 1073 allRight on node 590
+reapplying 1074 orRight on node 591
+reapplying 1075 eqSymm on node 592
+reapplying 1157 pullOutSelect on node 593
+reapplying 1158 simplifySelectOfAnon on node 594
+reapplying 1159 One Step Simplification on node 595
+reapplying 1160 applyEqReverse on node 596
+reapplying 1161 One Step Simplification on node 597
+reapplying 1162 closeTrue on node 598
+reapplying 561 polySimp_mulComm0 on node 397
+reapplying 1164 polySimp_rightDist on node 600
+reapplying 1165 mul_literals on node 601
+reapplying 1166 precOfInt on node 602
+reapplying 1170 inEqSimp_leqRight on node 603
+reapplying 1171 polySimp_mulComm0 on node 604
+reapplying 1192 inEqSimp_ltToLeq on node 605
+reapplying 1193 polySimp_rightDist on node 606
+reapplying 1194 polySimp_mulAssoc on node 607
+reapplying 1195 polySimp_mulComm0 on node 608
+reapplying 1196 polySimp_mulLiterals on node 609
+reapplying 1197 polySimp_elimOne on node 610
+reapplying 1198 polySimp_addAssoc on node 611
+reapplying 1199 polySimp_addAssoc on node 612
+reapplying 1200 polySimp_addComm1 on node 613
+reapplying 1201 polySimp_pullOutFactor2b on node 614
+reapplying 1202 add_literals on node 615
+reapplying 1203 times_zero on node 616
+reapplying 1204 add_zero_right on node 617
+reapplying 1205 polySimp_addAssoc on node 618
+reapplying 1206 polySimp_addComm1 on node 619
+reapplying 1207 add_literals on node 620
+reapplying 1208 add_zero_left on node 621
+reapplying 1209 polySimp_pullOutFactor1 on node 622
+reapplying 1210 add_literals on node 623
+reapplying 1211 times_zero on node 624
+reapplying 1212 leq_literals on node 625
+reapplying 1213 One Step Simplification on node 626
+reapplying 1214 inEqSimp_leqRight on node 627
+reapplying 1215 add_zero_right on node 628
+reapplying 1216 polySimp_rightDist on node 629
+reapplying 1217 polySimp_rightDist on node 630
+reapplying 1218 mul_literals on node 631
+reapplying 1219 polySimp_mulLiterals on node 632
+reapplying 1220 polySimp_elimOne on node 633
+reapplying 1221 polySimp_addAssoc on node 634
+reapplying 1222 polySimp_addAssoc on node 635
+reapplying 1223 add_literals on node 636
+reapplying 1224 add_zero_left on node 637
+reapplying 1225 inEqSimp_sepPosMonomial1 on node 638
+reapplying 1226 polySimp_mulComm0 on node 639
+reapplying 1227 polySimp_rightDist on node 640
+reapplying 1228 mul_literals on node 641
+reapplying 1229 polySimp_mulLiterals on node 642
+reapplying 1230 polySimp_elimOne on node 643
+reapplying 1257 inEqSimp_sepNegMonomial1 on node 644
+reapplying 1258 polySimp_mulLiterals on node 645
+reapplying 1259 polySimp_elimOne on node 646
+reapplying 1269 inEqSimp_contradInEq0 on node 647
+reapplying 1270 andLeft on node 648
+reapplying 1271 inEqSimp_homoInEq1 on node 649
+reapplying 1272 polySimp_pullOutFactor1b on node 650
+reapplying 1273 add_literals on node 651
+reapplying 1274 times_zero on node 652
+reapplying 1275 add_zero_right on node 653
+reapplying 1276 leq_literals on node 654
+reapplying 1277 closeFalse on node 655
+reapplying 535 One Step Simplification on node 371
+reapplying 1281 blockEmpty on node 657
+reapplying 1282 postincrement on node 658
+reapplying 1283 cast on node 659
+reapplying 1284 variableDeclaration on node 660
+reapplying 1285 variableDeclaration on node 661
+reapplying 1286 remove_parentheses_right on node 662
+reapplying 1287 addition on node 663
+reapplying 1288 One Step Simplification on node 664
+reapplying 1289 translateJavaAdd on node 665
+reapplying 1290 polySimp_addComm0 on node 666
+reapplying 1291 cast on node 667
+reapplying 1292 assignment on node 668
+reapplying 1293 One Step Simplification on node 669
+reapplying 1294 tryEmpty on node 670
+reapplying 1295 methodCallEmpty on node 671
+reapplying 1296 emptyModality on node 672
+reapplying 1297 One Step Simplification on node 673
+reapplying 1298 andRight on node 674
+reapplying 1299 andRight on node 675
+reapplying 1301 andRight on node 677
+reapplying 1303 andRight on node 679
+reapplying 1309 inEqSimp_geqRight on node 681
+reapplying 1310 times_zero on node 683
+reapplying 1311 add_zero_right on node 684
+reapplying 1312 polySimp_addAssoc on node 685
+reapplying 1313 add_literals on node 686
+reapplying 1336 inEqSimp_sepPosMonomial0 on node 687
+reapplying 1337 mul_literals on node 688
+reapplying 1380 inEqSimp_contradInEq1 on node 689
+reapplying 1381 qeq_literals on node 690
+reapplying 1382 One Step Simplification on node 691
+reapplying 1383 closeFalse on node 692
+reapplying 1306 impRight on node 682
+reapplying 1385 replace_known_left on node 694
+reapplying 1386 One Step Simplification on node 695
+reapplying 1412 applyEq on node 696
+reapplying 1413 eqSymm on node 697
+reapplying 1414 close on node 698
+reapplying 1304 impRight on node 680
+reapplying 1416 replace_known_left on node 700
+reapplying 1417 One Step Simplification on node 701
+reapplying 1443 applyEq on node 702
+reapplying 1444 eqSymm on node 703
+reapplying 1445 close on node 704
+reapplying 1302 allRight on node 678
+reapplying 1447 allRight on node 706
+reapplying 1448 orRight on node 707
+reapplying 1449 eqSymm on node 708
+reapplying 1532 pullOutSelect on node 709
+reapplying 1533 simplifySelectOfAnon on node 710
+reapplying 1534 One Step Simplification on node 711
+reapplying 1535 applyEqReverse on node 712
+reapplying 1536 One Step Simplification on node 713
+reapplying 1537 closeTrue on node 714
+reapplying 1300 polySimp_mulComm0 on node 676
+reapplying 1539 polySimp_rightDist on node 716
+reapplying 1540 mul_literals on node 717
+reapplying 1541 precOfInt on node 718
+reapplying 1542 inEqSimp_leqRight on node 719
+reapplying 1543 polySimp_mulComm0 on node 720
+reapplying 1567 inEqSimp_ltToLeq on node 721
+reapplying 1568 polySimp_rightDist on node 722
+reapplying 1569 polySimp_mulAssoc on node 723
+reapplying 1570 polySimp_mulComm0 on node 724
+reapplying 1571 polySimp_mulLiterals on node 725
+reapplying 1572 polySimp_elimOne on node 726
+reapplying 1573 polySimp_addAssoc on node 727
+reapplying 1574 polySimp_addAssoc on node 728
+reapplying 1575 polySimp_addComm1 on node 729
+reapplying 1576 polySimp_pullOutFactor2b on node 730
+reapplying 1577 add_literals on node 731
+reapplying 1578 times_zero on node 732
+reapplying 1579 add_zero_right on node 733
+reapplying 1580 polySimp_addAssoc on node 734
+reapplying 1581 polySimp_addComm1 on node 735
+reapplying 1582 add_literals on node 736
+reapplying 1583 add_zero_left on node 737
+reapplying 1584 polySimp_pullOutFactor1 on node 738
+reapplying 1585 add_literals on node 739
+reapplying 1586 times_zero on node 740
+reapplying 1587 leq_literals on node 741
+reapplying 1588 One Step Simplification on node 742
+reapplying 1589 inEqSimp_leqRight on node 743
+reapplying 1590 add_zero_right on node 744
+reapplying 1591 polySimp_rightDist on node 745
+reapplying 1592 polySimp_rightDist on node 746
+reapplying 1593 mul_literals on node 747
+reapplying 1594 polySimp_mulLiterals on node 748
+reapplying 1595 polySimp_elimOne on node 749
+reapplying 1596 polySimp_addAssoc on node 750
+reapplying 1597 polySimp_addAssoc on node 751
+reapplying 1598 add_literals on node 752
+reapplying 1599 add_zero_left on node 753
+reapplying 1600 inEqSimp_sepPosMonomial1 on node 754
+reapplying 1601 polySimp_mulComm0 on node 755
+reapplying 1602 polySimp_rightDist on node 756
+reapplying 1603 mul_literals on node 757
+reapplying 1604 polySimp_mulLiterals on node 758
+reapplying 1605 polySimp_elimOne on node 759
+reapplying 1630 inEqSimp_sepNegMonomial1 on node 760
+reapplying 1631 polySimp_mulLiterals on node 761
+reapplying 1632 polySimp_elimOne on node 762
+reapplying 1645 inEqSimp_contradInEq0 on node 763
+reapplying 1646 andLeft on node 764
+reapplying 1647 inEqSimp_homoInEq1 on node 765
+reapplying 1648 polySimp_pullOutFactor1b on node 766
+reapplying 1649 add_literals on node 767
+reapplying 1650 times_zero on node 768
+reapplying 1651 add_zero_right on node 769
+reapplying 1652 leq_literals on node 770
+reapplying 1653 closeFalse on node 771
+reapplying 527 One Step Simplification on node 364
+reapplying 1657 elim_double_block on node 773
+reapplying 1658 ifElseUnfold on node 774
+reapplying 1659 variableDeclaration on node 775
+reapplying 1660 greater than distinction on node 776
+reapplying 1661 One Step Simplification on node 777
+reapplying 1662 ifElseSplit on node 778
+reapplying 1663 One Step Simplification on node 779
+reapplying 1665 One Step Simplification on node 781
+reapplying 1666 elim_double_block on node 782
+reapplying 1667 subtraction on node 783
+reapplying 1668 One Step Simplification on node 784
+reapplying 1669 translateJavaSub on node 785
+reapplying 1670 polySimp_elimSub on node 786
+reapplying 1671 polySimp_addComm0 on node 787
+reapplying 1672 blockEmpty on node 788
+reapplying 1673 postincrement on node 789
+reapplying 1674 cast on node 790
+reapplying 1675 variableDeclaration on node 791
+reapplying 1676 variableDeclaration on node 792
+reapplying 1677 remove_parentheses_right on node 793
+reapplying 1678 addition on node 794
+reapplying 1679 One Step Simplification on node 795
+reapplying 1680 translateJavaAdd on node 796
+reapplying 1681 polySimp_addComm0 on node 797
+reapplying 1682 cast on node 798
+reapplying 1683 assignment on node 799
+reapplying 1684 One Step Simplification on node 800
+reapplying 1685 tryEmpty on node 801
+reapplying 1686 methodCallEmpty on node 802
+reapplying 1687 emptyModality on node 803
+reapplying 1688 One Step Simplification on node 804
+reapplying 1689 andRight on node 805
+reapplying 1690 andRight on node 806
+reapplying 1692 andRight on node 808
+reapplying 1694 andRight on node 810
+reapplying 1696 andRight on node 812
+reapplying 1698 andRight on node 814
+reapplying 1700 inEqSimp_geqRight on node 816
+reapplying 1702 times_zero on node 818
+reapplying 1703 add_zero_right on node 819
+reapplying 1704 polySimp_addAssoc on node 820
+reapplying 1705 add_literals on node 821
+reapplying 1730 inEqSimp_sepPosMonomial0 on node 822
+reapplying 1731 mul_literals on node 823
+reapplying 1776 inEqSimp_contradInEq0 on node 824
+reapplying 1777 qeq_literals on node 825
+reapplying 1778 One Step Simplification on node 826
+reapplying 1779 closeFalse on node 827
+reapplying 1783 inEqSimp_ltRight on node 817
+reapplying 1784 add_zero_right on node 829
+reapplying 1785 polySimp_rightDist on node 830
+reapplying 1786 polySimp_mulAssoc on node 831
+reapplying 1787 polySimp_mulComm0 on node 832
+reapplying 1788 polySimp_mulLiterals on node 833
+reapplying 1789 polySimp_elimOne on node 834
+reapplying 1807 inEqSimp_gtToGeq on node 835
+reapplying 1808 polySimp_mulComm0 on node 836
+reapplying 1811 inEqSimp_sepNegMonomial1 on node 837
+reapplying 1812 polySimp_mulLiterals on node 838
+reapplying 1813 polySimp_elimOne on node 839
+reapplying 1835 inEqSimp_sepPosMonomial1 on node 840
+reapplying 1836 polySimp_mulComm0 on node 841
+reapplying 1837 polySimp_rightDist on node 842
+reapplying 1838 polySimp_mulLiterals on node 843
+reapplying 1839 mul_literals on node 844
+reapplying 1840 polySimp_elimOne on node 845
+reapplying 1873 inEqSimp_contradInEq1 on node 846
+reapplying 1874 andLeft on node 847
+reapplying 1875 inEqSimp_homoInEq1 on node 848
+reapplying 1876 polySimp_pullOutFactor1b on node 849
+reapplying 1877 add_literals on node 850
+reapplying 1878 times_zero on node 851
+reapplying 1879 add_zero_right on node 852
+reapplying 1880 leq_literals on node 853
+reapplying 1881 closeFalse on node 854
+reapplying 1699 replace_known_right on node 815
+reapplying 1883 One Step Simplification on node 856
+reapplying 1884 notLeft on node 857
+reapplying 1890 inEqSimp_ltRight on node 858
+reapplying 1891 polySimp_mulComm0 on node 859
+reapplying 1892 polySimp_addComm0 on node 860
+reapplying 1907 inEqSimp_gtToGeq on node 861
+reapplying 1908 polySimp_mulComm0 on node 862
+reapplying 1915 inEqSimp_sepNegMonomial1 on node 863
+reapplying 1916 polySimp_mulLiterals on node 864
+reapplying 1917 polySimp_elimOne on node 865
+reapplying 1936 inEqSimp_sepPosMonomial1 on node 866
+reapplying 1937 polySimp_mulComm0 on node 867
+reapplying 1938 polySimp_rightDist on node 868
+reapplying 1939 mul_literals on node 869
+reapplying 1940 polySimp_mulLiterals on node 870
+reapplying 1941 polySimp_elimOne on node 871
+reapplying 1951 inEqSimp_contradInEq1 on node 872
+reapplying 1952 andLeft on node 873
+reapplying 1953 inEqSimp_homoInEq1 on node 874
+reapplying 1954 polySimp_pullOutFactor1b on node 875
+reapplying 1955 add_literals on node 876
+reapplying 1956 times_zero on node 877
+reapplying 1957 add_zero_right on node 878
+reapplying 1958 leq_literals on node 879
+reapplying 1959 closeFalse on node 880
+reapplying 1697 impRight on node 813
+reapplying 1961 Contract_axiom_for_gcd_in_ParallelGcd on node 882
+reapplying 1962 One Step Simplification on node 883
+reapplying 1963 wellFormedAnon on node 884
+reapplying 1964 eqSymm on node 885
+reapplying 1965 eqSymm on node 886
+reapplying 1966 replace_known_left on node 887
+reapplying 1967 One Step Simplification on node 888
+reapplying 1968 polySimp_elimSub on node 889
+reapplying 1969 polySimp_homoEq on node 890
+reapplying 1970 polySimp_elimSub on node 891
+reapplying 1971 replace_known_right on node 892
+reapplying 1972 One Step Simplification on node 893
+reapplying 1973 notLeft on node 894
+reapplying 1989 inEqSimp_gtToGeq on node 895
+reapplying 1990 polySimp_mulComm0 on node 896
+reapplying 2011 inEqSimp_ltRight on node 897
+reapplying 2012 add_zero_right on node 898
+reapplying 2013 polySimp_rightDist on node 899
+reapplying 2014 polySimp_mulAssoc on node 900
+reapplying 2015 polySimp_mulComm0 on node 901
+reapplying 2016 polySimp_mulLiterals on node 902
+reapplying 2017 polySimp_elimOne on node 903
+reapplying 2030 inEqSimp_sepPosMonomial1 on node 904
+reapplying 2031 polySimp_mulComm0 on node 905
+reapplying 2032 polySimp_rightDist on node 906
+reapplying 2033 mul_literals on node 907
+reapplying 2034 polySimp_mulLiterals on node 908
+reapplying 2035 polySimp_elimOne on node 909
+reapplying 2059 inEqSimp_sepNegMonomial1 on node 910
+reapplying 2060 polySimp_mulLiterals on node 911
+reapplying 2061 polySimp_elimOne on node 912
+reapplying 2071 inEqSimp_contradInEq0 on node 913
+reapplying 2072 andLeft on node 914
+reapplying 2073 inEqSimp_homoInEq1 on node 915
+reapplying 2074 polySimp_pullOutFactor1b on node 916
+reapplying 2075 add_literals on node 917
+reapplying 2076 times_zero on node 918
+reapplying 2077 add_zero_right on node 919
+reapplying 2078 leq_literals on node 920
+reapplying 2079 closeFalse on node 921
+reapplying 1695 impRight on node 811
+reapplying 2081 Contract_axiom_for_gcd_in_ParallelGcd on node 923
+reapplying 2082 One Step Simplification on node 924
+reapplying 2083 wellFormedAnon on node 925
+reapplying 2084 eqSymm on node 926
+reapplying 2085 eqSymm on node 927
+reapplying 2086 replace_known_left on node 928
+reapplying 2087 One Step Simplification on node 929
+reapplying 2088 polySimp_homoEq on node 930
+reapplying 2089 polySimp_elimSub on node 931
+reapplying 2090 polySimp_elimSub on node 932
+reapplying 2091 polySimp_mulComm0 on node 933
+reapplying 2092 polySimp_addComm1 on node 934
+reapplying 2093 polySimp_pullOutFactor0 on node 935
+reapplying 2094 add_literals on node 936
+reapplying 2095 polySimp_addComm1 on node 937
+reapplying 2096 polySimp_pullOutFactor0 on node 938
+reapplying 2097 add_literals on node 939
+reapplying 2098 polySimp_rightDist on node 940
+reapplying 2099 polySimp_mulAssoc on node 941
+reapplying 2100 polySimp_mulComm0 on node 942
+reapplying 2101 polySimp_mulLiterals on node 943
+reapplying 2102 polySimp_elimOne on node 944
+reapplying 2103 polySimp_addAssoc on node 945
+reapplying 2104 polySimp_pullOutFactor0 on node 946
+reapplying 2105 add_literals on node 947
+reapplying 2106 replace_known_right on node 948
+reapplying 2107 One Step Simplification on node 949
+reapplying 2108 notLeft on node 950
+reapplying 2120 inEqSimp_gtToGeq on node 951
+reapplying 2121 polySimp_mulComm0 on node 952
+reapplying 2142 inEqSimp_ltRight on node 953
+reapplying 2143 add_zero_right on node 954
+reapplying 2144 polySimp_rightDist on node 955
+reapplying 2145 polySimp_mulAssoc on node 956
+reapplying 2146 polySimp_mulComm0 on node 957
+reapplying 2147 polySimp_mulLiterals on node 958
+reapplying 2148 polySimp_elimOne on node 959
+reapplying 2155 inEqSimp_sepPosMonomial1 on node 960
+reapplying 2156 polySimp_mulComm0 on node 961
+reapplying 2157 polySimp_rightDist on node 962
+reapplying 2158 mul_literals on node 963
+reapplying 2159 polySimp_mulLiterals on node 964
+reapplying 2160 polySimp_elimOne on node 965
+reapplying 2188 inEqSimp_sepNegMonomial1 on node 966
+reapplying 2189 polySimp_mulLiterals on node 967
+reapplying 2190 polySimp_elimOne on node 968
+reapplying 2215 inEqSimp_contradInEq0 on node 969
+reapplying 2216 andLeft on node 970
+reapplying 2217 inEqSimp_homoInEq1 on node 971
+reapplying 2218 polySimp_pullOutFactor1b on node 972
+reapplying 2219 add_literals on node 973
+reapplying 2220 times_zero on node 974
+reapplying 2221 add_zero_right on node 975
+reapplying 2222 leq_literals on node 976
+reapplying 2223 closeFalse on node 977
+reapplying 1693 allRight on node 809
+reapplying 2225 allRight on node 979
+reapplying 2226 orRight on node 980
+reapplying 2227 eqSymm on node 981
+reapplying 2311 pullOutSelect on node 982
+reapplying 2312 simplifySelectOfAnon on node 983
+reapplying 2313 One Step Simplification on node 984
+reapplying 2314 applyEqReverse on node 985
+reapplying 2315 One Step Simplification on node 986
+reapplying 2316 closeTrue on node 987
+reapplying 1691 polySimp_mulComm0 on node 807
+reapplying 2318 polySimp_rightDist on node 989
+reapplying 2319 mul_literals on node 990
+reapplying 2320 precOfInt on node 991
+reapplying 2324 inEqSimp_leqRight on node 992
+reapplying 2325 polySimp_mulComm0 on node 993
+reapplying 2345 inEqSimp_ltToLeq on node 994
+reapplying 2346 polySimp_rightDist on node 995
+reapplying 2347 polySimp_mulAssoc on node 996
+reapplying 2348 polySimp_mulComm0 on node 997
+reapplying 2349 polySimp_mulLiterals on node 998
+reapplying 2350 polySimp_elimOne on node 999
+reapplying 2351 polySimp_addAssoc on node 1000
+reapplying 2352 polySimp_addAssoc on node 1001
+reapplying 2353 polySimp_addComm1 on node 1002
+reapplying 2354 polySimp_pullOutFactor2b on node 1003
+reapplying 2355 add_literals on node 1004
+reapplying 2356 times_zero on node 1005
+reapplying 2357 add_zero_right on node 1006
+reapplying 2358 polySimp_addAssoc on node 1007
+reapplying 2359 polySimp_addComm1 on node 1008
+reapplying 2360 add_literals on node 1009
+reapplying 2361 add_zero_left on node 1010
+reapplying 2362 polySimp_pullOutFactor1 on node 1011
+reapplying 2363 add_literals on node 1012
+reapplying 2364 times_zero on node 1013
+reapplying 2365 leq_literals on node 1014
+reapplying 2366 One Step Simplification on node 1015
+reapplying 2367 inEqSimp_leqRight on node 1016
+reapplying 2368 add_zero_right on node 1017
+reapplying 2369 polySimp_rightDist on node 1018
+reapplying 2370 polySimp_rightDist on node 1019
+reapplying 2371 mul_literals on node 1020
+reapplying 2372 polySimp_mulLiterals on node 1021
+reapplying 2373 polySimp_elimOne on node 1022
+reapplying 2374 polySimp_addAssoc on node 1023
+reapplying 2375 polySimp_addAssoc on node 1024
+reapplying 2376 add_literals on node 1025
+reapplying 2377 add_zero_left on node 1026
+reapplying 2378 inEqSimp_sepPosMonomial1 on node 1027
+reapplying 2379 polySimp_mulComm0 on node 1028
+reapplying 2380 polySimp_rightDist on node 1029
+reapplying 2381 mul_literals on node 1030
+reapplying 2382 polySimp_mulLiterals on node 1031
+reapplying 2383 polySimp_elimOne on node 1032
+reapplying 2413 inEqSimp_sepNegMonomial1 on node 1033
+reapplying 2414 polySimp_mulLiterals on node 1034
+reapplying 2415 polySimp_elimOne on node 1035
+reapplying 2425 inEqSimp_contradInEq1 on node 1036
+reapplying 2426 andLeft on node 1037
+reapplying 2427 inEqSimp_homoInEq1 on node 1038
+reapplying 2428 polySimp_pullOutFactor1b on node 1039
+reapplying 2429 add_literals on node 1040
+reapplying 2430 times_zero on node 1041
+reapplying 2431 add_zero_right on node 1042
+reapplying 2432 leq_literals on node 1043
+reapplying 2433 closeFalse on node 1044
+reapplying 1664 One Step Simplification on node 780
+reapplying 2437 blockEmpty on node 1046
+reapplying 2438 postincrement on node 1047
+reapplying 2439 cast on node 1048
+reapplying 2440 variableDeclaration on node 1049
+reapplying 2441 variableDeclaration on node 1050
+reapplying 2442 remove_parentheses_right on node 1051
+reapplying 2443 addition on node 1052
+reapplying 2444 One Step Simplification on node 1053
+reapplying 2445 translateJavaAdd on node 1054
+reapplying 2446 polySimp_addComm0 on node 1055
+reapplying 2447 cast on node 1056
+reapplying 2448 assignment on node 1057
+reapplying 2449 One Step Simplification on node 1058
+reapplying 2450 tryEmpty on node 1059
+reapplying 2451 methodCallEmpty on node 1060
+reapplying 2452 emptyModality on node 1061
+reapplying 2453 One Step Simplification on node 1062
+reapplying 2454 andRight on node 1063
+reapplying 2455 andRight on node 1064
+reapplying 2457 andRight on node 1066
+reapplying 2459 andRight on node 1068
+reapplying 2461 inEqSimp_geqRight on node 1070
+reapplying 2463 times_zero on node 1072
+reapplying 2464 add_zero_right on node 1073
+reapplying 2465 polySimp_addAssoc on node 1074
+reapplying 2466 add_literals on node 1075
+reapplying 2491 inEqSimp_sepPosMonomial0 on node 1076
+reapplying 2492 mul_literals on node 1077
+reapplying 2535 inEqSimp_contradInEq1 on node 1078
+reapplying 2536 qeq_literals on node 1079
+reapplying 2537 One Step Simplification on node 1080
+reapplying 2538 closeFalse on node 1081
+reapplying 2462 impRight on node 1071
+reapplying 2540 replace_known_left on node 1083
+reapplying 2541 One Step Simplification on node 1084
+reapplying 2566 applyEq on node 1085
+reapplying 2567 eqSymm on node 1086
+reapplying 2568 close on node 1087
+reapplying 2460 impRight on node 1069
+reapplying 2570 replace_known_left on node 1089
+reapplying 2571 One Step Simplification on node 1090
+reapplying 2596 applyEq on node 1091
+reapplying 2597 eqSymm on node 1092
+reapplying 2598 close on node 1093
+reapplying 2458 allRight on node 1067
+reapplying 2600 allRight on node 1095
+reapplying 2601 orRight on node 1096
+reapplying 2602 eqSymm on node 1097
+reapplying 2684 pullOutSelect on node 1098
+reapplying 2685 simplifySelectOfAnon on node 1099
+reapplying 2686 One Step Simplification on node 1100
+reapplying 2687 applyEqReverse on node 1101
+reapplying 2688 One Step Simplification on node 1102
+reapplying 2689 closeTrue on node 1103
+reapplying 2456 polySimp_mulComm0 on node 1065
+reapplying 2691 polySimp_rightDist on node 1105
+reapplying 2692 mul_literals on node 1106
+reapplying 2693 precOfInt on node 1107
+reapplying 2694 inEqSimp_leqRight on node 1108
+reapplying 2695 polySimp_mulComm0 on node 1109
+reapplying 2718 inEqSimp_ltToLeq on node 1110
+reapplying 2719 polySimp_rightDist on node 1111
+reapplying 2720 polySimp_mulAssoc on node 1112
+reapplying 2721 polySimp_mulComm0 on node 1113
+reapplying 2722 polySimp_mulLiterals on node 1114
+reapplying 2723 polySimp_elimOne on node 1115
+reapplying 2724 polySimp_addAssoc on node 1116
+reapplying 2725 polySimp_addAssoc on node 1117
+reapplying 2726 polySimp_addComm1 on node 1118
+reapplying 2727 polySimp_pullOutFactor2b on node 1119
+reapplying 2728 add_literals on node 1120
+reapplying 2729 times_zero on node 1121
+reapplying 2730 add_zero_right on node 1122
+reapplying 2731 polySimp_addAssoc on node 1123
+reapplying 2732 polySimp_addComm1 on node 1124
+reapplying 2733 add_literals on node 1125
+reapplying 2734 add_zero_left on node 1126
+reapplying 2735 polySimp_pullOutFactor1 on node 1127
+reapplying 2736 add_literals on node 1128
+reapplying 2737 times_zero on node 1129
+reapplying 2738 leq_literals on node 1130
+reapplying 2739 One Step Simplification on node 1131
+reapplying 2740 inEqSimp_leqRight on node 1132
+reapplying 2741 add_zero_right on node 1133
+reapplying 2742 polySimp_rightDist on node 1134
+reapplying 2743 polySimp_rightDist on node 1135
+reapplying 2744 mul_literals on node 1136
+reapplying 2745 polySimp_mulLiterals on node 1137
+reapplying 2746 polySimp_elimOne on node 1138
+reapplying 2747 polySimp_addAssoc on node 1139
+reapplying 2748 polySimp_addAssoc on node 1140
+reapplying 2749 add_literals on node 1141
+reapplying 2750 add_zero_left on node 1142
+reapplying 2751 inEqSimp_sepPosMonomial1 on node 1143
+reapplying 2752 polySimp_mulComm0 on node 1144
+reapplying 2753 polySimp_rightDist on node 1145
+reapplying 2754 mul_literals on node 1146
+reapplying 2755 polySimp_mulLiterals on node 1147
+reapplying 2756 polySimp_elimOne on node 1148
+reapplying 2781 inEqSimp_sepNegMonomial1 on node 1149
+reapplying 2782 polySimp_mulLiterals on node 1150
+reapplying 2783 polySimp_elimOne on node 1151
+reapplying 2796 inEqSimp_contradInEq0 on node 1152
+reapplying 2797 andLeft on node 1153
+reapplying 2798 inEqSimp_homoInEq1 on node 1154
+reapplying 2799 polySimp_pullOutFactor1b on node 1155
+reapplying 2800 add_literals on node 1156
+reapplying 2801 times_zero on node 1157
+reapplying 2802 add_zero_right on node 1158
+reapplying 2803 leq_literals on node 1159
+reapplying 2804 closeFalse on node 1160
+reapplying 517 One Step Simplification on node 356
+reapplying 2806 closeFalse on node 1162
+reapplying 518 One Step Simplification on node 357
+reapplying 2810 methodCallThrow on node 1164
+reapplying 2811 tryCatchThrow on node 1165
+reapplying 2812 ifElseUnfold on node 1166
+reapplying 2813 variableDeclaration on node 1167
+reapplying 2814 equality comparison on node 1168
+reapplying 2815 throwUnfold on node 1169
+reapplying 2816 variableDeclaration on node 1170
+reapplying 2817 variableDeclaration on node 1171
+reapplying 2818 instanceCreationAssignment on node 1172
+reapplying 2819 variableDeclaration on node 1173
+reapplying 2820 variableDeclaration on node 1174
+reapplying 2821 methodCall on node 1175
+reapplying 2822 variableDeclaration on node 1176
+reapplying 2823 methodBodyExpand on node 1177
+reapplying 2824 One Step Simplification on node 1178
+reapplying 2825 variableDeclaration on node 1179
+reapplying 2826 methodCall on node 1180
+reapplying 2827 variableDeclaration on node 1181
+reapplying 2828 allocateInstance on node 1182
+reapplying 2829 One Step Simplification on node 1183
+reapplying 2830 One Step Simplification on node 1184
+reapplying 2831 wellFormedAnon on node 1185
+reapplying 2832 andLeft on node 1186
+reapplying 2833 andLeft on node 1187
+reapplying 2834 notLeft on node 1188
+reapplying 2838 blockEmpty on node 1189
+reapplying 2839 assignment on node 1190
+reapplying 2840 One Step Simplification on node 1191
+reapplying 2843 methodBodyExpand on node 1192
+reapplying 2844 One Step Simplification on node 1193
+reapplying 2845 assignmentThis on node 1194
+reapplying 2846 One Step Simplification on node 1195
+reapplying 2847 methodCall on node 1196
+reapplying 2848 methodBodyExpand on node 1197
+reapplying 2849 One Step Simplification on node 1198
+reapplying 2850 methodCallSuper on node 1199
+reapplying 2851 methodBodyExpand on node 1200
+reapplying 2852 One Step Simplification on node 1201
+reapplying 2853 methodCallSuper on node 1202
+reapplying 2854 methodBodyExpand on node 1203
+reapplying 2855 One Step Simplification on node 1204
+reapplying 2856 methodCallSuper on node 1205
+reapplying 2857 methodBodyExpand on node 1206
+reapplying 2858 One Step Simplification on node 1207
+reapplying 2859 methodCallSuper on node 1208
+reapplying 2860 methodBodyExpand on node 1209
+reapplying 2861 One Step Simplification on node 1210
+reapplying 2862 methodCallSuper on node 1211
+reapplying 2863 methodBodyExpand on node 1212
+reapplying 2864 One Step Simplification on node 1213
+reapplying 2865 methodCallEmpty on node 1214
+reapplying 2866 blockEmpty on node 1215
+reapplying 2867 assignmentThis on node 1216
+reapplying 2868 One Step Simplification on node 1217
+reapplying 2869 assignmentThis on node 1218
+reapplying 2870 One Step Simplification on node 1219
+reapplying 2871 methodCallEmpty on node 1220
+reapplying 2872 methodCallEmpty on node 1221
+reapplying 2873 methodCallEmpty on node 1222
+reapplying 2874 methodCallEmpty on node 1223
+reapplying 2875 methodCallEmpty on node 1224
+reapplying 2876 blockEmpty on node 1225
+reapplying 2877 methodCallReturn on node 1226
+reapplying 2878 methodCallReturn on node 1227
+reapplying 2879 assignment on node 1228
+reapplying 2880 One Step Simplification on node 1229
+reapplying 2881 methodCallEmpty on node 1230
+reapplying 2882 blockEmpty on node 1231
+reapplying 2883 assignment on node 1232
+reapplying 2884 One Step Simplification on node 1233
+reapplying 2885 methodBodyExpand on node 1234
+reapplying 2886 One Step Simplification on node 1235
+reapplying 2887 methodCallSuper on node 1236
+reapplying 2888 methodBodyExpand on node 1237
+reapplying 2889 One Step Simplification on node 1238
+reapplying 2890 methodCallSuper on node 1239
+reapplying 2891 methodBodyExpand on node 1240
+reapplying 2892 One Step Simplification on node 1241
+reapplying 2893 methodCallSuper on node 1242
+reapplying 2894 methodBodyExpand on node 1243
+reapplying 2895 One Step Simplification on node 1244
+reapplying 2896 methodCallSuper on node 1245
+reapplying 2897 methodBodyExpand on node 1246
+reapplying 2898 One Step Simplification on node 1247
+reapplying 2899 methodCallSuper on node 1248
+reapplying 2900 methodBodyExpand on node 1249
+reapplying 2901 One Step Simplification on node 1250
+reapplying 2902 methodCallEmpty on node 1251
+reapplying 2903 blockEmpty on node 1252
+reapplying 2904 assignmentThis on node 1253
+reapplying 2905 One Step Simplification on node 1254
+reapplying 2906 assignmentThis on node 1255
+reapplying 2907 One Step Simplification on node 1256
+reapplying 2908 methodCallEmpty on node 1257
+reapplying 2909 methodCallEmpty on node 1258
+reapplying 2910 methodCallEmpty on node 1259
+reapplying 2911 methodCallEmpty on node 1260
+reapplying 2912 methodCallEmpty on node 1261
+reapplying 2913 blockEmpty on node 1262
+reapplying 2914 assignment on node 1263
+reapplying 2915 One Step Simplification on node 1264
+reapplying 2919 assignment on node 1266
+reapplying 2920 One Step Simplification on node 1267
+reapplying 2921 tryCatchThrow on node 1268
+reapplying 2922 ifElseUnfold on node 1269
+reapplying 2923 variableDeclaration on node 1270
+reapplying 2924 equality comparison on node 1271
+reapplying 2925 One Step Simplification on node 1272
+reapplying 2926 replace_known_right on node 1273
+reapplying 2927 One Step Simplification on node 1274
+reapplying 2928 ifElseSplit on node 1275
+reapplying 2931 One Step Simplification on node 1276
+reapplying 2932 closeFalse on node 1278
+reapplying 2930 One Step Simplification on node 1277
+reapplying 2936 ifElseSplit on node 1280
+reapplying 2940 variableDeclaration on node 1281
+reapplying 2941 delete_unnecessary_cast on node 1283
+reapplying 2942 One Step Simplification on node 1284
+reapplying 2945 assignment on node 1285
+reapplying 2946 One Step Simplification on node 1286
+reapplying 2947 assignment on node 1287
+reapplying 2948 One Step Simplification on node 1288
+reapplying 2949 methodCallEmpty on node 1289
+reapplying 2950 emptyModality on node 1290
+reapplying 2951 One Step Simplification on node 1291
+reapplying 2952 replace_known_right on node 1292
+reapplying 2953 One Step Simplification on node 1293
+reapplying 2954 ifElseSplit on node 1294
+reapplying 2957 One Step Simplification on node 1295
+reapplying 2958 closeFalse on node 1297
+reapplying 2956 One Step Simplification on node 1296
+reapplying 2962 elim_double_block on node 1299
+reapplying 2963 ifElseSplit on node 1300
+reapplying 2967 variableDeclaration on node 1301
+reapplying 2968 delete_unnecessary_cast on node 1303
+reapplying 2969 One Step Simplification on node 1304
+reapplying 2972 assignment on node 1305
+reapplying 2973 One Step Simplification on node 1306
+reapplying 2974 emptyModality on node 1307
+reapplying 3009 inEqSimp_ltToLeq on node 1308
+reapplying 3010 times_zero on node 1309
+reapplying 3011 add_literals on node 1310
+reapplying 3039 inEqSimp_sepPosMonomial0 on node 1311
+reapplying 3040 mul_literals on node 1312
+reapplying 3050 inEqSimp_contradInEq0 on node 1313
+reapplying 3051 qeq_literals on node 1314
+reapplying 3052 One Step Simplification on node 1315
+reapplying 3053 closeFalse on node 1316
+reapplying 2965 One Step Simplification on node 1302
+reapplying 3055 closeFalse on node 1318
+reapplying 2938 One Step Simplification on node 1282
+reapplying 3057 closeFalse on node 1320
+reapplying 2916 One Step Simplification on node 1265
+reapplying 3059 closeFalse on node 1322
+reapplying 120 One Step Simplification on node 112
+reapplying 3061 closeFalse on node 1324
+reapplying 3063 One Step Simplification on node 104
+reapplying 3064 closeFalse on node 1326
+reapplying 37 One Step Simplification on node 37
+reapplying 3066 One Step Simplification on node 1328
+reapplying 3067 andLeft on node 1329
+reapplying 3068 andLeft on node 1330
+reapplying 3069 andLeft on node 1331
+reapplying 3070 andLeft on node 1332
+reapplying 3071 andLeft on node 1333
+reapplying 3072 variableDeclaration on node 1334
+reapplying 3073 variableDeclaration on node 1335
+reapplying 3074 inequality comparison on node 1336
+reapplying 3075 One Step Simplification on node 1337
+reapplying 3076 eqSymm on node 1338
+reapplying 3077 methodCallEmpty on node 1339
+reapplying 3078 emptyModality on node 1340
+reapplying 3079 One Step Simplification on node 1341
+reapplying 3080 impRight on node 1342
+reapplying 3081 methodCallReturn on node 1343
+reapplying 3082 assignment on node 1344
+reapplying 3083 One Step Simplification on node 1345
+reapplying 3084 methodCallEmpty on node 1346
+reapplying 3085 tryEmpty on node 1347
+reapplying 3086 emptyModality on node 1348
+reapplying 3087 One Step Simplification on node 1349
+reapplying 3088 selectOfAnon on node 1350
+reapplying 3089 One Step Simplification on node 1351
+reapplying 3090 applyEq on node 1352
+reapplying 3092 Contract_axiom_for_gcd_in_ParallelGcd on node 1353
+reapplying 3093 One Step Simplification on node 1354
+reapplying 3095 wellFormedAnon on node 1355
+reapplying 3097 eqSymm on node 1356
+reapplying 3098 One Step Simplification on node 1357
+reapplying 3101 eqSymm on node 1358
+reapplying 3102 eqSymm on node 1359
+reapplying 3106 replace_known_left on node 1360
+reapplying 3107 One Step Simplification on node 1361
+reapplying 3108 andLeft on node 1362
+reapplying 3109 andLeft on node 1363
+reapplying 3110 andLeft on node 1364
+reapplying 3150 inEqSimp_ltToLeq on node 1365
+reapplying 3151 add_zero_right on node 1366
+reapplying 3152 polySimp_mulComm0 on node 1367
+reapplying 3200 applyEq on node 1368
+reapplying 3201 eqSymm on node 1369
+reapplying 3202 replace_known_left on node 1370
+reapplying 3203 One Step Simplification on node 1371
+reapplying 3278 inEqSimp_sepNegMonomial0 on node 1372
+reapplying 3279 polySimp_mulLiterals on node 1373
+reapplying 3280 polySimp_elimOne on node 1374
+reapplying 3281 replace_known_left on node 1375
+reapplying 3282 One Step Simplification on node 1376
+reapplying 3283 allRight on node 1377
+reapplying 3284 allRight on node 1378
+reapplying 3285 orRight on node 1379
+reapplying 3286 orRight on node 1380
+reapplying 3287 notRight on node 1381
+reapplying 3288 close on node 1382
+[07:17:04.469] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Loading environment from /tmp/KeYslice4460756607529137272/parallelGcd_slice1.proof
+[07:17:04.471] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Creating init config
+[07:17:09.401] ?[34mINFO ?[0;39m ?[36mAbstractProblemLoader?[0;39m - Replaying proof ParallelGcd[ParallelGcd::parallelGcd(int,int,[Z)].JML behavior operation contract.0
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
