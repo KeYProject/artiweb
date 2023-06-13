@@ -1,0 +1,232 @@
+<testsuites> <testsuite name="runallproofs.observer" tests="14" id="0" disabled="0" errors="0" failures="0" time="0.000000"><testcase name="ExampleObserver_ExampleObserver.key"  classname="runallproofs.observer.observer" time="0.000000"><system-out><![CDATA[511        INFO  Timeout watchdog d.u.i.k.p.r.p.ForkedTestFileRunner Timeout watcher launched (2000 secs.) 
+535        WARN  main            d.u.i.k.s.ProofSettings   The settings in /home/runner/.key/proof-settings.props are *not* read. 
+593        INFO  main            d.u.i.k.p.r.p.TestFile    Now processing file /home/runner/work/key/key/key.core/../key.ui/examples/heap/observer/ExampleObserver_ExampleObserver.key 
+734        INFO  main            d.u.i.k.p.i.AbstractProblemLoader Loading environment from /home/runner/work/key/key/key.core/../key.ui/examples/heap/observer/ExampleObserver_ExampleObserver.key 
+753        DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Environment load took 2.42ms 
+1043       INFO  main            d.u.i.k.p.i.AbstractProblemLoader Creating init config 
+2190       DEBUG main            d.u.i.k.j.TypeConverter   No LDT found for Meta 
+2191       DEBUG main            d.u.i.k.j.TypeConverter   No LDT found for Meta 
+2196       DEBUG main            d.u.i.k.j.TypeConverter   No LDT found for Meta 
+2197       DEBUG main            d.u.i.k.j.TypeConverter   No LDT found for Meta 
+4029       DEBUG main            d.u.i.k.j.TypeConverter   No LDT found for JavaBigintExpression 
+10792      DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Init config took 9.75s 
+10949      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Replaying proof ExampleObserver[ExampleObserver::ExampleObserver(ExampleSubject)].JML normal_behavior operation contract.0 
+11063      DEBUG main            d.u.i.k.p.i.IntermediateProofReplayer Proof replay took 62.8ns 
+12194      INFO  main            d.u.i.k.p.r.p.TestFile    ... finished proof: closed. 
+12371      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Loading environment from /home/runner/work/key/key/key.core/../key.ui/examples/heap/observer/ExampleObserver_ExampleObserver.key.proof 
+12372      DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Environment load took 555.11ns 
+12379      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Creating init config 
+16219      DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Init config took 3.84s 
+16309      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Replaying proof ExampleObserver[ExampleObserver::ExampleObserver(ExampleSubject)].JML normal_behavior operation contract.0 
+16530      DEBUG main            d.u.i.k.p.i.IntermediateProofReplayer Proof replay took 210.75ms 
+16543      DEBUG main            d.u.i.k.p.r.p.TestFile    ... success: reloaded. 
+
+pass: Verifying property "provable" was successful for file: /home/runner/work/key/key/key.core/../key.ui/examples/heap/observer/ExampleObserver_ExampleObserver.key]]></system-out></testcase><testcase name="ExampleObserver_inv.key"  classname="runallproofs.observer.observer" time="0.000000"><system-out><![CDATA[16546      INFO  main            d.u.i.k.p.r.p.TestFile    Now processing file /home/runner/work/key/key/key.core/../key.ui/examples/heap/observer/ExampleObserver_inv.key 
+16546      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Loading environment from /home/runner/work/key/key/key.core/../key.ui/examples/heap/observer/ExampleObserver_inv.key 
+16547      DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Environment load took 317.1ns 
+16549      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Creating init config 
+20063      DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Init config took 3.51s 
+20158      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Replaying proof ExampleObserver[java.lang.Object::<inv>()].JML accessible clause.0 
+20163      DEBUG main            d.u.i.k.p.i.IntermediateProofReplayer Proof replay took 7ns 
+20369      INFO  main            d.u.i.k.p.r.p.TestFile    ... finished proof: closed. 
+20527      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Loading environment from /home/runner/work/key/key/key.core/../key.ui/examples/heap/observer/ExampleObserver_inv.key.proof 
+20528      DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Environment load took 652ns 
+20530      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Creating init config 
+23969      DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Init config took 3.44s 
+24047      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Replaying proof ExampleObserver[java.lang.Object::<inv>()].JML accessible clause.0 
+24069      DEBUG main            d.u.i.k.p.i.IntermediateProofReplayer Proof replay took 18.71ms 
+24071      DEBUG main            d.u.i.k.p.r.p.TestFile    ... success: reloaded. 
+
+pass: Verifying property "provable" was successful for file: /home/runner/work/key/key/key.core/../key.ui/examples/heap/observer/ExampleObserver_inv.key]]></system-out></testcase><testcase name="ExampleObserver_subject.key"  classname="runallproofs.observer.observer" time="0.000000"><system-out><![CDATA[24072      INFO  main            d.u.i.k.p.r.p.TestFile    Now processing file /home/runner/work/key/key/key.core/../key.ui/examples/heap/observer/ExampleObserver_subject.key 
+24073      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Loading environment from /home/runner/work/key/key/key.core/../key.ui/examples/heap/observer/ExampleObserver_subject.key 
+24073      DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Environment load took 308ns 
+24075      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Creating init config 
+27521      DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Init config took 3.45s 
+27582      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Replaying proof Observer[Observer::$subject()].JML accessible clause.0 
+27587      DEBUG main            d.u.i.k.p.i.IntermediateProofReplayer Proof replay took 7.2ns 
+27691      INFO  main            d.u.i.k.p.r.p.TestFile    ... finished proof: closed. 
+27869      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Loading environment from /home/runner/work/key/key/key.core/../key.ui/examples/heap/observer/ExampleObserver_subject.key.proof 
+27869      DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Environment load took 173.5ns 
+27871      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Creating init config 
+31251      DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Init config took 3.38s 
+31324      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Replaying proof Observer[Observer::$subject()].JML accessible clause.0 
+31329      DEBUG main            d.u.i.k.p.i.IntermediateProofReplayer Proof replay took 1.85ms 
+31330      DEBUG main            d.u.i.k.p.r.p.TestFile    ... success: reloaded. 
+
+pass: Verifying property "provable" was successful for file: /home/runner/work/key/key/key.core/../key.ui/examples/heap/observer/ExampleObserver_subject.key]]></system-out></testcase><testcase name="ExampleObserver_update.key"  classname="runallproofs.observer.observer" time="0.000000"><system-out><![CDATA[31332      INFO  main            d.u.i.k.p.r.p.TestFile    Now processing file /home/runner/work/key/key/key.core/../key.ui/examples/heap/observer/ExampleObserver_update.key 
+31332      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Loading environment from /home/runner/work/key/key/key.core/../key.ui/examples/heap/observer/ExampleObserver_update.key 
+31332      DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Environment load took 138.2ns 
+31333      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Creating init config 
+34760      DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Init config took 3.43s 
+34824      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Replaying proof ExampleObserver[Observer::update()].JML normal_behavior operation contract.0 
+34827      DEBUG main            d.u.i.k.p.i.IntermediateProofReplayer Proof replay took 6.5ns 
+35232      INFO  main            d.u.i.k.p.r.p.TestFile    ... finished proof: closed. 
+35481      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Loading environment from /home/runner/work/key/key/key.core/../key.ui/examples/heap/observer/ExampleObserver_update.key.proof 
+35483      DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Environment load took 1.49ms 
+35485      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Creating init config 
+38873      DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Init config took 3.39s 
+38984      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Replaying proof ExampleObserver[Observer::update()].JML normal_behavior operation contract.0 
+39082      DEBUG main            d.u.i.k.p.i.IntermediateProofReplayer Proof replay took 87.58ms 
+39083      DEBUG main            d.u.i.k.p.r.p.TestFile    ... success: reloaded. 
+
+pass: Verifying property "provable" was successful for file: /home/runner/work/key/key/key.core/../key.ui/examples/heap/observer/ExampleObserver_update.key]]></system-out></testcase><testcase name="ExampleObserver_upToDate.key"  classname="runallproofs.observer.observer" time="0.000000"><system-out><![CDATA[39086      INFO  main            d.u.i.k.p.r.p.TestFile    Now processing file /home/runner/work/key/key/key.core/../key.ui/examples/heap/observer/ExampleObserver_upToDate.key 
+39086      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Loading environment from /home/runner/work/key/key/key.core/../key.ui/examples/heap/observer/ExampleObserver_upToDate.key 
+39086      DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Environment load took 266.3ns 
+39088      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Creating init config 
+42531      DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Init config took 3.44s 
+42590      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Replaying proof ExampleObserver[Observer::$upToDate()].JML accessible clause.0 
+42593      DEBUG main            d.u.i.k.p.i.IntermediateProofReplayer Proof replay took 7ns 
+42796      INFO  main            d.u.i.k.p.r.p.TestFile    ... finished proof: closed. 
+43008      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Loading environment from /home/runner/work/key/key/key.core/../key.ui/examples/heap/observer/ExampleObserver_upToDate.key.proof 
+43009      DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Environment load took 1.35ms 
+43011      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Creating init config 
+46437      DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Init config took 3.43s 
+46503      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Replaying proof ExampleObserver[Observer::$upToDate()].JML accessible clause.0 
+46531      DEBUG main            d.u.i.k.p.i.IntermediateProofReplayer Proof replay took 24.41ms 
+46533      DEBUG main            d.u.i.k.p.r.p.TestFile    ... success: reloaded. 
+
+pass: Verifying property "provable" was successful for file: /home/runner/work/key/key/key.core/../key.ui/examples/heap/observer/ExampleObserver_upToDate.key]]></system-out></testcase><testcase name="ExampleObserver_value.key"  classname="runallproofs.observer.observer" time="0.000000"><system-out><![CDATA[46535      INFO  main            d.u.i.k.p.r.p.TestFile    Now processing file /home/runner/work/key/key/key.core/../key.ui/examples/heap/observer/ExampleObserver_value.key 
+46535      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Loading environment from /home/runner/work/key/key/key.core/../key.ui/examples/heap/observer/ExampleObserver_value.key 
+46536      DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Environment load took 415.9ns 
+46537      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Creating init config 
+50030      DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Init config took 3.49s 
+50086      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Replaying proof ExampleObserver[ExampleObserver::value()].JML normal_behavior operation contract.0 
+50089      DEBUG main            d.u.i.k.p.i.IntermediateProofReplayer Proof replay took 7.2ns 
+50192      INFO  main            d.u.i.k.p.r.p.TestFile    ... finished proof: closed. 
+50435      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Loading environment from /home/runner/work/key/key/key.core/../key.ui/examples/heap/observer/ExampleObserver_value.key.proof 
+50439      DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Environment load took 3.07ms 
+50440      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Creating init config 
+53758      DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Init config took 3.32s 
+53819      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Replaying proof ExampleObserver[ExampleObserver::value()].JML normal_behavior operation contract.0 
+53844      DEBUG main            d.u.i.k.p.i.IntermediateProofReplayer Proof replay took 21.52ms 
+53845      DEBUG main            d.u.i.k.p.r.p.TestFile    ... success: reloaded. 
+
+pass: Verifying property "provable" was successful for file: /home/runner/work/key/key/key.core/../key.ui/examples/heap/observer/ExampleObserver_value.key]]></system-out></testcase><testcase name="ExampleSubject_addObserver.key"  classname="runallproofs.observer.observer" time="0.000000"><system-out><![CDATA[53847      INFO  main            d.u.i.k.p.r.p.TestFile    Now processing file /home/runner/work/key/key/key.core/../key.ui/examples/heap/observer/ExampleSubject_addObserver.key 
+53854      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Loading environment from /home/runner/work/key/key/key.core/../key.ui/examples/heap/observer/ExampleSubject_addObserver.key 
+53854      DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Environment load took 300.8ns 
+53856      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Creating init config 
+57229      DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Init config took 3.37s 
+57291      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Replaying proof ExampleSubject[Subject::addObserver(Observer)].JML normal_behavior operation contract.0 
+57294      DEBUG main            d.u.i.k.p.i.IntermediateProofReplayer Proof replay took 7.7ns 
+64833      INFO  main            d.u.i.k.p.r.p.TestFile    ... finished proof: closed. 
+65111      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Loading environment from /home/runner/work/key/key/key.core/../key.ui/examples/heap/observer/ExampleSubject_addObserver.key.proof 
+65112      DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Environment load took 532.5ns 
+65115      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Creating init config 
+68378      DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Init config took 3.26s 
+68437      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Replaying proof ExampleSubject[Subject::addObserver(Observer)].JML normal_behavior operation contract.0 
+69198      DEBUG main            d.u.i.k.p.i.IntermediateProofReplayer Proof replay took 734.3ms 
+69201      DEBUG main            d.u.i.k.p.r.p.TestFile    ... success: reloaded. 
+
+pass: Verifying property "provable" was successful for file: /home/runner/work/key/key/key.core/../key.ui/examples/heap/observer/ExampleSubject_addObserver.key]]></system-out></testcase><testcase name="ExampleSubject_change.key"  classname="runallproofs.observer.observer" time="0.000000"><system-out><![CDATA[69203      INFO  main            d.u.i.k.p.r.p.TestFile    Now processing file /home/runner/work/key/key/key.core/../key.ui/examples/heap/observer/ExampleSubject_change.key 
+69203      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Loading environment from /home/runner/work/key/key/key.core/../key.ui/examples/heap/observer/ExampleSubject_change.key 
+69204      DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Environment load took 285.9ns 
+69205      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Creating init config 
+72624      DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Init config took 3.42s 
+72681      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Replaying proof ExampleSubject[ExampleSubject::change()].JML normal_behavior operation contract.0 
+72684      DEBUG main            d.u.i.k.p.i.IntermediateProofReplayer Proof replay took 24.2ns 
+73307      INFO  main            d.u.i.k.p.r.p.TestFile    ... finished proof: closed. 
+73545      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Loading environment from /home/runner/work/key/key/key.core/../key.ui/examples/heap/observer/ExampleSubject_change.key.proof 
+73545      DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Environment load took 169.3ns 
+73547      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Creating init config 
+76689      DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Init config took 3.14s 
+76743      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Replaying proof ExampleSubject[ExampleSubject::change()].JML normal_behavior operation contract.0 
+76814      DEBUG main            d.u.i.k.p.i.IntermediateProofReplayer Proof replay took 65.48ms 
+76816      DEBUG main            d.u.i.k.p.r.p.TestFile    ... success: reloaded. 
+
+pass: Verifying property "provable" was successful for file: /home/runner/work/key/key/key.core/../key.ui/examples/heap/observer/ExampleSubject_change.key]]></system-out></testcase><testcase name="ExampleSubject_ExampleSubject.key"  classname="runallproofs.observer.observer" time="0.000000"><system-out><![CDATA[76818      INFO  main            d.u.i.k.p.r.p.TestFile    Now processing file /home/runner/work/key/key/key.core/../key.ui/examples/heap/observer/ExampleSubject_ExampleSubject.key 
+76818      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Loading environment from /home/runner/work/key/key/key.core/../key.ui/examples/heap/observer/ExampleSubject_ExampleSubject.key 
+76819      DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Environment load took 255.6ns 
+76820      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Creating init config 
+79965      DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Init config took 3.14s 
+80052      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Replaying proof ExampleSubject[ExampleSubject::ExampleSubject()].JML normal_behavior operation contract.0 
+80055      DEBUG main            d.u.i.k.p.i.IntermediateProofReplayer Proof replay took 6.9ns 
+81496      INFO  main            d.u.i.k.p.r.p.TestFile    ... finished proof: closed. 
+81741      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Loading environment from /home/runner/work/key/key/key.core/../key.ui/examples/heap/observer/ExampleSubject_ExampleSubject.key.proof 
+81742      DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Environment load took 600.71ns 
+81743      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Creating init config 
+84963      DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Init config took 3.22s 
+85027      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Replaying proof ExampleSubject[ExampleSubject::ExampleSubject()].JML normal_behavior operation contract.0 
+85222      DEBUG main            d.u.i.k.p.i.IntermediateProofReplayer Proof replay took 185.49ms 
+85224      DEBUG main            d.u.i.k.p.r.p.TestFile    ... success: reloaded. 
+
+pass: Verifying property "provable" was successful for file: /home/runner/work/key/key/key.core/../key.ui/examples/heap/observer/ExampleSubject_ExampleSubject.key]]></system-out></testcase><testcase name="ExampleSubject_footprint.key"  classname="runallproofs.observer.observer" time="0.000000"><system-out><![CDATA[85226      INFO  main            d.u.i.k.p.r.p.TestFile    Now processing file /home/runner/work/key/key/key.core/../key.ui/examples/heap/observer/ExampleSubject_footprint.key 
+85226      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Loading environment from /home/runner/work/key/key/key.core/../key.ui/examples/heap/observer/ExampleSubject_footprint.key 
+85227      DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Environment load took 210.5ns 
+85228      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Creating init config 
+88369      DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Init config took 3.14s 
+88429      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Replaying proof ExampleSubject[Subject::$footprint()].JML accessible clause.0 
+88432      DEBUG main            d.u.i.k.p.i.IntermediateProofReplayer Proof replay took 6.8ns 
+88636      INFO  main            d.u.i.k.p.r.p.TestFile    ... finished proof: closed. 
+88884      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Loading environment from /home/runner/work/key/key/key.core/../key.ui/examples/heap/observer/ExampleSubject_footprint.key.proof 
+88884      DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Environment load took 129.7ns 
+88885      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Creating init config 
+92069      DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Init config took 3.18s 
+92121      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Replaying proof ExampleSubject[Subject::$footprint()].JML accessible clause.0 
+92138      DEBUG main            d.u.i.k.p.i.IntermediateProofReplayer Proof replay took 14.55ms 
+92140      DEBUG main            d.u.i.k.p.r.p.TestFile    ... success: reloaded. 
+
+pass: Verifying property "provable" was successful for file: /home/runner/work/key/key/key.core/../key.ui/examples/heap/observer/ExampleSubject_footprint.key]]></system-out></testcase><testcase name="ExampleSubject_inv.key"  classname="runallproofs.observer.observer" time="0.000000"><system-out><![CDATA[92141      INFO  main            d.u.i.k.p.r.p.TestFile    Now processing file /home/runner/work/key/key/key.core/../key.ui/examples/heap/observer/ExampleSubject_inv.key 
+92141      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Loading environment from /home/runner/work/key/key/key.core/../key.ui/examples/heap/observer/ExampleSubject_inv.key 
+92141      DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Environment load took 128.1ns 
+92142      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Creating init config 
+95336      DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Init config took 3.19s 
+95389      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Replaying proof ExampleSubject[java.lang.Object::<inv>()].JML accessible clause.0 
+95391      DEBUG main            d.u.i.k.p.i.IntermediateProofReplayer Proof replay took 6.6ns 
+96896      INFO  main            d.u.i.k.p.r.p.TestFile    ... finished proof: closed. 
+97280      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Loading environment from /home/runner/work/key/key/key.core/../key.ui/examples/heap/observer/ExampleSubject_inv.key.proof 
+97281      DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Environment load took 973.81ns 
+97283      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Creating init config 
+100471     DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Init config took 3.19s 
+100526     INFO  main            d.u.i.k.p.i.AbstractProblemLoader Replaying proof ExampleSubject[java.lang.Object::<inv>()].JML accessible clause.0 
+100643     DEBUG main            d.u.i.k.p.i.IntermediateProofReplayer Proof replay took 95.18ms 
+100645     DEBUG main            d.u.i.k.p.r.p.TestFile    ... success: reloaded. 
+
+pass: Verifying property "provable" was successful for file: /home/runner/work/key/key/key.core/../key.ui/examples/heap/observer/ExampleSubject_inv.key]]></system-out></testcase><testcase name="ExampleSubject_notifyObservers.key"  classname="runallproofs.observer.observer" time="0.000000"><system-out><![CDATA[100647     INFO  main            d.u.i.k.p.r.p.TestFile    Now processing file /home/runner/work/key/key/key.core/../key.ui/examples/heap/observer/ExampleSubject_notifyObservers.key 
+100648     INFO  main            d.u.i.k.p.i.AbstractProblemLoader Loading environment from /home/runner/work/key/key/key.core/../key.ui/examples/heap/observer/ExampleSubject_notifyObservers.key 
+100648     DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Environment load took 302.9ns 
+100649     INFO  main            d.u.i.k.p.i.AbstractProblemLoader Creating init config 
+103990     DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Init config took 3.34s 
+104041     INFO  main            d.u.i.k.p.i.AbstractProblemLoader Replaying proof Subject[Subject::notifyObservers()].JML normal_behavior operation contract.0 
+104044     DEBUG main            d.u.i.k.p.i.IntermediateProofReplayer Proof replay took 6.5ns 
+104147     INFO  main            d.u.i.k.p.r.p.TestFile    ... finished proof: closed. 
+104405     INFO  main            d.u.i.k.p.i.AbstractProblemLoader Loading environment from /home/runner/work/key/key/key.core/../key.ui/examples/heap/observer/ExampleSubject_notifyObservers.key.proof 
+104405     DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Environment load took 137.5ns 
+104407     INFO  main            d.u.i.k.p.i.AbstractProblemLoader Creating init config 
+107778     DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Init config took 3.37s 
+107830     INFO  main            d.u.i.k.p.i.AbstractProblemLoader Replaying proof Subject[Subject::notifyObservers()].JML normal_behavior operation contract.0 
+107836     DEBUG main            d.u.i.k.p.i.IntermediateProofReplayer Proof replay took 3.12ms 
+107837     DEBUG main            d.u.i.k.p.r.p.TestFile    ... success: reloaded. 
+
+pass: Verifying property "provable" was successful for file: /home/runner/work/key/key/key.core/../key.ui/examples/heap/observer/ExampleSubject_notifyObservers.key]]></system-out></testcase><testcase name="ExampleSubject_value_dep.key"  classname="runallproofs.observer.observer" time="0.000000"><system-out><![CDATA[107838     INFO  main            d.u.i.k.p.r.p.TestFile    Now processing file /home/runner/work/key/key/key.core/../key.ui/examples/heap/observer/ExampleSubject_value_dep.key 
+107839     INFO  main            d.u.i.k.p.i.AbstractProblemLoader Loading environment from /home/runner/work/key/key/key.core/../key.ui/examples/heap/observer/ExampleSubject_value_dep.key 
+107839     DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Environment load took 362.7ns 
+107850     INFO  main            d.u.i.k.p.i.AbstractProblemLoader Creating init config 
+111246     DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Init config took 3.4s 
+111308     INFO  main            d.u.i.k.p.i.AbstractProblemLoader Replaying proof ExampleSubject[ExampleSubject::value()].JML accessible clause.0 
+111311     DEBUG main            d.u.i.k.p.i.IntermediateProofReplayer Proof replay took 7.3ns 
+111414     INFO  main            d.u.i.k.p.r.p.TestFile    ... finished proof: closed. 
+111696     INFO  main            d.u.i.k.p.i.AbstractProblemLoader Loading environment from /home/runner/work/key/key/key.core/../key.ui/examples/heap/observer/ExampleSubject_value_dep.key.proof 
+111696     DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Environment load took 141.8ns 
+111702     INFO  main            d.u.i.k.p.i.AbstractProblemLoader Creating init config 
+115013     DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Init config took 3.31s 
+115063     INFO  main            d.u.i.k.p.i.AbstractProblemLoader Replaying proof ExampleSubject[ExampleSubject::value()].JML accessible clause.0 
+115080     DEBUG main            d.u.i.k.p.i.IntermediateProofReplayer Proof replay took 13.82ms 
+115081     DEBUG main            d.u.i.k.p.r.p.TestFile    ... success: reloaded. 
+
+pass: Verifying property "provable" was successful for file: /home/runner/work/key/key/key.core/../key.ui/examples/heap/observer/ExampleSubject_value_dep.key]]></system-out></testcase><testcase name="ExampleSubject_value.key"  classname="runallproofs.observer.observer" time="0.000000"><system-out><![CDATA[115082     INFO  main            d.u.i.k.p.r.p.TestFile    Now processing file /home/runner/work/key/key/key.core/../key.ui/examples/heap/observer/ExampleSubject_value.key 
+115085     INFO  main            d.u.i.k.p.i.AbstractProblemLoader Loading environment from /home/runner/work/key/key/key.core/../key.ui/examples/heap/observer/ExampleSubject_value.key 
+115085     DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Environment load took 313.3ns 
+115086     INFO  main            d.u.i.k.p.i.AbstractProblemLoader Creating init config 
+118361     DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Init config took 3.27s 
+118411     INFO  main            d.u.i.k.p.i.AbstractProblemLoader Replaying proof ExampleSubject[ExampleSubject::value()].JML normal_behavior operation contract.0 
+118413     DEBUG main            d.u.i.k.p.i.IntermediateProofReplayer Proof replay took 6.7ns 
+118517     INFO  main            d.u.i.k.p.r.p.TestFile    ... finished proof: closed. 
+118787     INFO  main            d.u.i.k.p.i.AbstractProblemLoader Loading environment from /home/runner/work/key/key/key.core/../key.ui/examples/heap/observer/ExampleSubject_value.key.proof 
+118787     DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Environment load took 137.1ns 
+118788     INFO  main            d.u.i.k.p.i.AbstractProblemLoader Creating init config 
+121976     DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Init config took 3.19s 
+122025     INFO  main            d.u.i.k.p.i.AbstractProblemLoader Replaying proof ExampleSubject[ExampleSubject::value()].JML normal_behavior operation contract.0 
+122039     DEBUG main            d.u.i.k.p.i.IntermediateProofReplayer Proof replay took 11.31ms 
+122040     DEBUG main            d.u.i.k.p.r.p.TestFile    ... success: reloaded. 
+
+pass: Verifying property "provable" was successful for file: /home/runner/work/key/key/key.core/../key.ui/examples/heap/observer/ExampleSubject_value.key]]></system-out></testcase></testsuite></testsuites>

@@ -1,0 +1,210 @@
+<testsuites> <testsuite name="runallproofs.redux" tests="12" id="0" disabled="0" errors="0" failures="0" time="0.000000"><testcase name="Arrays.copyOf.key"  classname="runallproofs.redux.redux" time="0.000000"><system-out><![CDATA[464        INFO  Timeout watchdog d.u.i.k.p.r.p.ForkedTestFileRunner Timeout watcher launched (2000 secs.) 
+485        WARN  main            d.u.i.k.s.ProofSettings   The settings in /home/runner/.key/proof-settings.props are *not* read. 
+547        INFO  main            d.u.i.k.p.r.p.TestFile    Now processing file /home/runner/work/key/key/key.core/../key.ui/examples/redux/arrays/Arrays.copyOf.key 
+697        INFO  main            d.u.i.k.p.i.AbstractProblemLoader Loading environment from /home/runner/work/key/key/key.core/../key.ui/examples/redux/arrays/Arrays.copyOf.key 
+718        DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Environment load took 2.15ms 
+1047       INFO  main            d.u.i.k.p.i.AbstractProblemLoader Creating init config 
+2370       DEBUG main            d.u.i.k.j.TypeConverter   No LDT found for Meta 
+2371       DEBUG main            d.u.i.k.j.TypeConverter   No LDT found for Meta 
+2374       DEBUG main            d.u.i.k.j.TypeConverter   No LDT found for Meta 
+2375       DEBUG main            d.u.i.k.j.TypeConverter   No LDT found for Meta 
+4239       DEBUG main            d.u.i.k.j.TypeConverter   No LDT found for JavaBigintExpression 
+10894      DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Init config took 9.85s 
+11118      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Replaying proof Arrays[Arrays::copyOf([I,int)].JML normal_behavior operation contract.0 
+11169      DEBUG main            d.u.i.k.p.i.IntermediateProofReplayer Proof replay took 50.3ns 
+17548      INFO  main            d.u.i.k.p.r.p.TestFile    ... finished proof: closed. 
+17777      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Loading environment from /home/runner/work/key/key/key.core/../key.ui/examples/redux/arrays/Arrays.copyOf.key.proof 
+17782      DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Environment load took 5.22ms 
+17785      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Creating init config 
+21825      DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Init config took 4.04s 
+21912      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Replaying proof Arrays[Arrays::copyOf([I,int)].JML normal_behavior operation contract.0 
+22616      DEBUG main            d.u.i.k.p.i.IntermediateProofReplayer Proof replay took 663.97ms 
+22626      DEBUG main            d.u.i.k.p.r.p.TestFile    ... success: reloaded. 
+
+pass: Verifying property "provable" was successful for file: /home/runner/work/key/key/key.core/../key.ui/examples/redux/arrays/Arrays.copyOf.key]]></system-out></testcase><testcase name="Arrays.copyOf.float.key"  classname="runallproofs.redux.redux" time="0.000000"><system-out><![CDATA[22628      INFO  main            d.u.i.k.p.r.p.TestFile    Now processing file /home/runner/work/key/key/key.core/../key.ui/examples/redux/arrays/Arrays.copyOf.float.key 
+22628      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Loading environment from /home/runner/work/key/key/key.core/../key.ui/examples/redux/arrays/Arrays.copyOf.float.key 
+22629      DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Environment load took 239.7ns 
+22631      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Creating init config 
+26457      DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Init config took 3.83s 
+26527      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Replaying proof Arrays[Arrays::copyOf([F,int)].JML normal_behavior operation contract.0 
+26530      DEBUG main            d.u.i.k.p.i.IntermediateProofReplayer Proof replay took 23ns 
+26571      DEBUG main            d.u.i.k.m.s.ProofScriptEngine [1] goal: 0, source line: 6, command: 'macro autopilot' 
+32026      DEBUG main            d.u.i.k.m.s.ProofScriptEngine [2] goal: 17, source line: 7, command: 'smt solver=Z3' 
+32145      INFO  main            d.u.i.k.m.s.SMTCommand    Finished run on goal 17 in 84ms, result is valid 
+32146      DEBUG main            d.u.i.k.m.s.ProofScriptEngine [3] goal: 309, source line: 8, command: 'tryclose' 
+34244      INFO  main            d.u.i.k.p.r.p.TestFile    ... finished proof: closed. 
+34549      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Loading environment from /home/runner/work/key/key/key.core/../key.ui/examples/redux/arrays/Arrays.copyOf.float.key.proof 
+34549      DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Environment load took 500.11ns 
+34557      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Creating init config 
+38255      DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Init config took 3.7s 
+38315      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Replaying proof Arrays[Arrays::copyOf([F,int)].JML normal_behavior operation contract.0 
+38441      INFO  main            d.u.i.k.s.SMTFocusResults Analyzing unsat core: (L_6) 
+39171      DEBUG main            d.u.i.k.p.i.IntermediateProofReplayer Proof replay took 827.88ms 
+39173      DEBUG main            d.u.i.k.p.r.p.TestFile    ... success: reloaded. 
+
+pass: Verifying property "provable" was successful for file: /home/runner/work/key/key/key.core/../key.ui/examples/redux/arrays/Arrays.copyOf.float.key]]></system-out></testcase><testcase name="Arrays.copyOfRange.key"  classname="runallproofs.redux.redux" time="0.000000"><system-out><![CDATA[39176      INFO  main            d.u.i.k.p.r.p.TestFile    Now processing file /home/runner/work/key/key/key.core/../key.ui/examples/redux/arrays/Arrays.copyOfRange.key 
+39176      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Loading environment from /home/runner/work/key/key/key.core/../key.ui/examples/redux/arrays/Arrays.copyOfRange.key 
+39177      DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Environment load took 221.7ns 
+39179      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Creating init config 
+43098      DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Init config took 3.92s 
+43154      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Replaying proof Arrays[Arrays::copyOfRange([I,int,int)].JML normal_behavior operation contract.0 
+43156      DEBUG main            d.u.i.k.p.i.IntermediateProofReplayer Proof replay took 5.8ns 
+48825      INFO  main            d.u.i.k.p.r.p.TestFile    ... finished proof: closed. 
+49179      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Loading environment from /home/runner/work/key/key/key.core/../key.ui/examples/redux/arrays/Arrays.copyOfRange.key.proof 
+49179      DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Environment load took 740.41ns 
+49185      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Creating init config 
+52843      DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Init config took 3.66s 
+52894      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Replaying proof Arrays[Arrays::copyOfRange([I,int,int)].JML normal_behavior operation contract.0 
+53387      DEBUG main            d.u.i.k.p.i.IntermediateProofReplayer Proof replay took 465.61ms 
+53391      DEBUG main            d.u.i.k.p.r.p.TestFile    ... success: reloaded. 
+
+pass: Verifying property "provable" was successful for file: /home/runner/work/key/key/key.core/../key.ui/examples/redux/arrays/Arrays.copyOfRange.key]]></system-out></testcase><testcase name="Arrays.copyOfRange.float.key"  classname="runallproofs.redux.redux" time="0.000000"><system-out><![CDATA[53393      INFO  main            d.u.i.k.p.r.p.TestFile    Now processing file /home/runner/work/key/key/key.core/../key.ui/examples/redux/arrays/Arrays.copyOfRange.float.key 
+53393      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Loading environment from /home/runner/work/key/key/key.core/../key.ui/examples/redux/arrays/Arrays.copyOfRange.float.key 
+53393      DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Environment load took 224.2ns 
+53395      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Creating init config 
+56959      DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Init config took 3.56s 
+57010      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Replaying proof Arrays[Arrays::copyOfRange([F,int,int)].JML normal_behavior operation contract.0 
+57012      DEBUG main            d.u.i.k.p.i.IntermediateProofReplayer Proof replay took 6.2ns 
+57013      DEBUG main            d.u.i.k.m.s.ProofScriptEngine [1] goal: 0, source line: 6, command: 'macro autopilot' 
+64215      DEBUG main            d.u.i.k.m.s.ProofScriptEngine [2] goal: 27, source line: 7, command: 'smt solver=Z3' 
+64264      INFO  main            d.u.i.k.m.s.SMTCommand    Finished run on goal 27 in 40ms, result is valid 
+64264      DEBUG main            d.u.i.k.m.s.ProofScriptEngine [3] goal: 375, source line: 8, command: 'tryclose' 
+68290      INFO  main            d.u.i.k.p.r.p.TestFile    ... finished proof: closed. 
+68568      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Loading environment from /home/runner/work/key/key/key.core/../key.ui/examples/redux/arrays/Arrays.copyOfRange.float.key.proof 
+68569      DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Environment load took 239ns 
+68571      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Creating init config 
+72188      DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Init config took 3.62s 
+72242      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Replaying proof Arrays[Arrays::copyOfRange([F,int,int)].JML normal_behavior operation contract.0 
+72334      INFO  main            d.u.i.k.s.SMTFocusResults Analyzing unsat core: (L_8) 
+73181      DEBUG main            d.u.i.k.p.i.IntermediateProofReplayer Proof replay took 905.01ms 
+73184      DEBUG main            d.u.i.k.p.r.p.TestFile    ... success: reloaded. 
+
+pass: Verifying property "provable" was successful for file: /home/runner/work/key/key/key.core/../key.ui/examples/redux/arrays/Arrays.copyOfRange.float.key]]></system-out></testcase><testcase name="Arrays.equals.key"  classname="runallproofs.redux.redux" time="0.000000"><system-out><![CDATA[73185      INFO  main            d.u.i.k.p.r.p.TestFile    Now processing file /home/runner/work/key/key/key.core/../key.ui/examples/redux/arrays/Arrays.equals.key 
+73186      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Loading environment from /home/runner/work/key/key/key.core/../key.ui/examples/redux/arrays/Arrays.equals.key 
+73186      DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Environment load took 207.2ns 
+73190      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Creating init config 
+77002      DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Init config took 3.81s 
+77053      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Replaying proof Arrays[Arrays::equals([B,[B)].JML normal_behavior operation contract.0 
+77054      DEBUG main            d.u.i.k.p.i.IntermediateProofReplayer Proof replay took 6ns 
+77760      INFO  main            d.u.i.k.p.r.p.TestFile    ... finished proof: closed. 
+78065      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Loading environment from /home/runner/work/key/key/key.core/../key.ui/examples/redux/arrays/Arrays.equals.key.proof 
+78066      DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Environment load took 1.01ms 
+78069      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Creating init config 
+81822      DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Init config took 3.75s 
+81871      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Replaying proof Arrays[Arrays::equals([B,[B)].JML normal_behavior operation contract.0 
+82024      DEBUG main            d.u.i.k.p.i.IntermediateProofReplayer Proof replay took 147.52ms 
+82026      DEBUG main            d.u.i.k.p.r.p.TestFile    ... success: reloaded. 
+
+pass: Verifying property "provable" was successful for file: /home/runner/work/key/key/key.core/../key.ui/examples/redux/arrays/Arrays.equals.key]]></system-out></testcase><testcase name="Arrays.fill.key"  classname="runallproofs.redux.redux" time="0.000000"><system-out><![CDATA[82027      INFO  main            d.u.i.k.p.r.p.TestFile    Now processing file /home/runner/work/key/key/key.core/../key.ui/examples/redux/arrays/Arrays.fill.key 
+82027      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Loading environment from /home/runner/work/key/key/key.core/../key.ui/examples/redux/arrays/Arrays.fill.key 
+82028      DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Environment load took 200.3ns 
+82029      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Creating init config 
+85788      DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Init config took 3.76s 
+85844      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Replaying proof Arrays[Arrays::fill([I,int)].JML normal_behavior operation contract.0 
+85846      DEBUG main            d.u.i.k.p.i.IntermediateProofReplayer Proof replay took 7.3ns 
+86050      INFO  main            d.u.i.k.p.r.p.TestFile    ... finished proof: closed. 
+86297      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Loading environment from /home/runner/work/key/key/key.core/../key.ui/examples/redux/arrays/Arrays.fill.key.proof 
+86297      DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Environment load took 198.4ns 
+86299      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Creating init config 
+89998      DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Init config took 3.7s 
+90043      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Replaying proof Arrays[Arrays::fill([I,int)].JML normal_behavior operation contract.0 
+90082      DEBUG main            d.u.i.k.p.i.IntermediateProofReplayer Proof replay took 35.06ms 
+90083      DEBUG main            d.u.i.k.p.r.p.TestFile    ... success: reloaded. 
+
+pass: Verifying property "provable" was successful for file: /home/runner/work/key/key/key.core/../key.ui/examples/redux/arrays/Arrays.fill.key]]></system-out></testcase><testcase name="Arrays.fill.float.key"  classname="runallproofs.redux.redux" time="0.000000"><system-out><![CDATA[90084      INFO  main            d.u.i.k.p.r.p.TestFile    Now processing file /home/runner/work/key/key/key.core/../key.ui/examples/redux/arrays/Arrays.fill.float.key 
+90085      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Loading environment from /home/runner/work/key/key/key.core/../key.ui/examples/redux/arrays/Arrays.fill.float.key 
+90085      DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Environment load took 246.7ns 
+90087      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Creating init config 
+93735      DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Init config took 3.65s 
+93779      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Replaying proof Arrays[Arrays::fill([F,float)].JML normal_behavior operation contract.0 
+93781      DEBUG main            d.u.i.k.p.i.IntermediateProofReplayer Proof replay took 7ns 
+93983      INFO  main            d.u.i.k.p.r.p.TestFile    ... finished proof: closed. 
+94218      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Loading environment from /home/runner/work/key/key/key.core/../key.ui/examples/redux/arrays/Arrays.fill.float.key.proof 
+94218      DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Environment load took 479.81ns 
+94219      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Creating init config 
+97779      DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Init config took 3.56s 
+97822      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Replaying proof Arrays[Arrays::fill([F,float)].JML normal_behavior operation contract.0 
+97868      DEBUG main            d.u.i.k.p.i.IntermediateProofReplayer Proof replay took 43.43ms 
+97869      DEBUG main            d.u.i.k.p.r.p.TestFile    ... success: reloaded. 
+
+pass: Verifying property "provable" was successful for file: /home/runner/work/key/key/key.core/../key.ui/examples/redux/arrays/Arrays.fill.float.key]]></system-out></testcase><testcase name="Arrays.fillFromTo.key"  classname="runallproofs.redux.redux" time="0.000000"><system-out><![CDATA[97871      INFO  main            d.u.i.k.p.r.p.TestFile    Now processing file /home/runner/work/key/key/key.core/../key.ui/examples/redux/arrays/Arrays.fillFromTo.key 
+97871      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Loading environment from /home/runner/work/key/key/key.core/../key.ui/examples/redux/arrays/Arrays.fillFromTo.key 
+97871      DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Environment load took 106.8ns 
+97872      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Creating init config 
+101508     DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Init config took 3.64s 
+101567     INFO  main            d.u.i.k.p.i.AbstractProblemLoader Replaying proof Arrays[Arrays::fill([I,int,int,int)].JML normal_behavior operation contract.0 
+101570     DEBUG main            d.u.i.k.p.i.IntermediateProofReplayer Proof replay took 8ns 
+102275     INFO  main            d.u.i.k.p.r.p.TestFile    ... finished proof: closed. 
+102505     INFO  main            d.u.i.k.p.i.AbstractProblemLoader Loading environment from /home/runner/work/key/key/key.core/../key.ui/examples/redux/arrays/Arrays.fillFromTo.key.proof 
+102505     DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Environment load took 534.3ns 
+102507     INFO  main            d.u.i.k.p.i.AbstractProblemLoader Creating init config 
+106229     DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Init config took 3.72s 
+106285     INFO  main            d.u.i.k.p.i.AbstractProblemLoader Replaying proof Arrays[Arrays::fill([I,int,int,int)].JML normal_behavior operation contract.0 
+106411     DEBUG main            d.u.i.k.p.i.IntermediateProofReplayer Proof replay took 118.63ms 
+106413     DEBUG main            d.u.i.k.p.r.p.TestFile    ... success: reloaded. 
+
+pass: Verifying property "provable" was successful for file: /home/runner/work/key/key/key.core/../key.ui/examples/redux/arrays/Arrays.fillFromTo.key]]></system-out></testcase><testcase name="Arrays.fillFromTo.float.key"  classname="runallproofs.redux.redux" time="0.000000"><system-out><![CDATA[106414     INFO  main            d.u.i.k.p.r.p.TestFile    Now processing file /home/runner/work/key/key/key.core/../key.ui/examples/redux/arrays/Arrays.fillFromTo.float.key 
+106415     INFO  main            d.u.i.k.p.i.AbstractProblemLoader Loading environment from /home/runner/work/key/key/key.core/../key.ui/examples/redux/arrays/Arrays.fillFromTo.float.key 
+106415     DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Environment load took 230.3ns 
+106416     INFO  main            d.u.i.k.p.i.AbstractProblemLoader Creating init config 
+110088     DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Init config took 3.67s 
+110130     INFO  main            d.u.i.k.p.i.AbstractProblemLoader Replaying proof Arrays[Arrays::fill([F,int,int,float)].JML normal_behavior operation contract.0 
+110132     DEBUG main            d.u.i.k.p.i.IntermediateProofReplayer Proof replay took 26.6ns 
+110937     INFO  main            d.u.i.k.p.r.p.TestFile    ... finished proof: closed. 
+111225     INFO  main            d.u.i.k.p.i.AbstractProblemLoader Loading environment from /home/runner/work/key/key/key.core/../key.ui/examples/redux/arrays/Arrays.fillFromTo.float.key.proof 
+111226     DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Environment load took 449.7ns 
+111227     INFO  main            d.u.i.k.p.i.AbstractProblemLoader Creating init config 
+114731     DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Init config took 3.5s 
+114775     INFO  main            d.u.i.k.p.i.AbstractProblemLoader Replaying proof Arrays[Arrays::fill([F,int,int,float)].JML normal_behavior operation contract.0 
+114927     DEBUG main            d.u.i.k.p.i.IntermediateProofReplayer Proof replay took 143ms 
+114928     DEBUG main            d.u.i.k.p.r.p.TestFile    ... success: reloaded. 
+
+pass: Verifying property "provable" was successful for file: /home/runner/work/key/key/key.core/../key.ui/examples/redux/arrays/Arrays.fillFromTo.float.key]]></system-out></testcase><testcase name="ArrayCopy.arraycopy.normal.0.key"  classname="runallproofs.redux.redux" time="0.000000"><system-out><![CDATA[114929     INFO  main            d.u.i.k.p.r.p.TestFile    Now processing file /home/runner/work/key/key/key.core/../key.ui/examples/redux/arrays/ArrayCopy.arraycopy.normal.0.key 
+114929     INFO  main            d.u.i.k.p.i.AbstractProblemLoader Loading environment from /home/runner/work/key/key/key.core/../key.ui/examples/redux/arrays/ArrayCopy.arraycopy.normal.0.key 
+114929     DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Environment load took 74.6ns 
+114931     INFO  main            d.u.i.k.p.i.AbstractProblemLoader Creating init config 
+118430     DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Init config took 3.5s 
+118471     INFO  main            d.u.i.k.p.i.AbstractProblemLoader Replaying proof ArrayCopy[ArrayCopy::arraycopy(java.lang.Object,int,java.lang.Object,int,int)].JML normal_behavior operation contract.0 
+118473     DEBUG main            d.u.i.k.p.i.IntermediateProofReplayer Proof replay took 6.3ns 
+125799     INFO  main            d.u.i.k.p.r.p.TestFile    ... finished proof: closed. 
+126088     INFO  main            d.u.i.k.p.i.AbstractProblemLoader Loading environment from /home/runner/work/key/key/key.core/../key.ui/examples/redux/arrays/ArrayCopy.arraycopy.normal.0.key.proof 
+126089     DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Environment load took 399.4ns 
+126091     INFO  main            d.u.i.k.p.i.AbstractProblemLoader Creating init config 
+129568     DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Init config took 3.48s 
+129620     INFO  main            d.u.i.k.p.i.AbstractProblemLoader Replaying proof ArrayCopy[ArrayCopy::arraycopy(java.lang.Object,int,java.lang.Object,int,int)].JML normal_behavior operation contract.0 
+130404     DEBUG main            d.u.i.k.p.i.IntermediateProofReplayer Proof replay took 763.41ms 
+130406     DEBUG main            d.u.i.k.p.r.p.TestFile    ... success: reloaded. 
+
+pass: Verifying property "provable" was successful for file: /home/runner/work/key/key/key.core/../key.ui/examples/redux/arrays/ArrayCopy.arraycopy.normal.0.key]]></system-out></testcase><testcase name="ArrayCopy.arraycopy.exceptional.0.key"  classname="runallproofs.redux.redux" time="0.000000"><system-out><![CDATA[130407     INFO  main            d.u.i.k.p.r.p.TestFile    Now processing file /home/runner/work/key/key/key.core/../key.ui/examples/redux/arrays/ArrayCopy.arraycopy.exceptional.0.key 
+130408     INFO  main            d.u.i.k.p.i.AbstractProblemLoader Loading environment from /home/runner/work/key/key/key.core/../key.ui/examples/redux/arrays/ArrayCopy.arraycopy.exceptional.0.key 
+130408     DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Environment load took 235.6ns 
+130409     INFO  main            d.u.i.k.p.i.AbstractProblemLoader Creating init config 
+133941     DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Init config took 3.53s 
+133981     INFO  main            d.u.i.k.p.i.AbstractProblemLoader Replaying proof ArrayCopy[ArrayCopy::arraycopy(java.lang.Object,int,java.lang.Object,int,int)].JML exceptional_behavior operation contract.0 
+133982     DEBUG main            d.u.i.k.p.i.IntermediateProofReplayer Proof replay took 7.2ns 
+134386     INFO  main            d.u.i.k.p.r.p.TestFile    ... finished proof: closed. 
+134705     INFO  main            d.u.i.k.p.i.AbstractProblemLoader Loading environment from /home/runner/work/key/key/key.core/../key.ui/examples/redux/arrays/ArrayCopy.arraycopy.exceptional.0.key.proof 
+134705     DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Environment load took 561ns 
+134707     INFO  main            d.u.i.k.p.i.AbstractProblemLoader Creating init config 
+138144     DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Init config took 3.44s 
+138184     INFO  main            d.u.i.k.p.i.AbstractProblemLoader Replaying proof ArrayCopy[ArrayCopy::arraycopy(java.lang.Object,int,java.lang.Object,int,int)].JML exceptional_behavior operation contract.0 
+138312     DEBUG main            d.u.i.k.p.i.IntermediateProofReplayer Proof replay took 123.61ms 
+138313     DEBUG main            d.u.i.k.p.r.p.TestFile    ... success: reloaded. 
+
+pass: Verifying property "provable" was successful for file: /home/runner/work/key/key/key.core/../key.ui/examples/redux/arrays/ArrayCopy.arraycopy.exceptional.0.key]]></system-out></testcase><testcase name="ArrayCopy.arraycopy.exceptional.1.key"  classname="runallproofs.redux.redux" time="0.000000"><system-out><![CDATA[138314     INFO  main            d.u.i.k.p.r.p.TestFile    Now processing file /home/runner/work/key/key/key.core/../key.ui/examples/redux/arrays/ArrayCopy.arraycopy.exceptional.1.key 
+138315     INFO  main            d.u.i.k.p.i.AbstractProblemLoader Loading environment from /home/runner/work/key/key/key.core/../key.ui/examples/redux/arrays/ArrayCopy.arraycopy.exceptional.1.key 
+138315     DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Environment load took 221.2ns 
+138316     INFO  main            d.u.i.k.p.i.AbstractProblemLoader Creating init config 
+141993     DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Init config took 3.68s 
+142034     INFO  main            d.u.i.k.p.i.AbstractProblemLoader Replaying proof ArrayCopy[ArrayCopy::arraycopy(java.lang.Object,int,java.lang.Object,int,int)].JML exceptional_behavior operation contract.1 
+142036     DEBUG main            d.u.i.k.p.i.IntermediateProofReplayer Proof replay took 7.3ns 
+149581     INFO  main            d.u.i.k.p.r.p.TestFile    ... finished proof: closed. 
+149906     INFO  main            d.u.i.k.p.i.AbstractProblemLoader Loading environment from /home/runner/work/key/key/key.core/../key.ui/examples/redux/arrays/ArrayCopy.arraycopy.exceptional.1.key.proof 
+149907     DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Environment load took 488.2ns 
+149911     INFO  main            d.u.i.k.p.i.AbstractProblemLoader Creating init config 
+153431     DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Init config took 3.52s 
+153473     INFO  main            d.u.i.k.p.i.AbstractProblemLoader Replaying proof ArrayCopy[ArrayCopy::arraycopy(java.lang.Object,int,java.lang.Object,int,int)].JML exceptional_behavior operation contract.1 
+154925     DEBUG main            d.u.i.k.p.i.IntermediateProofReplayer Proof replay took 1.43s 
+154927     DEBUG main            d.u.i.k.p.r.p.TestFile    ... success: reloaded. 
+
+pass: Verifying property "provable" was successful for file: /home/runner/work/key/key/key.core/../key.ui/examples/redux/arrays/ArrayCopy.arraycopy.exceptional.1.key]]></system-out></testcase></testsuite></testsuites>
