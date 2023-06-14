@@ -1,0 +1,134 @@
+<testsuites> <testsuite name="runallproofs.ToyBanking" tests="14" id="0" disabled="0" errors="0" failures="0" time="0.000000"><testcase name="banking_example.UserAccount(banking_example.UserAccount__getBankAccount(int)).JML normal_behavior operation contract.0.key"  classname="runallproofs.ToyBanking.ToyBanking" time="0.000000"><system-out><![CDATA[396        INFO  Timeout watchdog d.u.i.k.p.r.p.ForkedTestFileRunner Timeout watcher launched (1000 secs.) 
+416        WARN  main            d.u.i.k.s.ProofSettings   The settings in /home/runner/.key/proof-settings.props are *not* read. 
+454        INFO  main            d.u.i.k.p.r.p.TestFile    Now processing file /home/runner/work/key/key/key.core/../key.ui/examples/InformationFlow/ToyBanking/banking_example.UserAccount(banking_example.UserAccount__getBankAccount(int)).JML normal_behavior operation contract.0.key 
+598        INFO  main            d.u.i.k.p.i.AbstractProblemLoader Loading environment from /home/runner/work/key/key/key.core/../key.ui/examples/InformationFlow/ToyBanking/banking_example.UserAccount(banking_example.UserAccount__getBankAccount(int)).JML normal_behavior operation contract.0.key 
+627        DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Environment load took 2.37ms 
+871        INFO  main            d.u.i.k.p.i.AbstractProblemLoader Creating init config 
+1753       DEBUG main            d.u.i.k.j.TypeConverter   No LDT found for Meta 
+1754       DEBUG main            d.u.i.k.j.TypeConverter   No LDT found for Meta 
+1756       DEBUG main            d.u.i.k.j.TypeConverter   No LDT found for Meta 
+1757       DEBUG main            d.u.i.k.j.TypeConverter   No LDT found for Meta 
+3212       DEBUG main            d.u.i.k.j.TypeConverter   No LDT found for JavaBigintExpression 
+8987       DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Init config took 8.12s 
+9192       INFO  main            d.u.i.k.p.i.AbstractProblemLoader Replaying proof banking_example.UserAccount[banking_example.UserAccount::getBankAccount(int)].JML normal_behavior operation contract.0 
+9264       DEBUG main            d.u.i.k.p.i.IntermediateProofReplayer Proof replay took 370.6ns 
+10599      INFO  main            d.u.i.k.p.r.p.TestFile    ... finished proof: closed. 
+
+pass: Verifying property "provable" was successful for file: /home/runner/work/key/key/key.core/../key.ui/examples/InformationFlow/ToyBanking/banking_example.UserAccount(banking_example.UserAccount__getBankAccount(int)).JML normal_behavior operation contract.0.key]]></system-out></testcase><testcase name="banking_example.UserAccount(banking_example.UserAccount__tryLogin(int,(C)).JML normal_behavior operation contract.0.key"  classname="runallproofs.ToyBanking.ToyBanking" time="0.000000"><system-out><![CDATA[10823      INFO  main            d.u.i.k.p.r.p.TestFile    Now processing file /home/runner/work/key/key/key.core/../key.ui/examples/InformationFlow/ToyBanking/banking_example.UserAccount(banking_example.UserAccount__tryLogin(int,(C)).JML normal_behavior operation contract.0.key 
+10824      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Loading environment from /home/runner/work/key/key/key.core/../key.ui/examples/InformationFlow/ToyBanking/banking_example.UserAccount(banking_example.UserAccount__tryLogin(int,(C)).JML normal_behavior operation contract.0.key 
+10824      DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Environment load took 86.2ns 
+10827      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Creating init config 
+13985      DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Init config took 3.16s 
+14085      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Replaying proof banking_example.UserAccount[banking_example.UserAccount::tryLogin(int,[C)].JML normal_behavior operation contract.0 
+14093      DEBUG main            d.u.i.k.p.i.IntermediateProofReplayer Proof replay took 11.8ns 
+34077      INFO  main            d.u.i.k.p.r.p.TestFile    ... finished proof: closed. 
+
+pass: Verifying property "provable" was successful for file: /home/runner/work/key/key/key.core/../key.ui/examples/InformationFlow/ToyBanking/banking_example.UserAccount(banking_example.UserAccount__tryLogin(int,(C)).JML normal_behavior operation contract.0.key]]></system-out></testcase><testcase name="banking_example.UserAccount(java.lang.Object___inv_()).JML accessible clause.0.key"  classname="runallproofs.ToyBanking.ToyBanking" time="0.000000"><system-out><![CDATA[34345      INFO  main            d.u.i.k.p.r.p.TestFile    Now processing file /home/runner/work/key/key/key.core/../key.ui/examples/InformationFlow/ToyBanking/banking_example.UserAccount(java.lang.Object___inv_()).JML accessible clause.0.key 
+34346      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Loading environment from /home/runner/work/key/key/key.core/../key.ui/examples/InformationFlow/ToyBanking/banking_example.UserAccount(java.lang.Object___inv_()).JML accessible clause.0.key 
+34346      DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Environment load took 103.5ns 
+34347      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Creating init config 
+37124      DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Init config took 2.78s 
+37206      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Replaying proof banking_example.UserAccount[java.lang.Object::<inv>()].JML accessible clause.0 
+37209      DEBUG main            d.u.i.k.p.i.IntermediateProofReplayer Proof replay took 11.6ns 
+40725      INFO  main            d.u.i.k.p.r.p.TestFile    ... finished proof: closed. 
+
+pass: Verifying property "provable" was successful for file: /home/runner/work/key/key/key.core/../key.ui/examples/InformationFlow/ToyBanking/banking_example.UserAccount(java.lang.Object___inv_()).JML accessible clause.0.key]]></system-out></testcase><testcase name="banking_example.BankAccount(banking_example.BankAccount__depositMoney(int)).JML normal_behavior operation contract.0.key"  classname="runallproofs.ToyBanking.ToyBanking" time="0.000000"><system-out><![CDATA[40974      INFO  main            d.u.i.k.p.r.p.TestFile    Now processing file /home/runner/work/key/key/key.core/../key.ui/examples/InformationFlow/ToyBanking/banking_example.BankAccount(banking_example.BankAccount__depositMoney(int)).JML normal_behavior operation contract.0.key 
+40975      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Loading environment from /home/runner/work/key/key/key.core/../key.ui/examples/InformationFlow/ToyBanking/banking_example.BankAccount(banking_example.BankAccount__depositMoney(int)).JML normal_behavior operation contract.0.key 
+40975      DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Environment load took 66.3ns 
+40976      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Creating init config 
+43727      DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Init config took 2.75s 
+43801      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Replaying proof banking_example.BankAccount[banking_example.BankAccount::depositMoney(int)].JML normal_behavior operation contract.0 
+43804      DEBUG main            d.u.i.k.p.i.IntermediateProofReplayer Proof replay took 12.5ns 
+44107      INFO  main            d.u.i.k.p.r.p.TestFile    ... finished proof: closed. 
+
+pass: Verifying property "provable" was successful for file: /home/runner/work/key/key/key.core/../key.ui/examples/InformationFlow/ToyBanking/banking_example.BankAccount(banking_example.BankAccount__depositMoney(int)).JML normal_behavior operation contract.0.key]]></system-out></testcase><testcase name="banking_example.BankAccount(banking_example.BankAccount__getBalance()).JML normal_behavior operation contract.0.key"  classname="runallproofs.ToyBanking.ToyBanking" time="0.000000"><system-out><![CDATA[44245      INFO  main            d.u.i.k.p.r.p.TestFile    Now processing file /home/runner/work/key/key/key.core/../key.ui/examples/InformationFlow/ToyBanking/banking_example.BankAccount(banking_example.BankAccount__getBalance()).JML normal_behavior operation contract.0.key 
+44245      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Loading environment from /home/runner/work/key/key/key.core/../key.ui/examples/InformationFlow/ToyBanking/banking_example.BankAccount(banking_example.BankAccount__getBalance()).JML normal_behavior operation contract.0.key 
+44245      DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Environment load took 80.8ns 
+44247      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Creating init config 
+47043      DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Init config took 2.8s 
+47098      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Replaying proof banking_example.BankAccount[banking_example.BankAccount::getBalance()].JML normal_behavior operation contract.0 
+47101      DEBUG main            d.u.i.k.p.i.IntermediateProofReplayer Proof replay took 11ns 
+47203      INFO  main            d.u.i.k.p.r.p.TestFile    ... finished proof: closed. 
+
+pass: Verifying property "provable" was successful for file: /home/runner/work/key/key/key.core/../key.ui/examples/InformationFlow/ToyBanking/banking_example.BankAccount(banking_example.BankAccount__getBalance()).JML normal_behavior operation contract.0.key]]></system-out></testcase><testcase name="banking_example.BankAccount(banking_example.BankAccount__getId()).JML normal_behavior operation contract.0.key"  classname="runallproofs.ToyBanking.ToyBanking" time="0.000000"><system-out><![CDATA[47328      INFO  main            d.u.i.k.p.r.p.TestFile    Now processing file /home/runner/work/key/key/key.core/../key.ui/examples/InformationFlow/ToyBanking/banking_example.BankAccount(banking_example.BankAccount__getId()).JML normal_behavior operation contract.0.key 
+47329      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Loading environment from /home/runner/work/key/key/key.core/../key.ui/examples/InformationFlow/ToyBanking/banking_example.BankAccount(banking_example.BankAccount__getId()).JML normal_behavior operation contract.0.key 
+47329      DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Environment load took 68.6ns 
+47330      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Creating init config 
+50076      DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Init config took 2.75s 
+50130      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Replaying proof banking_example.BankAccount[banking_example.BankAccount::getId()].JML normal_behavior operation contract.0 
+50133      DEBUG main            d.u.i.k.p.i.IntermediateProofReplayer Proof replay took 11.8ns 
+50234      INFO  main            d.u.i.k.p.r.p.TestFile    ... finished proof: closed. 
+
+pass: Verifying property "provable" was successful for file: /home/runner/work/key/key/key.core/../key.ui/examples/InformationFlow/ToyBanking/banking_example.BankAccount(banking_example.BankAccount__getId()).JML normal_behavior operation contract.0.key]]></system-out></testcase><testcase name="banking_example.Bank(banking_example.Bank__login(int,(C)).JML normal_behavior operation contract.0.key"  classname="runallproofs.ToyBanking.ToyBanking" time="0.000000"><system-out><![CDATA[50358      INFO  main            d.u.i.k.p.r.p.TestFile    Now processing file /home/runner/work/key/key/key.core/../key.ui/examples/InformationFlow/ToyBanking/banking_example.Bank(banking_example.Bank__login(int,(C)).JML normal_behavior operation contract.0.key 
+50359      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Loading environment from /home/runner/work/key/key/key.core/../key.ui/examples/InformationFlow/ToyBanking/banking_example.Bank(banking_example.Bank__login(int,(C)).JML normal_behavior operation contract.0.key 
+50359      DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Environment load took 113ns 
+50361      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Creating init config 
+53074      DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Init config took 2.71s 
+53132      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Replaying proof banking_example.Bank[banking_example.Bank::login(int,[C)].JML normal_behavior operation contract.0 
+53135      DEBUG main            d.u.i.k.p.i.IntermediateProofReplayer Proof replay took 13ns 
+58385      INFO  main            d.u.i.k.p.r.p.TestFile    ... finished proof: closed. 
+
+pass: Verifying property "provable" was successful for file: /home/runner/work/key/key/key.core/../key.ui/examples/InformationFlow/ToyBanking/banking_example.Bank(banking_example.Bank__login(int,(C)).JML normal_behavior operation contract.0.key]]></system-out></testcase><testcase name="banking_example2.UserAccount(banking_example2.UserAccount__getBankAccount(int)).JML normal_behavior operation contract.0.key"  classname="runallproofs.ToyBanking.ToyBanking" time="0.000000"><system-out><![CDATA[58560      INFO  main            d.u.i.k.p.r.p.TestFile    Now processing file /home/runner/work/key/key/key.core/../key.ui/examples/InformationFlow/ToyBanking/banking_example2.UserAccount(banking_example2.UserAccount__getBankAccount(int)).JML normal_behavior operation contract.0.key 
+58560      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Loading environment from /home/runner/work/key/key/key.core/../key.ui/examples/InformationFlow/ToyBanking/banking_example2.UserAccount(banking_example2.UserAccount__getBankAccount(int)).JML normal_behavior operation contract.0.key 
+58560      DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Environment load took 90.3ns 
+58561      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Creating init config 
+61222      DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Init config took 2.66s 
+61276      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Replaying proof banking_example2.UserAccount[banking_example2.UserAccount::getBankAccount(int)].JML normal_behavior operation contract.0 
+61279      DEBUG main            d.u.i.k.p.i.IntermediateProofReplayer Proof replay took 13.2ns 
+61685      INFO  main            d.u.i.k.p.r.p.TestFile    ... finished proof: closed. 
+
+pass: Verifying property "provable" was successful for file: /home/runner/work/key/key/key.core/../key.ui/examples/InformationFlow/ToyBanking/banking_example2.UserAccount(banking_example2.UserAccount__getBankAccount(int)).JML normal_behavior operation contract.0.key]]></system-out></testcase><testcase name="banking_example2.UserAccount(banking_example2.UserAccount__tryLogin(int,(C)).JML normal_behavior operation contract.0.key"  classname="runallproofs.ToyBanking.ToyBanking" time="0.000000"><system-out><![CDATA[61825      INFO  main            d.u.i.k.p.r.p.TestFile    Now processing file /home/runner/work/key/key/key.core/../key.ui/examples/InformationFlow/ToyBanking/banking_example2.UserAccount(banking_example2.UserAccount__tryLogin(int,(C)).JML normal_behavior operation contract.0.key 
+61826      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Loading environment from /home/runner/work/key/key/key.core/../key.ui/examples/InformationFlow/ToyBanking/banking_example2.UserAccount(banking_example2.UserAccount__tryLogin(int,(C)).JML normal_behavior operation contract.0.key 
+61826      DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Environment load took 69.5ns 
+61827      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Creating init config 
+64453      DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Init config took 2.63s 
+64508      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Replaying proof banking_example2.UserAccount[banking_example2.UserAccount::tryLogin(int,[C)].JML normal_behavior operation contract.0 
+64510      DEBUG main            d.u.i.k.p.i.IntermediateProofReplayer Proof replay took 12.1ns 
+82665      INFO  main            d.u.i.k.p.r.p.TestFile    ... finished proof: closed. 
+
+pass: Verifying property "provable" was successful for file: /home/runner/work/key/key/key.core/../key.ui/examples/InformationFlow/ToyBanking/banking_example2.UserAccount(banking_example2.UserAccount__tryLogin(int,(C)).JML normal_behavior operation contract.0.key]]></system-out></testcase><testcase name="banking_example2.UserAccount(java.lang.Object___inv_()).JML accessible clause.0.key"  classname="runallproofs.ToyBanking.ToyBanking" time="0.000000"><system-out><![CDATA[82891      INFO  main            d.u.i.k.p.r.p.TestFile    Now processing file /home/runner/work/key/key/key.core/../key.ui/examples/InformationFlow/ToyBanking/banking_example2.UserAccount(java.lang.Object___inv_()).JML accessible clause.0.key 
+82891      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Loading environment from /home/runner/work/key/key/key.core/../key.ui/examples/InformationFlow/ToyBanking/banking_example2.UserAccount(java.lang.Object___inv_()).JML accessible clause.0.key 
+82891      DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Environment load took 69.5ns 
+82892      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Creating init config 
+85458      DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Init config took 2.57s 
+85511      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Replaying proof banking_example2.UserAccount[java.lang.Object::<inv>()].JML accessible clause.0 
+85514      DEBUG main            d.u.i.k.p.i.IntermediateProofReplayer Proof replay took 13.2ns 
+89747      INFO  main            d.u.i.k.p.r.p.TestFile    ... finished proof: open goal(s) 
+
+pass: Verifying property "notprovable" was successful for file: /home/runner/work/key/key/key.core/../key.ui/examples/InformationFlow/ToyBanking/banking_example2.UserAccount(java.lang.Object___inv_()).JML accessible clause.0.key]]></system-out></testcase><testcase name="banking_example2.BankAccount(banking_example2.BankAccount__depositMoney(int)).JML normal_behavior operation contract.0.key"  classname="runallproofs.ToyBanking.ToyBanking" time="0.000000"><system-out><![CDATA[89932      INFO  main            d.u.i.k.p.r.p.TestFile    Now processing file /home/runner/work/key/key/key.core/../key.ui/examples/InformationFlow/ToyBanking/banking_example2.BankAccount(banking_example2.BankAccount__depositMoney(int)).JML normal_behavior operation contract.0.key 
+89932      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Loading environment from /home/runner/work/key/key/key.core/../key.ui/examples/InformationFlow/ToyBanking/banking_example2.BankAccount(banking_example2.BankAccount__depositMoney(int)).JML normal_behavior operation contract.0.key 
+89933      DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Environment load took 64.2ns 
+89933      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Creating init config 
+92478      DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Init config took 2.54s 
+92527      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Replaying proof banking_example2.BankAccount[banking_example2.BankAccount::depositMoney(int)].JML normal_behavior operation contract.0 
+92529      DEBUG main            d.u.i.k.p.i.IntermediateProofReplayer Proof replay took 13.2ns 
+92832      INFO  main            d.u.i.k.p.r.p.TestFile    ... finished proof: closed. 
+
+pass: Verifying property "provable" was successful for file: /home/runner/work/key/key/key.core/../key.ui/examples/InformationFlow/ToyBanking/banking_example2.BankAccount(banking_example2.BankAccount__depositMoney(int)).JML normal_behavior operation contract.0.key]]></system-out></testcase><testcase name="banking_example2.BankAccount(banking_example2.BankAccount__getBalance()).JML normal_behavior operation contract.0.key"  classname="runallproofs.ToyBanking.ToyBanking" time="0.000000"><system-out><![CDATA[92993      INFO  main            d.u.i.k.p.r.p.TestFile    Now processing file /home/runner/work/key/key/key.core/../key.ui/examples/InformationFlow/ToyBanking/banking_example2.BankAccount(banking_example2.BankAccount__getBalance()).JML normal_behavior operation contract.0.key 
+92994      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Loading environment from /home/runner/work/key/key/key.core/../key.ui/examples/InformationFlow/ToyBanking/banking_example2.BankAccount(banking_example2.BankAccount__getBalance()).JML normal_behavior operation contract.0.key 
+92994      DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Environment load took 107.8ns 
+92996      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Creating init config 
+95555      DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Init config took 2.56s 
+95601      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Replaying proof banking_example2.BankAccount[banking_example2.BankAccount::getBalance()].JML normal_behavior operation contract.0 
+95605      DEBUG main            d.u.i.k.p.i.IntermediateProofReplayer Proof replay took 12.6ns 
+95711      INFO  main            d.u.i.k.p.r.p.TestFile    ... finished proof: closed. 
+
+pass: Verifying property "provable" was successful for file: /home/runner/work/key/key/key.core/../key.ui/examples/InformationFlow/ToyBanking/banking_example2.BankAccount(banking_example2.BankAccount__getBalance()).JML normal_behavior operation contract.0.key]]></system-out></testcase><testcase name="banking_example2.BankAccount(banking_example2.BankAccount__getId()).JML normal_behavior operation contract.0.key"  classname="runallproofs.ToyBanking.ToyBanking" time="0.000000"><system-out><![CDATA[95857      INFO  main            d.u.i.k.p.r.p.TestFile    Now processing file /home/runner/work/key/key/key.core/../key.ui/examples/InformationFlow/ToyBanking/banking_example2.BankAccount(banking_example2.BankAccount__getId()).JML normal_behavior operation contract.0.key 
+95857      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Loading environment from /home/runner/work/key/key/key.core/../key.ui/examples/InformationFlow/ToyBanking/banking_example2.BankAccount(banking_example2.BankAccount__getId()).JML normal_behavior operation contract.0.key 
+95857      DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Environment load took 73.9ns 
+95858      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Creating init config 
+98425      DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Init config took 2.57s 
+98471      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Replaying proof banking_example2.BankAccount[banking_example2.BankAccount::getId()].JML normal_behavior operation contract.0 
+98474      DEBUG main            d.u.i.k.p.i.IntermediateProofReplayer Proof replay took 12.3ns 
+98578      INFO  main            d.u.i.k.p.r.p.TestFile    ... finished proof: closed. 
+
+pass: Verifying property "provable" was successful for file: /home/runner/work/key/key/key.core/../key.ui/examples/InformationFlow/ToyBanking/banking_example2.BankAccount(banking_example2.BankAccount__getId()).JML normal_behavior operation contract.0.key]]></system-out></testcase><testcase name="banking_example2.Bank(banking_example2.Bank__login(int,(C)).JML normal_behavior operation contract.0.key"  classname="runallproofs.ToyBanking.ToyBanking" time="0.000000"><system-out><![CDATA[98729      INFO  main            d.u.i.k.p.r.p.TestFile    Now processing file /home/runner/work/key/key/key.core/../key.ui/examples/InformationFlow/ToyBanking/banking_example2.Bank(banking_example2.Bank__login(int,(C)).JML normal_behavior operation contract.0.key 
+98729      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Loading environment from /home/runner/work/key/key/key.core/../key.ui/examples/InformationFlow/ToyBanking/banking_example2.Bank(banking_example2.Bank__login(int,(C)).JML normal_behavior operation contract.0.key 
+98729      DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Environment load took 75.1ns 
+98730      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Creating init config 
+101311     DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Init config took 2.58s 
+101355     INFO  main            d.u.i.k.p.i.AbstractProblemLoader Replaying proof banking_example2.Bank[banking_example2.Bank::login(int,[C)].JML normal_behavior operation contract.0 
+101358     DEBUG main            d.u.i.k.p.i.IntermediateProofReplayer Proof replay took 12.7ns 
+104899     INFO  main            d.u.i.k.p.r.p.TestFile    ... finished proof: closed. 
+
+pass: Verifying property "provable" was successful for file: /home/runner/work/key/key/key.core/../key.ui/examples/InformationFlow/ToyBanking/banking_example2.Bank(banking_example2.Bank__login(int,(C)).JML normal_behavior operation contract.0.key]]></system-out></testcase></testsuite></testsuites>
