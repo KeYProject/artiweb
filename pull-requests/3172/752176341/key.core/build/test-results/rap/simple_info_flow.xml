@@ -1,0 +1,26 @@
+<testsuites> <testsuite name="runallproofs.simple_info_flow" tests="2" id="0" disabled="0" errors="0" failures="0" time="0.000000"><testcase name="UpdateAbstraction_ex7_1_insecure.key"  classname="runallproofs.simple_info_flow.simple_info_flow" time="0.000000"><system-out><![CDATA[399        WARN  main            d.u.i.k.s.ProofSettings   The settings in /home/runner/.key/proof-settings.props are *not* read. 
+406        INFO  Timeout watchdog d.u.i.k.p.r.p.ForkedTestFileRunner Timeout watcher launched (2000 secs.) 
+437        INFO  main            d.u.i.k.p.r.p.TestFile    Now processing file /home/runner/work/key/key/key.core/../key.ui/examples/heap/information_flow/UpdateAbstraction_ex7_1_insecure.key 
+559        INFO  main            d.u.i.k.p.i.AbstractProblemLoader Loading environment from /home/runner/work/key/key/key.core/../key.ui/examples/heap/information_flow/UpdateAbstraction_ex7_1_insecure.key 
+581        DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Environment load took 3.62ms 
+811        INFO  main            d.u.i.k.p.i.AbstractProblemLoader Creating init config 
+1828       DEBUG main            d.u.i.k.j.TypeConverter   No LDT found for Meta 
+1829       DEBUG main            d.u.i.k.j.TypeConverter   No LDT found for Meta 
+1832       DEBUG main            d.u.i.k.j.TypeConverter   No LDT found for Meta 
+1832       DEBUG main            d.u.i.k.j.TypeConverter   No LDT found for Meta 
+3287       DEBUG main            d.u.i.k.j.TypeConverter   No LDT found for JavaBigintExpression 
+8375       DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Init config took 7.56s 
+8552       INFO  main            d.u.i.k.p.i.AbstractProblemLoader Replaying proof UpdateAbstraction[UpdateAbstraction::ex7_1_insecure()].JML operation contract.0 
+8624       DEBUG main            d.u.i.k.p.i.IntermediateProofReplayer Proof replay took 36.7ns 
+9259       INFO  main            d.u.i.k.p.r.p.TestFile    ... finished proof: open goal(s) 
+
+pass: Verifying property "notprovable" was successful for file: /home/runner/work/key/key/key.core/../key.ui/examples/heap/information_flow/UpdateAbstraction_ex7_1_insecure.key]]></system-out></testcase><testcase name="UpdateAbstraction_ex7_2_insecure.key"  classname="runallproofs.simple_info_flow.simple_info_flow" time="0.000000"><system-out><![CDATA[9371       INFO  main            d.u.i.k.p.r.p.TestFile    Now processing file /home/runner/work/key/key/key.core/../key.ui/examples/heap/information_flow/UpdateAbstraction_ex7_2_insecure.key 
+9371       INFO  main            d.u.i.k.p.i.AbstractProblemLoader Loading environment from /home/runner/work/key/key/key.core/../key.ui/examples/heap/information_flow/UpdateAbstraction_ex7_2_insecure.key 
+9372       DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Environment load took 224.6ns 
+9373       INFO  main            d.u.i.k.p.i.AbstractProblemLoader Creating init config 
+12203      DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Init config took 2.83s 
+12280      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Replaying proof UpdateAbstraction[UpdateAbstraction::ex7_2_insecure()].JML operation contract.0 
+12282      DEBUG main            d.u.i.k.p.i.IntermediateProofReplayer Proof replay took 5.7ns 
+12587      INFO  main            d.u.i.k.p.r.p.TestFile    ... finished proof: open goal(s) 
+
+pass: Verifying property "notprovable" was successful for file: /home/runner/work/key/key/key.core/../key.ui/examples/heap/information_flow/UpdateAbstraction_ex7_2_insecure.key]]></system-out></testcase></testsuite></testsuites>

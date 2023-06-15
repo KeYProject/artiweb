@@ -1,0 +1,142 @@
+<testsuites> <testsuite name="runallproofs.applicationRestrictions" tests="11" id="0" disabled="0" errors="0" failures="0" time="0.000000"><testcase name="wellformed1.key"  classname="runallproofs.applicationRestrictions.applicationRestrictions" time="0.000000"><system-out><![CDATA[347        INFO  Timeout watchdog d.u.i.k.p.r.p.ForkedTestFileRunner Timeout watcher launched (2000 secs.) 
+357        WARN  main            d.u.i.k.s.ProofSettings   The settings in /home/runner/.key/proof-settings.props are *not* read. 
+383        INFO  main            d.u.i.k.p.r.p.TestFile    Now processing file /home/runner/work/key/key/key.core/../key.ui/examples/heap/polarity_tests/wellformed1.key 
+497        INFO  main            d.u.i.k.p.i.AbstractProblemLoader Loading environment from /home/runner/work/key/key/key.core/../key.ui/examples/heap/polarity_tests/wellformed1.key 
+514        DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Environment load took 2.25ms 
+746        INFO  main            d.u.i.k.p.i.AbstractProblemLoader Creating init config 
+1535       DEBUG main            d.u.i.k.j.TypeConverter   No LDT found for Meta 
+1535       DEBUG main            d.u.i.k.j.TypeConverter   No LDT found for Meta 
+1536       DEBUG main            d.u.i.k.j.TypeConverter   No LDT found for Meta 
+1537       DEBUG main            d.u.i.k.j.TypeConverter   No LDT found for Meta 
+3035       DEBUG main            d.u.i.k.j.TypeConverter   No LDT found for JavaBigintExpression 
+8070       DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Init config took 7.32s 
+8127       INFO  main            d.u.i.k.p.i.AbstractProblemLoader Replaying proof wellformed1.key 
+8159       DEBUG main            d.u.i.k.p.i.IntermediateProofReplayer Proof replay took 32.5ns 
+8333       INFO  main            d.u.i.k.p.r.p.TestFile    ... finished proof: closed. 
+8449       INFO  main            d.u.i.k.p.i.AbstractProblemLoader Loading environment from /home/runner/work/key/key/key.core/../key.ui/examples/heap/polarity_tests/wellformed1.key.proof 
+8449       DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Environment load took 174.6ns 
+8457       INFO  main            d.u.i.k.p.i.AbstractProblemLoader Creating init config 
+11341      DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Init config took 2.88s 
+11385      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Replaying proof wellformed1.key.proof 
+11392      DEBUG main            d.u.i.k.p.i.IntermediateProofReplayer Proof replay took 2.17ms 
+11402      DEBUG main            d.u.i.k.p.r.p.TestFile    ... success: reloaded. 
+
+pass: Verifying property "provable" was successful for file: /home/runner/work/key/key/key.core/../key.ui/examples/heap/polarity_tests/wellformed1.key]]></system-out></testcase><testcase name="wellformed2.key"  classname="runallproofs.applicationRestrictions.applicationRestrictions" time="0.000000"><system-out><![CDATA[11404      INFO  main            d.u.i.k.p.r.p.TestFile    Now processing file /home/runner/work/key/key/key.core/../key.ui/examples/heap/polarity_tests/wellformed2.key 
+11404      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Loading environment from /home/runner/work/key/key/key.core/../key.ui/examples/heap/polarity_tests/wellformed2.key 
+11404      DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Environment load took 273.81ns 
+11406      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Creating init config 
+14143      DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Init config took 2.74s 
+14173      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Replaying proof wellformed2.key 
+14175      DEBUG main            d.u.i.k.p.i.IntermediateProofReplayer Proof replay took 6.2ns 
+14278      INFO  main            d.u.i.k.p.r.p.TestFile    ... finished proof: open goal(s) 
+
+pass: Verifying property "notprovable" was successful for file: /home/runner/work/key/key/key.core/../key.ui/examples/heap/polarity_tests/wellformed2.key]]></system-out></testcase><testcase name="wellformed3.key"  classname="runallproofs.applicationRestrictions.applicationRestrictions" time="0.000000"><system-out><![CDATA[14402      INFO  main            d.u.i.k.p.r.p.TestFile    Now processing file /home/runner/work/key/key/key.core/../key.ui/examples/heap/polarity_tests/wellformed3.key 
+14402      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Loading environment from /home/runner/work/key/key/key.core/../key.ui/examples/heap/polarity_tests/wellformed3.key 
+14402      DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Environment load took 108.8ns 
+14404      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Creating init config 
+17067      DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Init config took 2.66s 
+17092      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Replaying proof wellformed3.key 
+17094      DEBUG main            d.u.i.k.p.i.IntermediateProofReplayer Proof replay took 5.6ns 
+17200      INFO  main            d.u.i.k.p.r.p.TestFile    ... finished proof: closed. 
+17332      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Loading environment from /home/runner/work/key/key/key.core/../key.ui/examples/heap/polarity_tests/wellformed3.key.proof 
+17332      DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Environment load took 148.4ns 
+17333      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Creating init config 
+19904      DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Init config took 2.57s 
+19928      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Replaying proof wellformed3.key.proof 
+19939      DEBUG main            d.u.i.k.p.i.IntermediateProofReplayer Proof replay took 6.32ms 
+19941      DEBUG main            d.u.i.k.p.r.p.TestFile    ... success: reloaded. 
+
+pass: Verifying property "provable" was successful for file: /home/runner/work/key/key/key.core/../key.ui/examples/heap/polarity_tests/wellformed3.key]]></system-out></testcase><testcase name="wellformed4.key"  classname="runallproofs.applicationRestrictions.applicationRestrictions" time="0.000000"><system-out><![CDATA[19942      INFO  main            d.u.i.k.p.r.p.TestFile    Now processing file /home/runner/work/key/key/key.core/../key.ui/examples/heap/polarity_tests/wellformed4.key 
+19943      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Loading environment from /home/runner/work/key/key/key.core/../key.ui/examples/heap/polarity_tests/wellformed4.key 
+19943      DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Environment load took 250.9ns 
+19950      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Creating init config 
+22634      DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Init config took 2.68s 
+22655      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Replaying proof wellformed4.key 
+22656      DEBUG main            d.u.i.k.p.i.IntermediateProofReplayer Proof replay took 5.4ns 
+22760      INFO  main            d.u.i.k.p.r.p.TestFile    ... finished proof: open goal(s) 
+
+pass: Verifying property "notprovable" was successful for file: /home/runner/work/key/key/key.core/../key.ui/examples/heap/polarity_tests/wellformed4.key]]></system-out></testcase><testcase name="wellformed5.key"  classname="runallproofs.applicationRestrictions.applicationRestrictions" time="0.000000"><system-out><![CDATA[22899      INFO  main            d.u.i.k.p.r.p.TestFile    Now processing file /home/runner/work/key/key/key.core/../key.ui/examples/heap/polarity_tests/wellformed5.key 
+22899      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Loading environment from /home/runner/work/key/key/key.core/../key.ui/examples/heap/polarity_tests/wellformed5.key 
+22899      DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Environment load took 73.2ns 
+22900      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Creating init config 
+25469      DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Init config took 2.57s 
+25489      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Replaying proof wellformed5.key 
+25490      DEBUG main            d.u.i.k.p.i.IntermediateProofReplayer Proof replay took 6ns 
+25597      INFO  main            d.u.i.k.p.r.p.TestFile    ... finished proof: closed. 
+25718      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Loading environment from /home/runner/work/key/key/key.core/../key.ui/examples/heap/polarity_tests/wellformed5.key.proof 
+25718      DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Environment load took 128.8ns 
+25721      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Creating init config 
+28272      DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Init config took 2.55s 
+28293      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Replaying proof wellformed5.key.proof 
+28296      DEBUG main            d.u.i.k.p.i.IntermediateProofReplayer Proof replay took 919.72ns 
+28297      DEBUG main            d.u.i.k.p.r.p.TestFile    ... success: reloaded. 
+
+pass: Verifying property "provable" was successful for file: /home/runner/work/key/key/key.core/../key.ui/examples/heap/polarity_tests/wellformed5.key]]></system-out></testcase><testcase name="wellformed6.key"  classname="runallproofs.applicationRestrictions.applicationRestrictions" time="0.000000"><system-out><![CDATA[28298      INFO  main            d.u.i.k.p.r.p.TestFile    Now processing file /home/runner/work/key/key/key.core/../key.ui/examples/heap/polarity_tests/wellformed6.key 
+28299      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Loading environment from /home/runner/work/key/key/key.core/../key.ui/examples/heap/polarity_tests/wellformed6.key 
+28299      DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Environment load took 244.8ns 
+28300      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Creating init config 
+30884      DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Init config took 2.58s 
+30904      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Replaying proof wellformed6.key 
+30905      DEBUG main            d.u.i.k.p.i.IntermediateProofReplayer Proof replay took 6.8ns 
+31008      INFO  main            d.u.i.k.p.r.p.TestFile    ... finished proof: open goal(s) 
+
+pass: Verifying property "notprovable" was successful for file: /home/runner/work/key/key/key.core/../key.ui/examples/heap/polarity_tests/wellformed6.key]]></system-out></testcase><testcase name="wellformed7.key"  classname="runallproofs.applicationRestrictions.applicationRestrictions" time="0.000000"><system-out><![CDATA[31148      INFO  main            d.u.i.k.p.r.p.TestFile    Now processing file /home/runner/work/key/key/key.core/../key.ui/examples/heap/polarity_tests/wellformed7.key 
+31148      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Loading environment from /home/runner/work/key/key/key.core/../key.ui/examples/heap/polarity_tests/wellformed7.key 
+31148      DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Environment load took 76.3ns 
+31150      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Creating init config 
+33674      DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Init config took 2.52s 
+33693      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Replaying proof wellformed7.key 
+33695      DEBUG main            d.u.i.k.p.i.IntermediateProofReplayer Proof replay took 6.1ns 
+33797      INFO  main            d.u.i.k.p.r.p.TestFile    ... finished proof: closed. 
+33931      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Loading environment from /home/runner/work/key/key/key.core/../key.ui/examples/heap/polarity_tests/wellformed7.key.proof 
+33931      DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Environment load took 130.9ns 
+33933      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Creating init config 
+36454      DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Init config took 2.52s 
+36474      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Replaying proof wellformed7.key.proof 
+36477      DEBUG main            d.u.i.k.p.i.IntermediateProofReplayer Proof replay took 1.3ms 
+36478      DEBUG main            d.u.i.k.p.r.p.TestFile    ... success: reloaded. 
+
+pass: Verifying property "provable" was successful for file: /home/runner/work/key/key/key.core/../key.ui/examples/heap/polarity_tests/wellformed7.key]]></system-out></testcase><testcase name="wellformed8.key"  classname="runallproofs.applicationRestrictions.applicationRestrictions" time="0.000000"><system-out><![CDATA[36479      INFO  main            d.u.i.k.p.r.p.TestFile    Now processing file /home/runner/work/key/key/key.core/../key.ui/examples/heap/polarity_tests/wellformed8.key 
+36480      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Loading environment from /home/runner/work/key/key/key.core/../key.ui/examples/heap/polarity_tests/wellformed8.key 
+36480      DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Environment load took 240.4ns 
+36481      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Creating init config 
+39033      DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Init config took 2.55s 
+39051      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Replaying proof wellformed8.key 
+39052      DEBUG main            d.u.i.k.p.i.IntermediateProofReplayer Proof replay took 7.4ns 
+39155      INFO  main            d.u.i.k.p.r.p.TestFile    ... finished proof: open goal(s) 
+
+pass: Verifying property "notprovable" was successful for file: /home/runner/work/key/key/key.core/../key.ui/examples/heap/polarity_tests/wellformed8.key]]></system-out></testcase><testcase name="wellformed9.key"  classname="runallproofs.applicationRestrictions.applicationRestrictions" time="0.000000"><system-out><![CDATA[39327      INFO  main            d.u.i.k.p.r.p.TestFile    Now processing file /home/runner/work/key/key/key.core/../key.ui/examples/heap/polarity_tests/wellformed9.key 
+39327      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Loading environment from /home/runner/work/key/key/key.core/../key.ui/examples/heap/polarity_tests/wellformed9.key 
+39327      DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Environment load took 77.6ns 
+39328      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Creating init config 
+41830      DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Init config took 2.5s 
+41848      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Replaying proof wellformed9.key 
+41849      DEBUG main            d.u.i.k.p.i.IntermediateProofReplayer Proof replay took 6.5ns 
+41952      INFO  main            d.u.i.k.p.r.p.TestFile    ... finished proof: closed. 
+42098      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Loading environment from /home/runner/work/key/key/key.core/../key.ui/examples/heap/polarity_tests/wellformed9.key.proof 
+42099      DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Environment load took 1.12ms 
+42101      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Creating init config 
+44653      DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Init config took 2.55s 
+44670      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Replaying proof wellformed9.key.proof 
+44673      DEBUG main            d.u.i.k.p.i.IntermediateProofReplayer Proof replay took 1.41ms 
+44674      DEBUG main            d.u.i.k.p.r.p.TestFile    ... success: reloaded. 
+
+pass: Verifying property "provable" was successful for file: /home/runner/work/key/key/key.core/../key.ui/examples/heap/polarity_tests/wellformed9.key]]></system-out></testcase><testcase name="wellformed10.key"  classname="runallproofs.applicationRestrictions.applicationRestrictions" time="0.000000"><system-out><![CDATA[44675      INFO  main            d.u.i.k.p.r.p.TestFile    Now processing file /home/runner/work/key/key/key.core/../key.ui/examples/heap/polarity_tests/wellformed10.key 
+44675      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Loading environment from /home/runner/work/key/key/key.core/../key.ui/examples/heap/polarity_tests/wellformed10.key 
+44675      DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Environment load took 106.4ns 
+44676      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Creating init config 
+47197      DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Init config took 2.52s 
+47214      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Replaying proof wellformed10.key 
+47215      DEBUG main            d.u.i.k.p.i.IntermediateProofReplayer Proof replay took 6.1ns 
+47320      INFO  main            d.u.i.k.p.r.p.TestFile    ... finished proof: open goal(s) 
+
+pass: Verifying property "notprovable" was successful for file: /home/runner/work/key/key/key.core/../key.ui/examples/heap/polarity_tests/wellformed10.key]]></system-out></testcase><testcase name="wellformed11.key"  classname="runallproofs.applicationRestrictions.applicationRestrictions" time="0.000000"><system-out><![CDATA[47474      INFO  main            d.u.i.k.p.r.p.TestFile    Now processing file /home/runner/work/key/key/key.core/../key.ui/examples/heap/polarity_tests/wellformed11.key 
+47475      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Loading environment from /home/runner/work/key/key/key.core/../key.ui/examples/heap/polarity_tests/wellformed11.key 
+47475      DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Environment load took 79.9ns 
+47476      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Creating init config 
+49963      DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Init config took 2.49s 
+49993      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Replaying proof wellformed11.key 
+49998      DEBUG main            d.u.i.k.p.i.IntermediateProofReplayer Proof replay took 8.2ns 
+50101      INFO  main            d.u.i.k.p.r.p.TestFile    ... finished proof: open goal(s) 
+
+pass: Verifying property "notprovable" was successful for file: /home/runner/work/key/key/key.core/../key.ui/examples/heap/polarity_tests/wellformed11.key]]></system-out></testcase></testsuite></testsuites>

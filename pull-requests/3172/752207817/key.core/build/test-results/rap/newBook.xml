@@ -1,0 +1,90 @@
+<testsuites> <testsuite name="runallproofs.newBook" tests="5" id="0" disabled="0" errors="0" failures="0" time="0.000000"><testcase name="ArrayList.add.key"  classname="runallproofs.newBook.newBook" time="0.000000"><system-out><![CDATA[391        INFO  Timeout watchdog d.u.i.k.p.r.p.ForkedTestFileRunner Timeout watcher launched (2000 secs.) 
+409        WARN  main            d.u.i.k.s.ProofSettings   No proof-settings could be loaded, using defaults java.io.FileNotFoundException: /home/runner/.key/proof-settings.props (No such file or directory)
+	at java.base/java.io.FileInputStream.open0(Native Method)
+
+441        INFO  main            d.u.i.k.p.r.p.TestFile    Now processing file /home/runner/work/key/key/key.core/../key.ui/examples/newBook/09.list_modelfield/ArrayList.add.key 
+614        INFO  main            d.u.i.k.p.i.AbstractProblemLoader Loading environment from /home/runner/work/key/key/key.core/../key.ui/examples/newBook/09.list_modelfield/ArrayList.add.key 
+642        DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Environment load took 2.61ms 
+906        INFO  main            d.u.i.k.p.i.AbstractProblemLoader Creating init config 
+1924       DEBUG main            d.u.i.k.j.TypeConverter   No LDT found for Meta 
+1930       DEBUG main            d.u.i.k.j.TypeConverter   No LDT found for Meta 
+1934       DEBUG main            d.u.i.k.j.TypeConverter   No LDT found for Meta 
+1936       DEBUG main            d.u.i.k.j.TypeConverter   No LDT found for Meta 
+3814       DEBUG main            d.u.i.k.j.TypeConverter   No LDT found for JavaBigintExpression 
+9665       DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Init config took 8.76s 
+9925       INFO  main            d.u.i.k.p.i.AbstractProblemLoader Replaying proof ArrayList[List::add(int)].JML normal_behavior operation contract.0 
+9971       DEBUG main            d.u.i.k.p.i.IntermediateProofReplayer Proof replay took 35.9ns 
+30751      INFO  main            d.u.i.k.p.r.p.TestFile    ... finished proof: closed. 
+31032      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Loading environment from /home/runner/work/key/key/key.core/../key.ui/examples/newBook/09.list_modelfield/ArrayList.add.key.proof 
+31032      DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Environment load took 229.81ns 
+31039      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Creating init config 
+34385      DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Init config took 3.35s 
+34498      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Replaying proof ArrayList[List::add(int)].JML normal_behavior operation contract.0 
+35595      DEBUG main            d.u.i.k.p.i.IntermediateProofReplayer Proof replay took 1.01s 
+35609      DEBUG main            d.u.i.k.p.r.p.TestFile    ... success: reloaded. 
+
+pass: Verifying property "provable" was successful for file: /home/runner/work/key/key/key.core/../key.ui/examples/newBook/09.list_modelfield/ArrayList.add.key]]></system-out></testcase><testcase name="ArrayList.remFirst.key"  classname="runallproofs.newBook.newBook" time="0.000000"><system-out><![CDATA[35613      INFO  main            d.u.i.k.p.r.p.TestFile    Now processing file /home/runner/work/key/key/key.core/../key.ui/examples/newBook/09.list_modelfield/ArrayList.remFirst.key 
+35614      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Loading environment from /home/runner/work/key/key/key.core/../key.ui/examples/newBook/09.list_modelfield/ArrayList.remFirst.key 
+35615      DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Environment load took 751.14ns 
+35617      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Creating init config 
+38956      DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Init config took 3.34s 
+39025      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Replaying proof ArrayList[List::remFirst()].JML normal_behavior operation contract.0 
+39028      DEBUG main            d.u.i.k.p.i.IntermediateProofReplayer Proof replay took 17.6ns 
+43971      INFO  main            d.u.i.k.p.r.p.TestFile    ... finished proof: closed. 
+44180      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Loading environment from /home/runner/work/key/key/key.core/../key.ui/examples/newBook/09.list_modelfield/ArrayList.remFirst.key.proof 
+44180      DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Environment load took 174.31ns 
+44186      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Creating init config 
+47327      DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Init config took 3.14s 
+47402      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Replaying proof ArrayList[List::remFirst()].JML normal_behavior operation contract.0 
+47850      DEBUG main            d.u.i.k.p.i.IntermediateProofReplayer Proof replay took 424.17ms 
+47852      DEBUG main            d.u.i.k.p.r.p.TestFile    ... success: reloaded. 
+
+pass: Verifying property "provable" was successful for file: /home/runner/work/key/key/key.core/../key.ui/examples/newBook/09.list_modelfield/ArrayList.remFirst.key]]></system-out></testcase><testcase name="ArrayList.empty.key"  classname="runallproofs.newBook.newBook" time="0.000000"><system-out><![CDATA[47853      INFO  main            d.u.i.k.p.r.p.TestFile    Now processing file /home/runner/work/key/key/key.core/../key.ui/examples/newBook/09.list_modelfield/ArrayList.empty.key 
+47853      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Loading environment from /home/runner/work/key/key/key.core/../key.ui/examples/newBook/09.list_modelfield/ArrayList.empty.key 
+47853      DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Environment load took 73.2ns 
+47855      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Creating init config 
+51071      DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Init config took 3.22s 
+51132      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Replaying proof ArrayList[List::empty()].JML normal_behavior operation contract.0 
+51135      DEBUG main            d.u.i.k.p.i.IntermediateProofReplayer Proof replay took 6.2ns 
+52342      INFO  main            d.u.i.k.p.r.p.TestFile    ... finished proof: closed. 
+52547      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Loading environment from /home/runner/work/key/key/key.core/../key.ui/examples/newBook/09.list_modelfield/ArrayList.empty.key.proof 
+52552      DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Environment load took 4.41ms 
+52554      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Creating init config 
+55643      DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Init config took 3.09s 
+55730      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Replaying proof ArrayList[List::empty()].JML normal_behavior operation contract.0 
+55854      DEBUG main            d.u.i.k.p.i.IntermediateProofReplayer Proof replay took 112.43ms 
+55856      DEBUG main            d.u.i.k.p.r.p.TestFile    ... success: reloaded. 
+
+pass: Verifying property "provable" was successful for file: /home/runner/work/key/key/key.core/../key.ui/examples/newBook/09.list_modelfield/ArrayList.empty.key]]></system-out></testcase><testcase name="ArrayList.size.key"  classname="runallproofs.newBook.newBook" time="0.000000"><system-out><![CDATA[55857      INFO  main            d.u.i.k.p.r.p.TestFile    Now processing file /home/runner/work/key/key/key.core/../key.ui/examples/newBook/09.list_modelfield/ArrayList.size.key 
+55857      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Loading environment from /home/runner/work/key/key/key.core/../key.ui/examples/newBook/09.list_modelfield/ArrayList.size.key 
+55857      DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Environment load took 70.4ns 
+55858      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Creating init config 
+58967      DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Init config took 3.11s 
+59025      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Replaying proof ArrayList[List::size()].JML normal_behavior operation contract.0 
+59027      DEBUG main            d.u.i.k.p.i.IntermediateProofReplayer Proof replay took 6.6ns 
+59658      INFO  main            d.u.i.k.p.r.p.TestFile    ... finished proof: closed. 
+59874      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Loading environment from /home/runner/work/key/key/key.core/../key.ui/examples/newBook/09.list_modelfield/ArrayList.size.key.proof 
+59875      DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Environment load took 1.08ms 
+59877      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Creating init config 
+63092      DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Init config took 3.22s 
+63150      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Replaying proof ArrayList[List::size()].JML normal_behavior operation contract.0 
+63193      DEBUG main            d.u.i.k.p.i.IntermediateProofReplayer Proof replay took 36.92ms 
+63195      DEBUG main            d.u.i.k.p.r.p.TestFile    ... success: reloaded. 
+
+pass: Verifying property "provable" was successful for file: /home/runner/work/key/key/key.core/../key.ui/examples/newBook/09.list_modelfield/ArrayList.size.key]]></system-out></testcase><testcase name="ArrayList.get.key"  classname="runallproofs.newBook.newBook" time="0.000000"><system-out><![CDATA[63196      INFO  main            d.u.i.k.p.r.p.TestFile    Now processing file /home/runner/work/key/key/key.core/../key.ui/examples/newBook/09.list_modelfield/ArrayList.get.key 
+63205      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Loading environment from /home/runner/work/key/key/key.core/../key.ui/examples/newBook/09.list_modelfield/ArrayList.get.key 
+63206      DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Environment load took 572.23ns 
+63207      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Creating init config 
+66323      DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Init config took 3.12s 
+66379      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Replaying proof ArrayList[List::get(int)].JML normal_behavior operation contract.0 
+66381      DEBUG main            d.u.i.k.p.i.IntermediateProofReplayer Proof replay took 7.3ns 
+67486      INFO  main            d.u.i.k.p.r.p.TestFile    ... finished proof: closed. 
+67713      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Loading environment from /home/runner/work/key/key/key.core/../key.ui/examples/newBook/09.list_modelfield/ArrayList.get.key.proof 
+67714      DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Environment load took 945.45ns 
+67716      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Creating init config 
+70839      DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Init config took 3.12s 
+70895      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Replaying proof ArrayList[List::get(int)].JML normal_behavior operation contract.0 
+70973      DEBUG main            d.u.i.k.p.i.IntermediateProofReplayer Proof replay took 68.02ms 
+70974      DEBUG main            d.u.i.k.p.r.p.TestFile    ... success: reloaded. 
+
+pass: Verifying property "provable" was successful for file: /home/runner/work/key/key/key.core/../key.ui/examples/newBook/09.list_modelfield/ArrayList.get.key]]></system-out></testcase></testsuite></testsuites>
