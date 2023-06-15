@@ -1,0 +1,56 @@
+<testsuites> <testsuite name="runallproofs.WeideEtAl" tests="3" id="0" disabled="0" errors="0" failures="0" time="0.000000"><testcase name="AddAndMultiply_add.key"  classname="runallproofs.WeideEtAl.WeideEtAl" time="0.000000"><system-out><![CDATA[358        INFO  Timeout watchdog d.u.i.k.p.r.p.ForkedTestFileRunner Timeout watcher launched (2000 secs.) 
+364        WARN  main            d.u.i.k.s.ProofSettings   The settings in /home/runner/.key/proof-settings.props are *not* read. 
+418        INFO  main            d.u.i.k.p.r.p.TestFile    Now processing file /home/runner/work/key/key/key.core/../key.ui/examples/heap/WeideEtAl_01_AddAndMultiply/AddAndMultiply_add.key 
+533        INFO  main            d.u.i.k.p.i.AbstractProblemLoader Loading environment from /home/runner/work/key/key/key.core/../key.ui/examples/heap/WeideEtAl_01_AddAndMultiply/AddAndMultiply_add.key 
+555        DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Environment load took 2.41ms 
+783        INFO  main            d.u.i.k.p.i.AbstractProblemLoader Creating init config 
+1679       DEBUG main            d.u.i.k.j.TypeConverter   No LDT found for Meta 
+1681       DEBUG main            d.u.i.k.j.TypeConverter   No LDT found for Meta 
+1682       DEBUG main            d.u.i.k.j.TypeConverter   No LDT found for Meta 
+1684       DEBUG main            d.u.i.k.j.TypeConverter   No LDT found for Meta 
+3063       DEBUG main            d.u.i.k.j.TypeConverter   No LDT found for JavaBigintExpression 
+8170       DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Init config took 7.39s 
+8299       INFO  main            d.u.i.k.p.i.AbstractProblemLoader Replaying proof AddAndMultiply[AddAndMultiply::add(int,int)].JML normal_behavior operation contract.0 
+8334       DEBUG main            d.u.i.k.p.i.IntermediateProofReplayer Proof replay took 37.1ns 
+9878       INFO  main            d.u.i.k.p.r.p.TestFile    ... finished proof: closed. 
+10026      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Loading environment from /home/runner/work/key/key/key.core/../key.ui/examples/heap/WeideEtAl_01_AddAndMultiply/AddAndMultiply_add.key.proof 
+10026      DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Environment load took 245.8ns 
+10028      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Creating init config 
+12927      DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Init config took 2.9s 
+13002      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Replaying proof AddAndMultiply[AddAndMultiply::add(int,int)].JML normal_behavior operation contract.0 
+13254      DEBUG main            d.u.i.k.p.i.IntermediateProofReplayer Proof replay took 227.63ms 
+13263      DEBUG main            d.u.i.k.p.r.p.TestFile    ... success: reloaded. 
+
+pass: Verifying property "provable" was successful for file: /home/runner/work/key/key/key.core/../key.ui/examples/heap/WeideEtAl_01_AddAndMultiply/AddAndMultiply_add.key]]></system-out></testcase><testcase name="AddAndMultiply_mul.key"  classname="runallproofs.WeideEtAl.WeideEtAl" time="0.000000"><system-out><![CDATA[13266      INFO  main            d.u.i.k.p.r.p.TestFile    Now processing file /home/runner/work/key/key/key.core/../key.ui/examples/heap/WeideEtAl_01_AddAndMultiply/AddAndMultiply_mul.key 
+13267      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Loading environment from /home/runner/work/key/key/key.core/../key.ui/examples/heap/WeideEtAl_01_AddAndMultiply/AddAndMultiply_mul.key 
+13267      DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Environment load took 319.7ns 
+13271      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Creating init config 
+16100      DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Init config took 2.83s 
+16157      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Replaying proof AddAndMultiply[AddAndMultiply::mul(int,int)].JML normal_behavior operation contract.0 
+16160      DEBUG main            d.u.i.k.p.i.IntermediateProofReplayer Proof replay took 7.5ns 
+16664      INFO  main            d.u.i.k.p.r.p.TestFile    ... finished proof: closed. 
+16826      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Loading environment from /home/runner/work/key/key/key.core/../key.ui/examples/heap/WeideEtAl_01_AddAndMultiply/AddAndMultiply_mul.key.proof 
+16827      DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Environment load took 1.12ms 
+16828      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Creating init config 
+19468      DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Init config took 2.64s 
+19536      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Replaying proof AddAndMultiply[AddAndMultiply::mul(int,int)].JML normal_behavior operation contract.0 
+19643      DEBUG main            d.u.i.k.p.i.IntermediateProofReplayer Proof replay took 100.96ms 
+19644      DEBUG main            d.u.i.k.p.r.p.TestFile    ... success: reloaded. 
+
+pass: Verifying property "provable" was successful for file: /home/runner/work/key/key/key.core/../key.ui/examples/heap/WeideEtAl_01_AddAndMultiply/AddAndMultiply_mul.key]]></system-out></testcase><testcase name="BinarySearch_search.key"  classname="runallproofs.WeideEtAl.WeideEtAl" time="0.000000"><system-out><![CDATA[19646      INFO  main            d.u.i.k.p.r.p.TestFile    Now processing file /home/runner/work/key/key/key.core/../key.ui/examples/heap/WeideEtAl_02_BinarySearch/BinarySearch_search.key 
+19646      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Loading environment from /home/runner/work/key/key/key.core/../key.ui/examples/heap/WeideEtAl_02_BinarySearch/BinarySearch_search.key 
+19647      DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Environment load took 235.2ns 
+19648      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Creating init config 
+22376      DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Init config took 2.73s 
+22424      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Replaying proof BinarySearch[BinarySearch::search([I,int)].JML normal_behavior operation contract.0 
+22428      DEBUG main            d.u.i.k.p.i.IntermediateProofReplayer Proof replay took 6.7ns 
+26003      INFO  main            d.u.i.k.p.r.p.TestFile    ... finished proof: closed. 
+26182      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Loading environment from /home/runner/work/key/key/key.core/../key.ui/examples/heap/WeideEtAl_02_BinarySearch/BinarySearch_search.key.proof 
+26183      DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Environment load took 487.5ns 
+26185      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Creating init config 
+28817      DEBUG main            d.u.i.k.p.i.AbstractProblemLoader Init config took 2.63s 
+28871      INFO  main            d.u.i.k.p.i.AbstractProblemLoader Replaying proof BinarySearch[BinarySearch::search([I,int)].JML normal_behavior operation contract.0 
+29285      DEBUG main            d.u.i.k.p.i.IntermediateProofReplayer Proof replay took 380.91ms 
+29286      DEBUG main            d.u.i.k.p.r.p.TestFile    ... success: reloaded. 
+
+pass: Verifying property "provable" was successful for file: /home/runner/work/key/key/key.core/../key.ui/examples/heap/WeideEtAl_02_BinarySearch/BinarySearch_search.key]]></system-out></testcase></testsuite></testsuites>
