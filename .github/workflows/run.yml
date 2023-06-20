@@ -48,6 +48,9 @@ jobs:
         env:
           BASE_URL: artiweb
       - run: python render.py
+      
+      # weigl: quick fix!
+      - run: rm pull-requests/*/*/keyext.slicing/build/test-results/test/*EndToEndTests.xml
 
       - uses: EndBug/add-and-commit@v9
         with:
