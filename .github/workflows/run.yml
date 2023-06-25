@@ -50,7 +50,7 @@ jobs:
       - run: python render.py
       
       # weigl: quick fix!
-      - run: rm -vf pull-requests/*/*/keyext.slicing/build/test-results/test/*EndToEndTests.*
+      - run: find -type f -size +99M -delete
 
       - uses: EndBug/add-and-commit@v9
         with:
